@@ -1,0 +1,95 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+
+:root {
+  --background: black;
+  --foreground: #ffffff;
+  --font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family);
+  position: relative;
+}
+
+/* navbar CSS */
+
+.navitems-section-wrapper {
+  background-image: url("../../public/assets/nav-content-background-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 51px;
+  border-radius: 100px;
+  border: 1px solid #ffffff1a;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-wrapper {
+  padding: 3.25rem 2rem 0 2rem;
+  position: sticky;
+  top: 0;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.nav-item {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 20.04px;
+  letter-spacing: -1%;
+  color: #ffffff;
+}
+
+/* hero section  */
+
+.hero-title-1,
+.hero-title-2 {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 128px;
+  line-height: 120%;
+  letter-spacing: -7%;
+  text-transform: uppercase;
+}
+
+.hero-title-1 {
+  opacity: 70%;
+}
+
+.hero-title-2 {
+  opacity: 100%;
+  font-size: 140px;
+}
+
+.hero-section-wrapper {
+  background-image: url("../../public/assets/hero-section-background.png");
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content-box-wrapper {
+  width: 100%;
+  height: fit-content;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  background-color: transparent;
+  border-color: wheat;
+  justify-content: space-around;
+  padding: 2rem 0;
+  align-items: center;
+}
