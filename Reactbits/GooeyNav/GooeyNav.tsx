@@ -97,6 +97,7 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
       }, 30);
     }
     
+    // Set animation complete after all particles are done
     setTimeout(() => {
       setAnimationComplete(true);
     }, bubbleTime);
@@ -199,7 +200,7 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
             content: "";
             position: absolute;
             inset: -75px;
-            z-index: -2;
+            z-index: -10;
             background: black;
           }
           .effect.filter::after {
@@ -294,7 +295,6 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
             transition: all 0.3s ease;
             color: white;
             border-radius: 100px;
-            position: relative;
           }
           li:hover {
             border-color: rgba(255, 255, 255, 0.7);
@@ -302,7 +302,24 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
           li.active {
             color: black;
             text-shadow: none;
+            border-color: white;
             border-radius: 100px;
+          }
+          li.active::after {
+            opacity: 1;
+            transform: scale(1);
+            border-radius: 100px;
+          }
+          li::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 100px;
+            background: white;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.3s ease;
+            z-index: -1;
           }
           li.completed {
             border-color: white;

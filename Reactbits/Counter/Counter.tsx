@@ -108,8 +108,11 @@ export default function Counter({
   const height = fontSize + padding;
 
   // Calculate the number of digits needed dynamically
-  const numDigits = value === 0 ? 1 : Math.floor(Math.log10(Math.max(1, value))) + 1;
-  const places = Array.from({ length: numDigits }, (_, i) => Math.pow(10, numDigits - 1 - i));
+  const numDigits =
+    value === 0 ? 1 : Math.floor(Math.log10(Math.max(1, value))) + 1;
+  const places = Array.from({ length: numDigits }, (_, i) =>
+    Math.pow(10, numDigits - 1 - i)
+  );
 
   useEffect(() => {
     const targetValue = Math.max(value, 0); // Ensure value is not negative
@@ -142,7 +145,10 @@ export default function Counter({
 
   const defaultContainerStyle: React.CSSProperties = {
     // position: "relative",
-    display: "inline-block",
+    display: "flex",
+    alignItems: "center", // vertical centering
+    justifyContent: "center", // horizontal centering
+    position: "relative",
   };
 
   const defaultCounterStyle: React.CSSProperties = {
@@ -193,6 +199,7 @@ export default function Counter({
             digitStyle={digitStyle}
           />
         ))}
+        <span className="plus-icon-in-counter">+</span>
       </div>
       <div style={gradientContainerStyle}>
         <div
