@@ -1,0 +1,35 @@
+﻿import FallingText from "../../../Reactbits/FallingText/FallingText";
+
+function OurExpertise() {
+  return (
+    <div className="our-expertise-wrapper">
+      <h3 className="text-center text-heading-our-expertise">
+        Our <span>Expertise</span>
+      </h3>
+      <p className="text-center text-paragraph-our-expertise">
+        Our blend of creativity and technical finesse ensures solutions that
+        elevate brands and captivate audiences, leaving an imprint on the design
+        landscape
+      </p>
+
+      <div className="falling-text-container-highlight">
+        <FallingText
+          text={`Branding & Content , Software Development , Brand Marketing , Web Design & Development, Graphics Design, UI/UX Design`}
+          highlightWords={[
+            "Branding & Content",
+            "Brand Marketing",
+            "Graphics Design",
+          ]}
+          trigger="hover"
+          backgroundColor="transparent"
+          wireframes={false}
+          gravity={0.56}
+          fontSize="2rem"
+          mouseConstraintStiffness={0.9}
+        />
+      </div>
+    </div>
+  );
+}
+
+export default OurExpertise;

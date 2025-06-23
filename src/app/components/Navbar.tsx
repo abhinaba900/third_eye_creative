@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import GooeyNav from "../../../Reactbits/GooeyNav/GooeyNav";
-import { Button } from "@chakra-ui/react";
 
 function Navbar() {
   const items = [
@@ -13,13 +12,7 @@ function Navbar() {
   ];
   return (
     <section className="flex  items-center  justify-between py-2 text-white navbar-wrapper">
-      <Image
-        src="/assets/main-logo.png"
-        alt="Logo"
-        width={259}
-        height={51}
-        className="mx-auto my-4"
-      />
+      <Image src="/assets/main-logo.png" alt="Logo" width={259} height={51} />
 
       <div className="navitems-section-wrapper">
         <GooeyNav
