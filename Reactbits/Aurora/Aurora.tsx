@@ -86,26 +86,26 @@ struct ColorStop {
 
 void main() {
   vec2 uv = gl_FragCoord.xy / uResolution;
-  
+
   ColorStop colors[3];
   colors[0] = ColorStop(uColorStops[0], 0.0);
   colors[1] = ColorStop(uColorStops[1], 0.5);
   colors[2] = ColorStop(uColorStops[2], 1.0);
-  
+
   vec3 rampColor;
   COLOR_RAMP(colors, uv.x, rampColor);
-  
-  float height = snoise(vec2(uv.x * 3.0 + uTime * 0.1, uTime * 0.25)) * 0.8 * uAmplitude;
-  height = exp(height * 1.5);
-  // Increased height effect
+
+  float noiseVal = snoise(vec2(uv.x * 2.0 + uTime * 0.1, uTime * 0.25));
+  float height = noiseVal * 0.5 * uAmplitude;  // Reduced noise intensity
+  height = exp(height * 1.2);                 // Softer curve
   height = ((1.0 - uv.y) * 3.5 - height + 0.5);
-  float intensity = 0.8 * height;
-  
+
+  float intensity = 0.5 * height;             // Dimmed
   float midPoint = 0.25;
   float auroraAlpha = smoothstep(midPoint - uBlend * 0.7, midPoint + uBlend * 0.7, intensity);
-  
-  vec3 auroraColor = intensity * rampColor;
-  
+
+  vec3 auroraColor = intensity * rampColor * 0.6; // Final brightness control
+
   fragColor = vec4(auroraColor * auroraAlpha, auroraAlpha);
 }
 `;
@@ -121,8 +121,8 @@ interface AuroraProps {
 export default function Aurora(props: AuroraProps) {
   const {
     colorStops = ["#5227FF", "#7cff67", "#5227FF"],
-    amplitude = 1.5, // Increased default amplitude
-    blend = 0.7, // Increased default blend
+    amplitude = 1.0,  // Lower default amplitude
+    blend = 0.5,      // Softer blending
   } = props;
   const propsRef = useRef<AuroraProps>(props);
   propsRef.current = props;
@@ -170,10 +170,9 @@ export default function Aurora(props: AuroraProps) {
             console.warn(`Invalid color: ${hex}, using black as fallback`);
             warnedColors.add(hex);
           }
-          return [0, 0, 0]; // Return black as fallback
+          return [0, 0, 0];
         }
         if (!hex) return [0, 0, 0];
-        
         const c = new Color(hex);
         return [c.r, c.g, c.b];
       } catch (e) {
@@ -183,8 +182,6 @@ export default function Aurora(props: AuroraProps) {
     };
 
     const warnedColors = new Set();
-
-  
 
     const getColorStops = () => {
       const stops = propsRef.current.colorStops || colorStops;
@@ -221,8 +218,7 @@ export default function Aurora(props: AuroraProps) {
       const { time = t * 0.01, speed = 1.0 } = propsRef.current;
       if (program) {
         program.uniforms.uTime.value = time * speed * 0.1;
-        program.uniforms.uAmplitude.value =
-          propsRef.current.amplitude ?? amplitude;
+        program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? amplitude;
         program.uniforms.uBlend.value = propsRef.current.blend ?? blend;
 
         const stops = getColorStops();

@@ -64,10 +64,7 @@ export const testimonialsGroup2: Testimonial[] = [
   },
 ];
 
-
-
 export default function TestimonialShowcase() {
-    
   return (
     <div className="relative">
       <Image
@@ -93,11 +90,12 @@ export default function TestimonialShowcase() {
             renderCard={(item: Testimonial, index) => (
               <div
                 key={index}
-                className="w-[360px] text-left min-w-[360px] h-full horizontal-scroller-card bg-white/5 text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 hover:scale-[1.02] transition-transform duration-300 last:mr-4"
+                className="w-[360px] text-left min-w-[360px] h-full horizontal-scroller-card bg-white/5 text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 hover:scale-[1.02] transition-transform duration-300"
+                style={{ margin: "0 8px" }} // 8px horizontal margin (equivalent to mx-2)
               >
                 <div className="flex items-center gap-2">
                   <img
-                    src={item.image }
+                    src={item.image}
                     alt={item.name}
                     className="w-10 h-10 rounded-full object-cover"
                   />

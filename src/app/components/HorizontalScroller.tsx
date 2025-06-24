@@ -1,6 +1,4 @@
 ﻿"use client";
-// @ts-nocheck
-
 import React, { useRef, useLayoutEffect, useState } from "react";
 import {
   motion,
@@ -18,7 +16,7 @@ interface VelocityMapping {
 }
 
 interface HorizontalScrollerProps {
-  data: unknown[][]; // Array of arrays of card objects
+  data: unknown[][];
   renderCard: (item: unknown, index: number) => React.ReactNode;
   velocity?: number;
   damping?: number;
@@ -31,7 +29,7 @@ interface HorizontalScrollerProps {
   parallaxStyle?: React.CSSProperties;
   scrollerStyle?: React.CSSProperties;
   isHoverable?: boolean;
-  hoverCardStyle?: React.CSSProperties; // Additional style for hovered card
+  hoverCardStyle?: React.CSSProperties;
 }
 
 function useElementWidth<T extends HTMLElement>(
@@ -55,7 +53,11 @@ function useElementWidth<T extends HTMLElement>(
 
 const VelocityScroller: React.FC<{
   items: unknown[];
-  renderCard: (item: unknown, index: number, isHovered: boolean) => React.ReactNode;
+  renderCard: (
+    item: unknown,
+    index: number,
+    isHovered: boolean
+  ) => React.ReactNode;
   baseVelocity: number;
   scrollContainerRef?: React.RefObject<HTMLElement>;
   damping?: number;
@@ -82,7 +84,10 @@ const VelocityScroller: React.FC<{
   parallaxStyle,
   scrollerStyle,
   isHoverable = true,
-  hoverCardStyle = { transform: "scale(1.05)", boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)" },
+  hoverCardStyle = {
+    transform: "scale(1.05)",
+    boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
+  },
 }) => {
   const baseX = useMotionValue(0);
   const scrollOptions = scrollContainerRef
@@ -116,7 +121,7 @@ const VelocityScroller: React.FC<{
   const directionFactor = useRef<number>(1);
   useAnimationFrame((t, delta) => {
     if (isHoverable && shouldStop) return;
-    
+
     let moveBy = directionFactor.current * baseVelocity * (delta / 1000);
     directionFactor.current = velocityFactor.get() >= 0 ? 1 : -1;
     moveBy += directionFactor.current * moveBy * velocityFactor.get();
@@ -138,14 +143,23 @@ const VelocityScroller: React.FC<{
   const blocks = [];
   for (let i = 0; i < numCopies; i++) {
     blocks.push(
-      <div className="flex gap-4" key={i} ref={i === 0 ? copyRef : null}>
+      <div
+        key={i}
+        ref={i === 0 ? copyRef : null}
+        style={{
+          display: "flex",
+        }}
+      >
         {items.map((item, idx) => (
           <div
             key={`${i}-${idx}`}
             onMouseEnter={() => handleMouseEnter(idx)}
             onMouseLeave={handleMouseLeave}
-            style={hoveredCard === idx ? hoverCardStyle : {}}
-            className="transition-all duration-300 ease-in-out"
+            style={{
+              ...(hoveredCard === idx ? hoverCardStyle : {}),
+              transition: "all 300ms ease-in-out",
+              margin: "0 8px", // Consistent spacing between cards
+            }}
           >
             {renderCard(item, idx, hoveredCard === idx)}
           </div>
@@ -156,12 +170,20 @@ const VelocityScroller: React.FC<{
 
   return (
     <div
-      className={`${parallaxClassName} relative overflow-hidden`}
-      style={parallaxStyle}
+      className={parallaxClassName}
+      style={{
+        position: "relative",
+        overflow: "hidden",
+        ...parallaxStyle,
+      }}
     >
       <motion.div
-        className={`flex ${scrollerClassName}`}
-        style={{ x, ...scrollerStyle }}
+        className={scrollerClassName}
+        style={{
+          display: "flex",
+          ...scrollerStyle,
+          x,
+        }}
       >
         {blocks}
       </motion.div>
@@ -185,8 +207,11 @@ const HorizontalScroller: React.FC<HorizontalScrollerProps> = ({
   isHoverable = true,
   hoverCardStyle,
 }) => {
-  // Wrap the renderCard function to maintain compatibility
-  const wrappedRenderCard = (item: unknown, index: number) => {
+  const wrappedRenderCard = (
+    item: unknown,
+    index: number,
+    isHovered: boolean
+  ) => {
     return renderCard(item, index);
   };
 
@@ -195,8 +220,7 @@ const HorizontalScroller: React.FC<HorizontalScrollerProps> = ({
       {data.map((items, index) => (
         <div
           key={index}
-          className={index !== data.length - 1 ? "mb-[1rem]" : ""}
-          style={{ marginBottom: index !== data.length - 1 ? "1rem" : "0" }}
+          style={{ marginBottom: index !== data.length - 1 ? "16px" : "0" }}
         >
           <VelocityScroller
             items={items}

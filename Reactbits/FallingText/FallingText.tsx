@@ -19,19 +19,16 @@ const FallingText: React.FC<FallingTextProps> = ({
   trigger = "auto",
   backgroundColor = "transparent",
   wireframes = false,
-  gravity = 1,
+  gravity = 0.3,
   mouseConstraintStiffness = 0.2,
   fontSize = "1rem",
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const textRef = useRef<HTMLDivElement | null>(null);
   const canvasContainerRef = useRef<HTMLDivElement | null>(null);
-
   const [effectStarted, setEffectStarted] = useState(false);
+  const [isMouseDown, setIsMouseDown] = useState(false);
 
-  /* ───────────────────────────────
-     1.  BUILD SPANS WITH NEW STYLES
-     ─────────────────────────────── */
   useEffect(() => {
     if (!textRef.current) return;
     const words = text.split(",");
@@ -48,11 +45,11 @@ const FallingText: React.FC<FallingTextProps> = ({
           <span
             class="inline-block select-none"
             style="
-              margin: 20px 20px;              /* 40 px total gap (20 px on each side) */
+              margin: 20px 20px;
               background-color: ${bgColor};
               color: ${textColor};
               padding: 0.5rem 1rem;
-              border-radius: 71.89px;      /* pill‑like radius */
+              border-radius: 71.89px;
             "
           >
             ${word.trim()}
@@ -63,9 +60,6 @@ const FallingText: React.FC<FallingTextProps> = ({
     textRef.current.innerHTML = newHTML;
   }, [text, highlightWords]);
 
-  /* ───────────────────────────────
-     2.  TRIGGER LOGIC
-     ─────────────────────────────── */
   useEffect(() => {
     if (trigger === "auto") {
       setEffectStarted(true);
@@ -86,14 +80,10 @@ const FallingText: React.FC<FallingTextProps> = ({
     }
   }, [trigger]);
 
-  /* ───────────────────────────────
-     3.  MATTER.JS PHYSICS
-     ─────────────────────────────── */
   useEffect(() => {
     if (!effectStarted) return;
 
-    const { Engine, Render, World, Bodies, Runner, Mouse, MouseConstraint } =
-      Matter;
+    const { Engine, Render, World, Bodies, Runner, Mouse, MouseConstraint, Body } = Matter;
 
     if (!containerRef.current || !canvasContainerRef.current) return;
 
@@ -102,7 +92,6 @@ const FallingText: React.FC<FallingTextProps> = ({
     const height = containerRect.height;
     if (width <= 0 || height <= 0) return;
 
-    /* Engine + renderer */
     const engine = Engine.create();
     engine.world.gravity.y = gravity;
 
@@ -112,41 +101,15 @@ const FallingText: React.FC<FallingTextProps> = ({
       options: { width, height, background: backgroundColor, wireframes },
     });
 
-    /* World bounds */
     const boundaryOptions = {
       isStatic: true,
       render: { fillStyle: "transparent" },
     };
-    const floor = Bodies.rectangle(
-      width / 2,
-      height + 25,
-      width,
-      50,
-      boundaryOptions
-    );
-    const leftWall = Bodies.rectangle(
-      -25,
-      height / 2,
-      50,
-      height,
-      boundaryOptions
-    );
-    const rightWall = Bodies.rectangle(
-      width + 25,
-      height / 2,
-      50,
-      height,
-      boundaryOptions
-    );
-    const ceiling = Bodies.rectangle(
-      width / 2,
-      -25,
-      width,
-      50,
-      boundaryOptions
-    );
+    const floor = Bodies.rectangle(width / 2, height + 25, width, 50, boundaryOptions);
+    const leftWall = Bodies.rectangle(-25, height / 2, 50, height, boundaryOptions);
+    const rightWall = Bodies.rectangle(width + 25, height / 2, 50, height, boundaryOptions);
+    const ceiling = Bodies.rectangle(width / 2, -25, width, 50, boundaryOptions);
 
-    /* Convert every span into a rigid body */
     if (!textRef.current) return;
     const wordSpans = textRef.current.querySelectorAll("span");
     const wordBodies = [...wordSpans].map((elem) => {
@@ -160,27 +123,24 @@ const FallingText: React.FC<FallingTextProps> = ({
       const body = Bodies.rectangle(x, y, spanRect.width, spanRect.height, {
         render: { fillStyle: "transparent" },
         restitution: 0.8,
-        frictionAir: 0.01,
-        friction: 0.2,
+        frictionAir: 0.08,
+        friction: 0.3,
       });
 
-      Matter.Body.setVelocity(body, {
-        x: (Math.random() - 0.5) * 5,
+      Body.setVelocity(body, {
+        x: (Math.random() - 0.5) * 2,
         y: 0,
       });
-      Matter.Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.05);
+      Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.03);
 
-      // Lock the initial position visually
       elem.style.position = "absolute";
       elem.style.left = `${x}px`;
       elem.style.top = `${y}px`;
       elem.style.transform = "translate(-50%, -50%)";
-      
 
       return { elem, body };
     });
 
-    /* Mouse interaction */
     const mouse = Mouse.create(containerRef.current);
     const mouseConstraint = MouseConstraint.create(engine, {
       mouse,
@@ -189,6 +149,10 @@ const FallingText: React.FC<FallingTextProps> = ({
         render: { visible: false },
       },
     });
+    
+    // Disable mouse constraint by default
+    mouseConstraint.collisionFilter.mask = 0;
+
     render.mouse = mouse;
 
     World.add(engine.world, [
@@ -200,25 +164,50 @@ const FallingText: React.FC<FallingTextProps> = ({
       ...wordBodies.map((wb) => wb.body),
     ]);
 
-    /* Run engine + renderer */
     const runner = Runner.create();
     Runner.run(runner, engine);
     Render.run(render);
 
-    /* Sync DOM to physics each frame */
     const update = () => {
       wordBodies.forEach(({ body, elem }) => {
         elem.style.left = `${body.position.x}px`;
         elem.style.top = `${body.position.y}px`;
         elem.style.transform = `translate(-50%, -50%) rotate(${body.angle}rad)`;
       });
-      Matter.Engine.update(engine);
       requestAnimationFrame(update);
     };
     update();
 
-    /* Cleanup */
+    // Event handlers for better scroll behavior
+    const onMouseDown = () => {
+      setIsMouseDown(true);
+      mouseConstraint.collisionFilter.mask = 0xFFFFFFFF; // Enable constraint
+    };
+
+    const onMouseUp = () => {
+      setIsMouseDown(false);
+      mouseConstraint.collisionFilter.mask = 0; // Disable constraint
+    };
+
+    // Prevent the mouse constraint from interfering with touch events
+    const preventTouch = (e: Event) => e.preventDefault();
+    if (containerRef.current) {
+      containerRef.current.addEventListener('mousedown', onMouseDown);
+      containerRef.current.addEventListener('mouseup', onMouseUp);
+      containerRef.current.addEventListener('mouseleave', onMouseUp);
+      // Prevent touch events from interfering with scrolling
+      containerRef.current.addEventListener('touchstart', preventTouch, { passive: false });
+      containerRef.current.addEventListener('touchmove', preventTouch, { passive: false });
+    }
+
     return () => {
+      if (containerRef.current) {
+        containerRef.current.removeEventListener('mousedown', onMouseDown);
+        containerRef.current.removeEventListener('mouseup', onMouseUp);
+        containerRef.current.removeEventListener('mouseleave', onMouseUp);
+        containerRef.current.removeEventListener('touchstart', preventTouch);
+        containerRef.current.removeEventListener('touchmove', preventTouch);
+      }
       Render.stop(render);
       Runner.stop(runner);
       if (render.canvas && canvasContainerRef.current) {
@@ -227,26 +216,14 @@ const FallingText: React.FC<FallingTextProps> = ({
       World.clear(engine.world, false);
       Engine.clear(engine);
     };
-  }, [
-    effectStarted,
-    gravity,
-    wireframes,
-    backgroundColor,
-    mouseConstraintStiffness,
-  ]);
+  }, [effectStarted, gravity, wireframes, backgroundColor, mouseConstraintStiffness]);
 
-  /* ───────────────────────────────
-     4.  CLICK / HOVER TRIGGER
-     ─────────────────────────────── */
   const handleTrigger = () => {
     if (!effectStarted && (trigger === "click" || trigger === "hover")) {
       setEffectStarted(true);
     }
   };
 
-  /* ───────────────────────────────
-     5.  RENDER
-     ─────────────────────────────── */
   return (
     <div
       ref={containerRef}
