@@ -725,7 +725,7 @@ html {
   gap: 1rem;
   align-items: center;
 }
- 
+
 .footer-section .footer-text-2 {
   font-family: var(--font-family);
   font-weight: 700;
@@ -736,4 +736,51 @@ html {
   letter-spacing: 0.5vw;
   color: #ffffff80;
   white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.hovered-card-in-scroller {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hovered-card-in-scroller::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  z-index: -1;
+  border-radius: 23px; /* 20px + 3px border padding */
+  padding: 3px; /* This defines the border thickness */
+
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  background-size: 300% 300%;
+  animation: animatedgradient_scroller 3s ease infinite alternate;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* Gradient animation keyframes */
+@keyframes animatedgradient_scroller {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

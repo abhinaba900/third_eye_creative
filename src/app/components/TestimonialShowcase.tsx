@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import HorizontalScroller from "./HorizontalScroller";
+import { useState } from "react";
 interface Testimonial {
   name: string;
   title: string;
@@ -65,6 +66,11 @@ export const testimonialsGroup2: Testimonial[] = [
 ];
 
 export default function TestimonialShowcase() {
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  const handleMouseEnter = (index: string) => {
+    setHoveredCard(index);
+  };
+
   return (
     <div className="relative">
       <Image
@@ -90,8 +96,10 @@ export default function TestimonialShowcase() {
             renderCard={(item: Testimonial, index) => (
               <div
                 key={index}
-                className="w-[360px] text-left min-w-[360px] h-full horizontal-scroller-card bg-white/5 text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 hover:scale-[1.02] transition-transform duration-300"
+                className={`w-[360px] text-left min-w-[360px] h-full horizontal-scroller-card bg-white/5 text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 ${hoveredCard === item.name ? "hovered-card-in-scroller" : ""}`}
                 style={{ margin: "0 8px" }} // 8px horizontal margin (equivalent to mx-2)
+                onMouseEnter={() => handleMouseEnter(item.name)}
+                onMouseLeave={() => setHoveredCard(null)}
               >
                 <div className="flex items-center gap-2">
                   <img

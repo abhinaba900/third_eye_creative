@@ -156,10 +156,11 @@ const VelocityScroller: React.FC<{
             onMouseEnter={() => handleMouseEnter(idx)}
             onMouseLeave={handleMouseLeave}
             style={{
-              ...(hoveredCard === idx ? hoverCardStyle : {}),
+              // ...(hoveredCard === idx ? hoverCardStyle : {}),
               transition: "all 300ms ease-in-out",
-              margin: "0 8px", // Consistent spacing between cards
+              // margin: "0 8px", // Consistent spacing between cards
             }}
+            
           >
             {renderCard(item, idx, hoveredCard === idx)}
           </div>
@@ -207,10 +208,7 @@ const HorizontalScroller: React.FC<HorizontalScrollerProps> = ({
   isHoverable = true,
   hoverCardStyle,
 }) => {
-  const wrappedRenderCard = (
-    item: unknown,
-    index: number,
-  ) => {
+  const wrappedRenderCard = (item: unknown, index: number) => {
     return renderCard(item, index);
   };
 
