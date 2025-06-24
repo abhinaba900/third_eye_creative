@@ -210,7 +210,6 @@ const HorizontalScroller: React.FC<HorizontalScrollerProps> = ({
   const wrappedRenderCard = (
     item: unknown,
     index: number,
-    isHovered: boolean
   ) => {
     return renderCard(item, index);
   };
