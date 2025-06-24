@@ -84,10 +84,6 @@ const VelocityScroller: React.FC<{
   parallaxStyle,
   scrollerStyle,
   isHoverable = true,
-  hoverCardStyle = {
-    transform: "scale(1.05)",
-    boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
-  },
 }) => {
   const baseX = useMotionValue(0);
   const scrollOptions = scrollContainerRef
@@ -160,7 +156,6 @@ const VelocityScroller: React.FC<{
               transition: "all 300ms ease-in-out",
               // margin: "0 8px", // Consistent spacing between cards
             }}
-            
           >
             {renderCard(item, idx, hoveredCard === idx)}
           </div>
