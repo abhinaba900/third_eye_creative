@@ -135,6 +135,8 @@ html {
   margin-top: -10%;
   left: 0;
   width: 100vw;
+  max-height: 1180px;
+  min-height: 1180px;
 }
 
 .hero-section-content-wrapper {
