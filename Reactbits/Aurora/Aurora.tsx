@@ -96,15 +96,15 @@ void main() {
   COLOR_RAMP(colors, uv.x, rampColor);
 
   float noiseVal = snoise(vec2(uv.x * 2.0 + uTime * 0.1, uTime * 0.25));
-  float height = noiseVal * 0.5 * uAmplitude;  // Reduced noise intensity
-  height = exp(height * 1.2);                 // Softer curve
+  float height = noiseVal * 0.5 * uAmplitude;
+  height = exp(height * 1.2);
   height = ((1.0 - uv.y) * 3.5 - height + 0.5);
 
-  float intensity = 0.5 * height;             // Dimmed
+  float intensity = 0.5 * height;
   float midPoint = 0.25;
   float auroraAlpha = smoothstep(midPoint - uBlend * 0.7, midPoint + uBlend * 0.7, intensity);
 
-  vec3 auroraColor = intensity * rampColor * 0.6; // Final brightness control
+  vec3 auroraColor = intensity * rampColor * 0.6;
 
   fragColor = vec4(auroraColor * auroraAlpha, auroraAlpha);
 }
@@ -114,15 +114,15 @@ interface AuroraProps {
   colorStops?: string[];
   amplitude?: number;
   blend?: number;
-  time?: number;
   speed?: number;
 }
 
 export default function Aurora(props: AuroraProps) {
   const {
     colorStops = ["#5227FF", "#7cff67", "#5227FF"],
-    amplitude = 1.0,  // Lower default amplitude
-    blend = 0.5,      // Softer blending
+    amplitude = 1.0,
+    blend = 0.5,
+    speed = 1.0,
   } = props;
   const propsRef = useRef<AuroraProps>(props);
   propsRef.current = props;
@@ -155,6 +155,7 @@ export default function Aurora(props: AuroraProps) {
         program.uniforms.uResolution.value = [width, height];
       }
     }
+
     window.addEventListener("resize", resize);
 
     const geometry = new Triangle(gl);
@@ -213,11 +214,16 @@ export default function Aurora(props: AuroraProps) {
     ctn.appendChild(gl.canvas);
 
     let animateId = 0;
-    const update = (t: number) => {
+    const loopDuration = 100.0; // seconds
+    const startTime = performance.now();
+
+    const update = () => {
       animateId = requestAnimationFrame(update);
-      const { time = t * 0.01, speed = 1.0 } = propsRef.current;
+      const elapsed = (performance.now() - startTime) * 0.001; // seconds
+      const loopedTime = (elapsed % loopDuration) * (propsRef.current.speed ?? speed);
+
       if (program) {
-        program.uniforms.uTime.value = time * speed * 0.1;
+        program.uniforms.uTime.value = loopedTime;
         program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? amplitude;
         program.uniforms.uBlend.value = propsRef.current.blend ?? blend;
 
@@ -227,8 +233,8 @@ export default function Aurora(props: AuroraProps) {
         renderer.render({ scene: mesh });
       }
     };
-    animateId = requestAnimationFrame(update);
 
+    animateId = requestAnimationFrame(update);
     resize();
 
     return () => {
@@ -239,7 +245,7 @@ export default function Aurora(props: AuroraProps) {
       }
       gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
-  }, [amplitude, blend, colorStops]);
+  }, [amplitude, blend, colorStops, speed]);
 
-  return <div ref={ctnDom} className="w-full h-[500px]"></div>
-};
+  return <div ref={ctnDom} className="w-full h-[500px]"></div>;
+}

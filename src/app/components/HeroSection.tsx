@@ -44,9 +44,9 @@ function HeroSection() {
         <div className="w-full relative">
           <Aurora
             colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}
-            blend={0.5}
+            blend={0.1}
             amplitude={1.0}
-            speed={0.5}
+            speed={1}
           />
 
           <div className="hero-content-wrapper">
