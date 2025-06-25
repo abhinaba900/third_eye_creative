@@ -27,7 +27,7 @@ function OurExpertise() {
           backgroundColor="transparent"
           wireframes={false}
           gravity={0.56}
-          fontSize="1.5rem"
+          fontSize="1.8rem"
           setIsHoveredForAnimation={setIsHoveredForAnimation}
           mouseConstraintStiffness={0.9}
         />
