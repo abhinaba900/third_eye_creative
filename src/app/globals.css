@@ -129,6 +129,7 @@ html {
   justify-content: center;
   align-items: center;
   height: fit-content;
+  padding-top: 4rem;
 }
 
 .background-image-hero-section {
@@ -147,11 +148,23 @@ html {
   margin-top: 2rem;
 }
 
+.hero-content-wrapper {
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+}
+
 .hero-content-box-wrapper {
   width: 100%;
   height: fit-content;
-  position: absolute;
-  bottom: 0;
+
   display: flex;
   background-color: transparent;
   border-color: wheat;

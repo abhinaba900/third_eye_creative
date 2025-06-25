@@ -90,7 +90,7 @@ void main() {
   ColorStop colors[3];
   colors[0] = ColorStop(uColorStops[0], 0.0);
   colors[1] = ColorStop(uColorStops[1], 0.5);
-  colors[2] = ColorStop(uColorStops[2], 1.0);
+  colors[2] = ColorStop(uColorStops[2], 0.0);
 
   vec3 rampColor;
   COLOR_RAMP(colors, uv.x, rampColor);
@@ -241,5 +241,5 @@ export default function Aurora(props: AuroraProps) {
     };
   }, [amplitude, blend, colorStops]);
 
-  return <div ref={ctnDom} className="w-full h-[280px]" />;
-}
+  return <div ref={ctnDom} className="w-full h-[500px]"></div>
+};

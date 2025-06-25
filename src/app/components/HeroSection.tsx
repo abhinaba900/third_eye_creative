@@ -42,9 +42,6 @@ function HeroSection() {
         </h3>
 
         <div className="w-full relative">
-          <h3 className="d-flex align-items-center hero-title-2 text-center">
-            FOR YOUR BRAND
-          </h3>
           <Aurora
             colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}
             blend={0.5}
@@ -52,58 +49,63 @@ function HeroSection() {
             speed={0.5}
           />
 
-          <div className="hero-content-box-wrapper">
-            <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
-              <Counter
-                value={20}
-                fontSize={80}
-                padding={5}
-                gap={10}
-                textColor="white"
-                fontWeight={900}
-                gradientFrom="transparent"
-                gradientTo="transparent"
-              />
-              <p>Brands Transformed</p>
-            </div>
-            <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
-              <Counter
-                value={8}
-                fontSize={80}
-                padding={5}
-                gap={10}
-                textColor="white"
-                fontWeight={900}
-                gradientFrom="transparent"
-                gradientTo="transparent"
-              />
-              <p>Years of Creative Impact</p>
-            </div>
-            <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
-              <Counter
-                value={50}
-                fontSize={80}
-                padding={5}
-                gap={10}
-                textColor="white"
-                fontWeight={900}
-                gradientFrom="transparent"
-                gradientTo="transparent"
-              />
-              <p>Websites & Platforms Delivered</p>
-            </div>
-            <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
-              <Counter
-                value={10}
-                fontSize={80}
-                padding={5}
-                gap={10}
-                textColor="white"
-                fontWeight={900}
-                gradientFrom="transparent"
-                gradientTo="transparent"
-              />
-              <p>Mobile Apps Engineered</p>
+          <div className="hero-content-wrapper">
+            <h3 className="d-flex align-items-center hero-title-2 text-center">
+              FOR YOUR BRAND
+            </h3>
+            <div className="hero-content-box-wrapper">
+              <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
+                <Counter
+                  value={20}
+                  fontSize={80}
+                  padding={5}
+                  gap={10}
+                  textColor="white"
+                  fontWeight={900}
+                  gradientFrom="transparent"
+                  gradientTo="transparent"
+                />
+                <p>Brands Transformed</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
+                <Counter
+                  value={8}
+                  fontSize={80}
+                  padding={5}
+                  gap={10}
+                  textColor="white"
+                  fontWeight={900}
+                  gradientFrom="transparent"
+                  gradientTo="transparent"
+                />
+                <p>Years of Creative Impact</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
+                <Counter
+                  value={50}
+                  fontSize={80}
+                  padding={5}
+                  gap={10}
+                  textColor="white"
+                  fontWeight={900}
+                  gradientFrom="transparent"
+                  gradientTo="transparent"
+                />
+                <p>Websites & Platforms Delivered</p>
+              </div>
+              <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
+                <Counter
+                  value={10}
+                  fontSize={80}
+                  padding={5}
+                  gap={10}
+                  textColor="white"
+                  fontWeight={900}
+                  gradientFrom="transparent"
+                  gradientTo="transparent"
+                />
+                <p>Mobile Apps Engineered</p>
+              </div>
             </div>
           </div>
         </div>
