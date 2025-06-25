@@ -11,6 +11,7 @@ interface FallingTextProps {
   gravity?: number;
   mouseConstraintStiffness?: number;
   fontSize?: string;
+  setIsHoveredForAnimation?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const FallingText: React.FC<FallingTextProps> = ({
@@ -22,6 +23,7 @@ const FallingText: React.FC<FallingTextProps> = ({
   gravity = 0.3,
   mouseConstraintStiffness = 0.2,
   fontSize = "1rem",
+  setIsHoveredForAnimation = () => {},
 }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const textRef = useRef<HTMLDivElement | null>(null);
@@ -112,13 +114,13 @@ const FallingText: React.FC<FallingTextProps> = ({
 
     if (!textRef.current) return;
     const wordSpans = textRef.current.querySelectorAll("span");
+
     const wordBodies = [...wordSpans].map((elem) => {
       const spanRect = elem.getBoundingClientRect();
-      const offsetTop = elem.offsetTop;
-      const offsetLeft = elem.offsetLeft;
 
-      const x = offsetLeft + spanRect.width / 2;
-      const y = offsetTop + spanRect.height / 2;
+      // ✅ Fix: Calculate relative position to container
+      const x = spanRect.left - containerRect.left + spanRect.width / 2;
+      const y = spanRect.top - containerRect.top + spanRect.height / 2;
 
       const body = Bodies.rectangle(x, y, spanRect.width, spanRect.height, {
         render: { fillStyle: "transparent" },
@@ -149,10 +151,8 @@ const FallingText: React.FC<FallingTextProps> = ({
         render: { visible: false },
       },
     });
-    
-    // Disable mouse constraint by default
-    mouseConstraint.collisionFilter.mask = 0;
 
+    mouseConstraint.collisionFilter.mask = 0; // Disabled initially
     render.mouse = mouse;
 
     World.add(engine.world, [
@@ -178,35 +178,32 @@ const FallingText: React.FC<FallingTextProps> = ({
     };
     update();
 
-    // Event handlers for better scroll behavior
     const onMouseDown = () => {
       setIsMouseDown(true);
-      mouseConstraint.collisionFilter.mask = 0xFFFFFFFF; // Enable constraint
+      mouseConstraint.collisionFilter.mask = 0xFFFFFFFF;
     };
 
     const onMouseUp = () => {
       setIsMouseDown(false);
-      mouseConstraint.collisionFilter.mask = 0; // Disable constraint
+      mouseConstraint.collisionFilter.mask = 0;
     };
 
-    // Prevent the mouse constraint from interfering with touch events
     const preventTouch = (e: Event) => e.preventDefault();
     if (containerRef.current) {
-      containerRef.current.addEventListener('mousedown', onMouseDown);
-      containerRef.current.addEventListener('mouseup', onMouseUp);
-      containerRef.current.addEventListener('mouseleave', onMouseUp);
-      // Prevent touch events from interfering with scrolling
-      containerRef.current.addEventListener('touchstart', preventTouch, { passive: false });
-      containerRef.current.addEventListener('touchmove', preventTouch, { passive: false });
+      containerRef.current.addEventListener("mousedown", onMouseDown);
+      containerRef.current.addEventListener("mouseup", onMouseUp);
+      containerRef.current.addEventListener("mouseleave", onMouseUp);
+      containerRef.current.addEventListener("touchstart", preventTouch, { passive: false });
+      containerRef.current.addEventListener("touchmove", preventTouch, { passive: false });
     }
 
     return () => {
       if (containerRef.current) {
-        containerRef.current.removeEventListener('mousedown', onMouseDown);
-        containerRef.current.removeEventListener('mouseup', onMouseUp);
-        containerRef.current.removeEventListener('mouseleave', onMouseUp);
-        containerRef.current.removeEventListener('touchstart', preventTouch);
-        containerRef.current.removeEventListener('touchmove', preventTouch);
+        containerRef.current.removeEventListener("mousedown", onMouseDown);
+        containerRef.current.removeEventListener("mouseup", onMouseUp);
+        containerRef.current.removeEventListener("mouseleave", onMouseUp);
+        containerRef.current.removeEventListener("touchstart", preventTouch);
+        containerRef.current.removeEventListener("touchmove", preventTouch);
       }
       Render.stop(render);
       Runner.stop(runner);
@@ -221,6 +218,7 @@ const FallingText: React.FC<FallingTextProps> = ({
   const handleTrigger = () => {
     if (!effectStarted && (trigger === "click" || trigger === "hover")) {
       setEffectStarted(true);
+      setIsHoveredForAnimation(true);
     }
   };
 
@@ -236,7 +234,6 @@ const FallingText: React.FC<FallingTextProps> = ({
         className="inline-block"
         style={{ fontSize, lineHeight: 1.4 }}
       />
-
       <div ref={canvasContainerRef} className="absolute top-0 left-0 z-0" />
     </div>
   );

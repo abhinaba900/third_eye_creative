@@ -1,6 +1,9 @@
-﻿import FallingText from "../../../Reactbits/FallingText/FallingText";
+﻿"use client";
+import { useState } from "react";
+import FallingText from "../../../Reactbits/FallingText/FallingText";
 
 function OurExpertise() {
+  const [isHoveredForAnimation, setIsHoveredForAnimation] = useState(false);
   return (
     <div className="our-expertise-wrapper">
       <h3 className="text-center text-heading-our-expertise">
@@ -12,7 +15,7 @@ function OurExpertise() {
         landscape
       </p>
 
-      <div className="falling-text-container-highlight">
+      <div className={`falling-text-container-highlight ${isHoveredForAnimation ? "hovered" : ""}`}>
         <FallingText
           text={`Branding & Content , Software Development , Brand Marketing , Web Design & Development, Graphics Design, UI/UX Design`}
           highlightWords={[
@@ -25,6 +28,7 @@ function OurExpertise() {
           wireframes={false}
           gravity={0.56}
           fontSize="2rem"
+          setIsHoveredForAnimation={setIsHoveredForAnimation}
           mouseConstraintStiffness={0.9}
         />
       </div>

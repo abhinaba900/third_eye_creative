@@ -256,6 +256,10 @@ html {
   margin: 5rem auto 0 auto;
 }
 
+.falling-text-container-highlight.hovered{
+  max-width: 100%;
+}
+
 /* workflow stages */
 
 .workflow-stages-container {
