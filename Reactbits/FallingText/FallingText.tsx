@@ -52,6 +52,7 @@ const FallingText: React.FC<FallingTextProps> = ({
               color: ${textColor};
               padding: 0.5rem 1rem;
               border-radius: 71.89px;
+              white-space: nowrap;
             "
           >
             ${word.trim()}
@@ -134,6 +135,8 @@ const FallingText: React.FC<FallingTextProps> = ({
         y: 0,
       });
       Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.03);
+      console.log(y,"y");
+      
 
       elem.style.position = "absolute";
       elem.style.left = `${x}px`;
@@ -225,7 +228,7 @@ const FallingText: React.FC<FallingTextProps> = ({
   return (
     <div
       ref={containerRef}
-      className="relative z-[1] w-full h-full cursor-pointer text-center pt-8 overflow-hidden"
+      className="relative z-[1] w-full h-full cursor-pointer text-center pt-8 "
       onClick={trigger === "click" ? handleTrigger : undefined}
       onMouseEnter={trigger === "hover" ? handleTrigger : undefined}
     >
