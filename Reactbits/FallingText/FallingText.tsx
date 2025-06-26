@@ -30,6 +30,8 @@ const FallingText: React.FC<FallingTextProps> = ({
   const canvasContainerRef = useRef<HTMLDivElement | null>(null);
   const [effectStarted, setEffectStarted] = useState(false);
   const [isMouseDown, setIsMouseDown] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     if (!textRef.current) return;
@@ -84,9 +86,38 @@ const FallingText: React.FC<FallingTextProps> = ({
   }, [trigger]);
 
   useEffect(() => {
+    const handleWheel = () => {
+      setIsScrolling(true);
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+      scrollTimeoutRef.current = setTimeout(() => {
+        setIsScrolling(false);
+      }, 200); // adjust delay as needed
+    };
+
+    window.addEventListener("wheel", handleWheel);
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+      if (scrollTimeoutRef.current) {
+        clearTimeout(scrollTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
     if (!effectStarted) return;
 
-    const { Engine, Render, World, Bodies, Runner, Mouse, MouseConstraint, Body } = Matter;
+    const {
+      Engine,
+      Render,
+      World,
+      Bodies,
+      Runner,
+      Mouse,
+      MouseConstraint,
+      Body,
+    } = Matter;
 
     if (!containerRef.current || !canvasContainerRef.current) return;
 
@@ -108,10 +139,34 @@ const FallingText: React.FC<FallingTextProps> = ({
       isStatic: true,
       render: { fillStyle: "transparent" },
     };
-    const floor = Bodies.rectangle(width / 2, height + 25, width, 50, boundaryOptions);
-    const leftWall = Bodies.rectangle(-25, height / 2, 50, height, boundaryOptions);
-    const rightWall = Bodies.rectangle(width + 25, height / 2, 50, height, boundaryOptions);
-    const ceiling = Bodies.rectangle(width / 2, -25, width, 50, boundaryOptions);
+    const floor = Bodies.rectangle(
+      width / 2,
+      height + 25,
+      width,
+      50,
+      boundaryOptions
+    );
+    const leftWall = Bodies.rectangle(
+      -25,
+      height / 2,
+      50,
+      height,
+      boundaryOptions
+    );
+    const rightWall = Bodies.rectangle(
+      width + 25,
+      height / 2,
+      50,
+      height,
+      boundaryOptions
+    );
+    const ceiling = Bodies.rectangle(
+      width / 2,
+      -25,
+      width,
+      50,
+      boundaryOptions
+    );
 
     if (!textRef.current) return;
     const wordSpans = textRef.current.querySelectorAll("span");
@@ -119,7 +174,6 @@ const FallingText: React.FC<FallingTextProps> = ({
     const wordBodies = [...wordSpans].map((elem) => {
       const spanRect = elem.getBoundingClientRect();
 
-      // ✅ Fix: Calculate relative position to container
       const x = spanRect.left - containerRect.left + spanRect.width / 2;
       const y = spanRect.top - containerRect.top + spanRect.height / 2;
 
@@ -135,8 +189,6 @@ const FallingText: React.FC<FallingTextProps> = ({
         y: 0,
       });
       Body.setAngularVelocity(body, (Math.random() - 0.5) * 0.03);
-      console.log(y,"y");
-      
 
       elem.style.position = "absolute";
       elem.style.left = `${x}px`;
@@ -155,7 +207,7 @@ const FallingText: React.FC<FallingTextProps> = ({
       },
     });
 
-    mouseConstraint.collisionFilter.mask = 0; // Disabled initially
+    mouseConstraint.collisionFilter.mask = 0;
     render.mouse = mouse;
 
     World.add(engine.world, [
@@ -183,7 +235,7 @@ const FallingText: React.FC<FallingTextProps> = ({
 
     const onMouseDown = () => {
       setIsMouseDown(true);
-      mouseConstraint.collisionFilter.mask = 0xFFFFFFFF;
+      mouseConstraint.collisionFilter.mask = 0xffffffff;
     };
 
     const onMouseUp = () => {
@@ -196,8 +248,12 @@ const FallingText: React.FC<FallingTextProps> = ({
       containerRef.current.addEventListener("mousedown", onMouseDown);
       containerRef.current.addEventListener("mouseup", onMouseUp);
       containerRef.current.addEventListener("mouseleave", onMouseUp);
-      containerRef.current.addEventListener("touchstart", preventTouch, { passive: false });
-      containerRef.current.addEventListener("touchmove", preventTouch, { passive: false });
+      containerRef.current.addEventListener("touchstart", preventTouch, {
+        passive: false,
+      });
+      containerRef.current.addEventListener("touchmove", preventTouch, {
+        passive: false,
+      });
     }
 
     return () => {
@@ -216,7 +272,13 @@ const FallingText: React.FC<FallingTextProps> = ({
       World.clear(engine.world, false);
       Engine.clear(engine);
     };
-  }, [effectStarted, gravity, wireframes, backgroundColor, mouseConstraintStiffness]);
+  }, [
+    effectStarted,
+    gravity,
+    wireframes,
+    backgroundColor,
+    mouseConstraintStiffness,
+  ]);
 
   const handleTrigger = () => {
     if (!effectStarted && (trigger === "click" || trigger === "hover")) {
@@ -228,7 +290,9 @@ const FallingText: React.FC<FallingTextProps> = ({
   return (
     <div
       ref={containerRef}
-      className="relative z-[1] w-full h-full cursor-pointer text-center pt-8 "
+      className={`relative  ${
+        isScrolling ? "z-[-1]" : "z-0"
+      } w-full h-full cursor-pointer text-center pt-8`}
       onClick={trigger === "click" ? handleTrigger : undefined}
       onMouseEnter={trigger === "hover" ? handleTrigger : undefined}
     >
@@ -238,6 +302,11 @@ const FallingText: React.FC<FallingTextProps> = ({
         style={{ fontSize, lineHeight: 1.4 }}
       />
       <div ref={canvasContainerRef} className="absolute top-0 left-0 z-0" />
+      {/** Optional: show scroll state */}
+      <div
+        className="absolute bottom-0 left-0 text-xs text-gray-
+      500"
+      ></div>
     </div>
   );
 };

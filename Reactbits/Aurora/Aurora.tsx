@@ -214,7 +214,7 @@ export default function Aurora(props: AuroraProps) {
     ctn.appendChild(gl.canvas);
 
     let animateId = 0;
-    const loopDuration = 100.0; // seconds
+    const loopDuration = 40.0; // seconds
     const startTime = performance.now();
 
     const update = () => {
