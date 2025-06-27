@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useRef, useEffect, useState } from "react";
 
 interface GooeyNavItem {
@@ -348,13 +349,13 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
                 }`}
                 onClick={(e) => handleClick(e, index)}
               >
-                <a
+                <Link
                   href={item.href}
                   onKeyDown={(e) => handleKeyDown(e, index)}
                   className="outline-none"
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

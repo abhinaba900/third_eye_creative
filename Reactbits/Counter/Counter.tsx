@@ -20,28 +20,24 @@ function Number({ mv, number, height }: NumberProps) {
     return memo;
   });
 
-  const style: React.CSSProperties = {
-    position: "absolute",
-    top: 0,
-    right: 0,
-    bottom: 0,
-    left: 0,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-  };
-
-  return <motion.span style={{ ...style, y }}>{number}</motion.span>;
+  return (
+    <motion.span 
+      className="absolute inset-0 flex items-center justify-center"
+      style={{ y }}
+    >
+      {number}
+    </motion.span>
+  );
 }
 
 interface DigitProps {
   place: number;
   value: number;
   height: number;
-  digitStyle?: React.CSSProperties;
+  digitClassName?: string;
 }
 
-function Digit({ place, value, height, digitStyle }: DigitProps) {
+function Digit({ place, value, height, digitClassName = "" }: DigitProps) {
   let valueRoundedToPlace = Math.floor(value / place);
   let animatedValue = useSpring(valueRoundedToPlace);
 
@@ -49,15 +45,11 @@ function Digit({ place, value, height, digitStyle }: DigitProps) {
     animatedValue.set(valueRoundedToPlace);
   }, [animatedValue, valueRoundedToPlace]);
 
-  const defaultStyle: React.CSSProperties = {
-    height,
-    position: "relative",
-    width: "1ch",
-    fontVariantNumeric: "tabular-nums",
-  };
-
   return (
-    <div style={{ ...defaultStyle, ...digitStyle }}>
+    <div 
+      className={`relative w-[1ch] font-tabular-nums ${digitClassName}`}
+      style={{ height: `${height}px` }}
+    >
       {Array.from({ length: 10 }, (_, i) => (
         <Number key={i} mv={animatedValue} number={i} height={height} />
       ))}
@@ -67,21 +59,21 @@ function Digit({ place, value, height, digitStyle }: DigitProps) {
 
 interface CounterProps {
   value: number;
-  fontSize?: number;
+  fontSize?: number; // in pixels
   padding?: number;
   gap?: number;
   borderRadius?: number;
   horizontalPadding?: number;
   textColor?: string;
-  fontWeight?: React.CSSProperties["fontWeight"];
-  containerStyle?: React.CSSProperties;
-  counterStyle?: React.CSSProperties;
-  digitStyle?: React.CSSProperties;
+  fontWeight?: string;
+  containerClassName?: string;
+  counterClassName?: string;
+  digitClassName?: string;
   gradientHeight?: number;
   gradientFrom?: string;
   gradientTo?: string;
-  topGradientStyle?: React.CSSProperties;
-  bottomGradientStyle?: React.CSSProperties;
+  topGradientClassName?: string;
+  bottomGradientClassName?: string;
   duration?: number;
 }
 
@@ -94,14 +86,14 @@ export default function Counter({
   horizontalPadding = 8,
   textColor = "white",
   fontWeight = "bold",
-  containerStyle,
-  counterStyle,
-  digitStyle,
+  containerClassName = "",
+  counterClassName = "",
+  digitClassName = "",
   gradientHeight = 16,
   gradientFrom = "black",
   gradientTo = "transparent",
-  topGradientStyle,
-  bottomGradientStyle,
+  topGradientClassName = "",
+  bottomGradientClassName = "",
   duration = 2000,
 }: CounterProps) {
   const [currentValue, setCurrentValue] = useState(0);
@@ -115,7 +107,7 @@ export default function Counter({
   );
 
   useEffect(() => {
-    const targetValue = Math.max(value, 0); // Ensure value is not negative
+    const targetValue = Math.max(value, 0);
 
     const startTime = Date.now();
     const endTime = startTime + duration;
@@ -138,79 +130,49 @@ export default function Counter({
     requestAnimationFrame(animate);
   }, [value, duration]);
 
-  // Easing function for smooth animation
   function easeOutQuad(t: number): number {
     return t * (2 - t);
   }
 
-  const defaultContainerStyle: React.CSSProperties = {
-    // position: "relative",
-    display: "flex",
-    alignItems: "center", // vertical centering
-    justifyContent: "center", // horizontal centering
-    position: "relative",
-  };
-
-  const defaultCounterStyle: React.CSSProperties = {
-    fontSize,
-    display: "flex",
-    gap: gap,
-    overflow: "hidden",
-    borderRadius: borderRadius,
-    paddingLeft: horizontalPadding,
-    paddingRight: horizontalPadding,
-    lineHeight: 1,
-    color: textColor,
-    fontWeight: fontWeight,
-    boxShadow: "none", // Explicitly remove box shadow
-  };
-
-  const gradientContainerStyle: React.CSSProperties = {
-    pointerEvents: "none",
-    position: "absolute",
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-  };
-
-  const defaultTopGradientStyle: React.CSSProperties = {
-    height: gradientHeight,
-    background: `linear-gradient(to bottom, ${gradientFrom}, ${gradientTo})`,
-  };
-
-  const defaultBottomGradientStyle: React.CSSProperties = {
-    position: "absolute",
-    bottom: 0,
-    width: "100%",
-    height: gradientHeight,
-    background: `linear-gradient(to top, ${gradientFrom}, ${gradientTo})`,
-  };
-
   return (
-    <div style={{ ...defaultContainerStyle, ...containerStyle }}>
-      <div style={{ ...defaultCounterStyle, ...counterStyle }}>
+    <div className={`flex items-center justify-center relative ${containerClassName}`}>
+      <div 
+        className={`flex overflow-hidden leading-none shadow-none ${counterClassName}`}
+        style={{
+          fontSize: `${fontSize}px`,
+          gap: `${gap}px`,
+          borderRadius: `${borderRadius}px`,
+          paddingLeft: `${horizontalPadding}px`,
+          paddingRight: `${horizontalPadding}px`,
+          color: textColor,
+          fontWeight,
+        }}
+      >
         {places.map((place) => (
           <Digit
             key={place}
             place={place}
             value={currentValue}
             height={height}
-            digitStyle={digitStyle}
+            digitClassName={digitClassName}
           />
         ))}
         <span className="plus-icon-in-counter">+</span>
       </div>
-      <div style={gradientContainerStyle}>
-        <div
-          style={topGradientStyle ? topGradientStyle : defaultTopGradientStyle}
+      <div className="pointer-events-none absolute inset-0">
+        <div 
+          className={`w-full ${topGradientClassName}`}
+          style={{
+            height: `${gradientHeight}px`,
+            background: `linear-gradient(to bottom, ${gradientFrom}, ${gradientTo})`,
+          }}
         />
-        <div
-          style={
-            bottomGradientStyle
-              ? bottomGradientStyle
-              : defaultBottomGradientStyle
-          }
+        <div 
+          className={`absolute bottom-0 w-full ${bottomGradientClassName}`}
+          style={{
+            height: `${gradientHeight}px`,
+            background: `linear-gradient(to top, ${gradientFrom}, ${gradientTo})`,
+          }}
         />
       </div>
     </div>

@@ -158,7 +158,6 @@ html {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-
 }
 
 .hero-content-box-wrapper {
@@ -256,7 +255,7 @@ html {
   margin: 5rem auto 0 auto;
 }
 
-.falling-text-container-highlight.hovered{
+.falling-text-container-highlight.hovered {
   max-width: 100%;
 }
 
@@ -800,4 +799,180 @@ html {
   100% {
     background-position: 0% 50%;
   }
+}
+
+/* about us  */
+
+/* about us hero section  */
+
+.about-us-hero-section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  overflow: hidden;
+  position: relative;
+  border-radius: 0 0 48px 48px;
+  z-index: 1;
+}
+
+.about-us-hero-section-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 21vw;
+  line-height: 120%;
+  letter-spacing: -2%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.about-us-hero-section-content-wrapper span {
+  background: linear-gradient(0deg, #772bf2, #772bf2),
+    linear-gradient(180deg, #ec4b7b 0%, rgba(206, 10, 255, 0) 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+.about-us-hero-section-content-wrapper {
+  max-width: 996px;
+  padding-left: 7.292vw;
+  padding-bottom: 17.5vh;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.about-us-hero-section-content-wrapper h4 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0%;
+}
+
+.about-us-hero-section-footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.833rem;
+}
+
+.about-us-hero-section-footer-wrapper p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -1%;
+  background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* service tags */
+
+.servicetags-text {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  background: linear-gradient(0deg, #e1d3ff, #e1d3ff),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* our approch */
+
+.our-approach-wrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: start;
+  height: 100%;
+
+  padding: 14.444vh 5.417vw 12.963vh 5.417vw;
+}
+
+.our-approach-wrapper .our-approach-content-wrapper p {
+  max-width: 816px;
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 405;
+  font-size: 2.5rem;
+  line-height: 56px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.our-approach-wrapper h3 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.our-approach-wrapper h3 span {
+  background: linear-gradient(0deg, #c883ff, #c883ff),
+    linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+/* impact status */
+
+.impact-stats-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: start;
+  height: 100%;
+  padding: 14.444vh 5.417vw 12.963vh 5.417vw;
+}
+
+.impact-stats-divider {
+  text-align: center;
+}
+
+.impact-stats-divider p {
+  font-family: Cabinet Grotesk;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 3%;
+  text-align: center;
+  background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+.impact-stats-divider .counter-container-wrapper {
+  font-size: 12.5rem !important;
+}
+
+/* service highlights */
+
+.service-highlights {
+  margin-bottom: 8.75rem;
+}
+
+.service-highlights .workflow-stage-icon {
+  width: 100px;
+  height: 99.98622131347656px;
 }

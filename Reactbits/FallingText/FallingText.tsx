@@ -291,7 +291,7 @@ const FallingText: React.FC<FallingTextProps> = ({
     <div
       ref={containerRef}
       className={`relative  ${
-        isScrolling ? "z-[-1]" : "z-0"
+        isScrolling ? "z-[0]" : "z-0"
       } w-full h-full cursor-pointer text-center pt-8`}
       onClick={trigger === "click" ? handleTrigger : undefined}
       onMouseEnter={trigger === "hover" ? handleTrigger : undefined}
@@ -301,6 +301,7 @@ const FallingText: React.FC<FallingTextProps> = ({
         className="inline-block"
         style={{ fontSize, lineHeight: 1.4 }}
       />
+      
       <div ref={canvasContainerRef} className="absolute top-0 left-0 z-0" />
       {/** Optional: show scroll state */}
       <div

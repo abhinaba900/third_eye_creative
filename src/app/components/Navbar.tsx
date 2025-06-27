@@ -5,8 +5,8 @@ import GooeyNav from "../../../Reactbits/GooeyNav/GooeyNav";
 
 function Navbar() {
   const items = [
-    { label: "Home", href: "#" },
-    { label: "About Us", href: "#" },
+    { label: "Home", href: "/" },
+    { label: "About Us", href: "aboutus" },
     { label: "Work", href: "#" },
     { label: "Careers", href: "#" },
   ];

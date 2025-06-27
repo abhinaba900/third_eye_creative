@@ -1,8 +1,8 @@
 ﻿"use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import HorizontalScroller from "./HorizontalScroller";
-import { useState } from "react";
 interface Testimonial {
   name: string;
   title: string;
