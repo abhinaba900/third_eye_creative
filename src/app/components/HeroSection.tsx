@@ -61,7 +61,7 @@ function HeroSection() {
                   padding={5}
                   gap={10}
                   textColor="white"
-                  fontWeight={900}
+                  fontWeight={"900"}
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />
@@ -74,7 +74,7 @@ function HeroSection() {
                   padding={5}
                   gap={10}
                   textColor="white"
-                  fontWeight={900}
+                  fontWeight={"900"}
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />
@@ -87,7 +87,7 @@ function HeroSection() {
                   padding={5}
                   gap={10}
                   textColor="white"
-                  fontWeight={900}
+                  fontWeight={"900"}
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />
@@ -100,7 +100,7 @@ function HeroSection() {
                   padding={5}
                   gap={10}
                   textColor="white"
-                  fontWeight={900}
+                  fontWeight={"900"}
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />

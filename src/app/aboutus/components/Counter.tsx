@@ -3,6 +3,14 @@
 import { MotionValue, motion, useSpring, useTransform } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 
+type ResponsiveValue<T> = T | {
+  base?: T;
+  sm?: T;
+  md?: T;
+  lg?: T;
+  xl?: T;
+};
+
 interface NumberProps {
   mv: MotionValue<number>;
   number: number;
@@ -11,9 +19,9 @@ interface NumberProps {
 }
 
 function Number({ mv, number, height, textGradient }: NumberProps) {
-  let y = useTransform(mv, (latest) => {
-    let placeValue = latest % 10;
-    let offset = (10 + number - placeValue) % 10;
+  const y = useTransform(mv, (latest) => {
+    const placeValue = latest % 10;
+    const offset = (10 + number - placeValue) % 10;
     let memo = offset * height;
     if (offset > 5) {
       memo -= 10 * height;
@@ -52,8 +60,8 @@ function Digit({
   digitClassName = "",
   textGradient,
 }: DigitProps) {
-  let valueRoundedToPlace = Math.floor(value / place);
-  let animatedValue = useSpring(valueRoundedToPlace);
+  const valueRoundedToPlace = Math.floor(value / place);
+  const animatedValue = useSpring(valueRoundedToPlace);
 
   useEffect(() => {
     animatedValue.set(valueRoundedToPlace);
@@ -79,16 +87,16 @@ function Digit({
 
 interface CounterProps {
   value: number;
-  fontSize?: number | { base?: number; sm?: number; md?: number; lg?: number; xl?: number };
-  padding?: number | { base?: number; sm?: number; md?: number; lg?: number; xl?: number };
-  gap?: number | { base?: number; sm?: number; md?: number; lg?: number; xl?: number };
-  borderRadius?: number | { base?: number; sm?: number; md?: number; lg?: number; xl?: number };
-  horizontalPadding?: number | { base?: number; sm?: number; md?: number; lg?: number; xl?: number };
-  fontWeight?: string | { base?: string; sm?: string; md?: string; lg?: string; xl?: string };
+  fontSize?: ResponsiveValue<number>;
+  padding?: ResponsiveValue<number>;
+  gap?: ResponsiveValue<number>;
+  borderRadius?: ResponsiveValue<number>;
+  horizontalPadding?: ResponsiveValue<number>;
+  fontWeight?: ResponsiveValue<string>;
   containerClassName?: string;
   counterClassName?: string;
   digitClassName?: string;
-  gradientHeight?: number | { base?: number; sm?: number; md?: number; lg?: number; xl?: number };
+  gradientHeight?: ResponsiveValue<number>;
   gradientFrom?: string;
   gradientTo?: string;
   topGradientClassName?: string;
@@ -99,6 +107,13 @@ interface CounterProps {
   textGradientDegree?: number;
   textGradientStops?: string[];
   threshold?: number;
+}
+
+// Helper type guard
+function isResponsiveObject<T>(value: ResponsiveValue<T>): value is { base?: T; sm?: T; md?: T; lg?: T; xl?: T } {
+  return typeof value === "object" && value !== null && (
+    "base" in value || "sm" in value || "md" in value || "lg" in value || "xl" in value
+  );
 }
 
 export default function Counter({
@@ -127,16 +142,15 @@ export default function Counter({
   const [currentValue, setCurrentValue] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
   const counterRef = useRef<HTMLDivElement>(null);
-  
-  // Responsive value handling
-  const getResponsiveValue = (value: any, defaultVal: any) => {
-    if (typeof value === 'object') {
+
+  const getResponsiveValue = <T,>(value: ResponsiveValue<T>, defaultVal: T) => {
+    if (isResponsiveObject(value)) {
       return {
-        base: value.base || defaultVal,
-        sm: value.sm || value.base || defaultVal,
-        md: value.md || value.sm || value.base || defaultVal,
-        lg: value.lg || value.md || value.sm || value.base || defaultVal,
-        xl: value.xl || value.lg || value.md || value.sm || value.base || defaultVal,
+        base: value.base ?? defaultVal,
+        sm: value.sm ?? value.base ?? defaultVal,
+        md: value.md ?? value.sm ?? value.base ?? defaultVal,
+        lg: value.lg ?? value.md ?? value.sm ?? value.base ?? defaultVal,
+        xl: value.xl ?? value.lg ?? value.md ?? value.sm ?? value.base ?? defaultVal,
       };
     }
     return {
@@ -156,7 +170,6 @@ export default function Counter({
   const responsiveFontWeight = getResponsiveValue(fontWeight, "bold");
   const responsiveGradientHeight = getResponsiveValue(gradientHeight, 16);
 
-  // Calculate height based on responsive values
   const height = {
     base: responsiveFontSize.base + responsivePadding.base,
     sm: responsiveFontSize.sm + responsivePadding.sm,
@@ -165,12 +178,8 @@ export default function Counter({
     xl: responsiveFontSize.xl + responsivePadding.xl,
   };
 
-  // Calculate the number of digits needed dynamically
-  const numDigits =
-    value === 0 ? 1 : Math.floor(Math.log10(Math.max(1, value))) + 1;
-  const places = Array.from({ length: numDigits }, (_, i) =>
-    Math.pow(10, numDigits - 1 - i)
-  );
+  const numDigits = value === 0 ? 1 : Math.floor(Math.log10(Math.max(1, value))) + 1;
+  const places = Array.from({ length: numDigits }, (_, i) => Math.pow(10, numDigits - 1 - i));
 
   useEffect(() => {
     if (!counterRef.current || hasStarted) return;
@@ -224,15 +233,10 @@ export default function Counter({
     requestAnimationFrame(animate);
   }, [hasStarted, value, duration]);
 
-  function easeOutQuad(t: number): number {
-    return t * (2 - t);
-  }
+  const easeOutQuad = (t: number): number => t * (2 - t);
 
-  // Build the text gradient
   const textGradient = textGradientStops
-    ? `linear-gradient(${textGradientDegree}deg, ${textGradientStops.join(
-        ", "
-      )})`
+    ? `linear-gradient(${textGradientDegree}deg, ${textGradientStops.join(", ")})`
     : `linear-gradient(${textGradientDegree}deg, ${textGradientFrom}, ${textGradientTo})`;
 
   return (
