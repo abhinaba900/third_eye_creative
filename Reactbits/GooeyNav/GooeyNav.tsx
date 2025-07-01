@@ -17,6 +17,8 @@ export interface GooeyNavProps {
   timeVariance?: number;
   colors?: number[];
   initialActiveIndex?: number;
+  activeIndex?: number;
+  setActiveIndex?: (index: number) => void;
 }
 
 const GooeyNav: React.FC<GooeyNavProps> = ({
@@ -67,7 +69,7 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
     const bubbleTime = animationTime * 2 + timeVariance;
     element.style.setProperty("--time", `${bubbleTime}ms`);
     setAnimationComplete(false);
-    
+
     for (let i = 0; i < particleCount; i++) {
       const t = animationTime * 2 + noise(timeVariance * 2);
       const p = createParticle(i, t, d, r);
@@ -97,7 +99,7 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
         }, t);
       }, 30);
     }
-    
+
     // Set animation complete after all particles are done
     setTimeout(() => {
       setAnimationComplete(true);
@@ -170,6 +172,17 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
     resizeObserver.observe(containerRef.current);
     return () => resizeObserver.disconnect();
   }, [activeIndex]);
+
+  useEffect(() => {
+    const activeHref = window.location.pathname;
+
+    const index = items.findIndex(
+      (item) => item.href === activeHref.replace("/", "")
+    );
+    if (index !== -1) {
+      setActiveIndex(index);
+    }
+  }, []);
 
   return (
     <>

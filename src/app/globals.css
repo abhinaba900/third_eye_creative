@@ -80,7 +80,7 @@ html {
 }
 
 .navbar-wrapper {
-  padding: 0 2rem 0 2rem;
+  padding: 2rem 2rem 0 2rem;
   position: sticky;
   top: 0;
   background-color: transparent;
@@ -94,6 +94,38 @@ html {
   line-height: 20.04px;
   letter-spacing: -1%;
   color: #ffffff;
+}
+
+.start-project-button {
+  height: 51px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 28px;
+  border: 1px solid #ffffff;
+  border-radius: 100px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1; /* LOWER than background image */
+  overflow: hidden;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20.04px;
+  letter-spacing: -1%;
+}
+
+.buttom-background-in-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateX(0); /* Ensure it's visible */
+  transition: transform 0.3s ease-in-out;
+  z-index: 0; /* Background should be BEHIND text and icon */
 }
 
 /* hero section  */
@@ -991,4 +1023,152 @@ html {
 .service-highlights .workflow-stage-icon {
   width: 100px;
   height: 99.98622131347656px;
+}
+
+/* creative team intro */
+
+.creative-team-intro-wrapper {
+  margin-top: 8.75rem;
+}
+
+.creative-team-intro-title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 140px;
+  line-height: 140%;
+  letter-spacing: -4%;
+  text-align: center;
+}
+
+.creative-team-intro-title span {
+  background: linear-gradient(0deg, #772bf2, #772bf2),
+    linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+.text-section-in-creative-team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 5rem;
+}
+
+.text-section-in-creative-team p {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0%;
+}
+
+.text-wraper-in-creative-team {
+  max-width: 1279px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* trusted by brands section */
+
+.trusted-by-brands-wrapper {
+  position: relative;
+}
+
+.heading-content-holders {
+  padding: 0 6.563rem 7.5rem 6.563rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading-content-holders h3 {
+  max-width: 500px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 88px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.heading-content-holders h3 span {
+  background: linear-gradient(0deg, #772bf2, #772bf2),
+    linear-gradient(180deg, #ec4b7b 0%, rgba(206, 10, 255, 0) 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+.heading-content-holders p {
+  max-width: 415px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+/* service overview  */
+
+.services-overview-wrapper {
+  padding: 8.75rem 0 12.5rem 0;
+}
+
+.services-overview-title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 88px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.services-overview-title span {
+  background: linear-gradient(0deg, #c883ff, #c883ff),
+    linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+.services-overview-description {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: center;
+  max-width: 608px;
+  margin: auto;
+}
+
+.services-overview-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  padding: 6.25rem;
+  max-width: 1284px;
+  margin: auto;
+}
+
+.services-overview-list{
+  width: 100%;
+}
+
+.services-overview-list p {
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 415;
+  font-size: 64px;
+  line-height: 72px;
+  letter-spacing: -2%;
 }

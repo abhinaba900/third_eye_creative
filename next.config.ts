@@ -12,12 +12,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "images.unsplash.com",
-      },
-    ],
+    remotePatterns: [new URL("https://images.unsplash.com")],
   },
 };
 

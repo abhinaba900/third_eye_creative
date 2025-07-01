@@ -10,6 +10,7 @@ function Navbar() {
     { label: "Work", href: "#" },
     { label: "Careers", href: "#" },
   ];
+
   return (
     <section className="flex  items-center  justify-between py-2 text-white navbar-wrapper">
       <Image src="/assets/main-logo.png" alt="Logo" width={259} height={51} />
@@ -27,13 +28,18 @@ function Navbar() {
         />
       </div>
 
-      <button>
+      <button className="start-project-button">
+        Start Project{" "}
         <Image
-          src="/assets/StartProject.png"
-          alt="Start Project"
-          width={196}
-          height={51}
-          className="mx-auto my-4 cursor-pointer"
+          src="/assets/Navbar-start-project-arrow.png"
+          alt="arrow"
+          width={16}
+          height={16}
+        />
+        <img
+          src="/assets/navbar-start-project-background.png"
+          className="buttom-background-in-navbar"
+          alt="background"
         />
       </button>
     </section>
