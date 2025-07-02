@@ -1073,6 +1073,82 @@ html {
   justify-content: center;
 }
 
+.creative-team-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 1px solid #3f3f3f;
+  cursor: pointer;
+}
+
+.creative-team-image-wrapper {
+  padding: 0 6.563rem 7rem 6.563rem;
+}
+
+.main-heading-tet-in-creative-team {
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 410;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: 0%;
+  background: linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+.creative-team-tags {
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 405;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.creative-team-description {
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 405;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
+.creative-team-name {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -2%;
+  text-align: center;
+
+  background: linear-gradient(0deg, #c883ff, #c883ff),
+    linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+.creative-team-role {
+  font-family: var(--font-family);
+  font-weight: 405;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  background: linear-gradient(94.46deg, #ffffff 25.29%, #9c9c9c 107.3%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
 /* trusted by brands section */
 
 .trusted-by-brands-wrapper {
@@ -1114,6 +1190,22 @@ html {
   line-height: 32px;
   letter-spacing: 0%;
   vertical-align: middle;
+}
+
+/* Add this to your global CSS or module CSS */
+.brand-logo {
+  transition: all 0.3s ease;
+}
+
+.brand-logo svg .brand-fill {
+  transition: fill 0.3s ease, stroke 0.3s ease;
+}
+
+.brand-logo:hover svg .brand-fill {
+  fill: #3b82f6;
+}
+.brand-logo:hover svg .brand-stroke {
+  stroke: #3b82f6;
 }
 
 /* service overview  */
@@ -1161,7 +1253,7 @@ html {
   margin: auto;
 }
 
-.services-overview-list{
+.services-overview-list {
   width: 100%;
 }
 

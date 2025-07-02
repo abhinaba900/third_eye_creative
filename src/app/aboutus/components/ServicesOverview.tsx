@@ -35,6 +35,10 @@ const services = [
 
 function ServicesOverview() {
   const [active, setActive] = useState(0);
+  const [hovered, setHovered] = useState<number | null>(null);
+
+  const currentIndex = hovered !== null ? hovered : active;
+  const currentService = services[currentIndex];
 
   return (
     <div className="services-overview-wrapper">
@@ -47,11 +51,12 @@ function ServicesOverview() {
       </p>
 
       <div className="services-overview-content flex flex-col md:flex-row gap-10">
-        {/* Image or Graphic Preview */}
+        {/* Image Preview */}
         <div className="w-full rounded-lg overflow-hidden flex justify-center">
-          <img
-            src={services[active].image}
-            alt={services[active].title}
+          <motion.img
+            key={currentService.image} // triggers animation on image change
+            src={currentService.image}
+            alt={currentService.title}
             width={520}
             height={797}
             onError={(e) => {
@@ -59,40 +64,53 @@ function ServicesOverview() {
                 "https://via.placeholder.com/520x797?text=No+Image";
             }}
             className="rounded-xl object-cover"
+            initial={{ opacity: 0.5, scale: 0.98 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
           />
         </div>
 
         {/* Service List */}
         <div className="w-full space-y-[2rem]">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              onClick={() => setActive(index)}
-              className={`cursor-pointer text-xl font-semibold flex items-center gap-2 transition-all services-overview-list ${
-                active === index ? "text-white" : "text-gray-500"
-              }`}
-            >
-              <AnimatePresence>
-                {active === index && (
-                  <motion.span
-                    key="arrow"
-                    initial={{ x: -20, opacity: 0 }}
-                    animate={{ x: 0, opacity: 1 }}
-                    exit={{ x: -20, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <Image
-                      src={"/assets/service overview arrow.png"}
-                      alt="arrow"
-                      width={50}
-                      height={42}
-                    />
-                  </motion.span>
-                )}
-              </AnimatePresence>
-              <p>{service.title}</p>
-            </div>
-          ))}
+          {services.map((service, index) => {
+            const isActive = active === index;
+            const isHovered = hovered === index;
+
+            const isHighlight = isHovered || isActive;
+
+            return (
+              <div
+                key={index}
+                onMouseEnter={() => setHovered(index)}
+                onMouseLeave={() => setHovered(null)}
+                onClick={() => setActive(index)}
+                className={`cursor-pointer text-xl font-semibold flex items-center gap-2 transition-all services-overview-list ${
+                  isHighlight ? "text-white" : "text-gray-500"
+                }`}
+              >
+                <AnimatePresence>
+                  {isHighlight && (
+                    <motion.span
+                      key={`arrow-${index}`}
+                      initial={{ x: -20, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      exit={{ x: -20, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <Image
+                        src={"/assets/service overview arrow.png"}
+                        alt="arrow"
+                        width={50}
+                        height={42}
+                      />
+                    </motion.span>
+                  )}
+                </AnimatePresence>
+                <p>{service.title}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
