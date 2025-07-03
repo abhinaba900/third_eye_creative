@@ -92,8 +92,8 @@ function CreativeTeamIntro() {
           </motion.div>
         </motion.div>
       </div>
-      <div className="  text-white  max-w-7xl mx-auto mb-[8.75rem]">
-        <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start">
+      <div className=" overflow-hidden text-white  max-w-7xl mx-auto mb-[8.75rem]  relative">
+        <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start ">
           {/* Left: Text Content */}
           <div className="lg:w-[40%] w-full space-y-6">
             <h2 className="text-3xl font-semibold leading-snug main-heading-tet-in-creative-team">
@@ -117,6 +117,19 @@ function CreativeTeamIntro() {
               {teamMember.description}
             </p>
           </div>
+
+          <img
+            src="/assets/Pink background blurred.png"
+            alt="background-image"
+            className="absolute -top-20 left-35 w-full h-screen z-2 right-0"
+          />
+          <Image
+            width={785}
+            height={499}
+            src="/assets/background in creative team info.png"
+            alt="background-image"
+            className="absolute -top-30 left-80  z-3 right-0"
+          />
 
           {/* Right: Image Stack */}
           <div className="relative lg:w-[60%] w-full h-[500px] lg:h-[550px] overflow-hidden ">

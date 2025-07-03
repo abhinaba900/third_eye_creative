@@ -1,47 +1,91 @@
 "use client";
 
 import Image from "next/image";
-import GooeyNav from "../../../Reactbits/GooeyNav/GooeyNav";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 function Navbar() {
   const items = [
     { label: "Home", href: "/" },
-    { label: "About Us", href: "aboutus" },
+    { label: "About Us", href: "/aboutus" },
     { label: "Work", href: "#" },
     { label: "Careers", href: "#" },
   ];
 
+  const [active, setActive] = useState(0);
+  const pathname = usePathname(); // e.g. /aboutus/123
+
+  useEffect(() => {
+    const index = items.findIndex((item) => {
+      // Match exact or dynamic routes like /aboutus/123
+      if (item.href === "/") return pathname === "/";
+      return pathname.startsWith(item.href);
+    });
+
+    if (index !== -1) {
+      setActive(index);
+    }
+  }, []);
+
   return (
     <section className="flex  items-center  justify-between py-2 text-white navbar-wrapper">
-      <Image src="/assets/main-logo.png" alt="Logo" width={259} height={51} />
+      <Link href={"/"} className="btn">
+        <strong className="text-section-in-navbar">
+          <span>THIRD</span>
+          <Image
+            src="/assets/logo eye.png"
+            alt="arrow"
+            width={24}
+            height={17}
+          />
+          <span>CREATIVE</span>
+        </strong>
+        <div id="container-stars">
+          <div id="stars"></div>
+        </div>
+
+        <div id="glow">
+          <div className="circle"></div>
+          <div className="circle"></div>
+        </div>
+      </Link>
 
       <div className="navitems-section-wrapper">
-        <GooeyNav
-          items={items}
-          particleCount={20}
-          particleDistances={[90, 10]}
-          particleR={100}
-          initialActiveIndex={0}
-          animationTime={600}
-          timeVariance={300}
-          colors={[1, 2, 3, 1, 2, 3, 1, 4]}
-        />
+        {items.map((item, idx) => (
+          <Link
+            href={item.href}
+            key={idx}
+            onClick={() => setActive(idx)}
+            className={`nav-item ${active === idx ? "active-nav" : ""}`}
+          >
+            {item.label}
+          </Link>
+        ))}
       </div>
 
-      <button className="start-project-button">
-        Start Project{" "}
-        <Image
-          src="/assets/Navbar-start-project-arrow.png"
-          alt="arrow"
-          width={16}
-          height={16}
-        />
-        <img
-          src="/assets/navbar-start-project-background.png"
-          className="buttom-background-in-navbar"
-          alt="background"
-        />
-      </button>
+      <div className="galaxy-button  ">
+        <button className="space-button start-project-button">
+          <span className="backdrop"></span>
+          <span className="galaxy"></span>
+          <label className="text relative flex items-center gap-2 ">
+            Start Project{" "}
+            <Image
+              src="/assets/Navbar-start-project-arrow.png"
+              alt="arrow"
+              width={16}
+              height={16}
+            />
+            <img
+              src="/assets/navbar-start-project-background.png"
+              className="buttom-background-in-navbar"
+              alt="background"
+            />
+          </label>
+        </button>
+        <div className="bodydrop"></div>
+      </div>
+
     </section>
   );
 }

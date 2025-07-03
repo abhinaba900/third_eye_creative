@@ -1,7 +1,6 @@
 ﻿"use client";
 import HorizontalScroller from "@/app/components/HorizontalScroller";
 import React from "react";
-import { motion } from "framer-motion";
 type itemData = {
   image: React.ReactNode;
 };
@@ -484,30 +483,10 @@ function TrustedByBrands() {
           together!
         </p>
       </div>
-      <motion.div
-        className="horizontal-scroller-container-testimonial-showcase cursor-grab overflow-hidden"
-        whileTap={{ cursor: "grabbing" }}
-      >
-        <motion.div
-          drag="x"
-          dragConstraints={{ left: -1000, right: 0 }}
-          className="flex gap-6 px-2"
-        >
-          {branddata.map((item, index) => (
-            <div
-              key={index}
-              className="min-w-[200px] flex items-center justify-center p-4  rounded-md shadow hover:shadow-lg transition-shadow duration-300 hover:scale-105"
-            >
-              <div className="brand-logo hover-fill-transition w-full flex justify-center">
-                {item.image}
-              </div>
-            </div>
-          ))}
-        </motion.div>
-      </motion.div>
+
       <div className="horizontal-scroller-container-testimonial-showcase relative">
         <HorizontalScroller
-          data={[branddata, branddata]} // Pass the branddata array directly
+          data={[branddata, branddata, branddata]} // Pass the branddata array directly
           renderCard={(item: itemData, index) => (
             <div
               key={index}

@@ -5,7 +5,7 @@ import FallingText from "../../../Reactbits/FallingText/FallingText";
 function OurExpertise() {
   const [isHoveredForAnimation, setIsHoveredForAnimation] = useState(false);
   return (
-    <div className="our-expertise-wrapper overflow-hidden">
+    <div className="our-expertise-wrapper max-w-[1232px] overflow-hidden mx-auto">
       <img
         src="/assets/Our-Expertise-background-image.png"
         alt="Our Expertise Background"

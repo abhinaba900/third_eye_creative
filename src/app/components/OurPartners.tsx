@@ -1,7 +1,14 @@
-﻿import React from "react";
+﻿"use client";
+import React from "react";
+import HorizontalScroller from "./HorizontalScroller";
+
+type partner = {
+  name: string;
+  logo: React.ReactNode;
+};
 
 function OurPartners() {
-  const partners = [
+  const partners: partner[] = [
     {
       name: "Partner 1",
       logo: (
@@ -448,12 +455,22 @@ function OurPartners() {
   ];
   return (
     <div className="our-partners-section">
-      <div className="flex flex-wrap gap-[47px]  justify-center items-center">
-        {partners.map((partner, index) => (
-          <div key={index} className="flex items-center">
-            {partner.logo}
-          </div>
-        ))}
+      <div className="">
+        <HorizontalScroller
+          data={[partners]}
+          isHoverable={false}
+          renderCard={(partner: partner, index) => (
+            <div
+              key={index}
+              className={`w-[200px]  flex flex-col justify-center align-middle gap-4`}
+              style={{ margin: "0 8px" }} // 8px horizontal margin (equivalent to mx-2)
+            >
+              <div key={index} className="flex items-center">
+                {partner.logo}
+              </div>
+            </div>
+          )}
+        />
       </div>
     </div>
   );

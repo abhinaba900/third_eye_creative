@@ -20,7 +20,6 @@ export default function Home() {
       <TestimonialShowcase />
       <OurPartners />
       <BuildWithUsBanner />
-      
     </section>
   );
 }
