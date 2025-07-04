@@ -473,10 +473,10 @@ html {
 }
 
 .hero-section-wrapper {
-  background-image: url("../../public/assets/hero-section-background.png");
+  /* background-image: url("../../public/assets/hero-section-background.png");
   background-size: cover;
   background-position: top center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   position: relative;
   z-index: 1;
   display: flex;
@@ -493,6 +493,7 @@ html {
   width: 100vw;
   max-height: 1180px;
   min-height: 1180px;
+  object-fit: cover;
 }
 
 .hero-section-content-wrapper {
@@ -1223,7 +1224,7 @@ strong {
   text-align: center;
   vertical-align: middle;
   color: #ffffff;
-  max-width: 816px;
+  max-width: 476px;
   margin: 1.5rem auto 5rem auto;
 }
 
@@ -1515,9 +1516,20 @@ strong {
   justify-content: space-between;
 
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  top: 10%;
   border-radius: 0 0 48px 48px;
   z-index: 1;
+}
+
+.background-image-hero-section-about-us {
+  margin-top: -10%;
+  left: 0;
+  width: 100vw;
+  object-fit: cover;
+
+  max-height: 980px;
+  min-height: 980px;
 }
 
 .about-us-hero-section-title {

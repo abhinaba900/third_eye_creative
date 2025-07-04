@@ -7,7 +7,7 @@ function HeroSection() {
   return (
     <div className="hero-section-wrapper">
       <Image
-        src="/assets/hero-section-background.png"
+        src="/assets/Glass effect for hero section.svg"
         alt="Logo"
         width={"100"}
         height={"100"}

@@ -10,7 +10,7 @@ function Navbar() {
   const items = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/aboutus" },
-    { label: "Work", href: "#" },
+    { label: "Work", href: "/work" },
     { label: "Careers", href: "#" },
   ];
 
@@ -55,8 +55,8 @@ function Navbar() {
       <div className="navitems-section-wrapper relative">
         {/* Particle Background */}
         <Particles
-          particleCount={400}
-          particleSpread={10}
+          particleCount={2000}
+          particleSpread={20}
           speed={0.3}
           particleBaseSize={40}
           moveParticlesOnHover={false}
