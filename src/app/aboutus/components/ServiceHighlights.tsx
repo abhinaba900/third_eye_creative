@@ -71,7 +71,18 @@ function ServiceHighlights() {
   };
 
   return (
-    <div className="relative service-highlights" ref={ref}>
+    <div 
+      className="service-highlights" 
+      ref={ref}
+      style={{
+        marginBottom: "8.75rem",
+        maxWidth: "1260px",
+        margin: "0 auto",
+        padding: "0 20px",
+        width: "100%",
+        boxSizing: "border-box"
+      }}
+    >
       <div
         className="workflow-stages-grid-container"
         style={{
@@ -79,10 +90,10 @@ function ServiceHighlights() {
           top: 0,
           left: 0,
           transform: "translate(0,0)",
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "flex-end",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
           gap: "20px",
+          width: "100%",
         }}
       >
         {stages.map((stage, index) => (
@@ -94,11 +105,8 @@ function ServiceHighlights() {
             animate={controls}
             variants={cardVariants}
             style={{
-              width: "calc(25% - 20px)",
-              minWidth: "250px",
               padding: "20px",
               borderRadius: "21px",
-              marginBottom: "20px",
             }}
           >
             <Image

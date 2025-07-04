@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Particles from "../../../Reactbits/Particles/Particles";
 
 function Navbar() {
   const items = [
@@ -51,17 +52,32 @@ function Navbar() {
         </div>
       </Link>
 
-      <div className="navitems-section-wrapper">
-        {items.map((item, idx) => (
-          <Link
-            href={item.href}
-            key={idx}
-            onClick={() => setActive(idx)}
-            className={`nav-item ${active === idx ? "active-nav" : ""}`}
-          >
-            {item.label}
-          </Link>
-        ))}
+      <div className="navitems-section-wrapper relative">
+        {/* Particle Background */}
+        <Particles
+          particleCount={400}
+          particleSpread={10}
+          speed={0.3}
+          particleBaseSize={40}
+          moveParticlesOnHover={false}
+          alphaParticles={true}
+          disableRotation={true}
+          className="particle-background-in-navbar"
+        />
+
+        {/* Navigation Items */}
+        <div className="relative z-10 flex items-center gap-4">
+          {items.map((item, idx) => (
+            <Link
+              href={item.href}
+              key={idx}
+              onClick={() => setActive(idx)}
+              className={`nav-item ${active === idx ? "active-nav" : ""}`}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
       </div>
 
       <div className="galaxy-button  ">
@@ -85,7 +101,6 @@ function Navbar() {
         </button>
         <div className="bodydrop"></div>
       </div>
-
     </section>
   );
 }

@@ -8,11 +8,11 @@ function ImpactStats() {
         <Counter
           value={20}
           fontSize={{
-            base: 120, // for mobile (0-640px)
-            sm: 150, // for small devices (640px+)
-            md: 180, // for medium devices (768px+)
+            base: 200, // for mobile (0-640px)
+            sm: 200, // for small devices (640px+)
+            md: 200, // for medium devices (768px+)
             lg: 200, // for large devices (1024px+)
-            xl: 220, // for extra large devices (1280px+)
+            xl: 200, // for extra large devices (1280px+)
           }}
         />
         <p>Brands Transformed</p>
@@ -21,11 +21,11 @@ function ImpactStats() {
         <Counter
           value={50}
           fontSize={{
-            base: 120, // for mobile (0-640px)
-            sm: 150, // for small devices (640px+)
-            md: 180, // for medium devices (768px+)
+            base: 200, // for mobile (0-640px)
+            sm: 200, // for small devices (640px+)
+            md: 200, // for medium devices (768px+)
             lg: 200, // for large devices (1024px+)
-            xl: 220, // for extra large devices (1280px+)
+            xl: 200, // for extra large devices (1280px+)
           }}
         />
         <p>Websites & Platforms Delivered</p>
@@ -34,11 +34,11 @@ function ImpactStats() {
         <Counter
           value={10}
           fontSize={{
-            base: 120, // for mobile (0-640px)
-            sm: 150, // for small devices (640px+)
-            md: 180, // for medium devices (768px+)
+            base: 200, // for mobile (0-640px)
+            sm: 200, // for small devices (640px+)
+            md: 200, // for medium devices (768px+)
             lg: 200, // for large devices (1024px+)
-            xl: 220, // for extra large devices (1280px+)
+            xl: 200, // for extra large devices (1280px+)
           }}
         />
         <p>Mobile Apps Engineered</p>
@@ -47,11 +47,11 @@ function ImpactStats() {
         <Counter
           value={8}
           fontSize={{
-            base: 120, // for mobile (0-640px)
-            sm: 150, // for small devices (640px+)
-            md: 180, // for medium devices (768px+)
+            base: 200, // for mobile (0-640px)
+            sm: 200, // for small devices (640px+)
+            md: 200, // for medium devices (768px+)
             lg: 200, // for large devices (1024px+)
-            xl: 220, // for extra large devices (1280px+)
+            xl: 200, // for extra large devices (1280px+)
           }}
         />
         <p>Years of Creative Impact</p>
