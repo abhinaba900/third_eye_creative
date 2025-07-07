@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import SplashCursor from "../../Reactbits/SplashCursor/SplashCursor";
+// import SplashCursor from "../../Reactbits/SplashCursor/SplashCursor";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <body cz-shortcut-listen="true">
         <Navbar />
-        <SplashCursor />
+        {/* <SplashCursor /> */}
         {children}
         <Footer />
       </body>

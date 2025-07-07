@@ -1391,7 +1391,7 @@ strong {
 .footer-section {
   background: #181818;
   padding-top: 6.938rem;
-  height: 100vh;
+  height: 670px;
   overflow: hidden;
   position: relative; /* Make sure it's positioned relatively for absolute children */
 }
