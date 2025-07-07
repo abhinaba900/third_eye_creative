@@ -9,7 +9,7 @@ function BuildWithUsBanner() {
       </h3>
       <button className="view-more-button">
         Lets Build Something{" "}
-        <Image src="/assets/project-data-button-arrow.png" alt="arrow" width={24} height={24} />
+        <Image src="/assets/project-data-button-arrow.png" alt="arrow" width={24} height={24} className="view-more-button-arrow" />
       </button>
     </div>
   );

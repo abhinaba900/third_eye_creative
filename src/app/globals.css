@@ -917,6 +917,16 @@ html {
   /* overflow: hidden; */
 }
 
+.view-more-button:hover {
+  background: linear-gradient(0deg, #c883ff, #c883ff),
+    linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+.view-more-button:hover .view-more-button-arrow{
+  transform: rotate(-35deg);
+  transition: transform 0.3s ease-in-out;
+}
+
 /* Full animated border around the button */
 .view-more-button::before {
   content: "";
@@ -2054,7 +2064,7 @@ strong {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0%;
-  background: linear-gradient(93.46deg, #C4C4C4 4.94%, #FFFFFF 98.78%);
+  background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* for Firefox */
