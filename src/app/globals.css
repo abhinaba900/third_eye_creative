@@ -918,11 +918,13 @@ html {
 }
 
 .view-more-button:hover {
+  transform: scale(1.05);
   background: linear-gradient(0deg, #c883ff, #c883ff),
     linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  transition: all 0.3s ease-in-out;
 }
-.view-more-button:hover .view-more-button-arrow{
+.view-more-button:hover .view-more-button-arrow {
   transform: rotate(-35deg);
   transition: transform 0.3s ease-in-out;
 }

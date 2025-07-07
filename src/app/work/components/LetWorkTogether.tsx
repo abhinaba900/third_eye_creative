@@ -101,6 +101,7 @@ function LetWorkTogether() {
               alt="arrow"
               width={32}
               height={27.44}
+              className="view-more-button-arrow"
             />
           </button>
         </form>
