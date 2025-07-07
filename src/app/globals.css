@@ -2001,3 +2001,63 @@ strong {
   vertical-align: middle;
   margin-bottom: 5rem;
 }
+
+/* catagory filter bar */
+
+.work-grid-filter-button {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  height: 49px;
+  cursor: pointer;
+}
+
+/* project showcase grid  */
+
+.project-tags-in-project-showcase-grid {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.image-box-project-showcase-grid {
+  max-height: 454px;
+  min-height: 454px;
+  border-radius: 20px;
+}
+
+.project-title-in-project-showcase-grid {
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 415;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+.project-description-in-project-showcase-grid {
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  background: linear-gradient(93.46deg, #C4C4C4 4.94%, #FFFFFF 98.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+  opacity: 40%;
+}

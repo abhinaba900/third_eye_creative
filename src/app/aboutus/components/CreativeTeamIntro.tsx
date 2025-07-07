@@ -37,12 +37,35 @@ const teamDatas: TeamData[] = [
     role: "Founder, CEO & Creative Director",
     bannerimage: "/assets/creative team image ram banner image.png",
   },
+  {
+    id: 2,
+    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    tags: [
+      "Digital Marketing",
+      "Brand Strategist",
+      "AI Tools",
+      "Graphic Design",
+      "SEO Specialist",
+      "Concept Art",
+    ],
+    description:
+      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+    images: [
+      "/assets/creative team image siddharth image 1.png",
+      "/assets/creative team image ram image 2.png",
+      "/assets/creative team image siddharth image 2.png",
+    ],
+    name: "SIDDHARTH SHANKAR",
+    role: "CTO & Technical Head",
+    bannerimage: "/assets/creative team image ram banner image2.png",
+  },
 ];
 
 function CreativeTeamIntro() {
   const [bannerimages, setBannerImages] = React.useState<string[]>([]);
+  const [active, setActive] = React.useState<number>(1);
 
-  const teamMember = teamDatas[0];
+  const teamMember = teamDatas.find((project) => project.id === active);
 
   React.useEffect(() => {
     const images = teamDatas.map((item) => item.bannerimage);
@@ -82,6 +105,7 @@ function CreativeTeamIntro() {
             {bannerimages.map((item, index) => (
               <div
                 key={index}
+                onClick={() => setActive(index + 1)}
                 className="min-w-[200px] flex items-center justify-center p-4  rounded-md shadow hover:shadow-lg transition-shadow duration-300 hover:scale-105"
               >
                 <div className="brand-logo hover-fill-transition w-full flex justify-center creative-team-image">
