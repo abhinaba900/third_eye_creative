@@ -89,7 +89,7 @@ html {
   cursor: pointer;
 }
 
-.navitems-section-wrapper .nav-item.active-nav {
+.nav-item.active-nav {
   border: 2px solid #ffffff80;
   border-radius: 100px;
   color: #ffffff;
@@ -133,7 +133,7 @@ html {
   overflow: hidden;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 20.04px;
   letter-spacing: -1%;
 }
@@ -457,7 +457,7 @@ html {
 .hero-title-2 {
   font-family: var(--font-family);
   font-weight: 300;
-  font-size: 128px;
+  font-size: 8rem;
   line-height: 120%;
   letter-spacing: -7%;
   text-transform: uppercase;
@@ -469,7 +469,7 @@ html {
 
 .hero-title-2 {
   opacity: 100%;
-  font-size: 140px;
+  font-size: 8.75rem;
 }
 
 .hero-section-wrapper {
@@ -532,7 +532,7 @@ html {
 .plus-icon-in-counter {
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 64px;
+  font-size: 4rem;
   line-height: 100%;
   letter-spacing: 3%;
   text-transform: uppercase;
@@ -553,7 +553,7 @@ html {
 .ScrollReveal_scroll-reveal-text__Td_gR {
   font-family: var(--font-family-sequel-sans-book);
   font-weight: 400;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 56px;
   letter-spacing: 0%;
 }
@@ -589,7 +589,7 @@ html {
 
 .text-heading-our-expertise {
   font-weight: 500;
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 100%;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -598,7 +598,7 @@ html {
 }
 .text-heading-our-expertise span {
   font-weight: 500;
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 100%;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -612,7 +612,7 @@ html {
 
 .text-paragraph-our-expertise {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
   letter-spacing: 0%;
   text-align: center;
@@ -644,7 +644,7 @@ html {
 .custom-scroll-text-in-workflow-stages {
   font-family: var(--font-family-subjectivity);
   font-weight: 500;
-  font-size: 160px;
+  font-size: 10rem;
   line-height: 100%;
   letter-spacing: 3%;
   text-transform: uppercase;
@@ -721,7 +721,7 @@ html {
 .workflow-stage-id {
   font-family: var(--font-family-sequel-sans-medium);
   font-weight: 415;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 100%;
   letter-spacing: 3%;
 
@@ -735,7 +735,7 @@ html {
 .workflow-stage-title {
   font-family: var(--font-family-sequel-sans-medium);
   font-weight: 415;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 100%;
   letter-spacing: 0%;
   background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
@@ -746,7 +746,7 @@ html {
 .workflow-stage-description {
   font-family: var(--font-family-sequel-sans-book);
   font-weight: 405;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: 3%;
   background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
@@ -768,7 +768,7 @@ html {
 .inside-creative-mind-wrapper h3 {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 88px;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -782,7 +782,7 @@ html {
 .inside-creative-mind-wrapper p {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
   letter-spacing: 0%;
   text-align: center;
@@ -828,7 +828,7 @@ html {
 .client-projects-container .client-projects-title {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 88px;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -845,7 +845,7 @@ html {
 .client-projects-container .client-projects-description {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
   letter-spacing: 0%;
   text-align: center;
@@ -863,7 +863,7 @@ html {
 .title-text-in-projects-data {
   font-family: var(--font-family-sequel-sans-medium);
   font-weight: 410;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 100%;
   letter-spacing: 0%;
   max-width: 608px;
@@ -873,7 +873,7 @@ html {
 .paragraph-text-in-projects-data {
   font-family: var(--font-family-sequel-sans-medium);
   font-weight: 410;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 100%;
   letter-spacing: 0%;
   display: flex;
@@ -901,7 +901,7 @@ html {
   gap: 0.5rem;
   margin: 0 auto 10.143rem;
 
-  font: 700 32px/1 var(--font-family);
+  font: 700 2rem/1 var(--font-family);
   text-align: center;
 
   background: black; /* or your intended background */
@@ -966,7 +966,7 @@ html {
   gap: 1rem;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 28px;
   letter-spacing: -1%;
 }
@@ -1033,7 +1033,7 @@ html {
 strong {
   z-index: 2;
   font-family: "Avalors Personal Use";
-  font-size: 12px;
+  font-size: 0.75rem;
   letter-spacing: 5px;
   color: #ffffff;
   text-shadow: 0 0 4px white;
@@ -1207,7 +1207,7 @@ strong {
 .absolute-container-testimonial-showcase .absolute-title-testimonial-showcase {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 88px;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -1230,7 +1230,7 @@ strong {
   .absolute-paragraph-testimonial-showcase {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
   letter-spacing: 0%;
   text-align: center;
@@ -1279,13 +1279,12 @@ strong {
   pointer-events: none; /* So user interactions pass through */
   border-radius: 32px 32px 0 0;
   overflow: hidden;
-
 }
 
 .build-with-us-banner h3 {
   font-family: var(--font-family);
   font-weight: 300;
-  font-size: 85px;
+  font-size: 5.313rem;
   line-height: 120%;
   letter-spacing: -4%;
   text-align: center;
@@ -1436,7 +1435,7 @@ strong {
 .footer-text-1 {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 28px;
+  font-size: 1.75rem;
   line-height: 36px;
   letter-spacing: 3%;
   max-width: 420px;
@@ -1455,7 +1454,7 @@ strong {
   gap: 0.5rem;
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: -1%;
   background: linear-gradient(90deg, #ffffff 0%, #999999 100%);
@@ -1593,7 +1592,7 @@ strong {
 .about-us-hero-section-content-wrapper h4 {
   font-family: var(--font-family);
   font-weight: 700;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 48px;
   letter-spacing: 0%;
 }
@@ -1608,7 +1607,7 @@ strong {
 .about-us-hero-section-footer-wrapper p {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: -1%;
   background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
@@ -1621,7 +1620,7 @@ strong {
 .servicetags-text {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
@@ -1661,7 +1660,7 @@ strong {
 .our-approach-wrapper h3 {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 48px;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -1697,7 +1696,7 @@ strong {
 .impact-stats-divider p {
   font-family: Cabinet Grotesk;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
   letter-spacing: 3%;
   text-align: center;
@@ -1741,7 +1740,7 @@ strong {
 .creative-team-intro-title {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 140px;
+  font-size: 8.75rem;
   line-height: 140%;
   letter-spacing: -4%;
   text-align: center;
@@ -1767,7 +1766,7 @@ strong {
 .text-section-in-creative-team p {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 28px;
   letter-spacing: 0%;
 }
@@ -1798,7 +1797,7 @@ strong {
 .main-heading-tet-in-creative-team {
   font-family: var(--font-family-sequel-sans-medium);
   font-weight: 410;
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 44px;
   letter-spacing: 0%;
   background: linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%),
@@ -1813,7 +1812,7 @@ strong {
 .creative-team-tags {
   font-family: var(--font-family-sequel-sans-medium);
   font-weight: 405;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -1822,7 +1821,7 @@ strong {
 .creative-team-description {
   font-family: var(--font-family-sequel-sans-medium);
   font-weight: 405;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0%;
 }
@@ -1830,7 +1829,7 @@ strong {
 .creative-team-name {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 40px;
+  font-size: 2.5rem;
   line-height: 48px;
   letter-spacing: -2%;
   text-align: center;
@@ -1848,7 +1847,7 @@ strong {
 .creative-team-role {
   font-family: var(--font-family);
   font-weight: 405;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 28px;
   letter-spacing: 0%;
   background: linear-gradient(94.46deg, #ffffff 25.29%, #9c9c9c 107.3%);
@@ -1877,7 +1876,7 @@ strong {
   max-width: 500px;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 88px;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -1897,7 +1896,7 @@ strong {
   max-width: 415px;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -1928,7 +1927,7 @@ strong {
 .services-overview-title {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 80px;
+  font-size: 5rem;
   line-height: 88px;
   letter-spacing: 0%;
   text-align: center;
@@ -1947,7 +1946,7 @@ strong {
 .services-overview-description {
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
   letter-spacing: 0%;
   text-align: center;
@@ -1971,7 +1970,7 @@ strong {
 .services-overview-list p {
   font-family: var(--font-family-sequel-sans-medium);
   font-weight: 415;
-  font-size: 64px;
+  font-size: 4rem;
   line-height: 72px;
   letter-spacing: -2%;
 }
@@ -2000,7 +1999,7 @@ strong {
   font-family: var(--font-family-sequel-sans-book);
   font-weight: 410;
   font-style: "Roman Dip";
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0%;
   color: #9a6aff;
@@ -2011,7 +2010,7 @@ strong {
   font-family: var(--font-family);
   font-weight: 500;
   font-style: Medium;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0%;
   text-align: center;
@@ -2022,7 +2021,7 @@ strong {
   font-family: var(--font-family);
   font-weight: 700;
   font-style: Bold;
-  font-size: 32px;
+  font-size: 2rem;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
@@ -2036,7 +2035,7 @@ strong {
   font-family: var(--font-family);
   font-weight: 500;
   font-style: Medium;
-  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
@@ -2051,7 +2050,7 @@ strong {
   font-family: var(--font-family);
   font-weight: 700;
   font-style: Bold;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -2066,7 +2065,7 @@ strong {
 .project-title-in-project-showcase-grid {
   font-family: var(--font-family-sequel-sans-medium);
   font-weight: 415;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 32px;
   letter-spacing: 0%;
   background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
@@ -2079,7 +2078,7 @@ strong {
 .project-description-in-project-showcase-grid {
   font-family: var(--font-family-sequel-sans-book);
   font-weight: 405;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0%;
   background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
@@ -2090,4 +2089,154 @@ strong {
   opacity: 40%;
 }
 
+.vision-text-gradient-mobile {
+  display: none;
+}
+
+.desktop-text {
+  display: block;
+}
+
+.mobile-text {
+  display: none;
+}
+
 /* media quarry */
+
+@media (max-width: 700px) {
+  .navbar-wrapper {
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  .hero-title-1,
+  .hero-title-2 {
+    font-size: 2.5rem;
+  }
+
+  .vision-text-gradient-desktop {
+    display: none;
+  }
+
+  .vision-text-gradient-mobile {
+    display: block;
+    background: linear-gradient(0deg, #772bf2, #772bf2),
+      linear-gradient(180deg, #ec4b7b 0%, rgba(206, 10, 255, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* for Firefox */
+    color: transparent;
+    opacity: 1;
+  }
+
+  .background-image-hero-section {
+    min-height: 900px;
+    max-height: 900px;
+  }
+
+  .hero-content-box-wrapper {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .hero-section-content-wrapper {
+    bottom: -5%;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: block;
+  }
+
+  .mobile-expertise {
+    display: block;
+  }
+
+  .text-heading-our-expertise,
+  .text-heading-our-expertise span,
+  .inside-creative-mind-wrapper h3,
+  .client-projects-container .client-projects-title,
+  .absolute-container-testimonial-showcase .absolute-title-testimonial-showcase,
+  .build-with-us-banner h3 {
+    font-size: 3rem;
+    line-height: 100%;
+  }
+
+  .text-paragraph-our-expertise,
+  .inside-creative-mind-wrapper p,
+  .absolute-container-testimonial-showcase
+    .absolute-paragraph-testimonial-showcase,
+  .view-more-button {
+    font-size: 1rem;
+  }
+
+  .our-expertise-wrapper {
+    padding: 2rem 0.5rem;
+  }
+
+  .our-expertise-card-container-mobile {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+  .our-expertise-card {
+    background-color: rgb(154, 106, 255);
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    border-radius: 71.89px;
+  }
+
+  .workflow-stages-grid-container {
+    grid-template-columns: repeat(1, 1fr);
+    position: relative;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .custom-scroll-text-in-workflow-stages,
+  .workflow-stages-container section {
+    display: none;
+  }
+  .workflow-stages-container,
+  .mobile-text,
+  .project-data-container,
+  .build-with-us-banner h3,
+  .footer-content {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .video-wrapper {
+    aspect-ratio: 1.1; /* Slightly more square on mobile */
+    margin-bottom: clamp(1.5rem, 6vw, 3rem);
+  }
+
+  .title-text-in-projects-data,
+  .paragraph-text-in-projects-data {
+    font-size: 0.75rem;
+  }
+
+  .paragraph-text-in-projects-data {
+    width: 90%;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+
+  .footer-section .footer-text-2 {
+    top: 37.8rem;
+  }
+}

@@ -23,22 +23,26 @@ function HeroSection() {
           className="m-auto d-block"
         />
 
-        <h3 className="d-flex align-items-center hero-title-1 text-center">
+        <h3 className="d-flex align-items-center hero-title-1 text-center ">
           We&apos; ve got a{" "}
-          <TextPressure
-            text=" VISION"
-            flex={false}
-            alpha={false}
-            stroke={false}
-            width={true}
-            weight={true}
-            italic={true}
-            textColor="#772BF2" // Solid color as fallback
-            strokeColor="#ff0000"
-            minFontSize={35}
-            inline={true}
-            className="gradient-text" // Add gradient via class
-          />
+          <span className="vision-text-gradient-desktop">
+            {" "}
+            <TextPressure
+              text=" VISION"
+              flex={false}
+              alpha={false}
+              stroke={false}
+              width={true}
+              weight={true}
+              italic={true}
+              textColor="#772BF2" // Solid color as fallback
+              strokeColor="#ff0000"
+              minFontSize={35}
+              inline={true}
+              className="gradient-text " // Add gradient via class
+            />
+          </span>
+          <span className="vision-text-gradient-mobile">VISION</span>
         </h3>
 
         <div className="w-full relative">
