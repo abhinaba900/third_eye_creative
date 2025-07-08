@@ -99,7 +99,7 @@ function CreativeTeamIntro() {
         >
           <motion.div
             drag="x"
-            dragConstraints={{ left: -1000, right: 0 }}
+            dragConstraints={{ left: -300, right: 0 }}
             className="flex gap-6 px-2"
           >
             {bannerimages.map((item, index) => (

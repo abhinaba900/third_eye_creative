@@ -1,8 +1,9 @@
 ﻿"use client";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 function ClientProjects() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(0);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
   const projects = [
     {
@@ -41,8 +42,6 @@ function ClientProjects() {
     },
   ];
 
-  const getIsActive = (idx: number) => idx === activeIndex;
-
   return (
     <div className="w-full h-full mx-auto client-projects-container">
       {/* Header & Description */}
@@ -55,27 +54,38 @@ function ClientProjects() {
         crafted to inspire and built to perform.
       </p>
 
-      {/* Project Cards */}
+      {/* Project List */}
       <div className="w-full h-full mx-auto project-data-container">
-        {projects.map(({ title, client, year, image }, idx) => {
-          const isActive = getIsActive(idx);
+        {projects.map(({ title, client, year }, idx) => {
+          const isActive = idx === activeIndex;
 
           return (
-            <section key={idx}>
+            <section
+              key={idx}
+              className="first:shadow-none shadow-[0_-1px_0_0_#fff]"
+            >
+              {/* Image Display Area */}
               {isActive && (
-                <div className=" transition duration-300 ease-in-out">
-                  <img
-                    src={image}
-                    alt="Our Work"
-                    className="w-full max-w-[1232px] max-h-[714px] object-cover transition-all duration-300 ease-in-out client-projects-image rounded-[40px]"
-                  />
+                <div className="relative w-full max-w-[1232px] h-[400px] md:h-[600px] lg:h-[714px] mx-auto overflow-hidden rounded-[40px] mb-6 ">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={projects[activeIndex].image}
+                      src={projects[activeIndex].image}
+                      alt="Our Work"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.6, ease: "easeInOut" }}
+                      className="absolute inset-0 w-full h-full object-cover rounded-[40px] pt-5"
+                    />
+                  </AnimatePresence>
                 </div>
               )}
               <div
                 onClick={() => setActiveIndex(idx)}
-                className="group flex-1 relative overflow-hidden text-center shadow-[0_-1px_0_0_#fff] flowing-menu-item-projects-data-container transition-colors duration-300"
+                className="group flex-1 relative overflow-hidden text-center flowing-menu-item-projects-data-container transition-colors duration-300 cursor-pointer"
               >
-                <a className="flex flex-col items-center justify-center h-full relative cursor-pointer uppercase no-underline focus:text-white focus-visible:text-white">
+                <a className="flex flex-col items-center justify-center h-full relative uppercase no-underline focus:text-white focus-visible:text-white">
                   <div className="flex justify-between w-full items-center">
                     <h4
                       className={`font-semibold text-[4vh] leading-[1.2] title-text-in-projects-data transition duration-200 ${
@@ -101,8 +111,7 @@ function ClientProjects() {
       </div>
 
       {/* View More Button */}
-
-      <div className="flex items-center justify-center view-more-button-in-client-projects">
+      <div className="flex items-center justify-center view-more-button-in-client-projects mt-10">
         <div className="relative group">
           <button className="relative inline-block p-px font-semibold leading-6 text-white bg-neutral-900 shadow-2xl cursor-pointer rounded-2xl shadow-[#1098ad] transition-all duration-300 ease-in-out hover:scale-105 active:scale-95 hover:shadow-emerald-600">
             <span className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#f79533] via-[#f37055] to-[#ef4e7b] p-[2px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"></span>

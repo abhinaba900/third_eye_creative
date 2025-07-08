@@ -1,7 +1,7 @@
 "use client";
 
-import { MotionValue, motion, useSpring, useTransform } from "framer-motion";
-import { useEffect, useState } from "react";
+import { MotionValue, motion, useInView, useSpring, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
 interface NumberProps {
   mv: MotionValue<number>;
@@ -21,7 +21,7 @@ function Number({ mv, number, height }: NumberProps) {
   });
 
   return (
-    <motion.span 
+    <motion.span
       className="absolute inset-0 flex items-center justify-center"
       style={{ y }}
     >
@@ -46,7 +46,7 @@ function Digit({ place, value, height, digitClassName = "" }: DigitProps) {
   }, [animatedValue, valueRoundedToPlace]);
 
   return (
-    <div 
+    <div
       className={`relative w-[1ch] font-tabular-nums ${digitClassName}`}
       style={{ height: `${height}px` }}
     >
@@ -99,7 +99,9 @@ export default function Counter({
   const [currentValue, setCurrentValue] = useState(0);
   const height = fontSize + padding;
 
-  // Calculate the number of digits needed dynamically
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   const numDigits =
     value === 0 ? 1 : Math.floor(Math.log10(Math.max(1, value))) + 1;
   const places = Array.from({ length: numDigits }, (_, i) =>
@@ -107,6 +109,8 @@ export default function Counter({
   );
 
   useEffect(() => {
+    if (!isInView) return;
+
     const targetValue = Math.max(value, 0);
 
     const startTime = Date.now();
@@ -128,15 +132,18 @@ export default function Counter({
     };
 
     requestAnimationFrame(animate);
-  }, [value, duration]);
+  }, [value, duration, isInView]);
 
   function easeOutQuad(t: number): number {
     return t * (2 - t);
   }
 
   return (
-    <div className={`flex items-center justify-center relative ${containerClassName}`}>
-      <div 
+    <div
+      ref={ref}
+      className={`flex items-center justify-center relative ${containerClassName}`}
+    >
+      <div
         className={`flex overflow-hidden leading-none shadow-none ${counterClassName}`}
         style={{
           fontSize: `${fontSize}px`,
@@ -160,14 +167,14 @@ export default function Counter({
         <span className="plus-icon-in-counter">+</span>
       </div>
       <div className="pointer-events-none absolute inset-0">
-        <div 
+        <div
           className={`w-full ${topGradientClassName}`}
           style={{
             height: `${gradientHeight}px`,
             background: `linear-gradient(to bottom, ${gradientFrom}, ${gradientTo})`,
           }}
         />
-        <div 
+        <div
           className={`absolute bottom-0 w-full ${bottomGradientClassName}`}
           style={{
             height: `${gradientHeight}px`,

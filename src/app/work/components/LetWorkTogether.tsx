@@ -9,11 +9,6 @@ const services = [
   "Branding",
   "Brand Marketing",
   "Web Design",
-  "Brand Marketing",
-  "UI-UX Design",
-  "Branding",
-  "Custom Software Development",
-  "Web Design",
 ];
 function LetWorkTogether() {
   const [selected, setSelected] = useState<string[]>([]);
