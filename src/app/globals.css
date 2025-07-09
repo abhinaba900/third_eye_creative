@@ -1549,7 +1549,7 @@ strong {
   z-index: 1;
 }
 
-.about-us-hero-section-wrapper  canvas {
+.about-us-hero-section-wrapper canvas {
   width: 100% !important;
 }
 
@@ -2245,76 +2245,75 @@ strong {
   }
 
   /* about us */
-  .our-approach-wrapper{
+  .our-approach-wrapper {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .our-approach-wrapper .our-approach-content-wrapper p{
+  .our-approach-wrapper .our-approach-content-wrapper p {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 
-  .impact-stats-wrapper{
+  .impact-stats-wrapper {
     grid-template-columns: repeat(1, 1fr);
   }
-  
-  .creative-team-intro-title{
+
+  .creative-team-intro-title {
     font-size: 2rem;
     line-height: 100%;
   }
 
-  .text-section-in-creative-team{
+  .text-section-in-creative-team {
     grid-template-columns: repeat(1, 1fr);
-    gap: 1rem
-    ;
+    gap: 1rem;
     align-items: center;
     text-align: center;
   }
 
-  .creative-team-image-wrapper{
+  .creative-team-image-wrapper {
     padding: 1rem 1rem;
   }
 
-  .heading-content-holders{
+  .heading-content-holders {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
     text-align: center;
   }
-  
-  .heading-content-holders h3{
+
+  .heading-content-holders h3 {
     font-size: 2rem;
     line-height: 100%;
   }
-  .heading-content-holders p{
+  .heading-content-holders p {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 
-  .services-overview-title{
+  .services-overview-title {
     font-size: 2rem;
     line-height: 100%;
   }
 
-  .services-overview-description{
+  .services-overview-description {
     font-size: 1rem;
     line-height: 1.5rem;
   }
 
-  .services-overview-content{
+  .services-overview-content {
     grid-template-columns: repeat(1, 1fr);
     gap: 1rem;
     padding: 1rem;
   }
 
-  .services-overview-list p{
+  .services-overview-list p {
     font-size: 2rem;
     line-height: 1.5rem;
   }
 
-  .services-overview-list img{
+  .services-overview-list img {
     width: 1.5rem;
     height: 1.5rem;
   }
@@ -2388,5 +2387,22 @@ strong {
   }
   .navbar-wrapper {
     padding: 1rem 0.5rem 0.5rem 0.5rem;
+  }
+
+  .services-overview-content {
+    padding: 2rem;
+  }
+  .creative-team-intro-title {
+    font-size: 4rem;
+  }
+  .text-section-in-creative-team {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .heading-content-holders h3 {
+    font-size: 3rem;
+    line-height: 100%;
   }
 }
