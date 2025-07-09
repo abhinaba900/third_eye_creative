@@ -4,14 +4,14 @@ import Aurora from "../../../../Reactbits/Aurora/Aurora";
 
 function WorkHeroSection() {
   return (
-    <div className="relative">
-      <Image
+    <div className="relative about-us-hero-section">
+      {/* <Image
         src="/assets/Glass effect for hero section.svg"
         alt="Logo"
         width={"100"}
         height={"100"}
         className="mx-auto my-4 background-image-hero-section-about-us"
-      />
+      /> */}
       <div className="about-us-hero-section-wrapper ">
         <h3 className="about-us-hero-section-title " style={{fontSize: "19vw"}}>OUR WORK</h3>
         <div className="relative">

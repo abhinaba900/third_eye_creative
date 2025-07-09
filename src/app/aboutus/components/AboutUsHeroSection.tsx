@@ -5,14 +5,16 @@ import Image from "next/image";
 function AboutUsHeroSection() {
   return (
     <div className="relative h-fit about-us-hero-section ">
-      <Image
+      {/* <Image
         src="/assets/Glass effect for hero section.svg"
         alt="Logo"
         width={"100"}
         height={"100"}
         className="mx-auto my-4 background-image-hero-section-about-us"
-      />
-      <div className="about-us-hero-section-wrapper w-fit overflow-hidden">
+      /> */}
+      <div
+        className="about-us-hero-section-wrapper overflow-hidden"
+      >
         <h3 className="about-us-hero-section-title">THIRD EYE</h3>
         <div className="relative w-full ">
           <Aurora
