@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function AboutUsHeroSection() {
   return (
-    <div className="relative">
+    <div className="relative w-[100vw]">
       <Image
         src="/assets/Glass effect for hero section.svg"
         alt="Logo"
@@ -12,9 +12,9 @@ function AboutUsHeroSection() {
         height={"100"}
         className="mx-auto my-4 background-image-hero-section-about-us"
       />
-      <div className="about-us-hero-section-wrapper ">
+      <div className="about-us-hero-section-wrapper w-[100vw] overflow-hidden">
         <h3 className="about-us-hero-section-title">THIRD EYE</h3>
-        <div className="relative w-full">
+        <div className="relative w-[100vw">
           <Aurora
             colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}
             blend={0.1}
