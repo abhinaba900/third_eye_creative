@@ -1,9 +1,10 @@
 ﻿"use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 function ClientProjects() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const imageRef = useRef<HTMLDivElement>(null);
 
   const projects = [
     {
@@ -42,6 +43,21 @@ function ClientProjects() {
     },
   ];
 
+  const handleProjectClick = (idx: number) => {
+    setActiveIndex(idx);
+
+    setTimeout(() => {
+      if (imageRef.current) {
+        const yOffset = 0;
+        const y =
+          imageRef.current.getBoundingClientRect().top +
+          window.pageYOffset +
+          yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    }, 0); // Small timeout ensures state update renders the image first
+  };
+
   return (
     <div className="w-full h-full mx-auto client-projects-container">
       {/* Header & Description */}
@@ -66,7 +82,10 @@ function ClientProjects() {
             >
               {/* Image Display Area */}
               {isActive && (
-                <div className="relative w-full max-w-[1232px] h-[400px] md:h-[600px] lg:h-[714px] mx-auto overflow-hidden rounded-[40px] mb-6 ">
+                <div
+                  ref={imageRef}
+                  className="relative w-full max-w-[1232px] h-[400px] md:h-[600px] lg:h-[714px] mx-auto overflow-hidden rounded-[40px] mb-6 "
+                >
                   <AnimatePresence mode="wait">
                     <motion.img
                       key={projects[activeIndex].image}
@@ -82,7 +101,7 @@ function ClientProjects() {
                 </div>
               )}
               <div
-                onClick={() => setActiveIndex(idx)}
+                onClick={() => handleProjectClick(idx)}
                 className="group flex-1 relative overflow-hidden text-center flowing-menu-item-projects-data-container transition-colors duration-300 cursor-pointer"
               >
                 <a className="flex flex-col items-center justify-center h-full relative uppercase no-underline focus:text-white focus-visible:text-white">
