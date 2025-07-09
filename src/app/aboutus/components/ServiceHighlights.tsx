@@ -72,13 +72,13 @@ function ServiceHighlights() {
 
   return (
     <div 
-      className="service-highlights" 
+      className="service-highlights overflow-hidden py-5" 
       ref={ref}
       style={{
         marginBottom: "8.75rem",
         maxWidth: "1260px",
         margin: "0 auto",
-        padding: "0 20px",
+        padding: "20px 20px",
         width: "100%",
         boxSizing: "border-box"
       }}

@@ -117,7 +117,7 @@ function CreativeTeamIntro() {
         </motion.div>
       </div>
       <div className=" overflow-hidden text-white  max-w-7xl mx-auto mb-[8.75rem]  relative">
-        <div className="flex flex-col lg:flex-row gap-12 items-center lg:items-start ">
+        <div className="flex flex-col lg:flex-row gap-12 items-center px-5 ">
           {/* Left: Text Content */}
           <div className="lg:w-[40%] w-full space-y-6">
             <h2 className="text-3xl font-semibold leading-snug main-heading-tet-in-creative-team">

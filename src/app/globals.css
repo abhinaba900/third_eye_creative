@@ -2103,7 +2103,7 @@ strong {
 
 /* media quarry */
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .navbar-wrapper {
     padding: 1rem 1rem 0 1rem;
   }
@@ -2238,5 +2238,76 @@ strong {
 
   .footer-section .footer-text-2 {
     top: 37.8rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .vision-text-gradient-desktop {
+    display: none;
+  }
+
+  .vision-text-gradient-mobile {
+    display: block;
+    background: linear-gradient(0deg, #772bf2, #772bf2),
+      linear-gradient(180deg, #ec4b7b 0%, rgba(206, 10, 255, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* for Firefox */
+    color: transparent;
+    opacity: 1;
+  }
+
+  .desktop-text {
+    display: none;
+  }
+
+  .our-expertise-card-container-mobile {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 2rem;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .our-expertise-card {
+    background-color: rgb(154, 106, 255);
+    color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    border-radius: 71.89px;
+  }
+
+  .workflow-stages-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+  }
+
+  .custom-scroll-text-in-workflow-stages,
+  .workflow-stages-container section {
+    display: none;
+  }
+  .paragraph-text-in-projects-data {
+    width: 150%;
+  }
+
+  .workflow-stages-container,
+  .mobile-text,
+  .project-data-container,
+  .build-with-us-banner h3,
+  .footer-content {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .navbar-wrapper{
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
   }
 }
