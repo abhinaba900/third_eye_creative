@@ -1547,6 +1547,8 @@ strong {
   top: 10%;
   border-radius: 0 0 48px 48px;
   z-index: 1;
+  left: 0;
+  right: 0;
 }
 
 .about-us-hero-section-wrapper canvas {
@@ -2404,5 +2406,41 @@ strong {
   .heading-content-holders h3 {
     font-size: 3rem;
     line-height: 100%;
+  }
+
+  .our-approach-wrapper .our-approach-content-wrapper p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .our-approach-wrapper h3 {
+    width: 40%;
+    margin-bottom: -50px;
+  }
+}
+
+@media (min-width: 1561px) and (max-width: 1920px) {
+  .about-us-hero-section,
+  .background-image-hero-section-about-us {
+    max-width: 100%;
+    max-height: 1000px;
+    min-height: 1000px;
+  }
+
+  .about-us-hero-section-wrapper {
+    top: 2%;
+  }
+  .about-us-hero-section-title {
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: -5%;
+  }
+}
+
+@media (min-width: 1921px) and (max-width: 2560px) {
+  .about-us-hero-section,
+  .background-image-hero-section-about-us {
+    max-width: 100%;
+    max-height: 1400px;
+    min-height: 1400px;
   }
 }

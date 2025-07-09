@@ -14,7 +14,7 @@ function AboutUsHeroSection() {
       />
       <div className="about-us-hero-section-wrapper w-fit overflow-hidden">
         <h3 className="about-us-hero-section-title">THIRD EYE</h3>
-        <div className="relative w-full overflow-hidden">
+        <div className="relative w-full ">
           <Aurora
             colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}
             blend={0.1}
