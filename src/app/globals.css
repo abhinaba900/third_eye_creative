@@ -1553,6 +1553,7 @@ strong {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: 5rem;
 }
 
 .about-us-hero-section {
@@ -2342,6 +2343,18 @@ strong {
   .services-overview-list img {
     width: 1.5rem;
     height: 1.5rem;
+  }
+
+  .about-us-hero-section-content-wrapper{
+    padding-left: 1rem;
+  }
+
+  .about-us-hero-section-footer-wrapper{
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .lets-build-something-button{
+    margin-bottom: 1rem;
   }
 }
 
