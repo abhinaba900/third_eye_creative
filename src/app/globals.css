@@ -1608,8 +1608,14 @@ strong {
   max-width: 996px;
   padding-left: 7.292vw;
   padding-bottom: 17.5vh;
+}
+
+.about-us-hero-section-content-wrapper-inner {
+  max-width: 1521px;
+  margin: 0 auto;
   position: absolute;
   left: 0;
+  right: 0;
   bottom: 0;
 }
 
@@ -2452,6 +2458,11 @@ strong {
     margin-top: 5%;
     margin-bottom: -5%;
   }
+
+  .about-us-hero-section-content-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media (min-width: 1921px) and (max-width: 2560px) {
@@ -2460,5 +2471,10 @@ strong {
     max-width: 100%;
     /* max-height: 1400px;
     min-height: 1400px; */
+  }
+
+  .about-us-hero-section-content-wrapper {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
