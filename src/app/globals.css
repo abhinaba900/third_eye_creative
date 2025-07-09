@@ -107,6 +107,10 @@ html {
   z-index: 10;
   max-width: 1521px;
   margin: 0 auto;
+  background-image: url("/assets/Glass effect for hero section.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .nav-item {
@@ -1537,12 +1541,11 @@ strong {
 
 /* about us hero section  */
 
-.about-us-hero-section{
+.about-us-hero-section {
   background-image: url("/assets/Glass effect for hero section.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-top: -5%;
 }
 
 .about-us-hero-section {
@@ -1557,7 +1560,6 @@ strong {
   z-index: 1;
   left: 0;
   right: 0;
-  
 }
 
 .about-us-hero-section-wrapper canvas {
