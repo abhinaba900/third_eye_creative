@@ -580,7 +580,7 @@ html {
   background-origin: center;
   position: relative;
   background: transparent;
-  padding: 6.25rem 0;
+  padding: 6.25rem 0 0 0;
   border: 1px solid #3f3f3f;
   border-radius: 48px;
   overflow: hidden;
