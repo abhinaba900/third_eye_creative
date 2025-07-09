@@ -106,7 +106,7 @@ function CreativeTeamIntro() {
               <div
                 key={index}
                 onClick={() => setActive(index + 1)}
-                className="min-w-[200px] flex items-center justify-center p-4  rounded-md shadow hover:shadow-lg transition-shadow duration-300 hover:scale-105"
+                className=" flex items-center justify-center p-4  rounded-md shadow hover:shadow-lg transition-shadow duration-300 hover:scale-105"
               >
                 <div className="brand-logo hover-fill-transition w-full flex justify-center creative-team-image">
                   <Image src={item} alt="image" width={100} height={100} />
