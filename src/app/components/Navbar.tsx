@@ -18,6 +18,8 @@ function Navbar() {
   const [active, setActive] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
+  const [isScrolled, setIsScrolled] = useState(false);
+
 
   // Animation variants
   const menuVariants = {
@@ -57,12 +59,25 @@ function Navbar() {
     }
   }, [pathname]);
 
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };
 
   return (
-    <div className="navbar-background">
+    <div className={`navbar-background ${isScrolled ? "navbar-transparent" : ''}`}>
        <section className="flex items-center justify-between lg:py-2 lg:px-4 gap-2 text-white navbar-wrapper relative z-50">
       {/* Logo - Visible on all screens */}
       <Link href="/" className="btn flex items-center gap-2">

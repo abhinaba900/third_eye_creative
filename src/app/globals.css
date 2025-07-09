@@ -116,6 +116,10 @@ html {
   z-index: 10;
 }
 
+.navbar-transparent {
+  background-image: none;
+}
+
 .nav-item {
   font-family: var(--font-family);
   font-weight: 400;
