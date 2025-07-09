@@ -1537,16 +1537,20 @@ strong {
 
 /* about us hero section  */
 
-.about-us-hero-section-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.about-us-hero-section {
+  max-width: 1560px;
+}
 
+.about-us-hero-section-wrapper {
   overflow: hidden;
   position: absolute;
   top: 10%;
   border-radius: 0 0 48px 48px;
   z-index: 1;
+}
+
+.about-us-hero-section-wrapper  canvas {
+  width: 100% !important;
 }
 
 .background-image-hero-section-about-us {
@@ -2307,7 +2311,7 @@ strong {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-  .navbar-wrapper{
+  .navbar-wrapper {
     padding: 1rem 0.5rem 0.5rem 0.5rem;
   }
 }

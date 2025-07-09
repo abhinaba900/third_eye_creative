@@ -11,7 +11,7 @@ import BuildWithUsBanner from "../components/BuildWithUsBanner";
 
 function page() {
   return (
-    <div>
+    <div className="">
       <AboutUsHeroSection />
       <ServiceTags />
       <OurApproach />

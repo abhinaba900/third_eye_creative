@@ -146,18 +146,6 @@ export default function Aurora(props: AuroraProps) {
 
     let program: Program | undefined;
 
-    function resize() {
-      if (!ctn) return;
-      const width = ctn.offsetWidth;
-      const height = ctn.offsetHeight;
-      renderer.setSize(width, height);
-      if (program) {
-        program.uniforms.uResolution.value = [width, height];
-      }
-    }
-
-    window.addEventListener("resize", resize);
-
     const geometry = new Triangle(gl);
     if (geometry.attributes.uv) {
       delete geometry.attributes.uv;
@@ -187,13 +175,7 @@ export default function Aurora(props: AuroraProps) {
     const getColorStops = () => {
       const stops = propsRef.current.colorStops || colorStops;
       const defaultStops = ["#5227FF", "#7cff67", "#5227FF"];
-      const result = [];
-
-      for (let i = 0; i < 3; i++) {
-        result.push(stops[i] || defaultStops[i]);
-      }
-
-      return result;
+      return Array.from({ length: 3 }, (_, i) => stops[i] || defaultStops[i]);
     };
 
     const colorStopsArray = getColorStops().map(parseColor);
@@ -205,7 +187,7 @@ export default function Aurora(props: AuroraProps) {
         uTime: { value: 0 },
         uAmplitude: { value: amplitude },
         uColorStops: { value: colorStopsArray },
-        uResolution: { value: [ctn.offsetWidth, ctn.offsetHeight] },
+        uResolution: { value: [0, 0] },
         uBlend: { value: blend },
       },
     });
@@ -213,33 +195,51 @@ export default function Aurora(props: AuroraProps) {
     const mesh = new Mesh(gl, { geometry, program });
     ctn.appendChild(gl.canvas);
 
+    let width = 0;
+    let height = 0;
+
+    const resize = () => {
+      const newWidth = ctn.offsetWidth;
+      const newHeight = ctn.offsetHeight;
+      if (width !== newWidth || height !== newHeight) {
+        width = newWidth;
+        height = newHeight;
+        renderer.setSize(width, height);
+        program!.uniforms.uResolution.value = [width, height];
+      }
+    };
+
+    const observer = new ResizeObserver(resize);
+    observer.observe(ctn);
+    resize();
+
     let animateId = 0;
-    const loopDuration = 40.0; // seconds
+    const loopDuration = 40.0;
     const startTime = performance.now();
 
     const update = () => {
       animateId = requestAnimationFrame(update);
-      const elapsed = (performance.now() - startTime) * 0.001; // seconds
-      const loopedTime = (elapsed % loopDuration) * (propsRef.current.speed ?? speed);
+      const elapsed = (performance.now() - startTime) * 0.001;
+      const loopedTime =
+        (elapsed % loopDuration) * (propsRef.current.speed ?? speed);
 
       if (program) {
         program.uniforms.uTime.value = loopedTime;
-        program.uniforms.uAmplitude.value = propsRef.current.amplitude ?? amplitude;
+        program.uniforms.uAmplitude.value =
+          propsRef.current.amplitude ?? amplitude;
         program.uniforms.uBlend.value = propsRef.current.blend ?? blend;
-
-        const stops = getColorStops();
-        program.uniforms.uColorStops.value = stops.map(parseColor);
-
-        renderer.render({ scene: mesh });
+        program.uniforms.uColorStops.value = getColorStops().map(parseColor);
       }
+
+      resize();
+      renderer.render({ scene: mesh });
     };
 
     animateId = requestAnimationFrame(update);
-    resize();
 
     return () => {
       cancelAnimationFrame(animateId);
-      window.removeEventListener("resize", resize);
+      observer.disconnect();
       if (ctn && gl.canvas.parentNode === ctn) {
         ctn.removeChild(gl.canvas);
       }

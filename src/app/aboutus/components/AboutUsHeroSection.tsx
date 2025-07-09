@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function AboutUsHeroSection() {
   return (
-    <div className="relative w-[100vw]">
+    <div className="relative h-fit about-us-hero-section ">
       <Image
         src="/assets/Glass effect for hero section.svg"
         alt="Logo"
@@ -12,16 +12,16 @@ function AboutUsHeroSection() {
         height={"100"}
         className="mx-auto my-4 background-image-hero-section-about-us"
       />
-      <div className="about-us-hero-section-wrapper w-[100vw] overflow-hidden">
+      <div className="about-us-hero-section-wrapper w-fit overflow-hidden">
         <h3 className="about-us-hero-section-title">THIRD EYE</h3>
-        <div className="relative w-[100vw">
+        <div className="relative w-full overflow-hidden">
           <Aurora
             colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}
             blend={0.1}
             amplitude={1.0}
             speed={1}
           />
-          <div className="relative about-us-hero-section-content-wrapper">
+          <div className=" about-us-hero-section-content-wrapper">
             <h4>
               Designing Bold Identities & Intelligent <span>Experiences</span>{" "}
               for Brands Ready to Lead & Inspire
