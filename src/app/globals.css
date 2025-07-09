@@ -102,15 +102,18 @@ html {
 
 .navbar-wrapper {
   padding: 2rem 2rem 0 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 10;
   max-width: 1521px;
   margin: 0 auto;
+}
+
+.navbar-background {
   background-image: url("/assets/Glass effect for hero section.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .nav-item {

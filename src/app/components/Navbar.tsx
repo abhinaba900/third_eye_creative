@@ -62,7 +62,8 @@ function Navbar() {
   };
 
   return (
-    <section className="flex items-center justify-between lg:py-2 lg:px-4 gap-2 text-white navbar-wrapper relative z-50">
+    <div className="navbar-background">
+       <section className="flex items-center justify-between lg:py-2 lg:px-4 gap-2 text-white navbar-wrapper relative z-50">
       {/* Logo - Visible on all screens */}
       <Link href="/" className="btn flex items-center gap-2">
         <strong className="text-section-in-navbar flex items-center gap-2">
@@ -226,6 +227,7 @@ function Navbar() {
         )}
       </AnimatePresence>
     </section>
+   </div>
   );
 }
 

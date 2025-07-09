@@ -1,6 +1,6 @@
 ﻿import React from "react";
 import Aurora from "../../../../Reactbits/Aurora/Aurora";
-import Image from "next/image";
+// import Image from "next/image";
 
 function AboutUsHeroSection() {
   return (
