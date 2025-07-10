@@ -74,7 +74,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
         ease: "none",
         scrollTrigger: {
           trigger: el,
-          scroller: scroller as any,
+          scroller: scroller as unknown as HTMLElement,
           start: "top 80%",
           end: rotationEnd,
           scrub: true,
@@ -92,7 +92,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       stagger: 0.05,
       scrollTrigger: {
         trigger: el,
-        scroller: scroller as any,
+        scroller: scroller as unknown as HTMLElement,
         start: "top 75%",
         end: wordAnimationEnd,
         scrub: true,
@@ -107,7 +107,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
         stagger: 0.05,
         scrollTrigger: {
           trigger: el,
-          scroller: scroller as any,
+          scroller: scroller as unknown as HTMLElement,
           start: "top 75%",
           end: wordAnimationEnd,
           scrub: true,
