@@ -4,6 +4,7 @@ import OurVision from "./components/OurVision";
 import PhotoGallary from "./components/PhotoGallary";
 import LifeatThirdEye from "./components/LifeatThirdEye";
 import OpenRoles from "./components/OpenRoles";
+import GetinTouch from "./components/GetinTouch";
 
 function page() {
   return (
@@ -13,6 +14,7 @@ function page() {
       <PhotoGallary />
       <LifeatThirdEye />
       <OpenRoles />
+      <GetinTouch />
     </div>
   );
 }

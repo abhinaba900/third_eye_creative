@@ -2364,8 +2364,6 @@ strong {
   margin-bottom: 5rem;
 }
 
-
-
 .job-card-tags {
   font-family: var(--font-family-sequel-sans-book);
   font-weight: 405;
@@ -2410,6 +2408,37 @@ strong {
   vertical-align: middle;
   color: #ffffff;
   cursor: pointer;
+}
+
+/* get in touch */
+
+.work-getintouch-title {
+  font-family: var(--font-family-cabinet-grotesk-extrabold);
+  font-weight: 800;
+  font-size: 12.5rem;
+  line-height: 120%;
+  letter-spacing: -4%;
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.work-getintouch-text {
+  font-family: var(--font-family-cabinet-grotesk-bold);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+}
+
+.work-getintouch-button {
+  font-family: var(--font-family-sequel-sans-random-display);
+  font-weight: 420;
+  font-size: 45.88px;
+  line-height: 55.06px;
+  letter-spacing: 1%;
 }
 
 /* media quarry */
