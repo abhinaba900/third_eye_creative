@@ -14,6 +14,7 @@ function ImpactStats() {
             lg: 200, // for large devices (1024px+)
             xl: 200, // for extra large devices (1280px+)
           }}
+          containerClassName="impact-stats-counter"
         />
         <p>Brands Transformed</p>
       </div>
@@ -27,6 +28,7 @@ function ImpactStats() {
             lg: 200, // for large devices (1024px+)
             xl: 200, // for extra large devices (1280px+)
           }}
+          containerClassName="impact-stats-counter"
         />
         <p>Websites & Platforms Delivered</p>
       </div>
@@ -40,6 +42,7 @@ function ImpactStats() {
             lg: 200, // for large devices (1024px+)
             xl: 200, // for extra large devices (1280px+)
           }}
+          containerClassName="impact-stats-counter"
         />
         <p>Mobile Apps Engineered</p>
       </div>
@@ -53,6 +56,7 @@ function ImpactStats() {
             lg: 200, // for large devices (1024px+)
             xl: 200, // for extra large devices (1280px+)
           }}
+          containerClassName="impact-stats-counter"
         />
         <p>Years of Creative Impact</p>
       </div>

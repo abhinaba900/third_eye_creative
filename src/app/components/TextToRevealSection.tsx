@@ -11,6 +11,7 @@ function TextToRevealSection() {
           enableBlur={true}
           baseRotation={5}
           blurStrength={10}
+          textClassName="scroll-reveal-text-wrapper"
         >
           {text}
         </ScrollReveal>

@@ -1,27 +1,14 @@
+import Image from "next/image";
 import Link from "next/link";
 
 function Footer() {
   return (
     <footer className="footer-section">
       <div className="footer-content">
-        <p className="footer-text-1">
-          Third Eye Creative is the spark your ideas have been waiting for.
-        </p>
-        <div className="footer-links-container">
-          <div className="footer-links">
-            <Link href="#" className="footer-link">
-              About Us
-            </Link>
-            <Link href="#" className="footer-link">
-              Careers
-            </Link>
-            <Link href="#" className="footer-link">
-              Work
-            </Link>
-            <Link href="#" className="footer-link">
-              Contact Us
-            </Link>
-          </div>
+        <div className="max-w-[500px] mx-auto">
+          <p className="footer-text-1">
+            Third Eye Creative is the spark your ideas have been waiting for.
+          </p>
           <div className="footer-social-links">
             <div className="card">
               <ul>
@@ -72,6 +59,42 @@ function Footer() {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+        <div className="footer-links-container ">
+          <div className="footer-links">
+            <Link href="#" className="footer-link">
+              About Us
+            </Link>
+            <Link href="#" className="footer-link">
+              Careers
+            </Link>
+            <Link href="#" className="footer-link">
+              Work
+            </Link>
+            <Link href="#" className="footer-link">
+              Contact Us
+            </Link>
+          </div>
+          <div className="flex flex-col gap-5">
+            <Link href="#" className="footer-link flex items-center gap-2">
+              <Image
+                src="/assets/footer-email.png"
+                alt="facebook"
+                width={16}
+                height={16}
+              />
+              hi@thirdeyegfx.in
+            </Link>
+            <Link href="#" className="footer-link flex items-center gap-2">
+              <Image
+                src="/assets/footer-phone.png"
+                alt="instagram"
+                width={16}
+                height={16}
+              />
+              +91 9876543210
+            </Link>
           </div>
         </div>
       </div>

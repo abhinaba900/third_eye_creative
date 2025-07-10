@@ -12,7 +12,8 @@ function Navbar() {
     { label: "Home", href: "/" },
     { label: "About Us", href: "/aboutus" },
     { label: "Work", href: "/work" },
-    { label: "Careers", href: "#" },
+    { label: "Careers", href: "/careers" },
+    { label: "Contact Us", href: "#" },
   ];
 
   const [active, setActive] = useState(0);
@@ -157,7 +158,7 @@ function Navbar() {
               disableRotation={true}
               className="particle-background-in-navbar"
             />
-            <div className="relative z-10 flex items-center gap-6">
+            <div className="relative z-10 flex items-center gap-6 nav-items-section">
               {items.map((item, idx) => (
                 <Link
                   href={item.href}

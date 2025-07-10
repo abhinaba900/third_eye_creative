@@ -19,13 +19,53 @@
     format("opentype");
 }
 @font-face {
-  font-family: "Cabinet Grotesk";
+  font-family: "Sequel Sans Light Display";
+  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Light Disp.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Cabinet Grotesk Medium";
   src: url("../../public/assets/font/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Medium.otf")
     format("opentype");
 }
 @font-face {
+  font-family: "Cabinet Grotesk Thin";
+  src: url("../../public/assets/font/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Thin.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Cabinet Grotesk Regular";
+  src: url("../../public/assets/font/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Regular.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Cabinet Grotesk Light";
+  src: url("../../public/assets/font/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Light.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Cabinet Grotesk Extralight";
+  src: url("../../public/assets/font/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Extralight.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Cabinet Grotesk Extrabold";
+  src: url("../../public/assets/font/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Extrabold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Cabinet Grotesk Bold";
+  src: url("../../public/assets/font/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Bold.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Cabinet Grotesk Black";
+  src: url("../../public/assets/font/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Black.otf")
+    format("opentype");
+}
+@font-face {
   font-family: "subjectivity";
-  src: url("../../public/assets/font/subjectivity/Subjectivity-Regular.otf")
+  src: url("../../public/assets/font/subjectivity/Subjectivity-Bold.otf")
     format("opentype");
 }
 :root {
@@ -35,7 +75,18 @@
   --font-family-sequel-sans-book: "Sequel Sans Book", sans-serif;
   --font-family-sequel-sans-medium: "Sequel Sans Medium", sans-serif;
   --font-family-sequel-sans-random-display: "Sequel Sans Random Display";
+  --font-family-sequel-sans-light-display: "Sequel Sans Light Display";
   --font-family-subjectivity: "subjectivity", sans-serif;
+  --font-family-cabinet-grotesk-medium: "Cabinet Grotesk Medium", sans-serif;
+  --font-family-cabinet-grotesk-thin: "Cabinet Grotesk Thin", sans-serif;
+  --font-family-cabinet-grotesk-regular: "Cabinet Grotesk Regular", sans-serif;
+  --font-family-cabinet-grotesk-light: "Cabinet Grotesk Light", sans-serif;
+  --font-family-cabinet-grotesk-extralight: "Cabinet Grotesk Extralight",
+    sans-serif;
+  --font-family-cabinet-grotesk-extrabold: "Cabinet Grotesk Extrabold",
+    sans-serif;
+  --font-family-cabinet-grotesk-bold: "Cabinet Grotesk Bold", sans-serif;
+  --font-family-cabinet-grotesk-black: "Cabinet Grotesk Black", sans-serif;
 }
 
 body,
@@ -464,9 +515,28 @@ html {
 
 /* hero section  */
 
+.counter-subtitle {
+  font-family: var(--font-family-cabinet-grotesk-medium);
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 1.25rem;
+  line-height: 28px;
+  letter-spacing: 3%;
+  background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.scroll-reveal-text-wrapper {
+  font-family: var(--font-family-sequel-sans-light-display);
+  font-weight: 400;
+  font-size: 48px;
+}
+
 .hero-title-1,
 .hero-title-2 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-light);
   font-weight: 300;
   font-size: 8rem;
   line-height: 120%;
@@ -481,6 +551,8 @@ html {
 .hero-title-2 {
   opacity: 100%;
   font-size: 8.75rem;
+  font-family: var(--font-family-cabinet-grotesk-bold);
+  font-weight: 700;
 }
 
 .hero-section-wrapper {
@@ -541,9 +613,10 @@ html {
 }
 
 .plus-icon-in-counter {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 700;
-  font-size: 4rem;
+  font-size: 9rem !important;
+  padding-bottom: -1rem !important;
   line-height: 100%;
   letter-spacing: 3%;
   text-transform: uppercase;
@@ -599,6 +672,7 @@ html {
 }
 
 .text-heading-our-expertise {
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 5rem;
   line-height: 100%;
@@ -606,6 +680,7 @@ html {
   vertical-align: middle;
   position: relative;
   z-index: 1;
+  margin-bottom: 1.5rem;
 }
 .text-heading-our-expertise span {
   font-weight: 500;
@@ -622,6 +697,7 @@ html {
 }
 
 .text-paragraph-our-expertise {
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 32px;
@@ -633,6 +709,14 @@ html {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+}
+
+.faling-text-container {
+  font-family: var(--font-family-cabinet-grotesk-bold);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0%;
 }
 
 .falling-text-container-highlight {
@@ -777,7 +861,7 @@ html {
 }
 
 .inside-creative-mind-wrapper h3 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 5rem;
   line-height: 88px;
@@ -791,7 +875,7 @@ html {
 }
 
 .inside-creative-mind-wrapper p {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 32px;
@@ -837,7 +921,7 @@ html {
 }
 
 .client-projects-container .client-projects-title {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 5rem;
   line-height: 88px;
@@ -854,7 +938,7 @@ html {
 }
 
 .client-projects-container .client-projects-description {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 32px;
@@ -872,7 +956,7 @@ html {
 }
 
 .title-text-in-projects-data {
-  font-family: var(--font-family-sequel-sans-medium);
+  font-family: var(--font-family-sequel-sans-random-display);
   font-weight: 410;
   font-size: 2rem;
   line-height: 100%;
@@ -882,7 +966,7 @@ html {
 }
 
 .paragraph-text-in-projects-data {
-  font-family: var(--font-family-sequel-sans-medium);
+  font-family: var(--font-family-sequel-sans-light-display);
   font-weight: 410;
   font-size: 2rem;
   line-height: 100%;
@@ -912,12 +996,12 @@ html {
   gap: 0.5rem;
   margin: 0 auto 10.143rem;
 
-  font: 700 2rem/1 var(--font-family);
+  font: 700 2rem/1 var(--font-family-cabinet-grotesk-bold);
   text-align: center;
 
   background: black; /* or your intended background */
   border: none;
-  border-radius: 20px;
+  border-radius: 100px;
   position: relative;
   cursor: pointer;
   z-index: 1;
@@ -949,7 +1033,7 @@ html {
   right: -1px;
   bottom: -1px;
   z-index: -1;
-  border-radius: 23px; /* 20px + 3px border padding */
+  border-radius: 100px; /* 20px + 3px border padding */
   padding: 3px; /* This defines the border thickness */
 
   background: linear-gradient(
@@ -1216,7 +1300,7 @@ strong {
 }
 
 .absolute-container-testimonial-showcase .absolute-title-testimonial-showcase {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 5rem;
   line-height: 88px;
@@ -1239,7 +1323,7 @@ strong {
 
 .absolute-container-testimonial-showcase
   .absolute-paragraph-testimonial-showcase {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 32px;
@@ -1293,7 +1377,7 @@ strong {
 }
 
 .build-with-us-banner h3 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-light);
   font-weight: 300;
   font-size: 5.313rem;
   line-height: 120%;
@@ -1307,6 +1391,7 @@ strong {
 }
 
 .build-with-us-banner h3 span {
+  font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 700;
 }
 
@@ -1444,26 +1529,26 @@ strong {
 }
 
 .footer-text-1 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 1.75rem;
   line-height: 36px;
   letter-spacing: 3%;
-  max-width: 420px;
+  max-width: 500px;
   margin: 0 auto;
 }
 
 .footer-links-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.813rem;
 }
 
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 0.5rem;
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-regular);
   font-weight: 400;
   font-size: 1rem;
   line-height: 24px;
@@ -1480,7 +1565,7 @@ strong {
 } */
 
 .footer-section .footer-text-2 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 700;
   font-size: 19vw; /* Dynamic size based on screen width */
   line-height: 1; /* Prevent extra vertical space */
@@ -1489,7 +1574,7 @@ strong {
   letter-spacing: 0.5vw;
   color: #ffffff80;
   position: absolute;
-  top: 27.8rem;
+  top: 27rem;
   bottom: 0;
   margin: 0 auto;
   padding: 0;
@@ -1585,7 +1670,7 @@ strong {
 }
 
 .about-us-hero-section-title {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 700;
   font-size: 21vw;
   line-height: 120%;
@@ -1621,7 +1706,7 @@ strong {
 }
 
 .about-us-hero-section-content-wrapper h4 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 48px;
@@ -1636,7 +1721,7 @@ strong {
 }
 
 .about-us-hero-section-footer-wrapper p {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 400;
   font-size: 1rem;
   line-height: 24px;
@@ -1649,7 +1734,7 @@ strong {
 /* service tags */
 
 .servicetags-text {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 2rem;
   line-height: 100%;
@@ -1680,7 +1765,7 @@ strong {
 
 .our-approach-wrapper .our-approach-content-wrapper p {
   max-width: 816px;
-  font-family: var(--font-family-sequel-sans-medium);
+  font-family: var(--font-family-sequel-sans-book);
   font-weight: 405;
   font-size: 2.5rem;
   line-height: 56px;
@@ -1689,7 +1774,7 @@ strong {
 }
 
 .our-approach-wrapper h3 {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 48px;
@@ -1719,7 +1804,9 @@ strong {
   height: 100%;
   padding: 14.444vh 5.417vw 12.963vh 5.417vw;
 }
-
+.impact-stats-counter {
+  font-family: var(--font-family-cabinet-grotesk-bold);
+}
 .impact-stats-divider {
   text-align: center;
 }
@@ -1769,7 +1856,7 @@ strong {
 }
 
 .creative-team-intro-title {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 8.75rem;
   line-height: 140%;
@@ -1795,7 +1882,7 @@ strong {
 }
 
 .text-section-in-creative-team p {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 28px;
@@ -1826,7 +1913,7 @@ strong {
 }
 
 .main-heading-tet-in-creative-team {
-  font-family: var(--font-family-sequel-sans-medium);
+  font-family: var(--font-family-sequel-sans-random-display);
   font-weight: 410;
   font-size: 2.25rem;
   line-height: 44px;
@@ -1841,7 +1928,7 @@ strong {
 }
 
 .creative-team-tags {
-  font-family: var(--font-family-sequel-sans-medium);
+  font-family: var(--font-family-sequel-sans-book);
   font-weight: 405;
   font-size: 1rem;
   line-height: 24px;
@@ -1850,7 +1937,7 @@ strong {
 }
 
 .creative-team-description {
-  font-family: var(--font-family-sequel-sans-medium);
+  font-family: var(--font-family-sequel-sans-book);
   font-weight: 405;
   font-size: 1rem;
   line-height: 24px;
@@ -1858,7 +1945,7 @@ strong {
 }
 
 .creative-team-name {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 48px;
@@ -1876,7 +1963,7 @@ strong {
 }
 
 .creative-team-role {
-  font-family: var(--font-family);
+  font-family: var(--font-family-sequel-sans-book);
   font-weight: 405;
   font-size: 1.25rem;
   line-height: 28px;
@@ -1905,7 +1992,7 @@ strong {
 
 .heading-content-holders h3 {
   max-width: 500px;
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 5rem;
   line-height: 88px;
@@ -1925,7 +2012,7 @@ strong {
 
 .heading-content-holders p {
   max-width: 415px;
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 32px;
@@ -1956,7 +2043,7 @@ strong {
 }
 
 .services-overview-title {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 5rem;
   line-height: 88px;
@@ -1975,7 +2062,7 @@ strong {
   color: transparent;
 }
 .services-overview-description {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 32px;
@@ -2008,6 +2095,16 @@ strong {
 
 /* let's work together */
 
+.input-label-in-let-work-together {
+  font-family: var(--font-family-sequel-sans-random-display);
+  font-weight: 410;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
 .let-work-together-wrapper {
   margin: 17.5rem auto 8.75rem auto;
   padding-bottom: 0;
@@ -2027,18 +2124,24 @@ strong {
 }
 
 .work-together-service-text {
-  font-family: var(--font-family-sequel-sans-book);
-  font-weight: 410;
-  font-style: "Roman Dip";
+  font-family: var(--font-family-sequel-sans-random-display);
+  font-weight: 500;
   font-size: 1rem;
   line-height: 24px;
-  letter-spacing: 0%;
   color: #9a6aff;
   margin-bottom: 1rem;
 }
 
+.input-in-let-work-together {
+  font-family: var(--font-family-cabinet-grotesk-medium);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
 .let-work-together-button {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-style: Medium;
   font-size: 1rem;
@@ -2049,7 +2152,7 @@ strong {
 }
 
 .lets-build-something-button {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 700;
   font-style: Bold;
   font-size: 2rem;
@@ -2063,7 +2166,7 @@ strong {
 /* catagory filter bar */
 
 .work-grid-filter-button {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
   font-style: Medium;
   font-size: 1.25rem;
@@ -2078,7 +2181,7 @@ strong {
 /* project showcase grid  */
 
 .project-tags-in-project-showcase-grid {
-  font-family: var(--font-family);
+  font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 700;
   font-style: Bold;
   font-size: 1rem;
@@ -2130,6 +2233,183 @@ strong {
 
 .mobile-text {
   display: none;
+}
+
+/* carrers  */
+
+.span-diffrent-color {
+  background: linear-gradient(0deg, #ec4b7b, #ce0aff),
+    linear-gradient(180deg, #ec4b7b 0%, rgba(206, 10, 255, 0) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important; /* for Firefox */
+  color: transparent !important;
+}
+
+.image-container-inner-in-photo-gallery {
+  width: 400px;
+  height: 500px;
+}
+
+/* life at third eye */
+
+.lifeat-third-eye-wrapper .lifeat-third-eye-title {
+  font-family: var(--font-family-cabinet-grotesk-medium);
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 5rem;
+  line-height: 88px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.lifeat-third-eye-wrapper .lifeat-third-eye-title span {
+  background: linear-gradient(0deg, #c883ff, #c883ff),
+    linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+.lifeat-third-eye-wrapper .lifeat-third-eye-desc {
+  font-family: var(--font-family-cabinet-grotesk-medium);
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 1.5rem;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.text-like-id-wrapper {
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 415;
+  font-size: 152px;
+  line-height: 100%;
+  letter-spacing: 3%;
+  opacity: 40%;
+  /* background: linear-gradient(94.46deg, #ffffff 25.29%, #9c9c9c 107.3%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  /* color: transparent;  */
+}
+
+.text-like-header-wrapper {
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+.text-like-paragraph-wrapper {
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  color: #ffffff;
+  opacity: 50%;
+}
+
+.overlay-in-border {
+  background-color: #3f3f3f !important;
+  height: 1px !important;
+}
+
+/* open rols  */
+
+.open-roles-wrapper {
+  margin-bottom: 1rem;
+}
+
+.open-roles-wrapper .open-roles-wrapper-title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 5rem;
+  line-height: 88px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.open-roles-wrapper .open-roles-wrapper-title span {
+  background: linear-gradient(0deg, #c883ff, #c883ff),
+    linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+.open-roles-wrapper .open-roles-wrapper-desc {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto;
+  margin-bottom: 5rem;
+}
+
+
+
+.job-card-tags {
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.job-card-title {
+  font-family: var(--font-family-sequel-sans-medium);
+  font-weight: 415;
+  font-size: 2.188rem;
+  line-height: 48px;
+  letter-spacing: 0%;
+  margin-bottom: 1.5rem;
+}
+
+.job-card-description {
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
+  font-size: 1.125rem;
+  line-height: 28px;
+  letter-spacing: 0%;
+  background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+  opacity: 40%;
+}
+
+.job-card-apply-button {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #ffffff;
+  cursor: pointer;
 }
 
 /* media quarry */
@@ -2345,15 +2625,15 @@ strong {
     height: 1.5rem;
   }
 
-  .about-us-hero-section-content-wrapper{
+  .about-us-hero-section-content-wrapper {
     padding-left: 1rem;
   }
 
-  .about-us-hero-section-footer-wrapper{
+  .about-us-hero-section-footer-wrapper {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .lets-build-something-button{
+  .lets-build-something-button {
     margin-bottom: 1rem;
   }
 }
@@ -2452,6 +2732,13 @@ strong {
   .our-approach-wrapper h3 {
     width: 40%;
     margin-bottom: -50px;
+  }
+  .nav-item {
+    font-size: 0.875rem;
+  }
+
+  .nav-items-section {
+    gap: 0.2rem;
   }
 }
 

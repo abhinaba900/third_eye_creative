@@ -69,7 +69,7 @@ function HeroSection() {
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />
-                <p>Brands Transformed</p>
+                <p className="counter-subtitle">Brands Transformed</p>
               </div>
               <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
                 <Counter

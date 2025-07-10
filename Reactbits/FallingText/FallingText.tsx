@@ -292,7 +292,7 @@ const FallingText: React.FC<FallingTextProps> = ({
       ref={containerRef}
       className={`relative  ${
         isScrolling ? "z-[0]" : "z-0"
-      } w-full h-full cursor-pointer text-center pt-8`}
+      } w-full h-full cursor-pointer text-center pt-8 faling-text-container`}
       onClick={trigger === "click" ? handleTrigger : undefined}
       onMouseEnter={trigger === "hover" ? handleTrigger : undefined}
     >
