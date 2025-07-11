@@ -44,7 +44,7 @@ function LifeatThirdEye() {
       <div className="bg-black text-white py-16 px-4 md:px-20 max-w-[1262px] mx-auto mb-[8.75rem]">
         {values.map((item, idx) => (
           <div key={idx} className="">
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
               <div className="w-50 shrink-0 py-6">
                 <ScrollReveal
                   baseOpacity={0}

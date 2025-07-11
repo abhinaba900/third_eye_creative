@@ -2499,7 +2499,9 @@ strong {
   .inside-creative-mind-wrapper h3,
   .client-projects-container .client-projects-title,
   .absolute-container-testimonial-showcase .absolute-title-testimonial-showcase,
-  .build-with-us-banner h3 {
+  .build-with-us-banner h3,
+  .lifeat-third-eye-wrapper .lifeat-third-eye-title,
+  .open-roles-wrapper .open-roles-wrapper-title {
     font-size: 3rem;
     line-height: 100%;
   }
@@ -2508,7 +2510,9 @@ strong {
   .inside-creative-mind-wrapper p,
   .absolute-container-testimonial-showcase
     .absolute-paragraph-testimonial-showcase,
-  .view-more-button {
+  .view-more-button,
+  .lifeat-third-eye-wrapper .lifeat-third-eye-desc,
+  .open-roles-wrapper .open-roles-wrapper-desc {
     font-size: 1rem;
   }
 
@@ -2664,6 +2668,28 @@ strong {
 
   .lets-build-something-button {
     margin-bottom: 1rem;
+  }
+
+  .text-like-header-wrapper {
+    font-size: 2rem;
+    line-height: 100%;
+  }
+
+  .work-getintouch-title {
+    font-size: 3rem;
+    line-height: 100%;
+  }
+  .work-getintouch-button {
+    font-size: 1.5rem;
+    line-height: 100%;
+  }
+
+  .getintouch-button-arrow {
+    height: 1.8rem;
+  }
+
+  .text-section-in-navbar {
+    gap: 0.6rem;
   }
 }
 
