@@ -3,13 +3,15 @@
 import { MotionValue, motion, useSpring, useTransform } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 
-type ResponsiveValue<T> = T | {
-  base?: T;
-  sm?: T;
-  md?: T;
-  lg?: T;
-  xl?: T;
-};
+type ResponsiveValue<T> =
+  | T
+  | {
+      base?: T;
+      sm?: T;
+      md?: T;
+      lg?: T;
+      xl?: T;
+    };
 
 interface NumberProps {
   mv: MotionValue<number>;
@@ -110,9 +112,17 @@ interface CounterProps {
 }
 
 // Helper type guard
-function isResponsiveObject<T>(value: ResponsiveValue<T>): value is { base?: T; sm?: T; md?: T; lg?: T; xl?: T } {
-  return typeof value === "object" && value !== null && (
-    "base" in value || "sm" in value || "md" in value || "lg" in value || "xl" in value
+function isResponsiveObject<T>(
+  value: ResponsiveValue<T>
+): value is { base?: T; sm?: T; md?: T; lg?: T; xl?: T } {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    ("base" in value ||
+      "sm" in value ||
+      "md" in value ||
+      "lg" in value ||
+      "xl" in value)
   );
 }
 
@@ -150,7 +160,13 @@ export default function Counter({
         sm: value.sm ?? value.base ?? defaultVal,
         md: value.md ?? value.sm ?? value.base ?? defaultVal,
         lg: value.lg ?? value.md ?? value.sm ?? value.base ?? defaultVal,
-        xl: value.xl ?? value.lg ?? value.md ?? value.sm ?? value.base ?? defaultVal,
+        xl:
+          value.xl ??
+          value.lg ??
+          value.md ??
+          value.sm ??
+          value.base ??
+          defaultVal,
       };
     }
     return {
@@ -178,8 +194,11 @@ export default function Counter({
     xl: responsiveFontSize.xl + responsivePadding.xl,
   };
 
-  const numDigits = value === 0 ? 1 : Math.floor(Math.log10(Math.max(1, value))) + 1;
-  const places = Array.from({ length: numDigits }, (_, i) => Math.pow(10, numDigits - 1 - i));
+  const numDigits =
+    value === 0 ? 1 : Math.floor(Math.log10(Math.max(1, value))) + 1;
+  const places = Array.from({ length: numDigits }, (_, i) =>
+    Math.pow(10, numDigits - 1 - i)
+  );
 
   useEffect(() => {
     if (!counterRef.current || hasStarted) return;
@@ -236,7 +255,9 @@ export default function Counter({
   const easeOutQuad = (t: number): number => t * (2 - t);
 
   const textGradient = textGradientStops
-    ? `linear-gradient(${textGradientDegree}deg, ${textGradientStops.join(", ")})`
+    ? `linear-gradient(${textGradientDegree}deg, ${textGradientStops.join(
+        ", "
+      )})`
     : `linear-gradient(${textGradientDegree}deg, ${textGradientFrom}, ${textGradientTo})`;
 
   return (
@@ -245,10 +266,15 @@ export default function Counter({
       className={`flex items-center justify-center relative ${containerClassName}`}
     >
       <div
-        className={`flex overflow-hidden leading-none shadow-none ${counterClassName}`}
+        className={`flex items-center overflow-hidden leading-none shadow-none ${counterClassName}`}
         style={{
-          fontSize: `clamp(${Math.min(120, responsiveFontSize.base * 0.6)}px, 8vw, ${responsiveFontSize.xl}px)`,
-          gap: `clamp(${responsiveGap.base * 0.5}px, 1vw, ${responsiveGap.xl}px)`,
+          fontSize: `clamp(${Math.min(
+            120,
+            responsiveFontSize.base * 0.6
+          )}px, 8vw, ${responsiveFontSize.xl}px)`,
+          gap: `clamp(${responsiveGap.base * 0.5}px, 1vw, ${
+            responsiveGap.xl
+          }px)`,
           borderRadius: `clamp(${responsiveBorderRadius.base}px, 0.5vw, ${responsiveBorderRadius.xl}px)`,
           paddingLeft: `clamp(${responsiveHorizontalPadding.base}px, 1vw, ${responsiveHorizontalPadding.xl}px)`,
           paddingRight: `clamp(${responsiveHorizontalPadding.base}px, 1vw, ${responsiveHorizontalPadding.xl}px)`,
@@ -282,14 +308,18 @@ export default function Counter({
         <div
           className={`w-full ${topGradientClassName}`}
           style={{
-            height: `clamp(${responsiveGradientHeight.base * 0.5}px, 1.5vw, ${responsiveGradientHeight.xl}px)`,
+            height: `clamp(${responsiveGradientHeight.base * 0.5}px, 1.5vw, ${
+              responsiveGradientHeight.xl
+            }px)`,
             background: `linear-gradient(to bottom, ${gradientFrom}, ${gradientTo})`,
           }}
         />
         <div
           className={`absolute bottom-0 w-full ${bottomGradientClassName}`}
           style={{
-            height: `clamp(${responsiveGradientHeight.base * 0.5}px, 1.5vw, ${responsiveGradientHeight.xl}px)`,
+            height: `clamp(${responsiveGradientHeight.base * 0.5}px, 1.5vw, ${
+              responsiveGradientHeight.xl
+            }px)`,
             background: `linear-gradient(to top, ${gradientFrom}, ${gradientTo})`,
           }}
         />

@@ -1,6 +1,12 @@
 "use client";
 
-import { MotionValue, motion, useInView, useSpring, useTransform } from "framer-motion";
+import {
+  MotionValue,
+  motion,
+  useInView,
+  useSpring,
+  useTransform,
+} from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 interface NumberProps {
@@ -144,7 +150,7 @@ export default function Counter({
       className={`flex items-center justify-center relative ${containerClassName}`}
     >
       <div
-        className={`flex overflow-hidden leading-none shadow-none ${counterClassName}`}
+        className={`flex items-center h-[${fontSize}px] overflow-hidden leading-none shadow-none ${counterClassName}`}
         style={{
           fontSize: `${fontSize}px`,
           gap: `${gap}px`,
@@ -153,6 +159,7 @@ export default function Counter({
           paddingRight: `${horizontalPadding}px`,
           color: textColor,
           fontWeight,
+          height: `${fontSize}px`,
         }}
       >
         {places.map((place) => (
