@@ -2668,6 +2668,10 @@ strong {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .navitems-section-wrapper .nav-item {
+    padding: 0.3rem 0.8rem;
+  }
+
   .vision-text-gradient-desktop {
     display: none;
   }
