@@ -13,7 +13,7 @@ function Navbar() {
     { label: "About Us", href: "/aboutus" },
     { label: "Work", href: "/work" },
     { label: "Careers", href: "/careers" },
-    { label: "Contact Us", href: "#" },
+    { label: "Contact Us", href: "/contactus" },
   ];
 
   const [active, setActive] = useState(0);

@@ -118,17 +118,17 @@ export default function TestimonialShowcase() {
                       className="w-10 h-10 rounded-full object-cover"
                     />
                     <div>
-                      <h4 className="text-white font-semibold text-sm">
+                      <h4 className="text-white font-semibold text-sm testimonial-name">
                         {item.name}
                       </h4>
-                      <p className="text-gray-400 text-xs">
+                      <p className="text-gray-400 text-xs testimonial-title">
                         {item.title}
                         {item.company && `, ${item.company}`}
                       </p>
                     </div>
                   </div>
 
-                  <p className="text-sm text-gray-300 mt-4 line-clamp-6">
+                  <p className="text-sm text-gray-300 mt-4 line-clamp-6 testimonial-message">
                     {item.message}
                   </p>
                 </div>

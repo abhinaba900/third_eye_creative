@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: false,
   // next.config.js
-  transpilePackages: ["gsap", "three", "ogl", "matter-js"],
+  transpilePackages: ["gsap", "three", "ogl", "matter-js", "postprocessing"],
   eslint: {
     ignoreDuringBuilds: true,
   },
