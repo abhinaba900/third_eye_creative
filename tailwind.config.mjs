@@ -4,17 +4,17 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
-    "./src/**/*.{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       translate: {
-        '101': '101%',
+        101: "101%",
       },
       keyframes: {
         marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
         },
         glitch: {
           "0%": { "clip-path": "inset(20% 0 50% 0)" },
@@ -39,11 +39,18 @@ module.exports = {
           "95%": { "clip-path": "inset(25% 0 35% 0)" },
           "100%": { "clip-path": "inset(30% 0 40% 0)" },
         },
+        shine: {
+          "0%": { "background-position": "200% 0" }, // Changed to 200%
+          "100%": { "background-position": "-200% 0" }, // Changed to -200%
+        },
       },
       animation: {
-        marquee: 'marquee 15s linear infinite',
-        "glitch-after": "glitch var(--after-duration) infinite linear alternate-reverse",
-        "glitch-before": "glitch var(--before-duration) infinite linear alternate-reverse",
+        marquee: "marquee 15s linear infinite",
+        "glitch-after":
+          "glitch var(--after-duration) infinite linear alternate-reverse",
+        "glitch-before":
+          "glitch var(--before-duration) infinite linear alternate-reverse",
+        shine: "shine 5s linear infinite",
       },
     },
   },

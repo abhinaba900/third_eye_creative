@@ -1,9 +1,13 @@
-﻿import Image from "next/image";
+﻿"use client";
+import Image from "next/image";
 import Aurora from "../../../Reactbits/Aurora/Aurora";
 import Counter from "../../../Reactbits/Counter/Counter";
 import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
+import VariableProximity from "../../../Reactbits/VariableProximity/VariableProximity";
+import { useRef } from "react";
 
 function HeroSection() {
+  const containerRef = useRef(null);
   return (
     <div className="hero-section-wrapper">
       <Image
@@ -23,11 +27,11 @@ function HeroSection() {
           className="m-auto d-block"
         />
 
-        <h3 className="d-flex align-items-center hero-title-1 text-center ">
+        <h3 className="d-flex align-items-center hero-title-1 text-center " ref={containerRef}>
           We&apos; ve got a{" "}
-          <span className="vision-text-gradient-desktop">
+          <span className="vision-text-gradient-desktop" >
             {" "}
-            <TextPressure
+            {/* <TextPressure
               text=" VISION"
               flex={false}
               alpha={false}
@@ -40,6 +44,15 @@ function HeroSection() {
               minFontSize={35}
               inline={true}
               className="gradient-text " // Add gradient via class
+            /> */}
+            <VariableProximity
+              label={"VISION"}
+              className={"variable-proximity-demo"}
+              fromFontVariationSettings="'wght' 400, 'opsz' 9"
+              toFontVariationSettings="'wght' 1000, 'opsz' 40"
+              containerRef={containerRef}
+              radius={100}
+              falloff="linear"
             />
           </span>
           <span className="vision-text-gradient-mobile">VISION</span>
