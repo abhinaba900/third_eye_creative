@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Aurora from "../../../Reactbits/Aurora/Aurora";
 import Counter from "../../../Reactbits/Counter/Counter";
-import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
+// import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
 import VariableProximity from "../../../Reactbits/VariableProximity/VariableProximity";
 import { useRef } from "react";
 

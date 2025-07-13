@@ -144,8 +144,6 @@ export default function Aurora(props: AuroraProps) {
     gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
     gl.canvas.style.backgroundColor = "transparent";
 
-    let program: Program | undefined;
-
     const geometry = new Triangle(gl);
     if (geometry.attributes.uv) {
       delete geometry.attributes.uv;
@@ -165,7 +163,7 @@ export default function Aurora(props: AuroraProps) {
         const c = new Color(hex);
         return [c.r, c.g, c.b];
       } catch (e) {
-        console.warn(`Invalid color: ${hex}, using black as fallback`);
+        console.warn(`Invalid color: ${hex}, using black as fallback ${e}`);
         return [0, 0, 0];
       }
     };
@@ -180,7 +178,8 @@ export default function Aurora(props: AuroraProps) {
 
     const colorStopsArray = getColorStops().map(parseColor);
 
-    program = new Program(gl, {
+    // Remove the first `program` declaration to avoid redeclaring it.
+    const program = new Program(gl, {
       vertex: VERT,
       fragment: FRAG,
       uniforms: {
@@ -205,7 +204,7 @@ export default function Aurora(props: AuroraProps) {
         width = newWidth;
         height = newHeight;
         renderer.setSize(width, height);
-        program!.uniforms.uResolution.value = [width, height];
+        program.uniforms.uResolution.value = [width, height];
       }
     };
 
