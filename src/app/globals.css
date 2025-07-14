@@ -2589,6 +2589,36 @@ strong {
   vertical-align: middle;
 }
 
+/* single work page */
+
+.hero-section-in-single-work {
+  background-image: url("/assets/Glass effect for hero section.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 8.75rem;
+  padding-top: 6.25rem;
+  overflow: hidden;
+  border-radius: 0 0 48px 48px;
+}
+
+/* executive-summary-container */
+
+.executive-summary-container {
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 1.563rem;
+  margin-bottom: 9.813rem;
+}
+.scroll-reveal-text-wrapper-in-executive-summary {
+  font-family: var(--font-family-sequel-sans-light-display);
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 56px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
 /* media quarry */
 
 @media (max-width: 768px) {

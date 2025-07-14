@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import CategoryFilterBar from "./CategoryFilterBar";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Project {
   id: number;
@@ -60,7 +61,7 @@ function ProjectShowcaseGrid() {
       <div className="max-w-[1232px] mx-auto px-4 py-10 grid gap-10 md:grid-cols-2 mb-[8.75rem]">
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project) => (
-            <div key={project.id} className="space-y-3">
+            <Link href={`/work/${project.id}`} key={project.id} className="space-y-3">
               {/* Fixed Height Image Box */}
               <Image
                 src={project.image}
@@ -87,7 +88,7 @@ function ProjectShowcaseGrid() {
 
               {/* Description */}
               <p className="text-sm text-gray-300 project-description-in-project-showcase-grid">{project.description}</p>
-            </div>
+            </Link>
           ))
         ) : (
           <div className="col-span-2 text-center text-white text-lg font-medium py-20">
