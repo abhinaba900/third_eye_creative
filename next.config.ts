@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: false,
+
   // next.config.js
   transpilePackages: ["gsap", "three", "ogl", "matter-js", "postprocessing"],
   eslint: {

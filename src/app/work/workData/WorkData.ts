@@ -1,5 +1,4 @@
-﻿
-const workData = [
+﻿const workData = [
   {
     id: "1",
     herosection: {
@@ -72,7 +71,7 @@ const workData = [
       },
     },
     objectives: {
-      title: "Behind the Build",
+      title: "Behind the <span>Build</span>",
       description:
         "Building a unified diagnostic ecosystem for a smarter, faster UPS insights",
       realTimeDiagnostics: {
@@ -109,21 +108,21 @@ const workData = [
     },
     Solution: {
       layout: "1",
-      title: "Scalable Diagnostics Centralized Intelligence",
+      title: "<span>Scalable Diagnostics</span> <br/> Centralized Intelligence",
       description:
         "Robust tools engineered to standardize, automate, and optimize UPS field operations at scale",
       offlineFunctionality: {
         title: "Offline Functionality",
         description:
           "Ensures uninterrupted operation by storing data locally when offline and syncing to cloud once connected.",
-        image: "https://example.com/offline-image.png",
+        image: "/assets/tsSolution-offlineFunctionality-image.png",
         buttonImage: "/assets/tsSolution-offlineFunctionality-button.png",
       },
       realTimeDiagnostics: {
         title: "Real-Time Diagnostics",
         description:
           "Instantly captures and displays critical data like voltage, current, temperature, and battery cycles.",
-        image: "https://example.com/real-time-image.png",
+        image: "/assets/Solution-realTimeDiagnostics-image.png",
       },
       seamlessBluetoothIntegration: {
         title: "Seamless Bluetooth Integration",
@@ -135,7 +134,7 @@ const workData = [
         title: "Technology Backbone",
         description:
           "Built using a powerful tech stack including Flutter, Firebase, GCP, and more.",
-        image: "https://example.com/tech-backbone-image.png",
+        image: "/assets/technologyBackbone-xplorean-ai.png",
       },
       technicianCommandCenter: {
         title: "Technician Command Center",
@@ -158,7 +157,7 @@ const workData = [
     },
 
     ChallengesandResolutions: {
-      title: "Smart Solutions for Complex Challenges",
+      title: "<span>Smart Solutions</span> <br /> for Complex Challenges",
       description:
         "Modular systems and adaptive technologies crafted to streamline UPS diagnostics and performance across all touchpoints",
       challenges: {
@@ -168,7 +167,7 @@ const workData = [
           "Maintaining reliable data sync in low-connectivity environments",
           "Achieving consistent performance across Android and iOS devices",
         ],
-        image: "/assets/challenges-image.png",
+        image: "/assets/ChallengesandResolutions-right-side-image.png",
       },
       solutions: {
         title: "How we engineered the fix",
@@ -177,11 +176,11 @@ const workData = [
           "Engineered an offline-first architecture with intelligent retry logic to ensure uninterrupted operations and accurate data capture",
           "Implemented Flutter for a unified codebase, ensuring cross-platform UI consistency and reduced development overhead",
         ],
-        image: "/assets/solutions-image.png",
+        image: "/assets/Solution-ChallengesandResolutions-right-side-image.svg",
       },
     },
     Results: {
-      title: "Where Strategy meets Tangible Results",
+      title: "Where <span>Strategy meets Tangible</span> <br /> Results",
       description:
         "From faster service cycles to smarter diagnostics — here’s how our solutions made measurable impact in the real world",
       metrics: [
@@ -192,7 +191,6 @@ const workData = [
         {
           value: "100%",
           description: "of service visits now generate cloud-logged reports",
-          highlight: true,
         },
         {
           value: "Significant",

@@ -11,7 +11,7 @@ function HeroSection({ data }) {
         {data.tags?.map((tag) => (
           <span
             key={tag}
-            className="px-4 py-1 text-sm rounded-full border border-[#9f5eff] bg-[#1a1a1a] text-[#e3d1ff]"
+            className="px-4 py-1 text-sm rounded-full border border-[#9f5eff] bg-[#1a1a1a] text-[#e3d1ff] work-single-page-tag"
           >
             {tag}
           </span>
@@ -19,7 +19,7 @@ function HeroSection({ data }) {
       </div>
 
       {/* Title */}
-      <h1 className="text-center text-4xl md:text-5xl font-semibold z-10 px-4 max-w-[1157px]">
+      <h1 className="text-center text-4xl md:text-5xl font-semibold z-10 px-4 max-w-[1157px] work-single-page-hero-title">
         {data.title}
       </h1>
 

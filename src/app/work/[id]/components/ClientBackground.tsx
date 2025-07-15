@@ -33,18 +33,18 @@ function ClientBackground({ data }) {
             height={64}
           />
         </div>
-        <h2 className="text-2xl lg:text-3xl font-semibold">
+        <h2 className="text-2xl lg:text-3xl font-semibold single-work-page-client-title">
           {data.rightContent.title}
         </h2>
-        <p className="text-sm lg:text-base text-white/80">
+        <p className="text-sm lg:text-base text-white/80 single-work-page-client-description">
           {data.rightContent.description}
         </p>
 
         <div className="grid grid-cols-2 gap-x-8 gap-y-4 text-sm text-white/70">
           {data.rightContent.footerContent.map((item, index) => (
             <div key={index}>
-              <p className="font-semibold text-white">{item.title}</p>
-              <p>{item.description}</p>
+              <p className="font-semibold text-white single-work-page-client-footer-title">{item.title}</p>
+              <p className="single-work-page-client-footer-description">{item.description}</p>
             </div>
           ))}
         </div>

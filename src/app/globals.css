@@ -29,6 +29,21 @@
     format("opentype");
 }
 @font-face {
+  font-family: "Sequel Sans Bold Head";
+  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Bold Head.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Sequel Sans Book Head";
+  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Book Head.otf")
+    format("opentype");
+}
+@font-face {
+  font-family: "Sequel Sans Medium Head";
+  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Medium Head.otf")
+    format("opentype");
+}
+@font-face {
   font-family: "Cabinet Grotesk Medium";
   src: url("../../public/assets/font/CabinetGrotesk_Complete/Fonts/OTF/CabinetGrotesk-Medium.otf")
     format("opentype");
@@ -82,6 +97,9 @@
   --font-family-sequel-sans-random-display: "Sequel Sans Random Display";
   --font-family-sequel-sans-roman-display: "Sequel Sans Roman Display";
   --font-family-sequel-sans-light-display: "Sequel Sans Light Display";
+  --font-family-sequel-sans-bold-head: "Sequel Sans Bold Head", sans-serif;
+  --font-family-sequel-sans-book-head: "Sequel Sans Book Head", sans-serif;
+  --font-family-sequel-sans-medium-head: "Sequel Sans Medium Head", sans-serif;
   --font-family-subjectivity: "subjectivity", sans-serif;
   --font-family-cabinet-grotesk-medium: "Cabinet Grotesk Medium", sans-serif;
   --font-family-cabinet-grotesk-thin: "Cabinet Grotesk Thin", sans-serif;
@@ -2617,6 +2635,284 @@ strong {
   line-height: 56px;
   letter-spacing: 0%;
   text-align: center;
+}
+
+/* hero section */
+.work-single-page-tag {
+  font-family: var(--font-family-cabinet-grotesk-medium);
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.work-single-page-hero-title {
+  font-family: var(--font-family-cabinet-grotesk-regular);
+  font-weight: 400;
+  font-size: 5rem;
+  line-height: 120%;
+  letter-spacing: -4%;
+  text-align: center;
+}
+
+/* client projects */
+
+.single-work-page-client-title {
+  font-family: var(--font-family-sequel-sans-bold-head);
+  font-weight: 375;
+  font-size: 1.5rem;
+  line-height: 32px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.single-work-page-client-description {
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  vertical-align: middle;
+  opacity: 80%;
+  color: #ffffffcc;
+}
+
+.single-work-page-client-footer-title {
+  font-family: var(--font-family-sequel-sans-medium-head);
+  font-weight: 365;
+  font-size: 1.25rem;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.single-work-page-client-footer-description {
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
+  font-size: 0.875rem;
+  line-height: 24px;
+  letter-spacing: 0%;
+}
+
+/* problem statement */
+
+.single-work-page-problem-statement-title {
+  font-family: var(--font-family-cabinet-grotesk-medium);
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 88px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.single-work-page-problem-statement-title span {
+  background: linear-gradient(0deg, #c883ff, #c883ff),
+    linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+.single-work-page-problem-statement-description {
+  font-family: var(--font-family-cabinet-grotesk-medium);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.single-work-page-problem-statement-content-title {
+  font-family: var(--font-family-sequel-sans-bold-head);
+  font-weight: 375;
+  font-size: 1.5rem;
+  line-height: 32px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.single-work-page-problem-statement-content-description {
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0.3px;
+  vertical-align: middle;
+}
+
+.single-work-page-problem-statement-content-description-tags {
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* objectives */
+
+.single-work-page-objectives-title {
+  font-family: var(--font-family-cabinet-grotesk-medium);
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 5rem;
+  line-height: 88px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.single-work-page-objectives-title span {
+  background: linear-gradient(0deg, #ff891d, #ec4b7b),
+    linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+.single-work-page-objectives-description {
+  font-family: var(--font-family-cabinet-grotesk-medium);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.single-work-page-objectives-real-time-diagnostics-title {
+  font-family: var(--font-family-sequel-sans-bold-head);
+  font-weight: 375;
+  font-size: 1.25rem;
+  line-height: 28px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.single-work-page-objectives-real-time-diagnostics-description {
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+}
+
+/* solution page */
+
+.single-page-solution-section-title {
+  font-family: var(--font-family-cabinet-grotesk-medium);
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 88px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.single-page-solution-section-title span {
+  background: linear-gradient(0deg, #ec4b7b, #ce0aff),
+    linear-gradient(180deg, #ec4b7b 0%, rgba(206, 10, 255, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+.single-page-solution-section-description {
+  font-family: var(--font-family-cabinet-grotesk-medium);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.single-page-solution-cards-title {
+  font-family: var(--font-family-sequel-sans-bold-head);
+  font-weight: 375;
+  font-size: 1.25rem;
+  line-height: 28px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.single-page-solution-cards-description {
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  opacity: 80%;
+  color: #ffffff;
+}
+
+/* challenges and  resolution */
+
+.single-work-page-bullet-point-title {
+  font-family: var(--font-family-sequel-sans-bold-head);
+  font-weight: 375;
+  font-size: 2rem;
+  line-height: 40px;
+  letter-spacing: 0%;
+}
+
+.single-work-page-bullet-point-description {
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
+  font-size: 1.25rem;
+  line-height: 140%;
+  letter-spacing: 0%;
+}
+
+.single-work-page-challenges-and-resolutions-title span {
+  background: linear-gradient(0deg, #c883ff, #c883ff),
+    linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+/* result section */
+
+.single-page-results-section-title span {
+  background: linear-gradient(0deg, #ff891d, #ec4b7b),
+    linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+
+.single-page-results-metric-value {
+  font-family: var(--font-family-sequel-sans-bold-head);
+  font-weight: 375;
+  font-size: 2rem;
+  line-height: 40px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.single-page-results-metric-description {
+  font-family: var(--font-family-sequel-sans-book-head);
+  font-weight: 355;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #e5e5e5;
 }
 
 /* media quarry */
