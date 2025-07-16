@@ -2915,6 +2915,45 @@ strong {
   color: #e5e5e5;
 }
 
+.single-page-testimonial-name {
+  font-family: var(--font-family-sequel-sans-bold-head);
+  font-weight: 375;
+  font-size: 1.5rem;
+  line-height: 32px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.single-page-testimonial-title {
+  font-family: var(--font-family-sequel-sans-light-display);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.single-page-testimonial-description {
+  font-family: var(--font-family-sequel-sans-bold-head);
+  font-weight: 355;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0px;
+  opacity: 80%;
+  color: #FFFFFFCC;
+}
+
+/* build with us banner */
+
+.single-page-build-with-us-banner {
+  background-image: url("../../public/assets/BuildWithUsBanner-bg-in-single-page.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+
 /* media quarry */
 
 @media (max-width: 768px) {

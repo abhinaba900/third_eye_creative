@@ -119,7 +119,7 @@ function Objectives({ data }) {
           </div>
         </div>
         <div className="h-full">
-          <div className="bg-[#161616] p-6 rounded-[24px] shadow-xl  h-full   lg:pr-0 lg:pb-0">
+          <div className="bg-[#161616] p-6 rounded-[24px] shadow-xl  h-full flex flex-col  lg:pr-0 lg:pb-0">
             {/* Title and Description */}
             <div>
               <h3 className="text-lg font-semibold mb-2">
@@ -131,7 +131,7 @@ function Objectives({ data }) {
             </div>
             {/* Main Image */}
             {data.smartReports.image && (
-              <div className="w-full h-[450px]">
+              <div className="w-full h-full max-h-[480px] my-auto ">
                 {" "}
                 {/* Match height from image */}
                 <Image
@@ -139,7 +139,7 @@ function Objectives({ data }) {
                   alt={data.smartReports.title}
                   width={526}
                   height={486}
-                  className="w-full h-full rounded-lg object-cover object-top"
+                  className="w-full h-full my-auto block rounded-lg object-cover object-top"
                 />
               </div>
             )}

@@ -11,7 +11,9 @@ import SolutionSection from "./components/SolutionSection";
 import Objectives from "./components/Objectives";
 import ChallengesandResolutions from "./components/ChallengesandResolutions";
 import Results from "./components/Results";
-import Gallery from "../components/Gallery";
+import Gallery from "./components/Gallery";
+import Testimonials from "./components/Testimonials";
+import BuildWithUsBanner from "./components/BuildWithUsBanner";
 
 // Types
 type HeroSectionType = {
@@ -22,6 +24,7 @@ type HeroSectionType = {
 type ClientBackgroundType = {
   type: string;
   leftImage: string;
+  leftImage2?: string;
   rightContent: {
     topIcon: string;
     title: string;
@@ -118,6 +121,11 @@ type SolutionType = {
     description: string;
     image: string;
   };
+  SaveandEditPlans?: {
+    title: string;
+    description: string;
+    image: string;
+  };
 };
 
 type ChallengesAndResolutionsType = {
@@ -151,6 +159,15 @@ type GalleryItem =
   | { type: "multiple"; images: string[] }
   | { type: string; image?: string; images?: string[] };
 
+type testimonialstype = {
+  leftVideo: string;
+  rightContent: {
+    title: string;
+    description: string;
+    details: string;
+  };
+};
+
 type WorkDataType = {
   id: string;
   herosection?: HeroSectionType;
@@ -162,6 +179,7 @@ type WorkDataType = {
   ChallengesandResolutions?: ChallengesAndResolutionsType;
   Results?: ResultsType;
   gallery?: GalleryItem[];
+  testimonials?: testimonialstype[];
 
   // add other fields here if needed
 };
@@ -179,50 +197,19 @@ const Page = () => {
   return (
     <div>
       {workDatas ? (
-        <HeroSection data={workDatas.herosection} />
-      ) : (
-        <p className="text-white p-4 text-center">Work not found.</p>
-      )}
-
-      {workDatas ? (
-        <ExecutiveSummary data={workDatas.ExecutiveSummary} />
-      ) : (
-        <p className="text-white p-4 text-center">Work not found.</p>
-      )}
-
-      {workDatas ? (
-        <ClientBackground data={workDatas.ClientBackground} />
-      ) : (
-        <p className="text-white p-4 text-center">Work not found.</p>
-      )}
-
-      {workDatas ? (
-        <ProblemStatement data={workDatas.ProblemStatement} />
-      ) : (
-        <p className="text-white p-4 text-center">Work not found.</p>
-      )}
-      {workDatas ? (
-        <Objectives data={workDatas.objectives} />
-      ) : (
-        <p className="text-white p-4 text-center">Work not found.</p>
-      )}
-      {workDatas ? (
-        <SolutionSection data={workDatas.Solution} />
-      ) : (
-        <p className="text-white p-4 text-center">Work not found.</p>
-      )}
-      {workDatas ? (
-        <ChallengesandResolutions data={workDatas.ChallengesandResolutions} />
-      ) : (
-        <p className="text-white p-4 text-center">Work not found.</p>
-      )}
-      {workDatas ? (
-        <Results data={workDatas.Results} />
-      ) : (
-        <p className="text-white p-4 text-center">Work not found.</p>
-      )}
-      {workDatas ? (
-        <Gallery data={workDatas.gallery} />
+        <>
+          <HeroSection data={workDatas.herosection} />
+          <ExecutiveSummary data={workDatas.ExecutiveSummary} />
+          <ClientBackground data={workDatas.ClientBackground} />
+          <ProblemStatement data={workDatas.ProblemStatement} />
+          <Objectives data={workDatas.objectives} />
+          <SolutionSection data={workDatas.Solution} />
+          <ChallengesandResolutions data={workDatas.ChallengesandResolutions} />
+          <Results data={workDatas.Results} />
+          <Gallery data={workDatas.gallery} />
+          <Testimonials data={workDatas.testimonials} />
+          <BuildWithUsBanner />
+        </>
       ) : (
         <p className="text-white p-4 text-center">Work not found.</p>
       )}
