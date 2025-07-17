@@ -41,6 +41,8 @@ const branddata = [
   },
 ];
 
+// this  is function 
+
 function TrustedByBrands() {
   return (
     <div className="trusted-by-brands-wrapper">
