@@ -1,35 +1,50 @@
 ﻿"use client";
-import Image from "next/image";
+// import Image from "next/image";
 import Aurora from "../../../Reactbits/Aurora/Aurora";
 import Counter from "../../../Reactbits/Counter/Counter";
 // import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
 import VariableProximity from "../../../Reactbits/VariableProximity/VariableProximity";
 import { useRef } from "react";
+// import Script from "next/script";
+import SplineViewer from "./SplineViewer";
 
 function HeroSection() {
   const containerRef = useRef(null);
   return (
-    <div className="hero-section-wrapper">
-      <Image
+    <div className="hero-section-wrapper background-image-hero-section">
+      {/* <Image
         src="/assets/Glass effect for hero section.svg"
         alt="Logo"
         width={"100"}
         height={"100"}
         className="mx-auto my-4 background-image-hero-section"
-      />
+      /> */}
       <div className="hero-section-content-wrapper">
-        <Image
+        {/* <Image
           src="/assets/Main-image.png"
           alt="Third Eye Creative Logo"
           width={881}
           height={450}
           style={{ display: "block", margin: "auto" }}
           className="m-auto d-block"
-        />
+        /> */}
 
-        <h3 className="d-flex align-items-center hero-title-1 text-center " ref={containerRef}>
+        <>
+          {/* <Script
+            type="module"
+            src="https://unpkg.com/@splinetool/viewer@1.10.32/build/spline-viewer.js"
+            strategy="beforeInteractive"
+          /> */}
+          <SplineViewer />
+        </>
+
+        <h3
+          className="d-flex align-items-center hero-title-1 text-center -mt-30 relative z-2 opacity-100"
+          style={{ backgroundColor: "black", opacity: 1 }}
+          ref={containerRef}
+        >
           We&apos; ve got a{" "}
-          <span className="vision-text-gradient-desktop" >
+          <span className="vision-text-gradient-desktop">
             {" "}
             {/* <TextPressure
               text=" VISION"

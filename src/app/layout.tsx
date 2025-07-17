@@ -1,8 +1,8 @@
-
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Script from "next/script";
 
 // import SplashCursor from "../../Reactbits/SplashCursor/SplashCursor";
 
@@ -20,6 +20,11 @@ export default function RootLayout({
     <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <body cz-shortcut-listen="true">
         <Navbar />
+        <Script
+          type="module"
+          src="https://unpkg.com/@splinetool/viewer@1.10.32/build/spline-viewer.js"
+          strategy="beforeInteractive"
+        />
         {/* <SplashCursor /> */}
         {children}
         <Footer />

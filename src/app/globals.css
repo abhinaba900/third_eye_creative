@@ -597,10 +597,14 @@ html {
 .background-image-hero-section {
   margin-top: -10%;
   left: 0;
-  width: 100vw;
   max-height: 1180px;
   min-height: 1180px;
   object-fit: cover;
+}
+
+
+#logo span, #logo svg{
+ display: none !important;
 }
 
 .hero-section-content-wrapper {
@@ -2750,8 +2754,7 @@ strong {
   font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0px;
-  text-align: center;
-  vertical-align: middle;
+  text-align: left;
 }
 
 /* objectives */
@@ -2940,7 +2943,7 @@ strong {
   line-height: 24px;
   letter-spacing: 0px;
   opacity: 80%;
-  color: #FFFFFFCC;
+  color: #ffffffcc;
 }
 
 /* build with us banner */

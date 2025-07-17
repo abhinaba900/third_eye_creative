@@ -441,101 +441,95 @@
     },
 
     ChallengesandResolutions: {
-      title: "<span>Smart Solutions</span> <br /> for Complex Challenges",
+      title: "<span>Solving for</span> <br /> Smarter Journeys",
       description:
-        "Modular systems and adaptive technologies crafted to streamline UPS diagnostics and performance across all touchpoints",
+        "We tackled real-world travel planning challenges with intelligent design, adaptive systems, and user-focused problem solving",
       challenges: {
         title: "What we were up against",
         points: [
-          "Handling diverse UPS firmware protocols across multiple models",
-          "Maintaining reliable data sync in low-connectivity environments",
-          "Achieving consistent performance across Android and iOS devices",
+          "Delivering personalization without compromising on practical logistics like location proximity and opening hours",
+          "Avoiding repetitive or generic suggestions in recommendations",
+          "Handling API rate limits and maintaining access to live data at scale",
         ],
         image: "/assets/ChallengesandResolutions-right-side-image.png",
       },
       solutions: {
         title: "How we engineered the fix",
         points: [
-          "Developed a modular parser system that dynamically adapts to varying firmware architectures and ensures seamless compatibility",
-          "Engineered an offline-first architecture with intelligent retry logic to ensure uninterrupted operations and accurate data capture",
-          "Implemented Flutter for a unified codebase, ensuring cross-platform UI consistency and reduced development overhead",
+          "Built a time-aware itinerary engine that smartly aligns user preferences with real-world constraints like travel time and slot availability",
+          "Introduced interest clustering and weighted preference scoring to deliver unique, personalized travel experiences",
+          "Integrated smart caching and request prioritization to ensure consistent data flow and optimal performance during key user actions",
         ],
         image: "/assets/Solution-ChallengesandResolutions-right-side-image.svg",
       },
     },
     Results: {
-      title: "Where <span>Strategy meets Tangible</span> <br /> Results",
+      title: "<span>Impact </span> that <br />  Travels Far",
       description:
-        "From faster service cycles to smarter diagnostics — here’s how our solutions made measurable impact in the real world",
+        "From planning time saved to global adoption—here’s how Xplorion is transforming travel, one smart itinerary at a time.",
       metrics: [
         {
-          value: "~50%",
-          description: "reduction in issue diagnosis time during servicing",
+          value: "~90%",
+          description: "of users planned trips without relying on other tools",
         },
         {
-          value: "100%",
-          description: "of service visits now generate cloud-logged reports",
-        },
-        {
-          value: "Significant",
-          description: "drop in UPS downtime due to faster fault detection",
-        },
-        {
-          value: "~40%",
+          value: "40+ Countries",
           description:
-            "increased technician efficiency through streamlined workflows",
+            "where users have planned trips using Xplorion and counting",
         },
         {
-          value: "Multi-region",
+          value: "Highly Rated",
           description:
-            "deployment with active usage by technicians across zones",
+            "consistent user praise for personalization, flow & usability",
         },
         {
-          value: "Real-time",
-          description: "analytics enabling data-driven maintenance decisions",
-        },
-        {
-          value: "24/7",
+          value: "~80%",
           description:
-            "system visibility enabled through real-time data logging",
+            "reduction in average time spent planning trips manually",
         },
         {
-          value: "<5 mins",
-          description: "average time to generate & sync reports to the cloud",
+          value: "Global-Ready",
+          description: "infrastructure designed for worldwide use",
+        },
+        {
+          value: "~30%",
+          description:
+            "increase in user retention from personalized travel experiences",
+        },
+        {
+          value: "<10 secs",
+          description:
+            "average time taken to generate an optimized day-wise itinerary",
+        },
+        {
+          value: "1-Tap Sharing",
+          description:
+            "Share full itineraries instantly with friends and co-travelers",
         },
       ],
     },
     gallery: [
       {
         type: "single",
-        image: "/assets/work-gallery-image-1.png",
-      },
-      {
-        type: "single",
-        image: "/assets/work-gallery-image-2.png",
-      },
-      {
-        type: "single",
-        image: "/assets/work-gallery-image-3.png",
-      },
-      {
-        type: "single",
-        image: "/assets/work-gallery-image-4.png",
+        image: "/assets/xplorean-galleryimage-1.png",
       },
       {
         type: "multiple",
         images: [
-          "/assets/work-gallery-image-5.png",
-          "/assets/work-gallery-image-6.png",
+          "/assets/xplorean-galleryimage-2.png",
+          "/assets/xplorean-galleryimage-3.png",
+        ],
+      },
+      {
+        type: "multiple",
+        images: [
+          "/assets/xplorean-galleryimage-4.png",
+          "/assets/xplorean-galleryimage-5.png",
         ],
       },
       {
         type: "single",
-        image: "/assets/work-gallery-image-7.png",
-      },
-      {
-        type: "single",
-        image: "/assets/work-gallery-image-8.png",
+        image: "/assets/xplorean-galleryimage-6.png",
       },
     ],
     testimonials: [
