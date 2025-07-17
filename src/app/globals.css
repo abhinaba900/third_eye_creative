@@ -552,6 +552,128 @@ html {
   background-clip: text;
 }
 
+.container_mouse {
+  text-align: center;
+  color: var(--color);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 2rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.container_mouse .mouse-btn {
+  margin: 10px auto;
+  width: 30px;
+  height: 60px;
+  border: 4px solid;
+  border-radius: 30px;
+  display: flex;
+  animation: borderRGB 4s linear infinite;
+  overflow: hidden;
+  position: relative;
+}
+
+.container_mouse .mouse-btn::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: black;
+
+  background-size: 400%;
+  border-radius: 30px;
+  z-index: -1;
+  opacity: 0.7;
+  animation: borderGlow 20s linear infinite;
+}
+
+.container_mouse .mouse-btn .mouse-scroll {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(
+    170deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+  background-size: 400% 400%;
+  border-radius: 50%;
+  margin: auto;
+  animation: scrolling 1.5s ease-in-out infinite, colorFlow 4s linear infinite;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes scrolling {
+  0% {
+    opacity: 0.3;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.3;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes borderRGB {
+  0% {
+    border-color: #f79533;
+  }
+  14% {
+    border-color: #f37055;
+  }
+  28% {
+    border-color: #ef4e7b;
+  }
+  42% {
+    border-color: #a166ab;
+  }
+  56% {
+    border-color: #5073b8;
+  }
+  70% {
+    border-color: #1098ad;
+  }
+  84% {
+    border-color: #07b39b;
+  }
+  100% {
+    border-color: #6fba82;
+  }
+}
+
+/* @keyframes colorFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+} */
+
+@keyframes borderGlow {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
 .scroll-reveal-text-wrapper {
   font-family: var(--font-family-sequel-sans-light-display);
   font-weight: 400;
@@ -592,6 +714,8 @@ html {
   align-items: center;
   height: fit-content;
   padding-top: 4rem;
+  border-radius: 0 0 100px 100px;
+  overflow: hidden;
 }
 
 .background-image-hero-section {
@@ -602,9 +726,9 @@ html {
   object-fit: cover;
 }
 
-
-#logo span, #logo svg{
- display: none !important;
+#logo span,
+#logo svg {
+  display: none !important;
 }
 
 .hero-section-content-wrapper {
@@ -742,7 +866,7 @@ html {
 .faling-text-container {
   font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 500;
-  font-size: 32px;
+  font-size: 1.5px;
   line-height: 100%;
   letter-spacing: 0%;
 }
@@ -1396,6 +1520,22 @@ strong {
 
 .horizontal-scroller-card {
   padding: 1rem !important;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.01),
+      rgba(255, 255, 255, 0.01)
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 54.17%,
+      rgba(255, 255, 255, 0.04) 100%
+    ),
+    radial-gradient(
+        50% 50% at 50% 50%,
+        rgba(120, 123, 255, 0.06) 0%,
+        rgba(120, 123, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
 }
 
 /* our partners section */
@@ -2919,31 +3059,31 @@ strong {
 }
 
 .single-page-testimonial-name {
-  font-family: var(--font-family-sequel-sans-bold-head);
-  font-weight: 375;
-  font-size: 1.5rem;
-  line-height: 32px;
+  font-family: var(--font-family-sequel-sans-random-display);
+  font-weight: 410;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: 0%;
-  vertical-align: middle;
 }
 
 .single-page-testimonial-title {
   font-family: var(--font-family-sequel-sans-light-display);
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: 24px;
   letter-spacing: 0%;
-  vertical-align: middle;
+  color: #efedfd99;
+  opacity: 60%;
 }
 
 .single-page-testimonial-description {
-  font-family: var(--font-family-sequel-sans-bold-head);
-  font-weight: 355;
+  font-family: var(--font-family-sequel-sans-book);
+  font-weight: 405;
   font-size: 1rem;
   line-height: 24px;
-  letter-spacing: 0px;
-  opacity: 80%;
-  color: #ffffffcc;
+  letter-spacing: 0%;
+  color: #efedfdb2;
+  opacity: 70%;
 }
 
 /* build with us banner */

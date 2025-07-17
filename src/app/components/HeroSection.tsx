@@ -7,11 +7,17 @@ import VariableProximity from "../../../Reactbits/VariableProximity/VariableProx
 import { useRef } from "react";
 // import Script from "next/script";
 import SplineViewer from "./SplineViewer";
+import ScrollToBottomButton from "./ScrollToBottomButton";
 
 function HeroSection() {
   const containerRef = useRef(null);
+  const containerref2 = useRef(null);
+  const text2Ref = useRef(null);
   return (
-    <div className="hero-section-wrapper background-image-hero-section">
+    <div
+      ref={containerref2}
+      className="hero-section-wrapper background-image-hero-section"
+    >
       {/* <Image
         src="/assets/Glass effect for hero section.svg"
         alt="Logo"
@@ -19,6 +25,7 @@ function HeroSection() {
         height={"100"}
         className="mx-auto my-4 background-image-hero-section"
       /> */}
+      <ScrollToBottomButton containerRef={containerref2} targetRef={text2Ref} />
       <div className="hero-section-content-wrapper">
         {/* <Image
           src="/assets/Main-image.png"
@@ -41,7 +48,7 @@ function HeroSection() {
         <h3
           className="d-flex align-items-center hero-title-1 text-center -mt-30 relative z-2 opacity-100"
           style={{ backgroundColor: "black", opacity: 1 }}
-          ref={containerRef}
+          ref={text2Ref}
         >
           We&apos; ve got a{" "}
           <span className="vision-text-gradient-desktop">
@@ -85,7 +92,11 @@ function HeroSection() {
             <h3 className="d-flex align-items-center hero-title-2 text-center">
               FOR YOUR BRAND
             </h3>
-            <div className="hero-content-box-wrapper">
+            <div
+              className="hero-content-box-wrapper mb-10"
+              ref={containerRef}
+              id="text-to-reveal-scroll"
+            >
               <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
                 <Counter
                   value={20}

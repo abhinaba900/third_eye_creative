@@ -15,27 +15,107 @@ interface Testimonial {
 export const testimonialsGroup1: Testimonial[] = [
   {
     name: "Amogh V",
-    title: "Director",
-    company: "Banna Sprays",
-    image: "https://dummyimage.com/200x200/4a86e8/ffffff&text=Amogh+V",
+    title: "KSAPCC",
+    company: "Karnataka Government",
+    image: "https://dummyimage.com/200x200/4a86e8/ffffff&text=KSAPCC",
     message:
-      "Banna Sprays needed a fresh perspective, and TEC delivered with brilliance. From packaging to digital, everything looked and felt on-brand and exciting. Their team worked like an extension of ours — quick, responsive, and deeply creative. We're thrilled with the results.",
+      "KSAPCC needed a unified monitoring system — and Third Eye delivered. The dashboards and reports are clear, reliable, and user-friendly. Their team felt like an extension of ours — proactive, responsive, and committed. We’re proud of what we’ve achieved together.",
   },
   {
     name: "Sandeep V",
-    title: "Marketing Lead",
-    company: "Wester Terrain Coffee",
-    image: "https://dummyimage.com/200x200/e67c73/ffffff&text=Sandeep+V",
+    title: "Microtek",
+    company: "",
+    image: "https://dummyimage.com/200x200/e67c73/ffffff&text=Microtek",
     message:
-      "We turned to TEC to lead our digital marketing and design overhaul. Their creativity, precision, and clarity in execution were refreshing. Our engagement metrics have grown significantly since launch. They’re more than a team — they’re creative collaborators.",
+      "With Third Eye Creative, we launched a field tool that replaced our outdated manual diagnostics with real-time, centralized insights. Their tech made it simple for our teams to service units faster and maintain higher uptime for our customers.",
   },
   {
     name: "Raj N",
-    title: "Director",
-    company: "Legacy Builders",
-    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Raj+N",
+    title: "EMPRI",
+    company: "Karnataka Government",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=EMPRI",
     message:
-      "Third Eye Creative brought new life to our brand’s online presence. Their website design was clean, modern, and aligned perfectly with our audience. The experience felt smooth from kickoff to handover. They truly understand how to blend function with elegance.",
+      "Third Eye Creative built us an intuitive platform that bridges the gap between departments and government oversight. The scheme submission, scoring, and approval system has streamlined our workflow and improved how we evaluate environmental initiatives.",
+  },
+  {
+    name: "Raj N",
+    title: "Livguard",
+    company: "",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Livguard",
+    message:
+      "Partnering with Third Eye Creative helped us modernize how we handle UPS maintenance in the field. Their intuitive app streamlined fault detection, improved reporting, and equipped our technicians with smarter tools on every service call.",
+  },
+  {
+    name: "Raj N",
+    title: "Banna",
+    company: "",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Banna",
+    message:
+      "From redefining our graffiti can design to managing our buzzing social presence, Third Eye Creative has been our creative force. They’ve helped us run impactful contests, brand collabs, and an e-commerce site that keeps our community inspired.",
+  },
+  {
+    name: "Big Bite",
+    title: "Big Bite",
+    company: "",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Big+Bite",
+    message:
+      "From branding to packaging to drool-worthy food photography, Third Eye Creative shaped Big Bite’s identity. Their team crafted every visual and design detail to make our food look irresistible, online and off.",
+  },
+  {
+    name: "Naren Electrix",
+    title: "Naren Electrix",
+    company: "",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Naren+Electrix",
+    message:
+      "With Third Eye Creative, we transformed how farmers use our products. They designed an app that lets farmers control equipment remotely via SMS, plus a user-friendly website that connects us directly with our customers.",
+  },
+  {
+    name: "Nava Karnataka",
+    title: "Nava Karnataka",
+    company: "",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Nava",
+    message:
+      "Third Eye Creative empowered us with an app that connects our constituency like never before. Citizens can submit grievances, access schemes, and stay informed, while our government teams handle issues efficiently—bridging people and governance digitally.",
+  },
+  {
+    name: "STEP GHA",
+    title: "STEP GHA",
+    company: "",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=STEP",
+    message:
+      "Third Eye Creative turned our vision for modern NEET PG prep into reality. Their bite-sized, gamified app keeps students engaged with quizzes, rankings, and smooth cross-platform access—raising the bar for exam prep.",
+  },
+  {
+    name: "Sathya Sai Hospital",
+    title: "Sathya Sai Hospital",
+    company: "",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Sathya",
+    message:
+      "Third Eye Creative has been instrumental in building our brand identity from the ground up. From our logo to digital outreach, patient education videos, doctor podcasts, and even staff outfits—they’ve made us stand out with heart and purpose.",
+  },
+  {
+    name: "Xplorion AI",
+    title: "Xplorion AI",
+    company: "",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Xplorion",
+    message:
+      "Working with Third Eye Creative gave life to our idea of AI-powered travel. They built an intelligent itinerary app that personalizes every trip with live data and smart suggestions—making travel planning truly effortless.",
+  },
+  {
+    name: "Prokennex",
+    title: "Prokennex",
+    company: "",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Prokennex",
+    message:
+      "Bringing Prokennex into the Indian market needed a bold strategy, and Third Eye Creative delivered. Their branding and social media campaigns helped us introduce our products to a whole new audience with style.",
+  },
+  {
+    name: "Mesha",
+    title: "Mesha",
+    company: "",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Mesha",
+    message:
+      "Third Eye Creative built us a robust diagnostics app that transformed how our engineers capture, analyze, and report UPS data on-site. The solution gave us the speed and standardization we needed for large-scale operations.",
   },
 ];
 
@@ -93,10 +173,10 @@ export default function TestimonialShowcase() {
         {/* horizontal sliders */}
         <div className="horizontal-scroller-container-testimonial-showcase relative">
           <HorizontalScroller
-            data={[testimonialsGroup1, testimonialsGroup2]}
+            data={[testimonialsGroup1, testimonialsGroup1]}
             renderCard={(item: Testimonial, index) => (
               <SpotlightCard
-                className={`w-[360px] text-left min-w-[360px] h-full horizontal-scroller-card mx-2 bg-white/5 text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 ${
+                className={`w-[360px] text-left min-w-[360px] h-full horizontal-scroller-card mx-2 bg-[#000000] text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 ${
                   hoveredCard === item.name ? "" : ""
                 }`}
                 // className={`w-[360px] text-left min-w-[360px] h-full horizontal-scroller-card mx-2 bg-white/5 text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 ${
