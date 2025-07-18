@@ -2754,14 +2754,24 @@ strong {
 /* single work page */
 
 .hero-section-in-single-work {
-  background-image: url("/assets/Glass effect for hero section.svg");
+  /* background-image: url("/assets/Glass effect for hero section.svg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   margin-bottom: 8.75rem;
   padding-top: 6.25rem;
   overflow: hidden;
   border-radius: 0 0 48px 48px;
+}
+
+.work-section-button-work-and-project {
+  font-family: var(--font-family-cabinet-grotesk-bold);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 /* executive-summary-container */
