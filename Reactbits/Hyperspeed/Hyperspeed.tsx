@@ -92,10 +92,10 @@ const defaultOptions: HyperspeedOptions = {
   carFloorSeparation: [0, 5],
   colors: {
     roadColor: 0x080808,
-    islandColor: 0x0a0a0a,
-    background: 0x000000,
-    shoulderLines: 0xffffff,
-    brokenLines: 0xffffff,
+    islandColor: 0x181818, // <-- set under track background to #181818
+    background: 0x181818,
+    shoulderLines: 0x181818,
+    brokenLines: 0x181818,
     leftCars: [0xd856bf, 0x6750a2, 0xc247ac],
     rightCars: [0x03b3c3, 0x0e5ea5, 0x324555],
     sticks: 0x03b3c3,
@@ -934,7 +934,8 @@ const roadMarkings_fragment = `
   float brokenLines = step(1.0 - brokenLineWidth, fract(uv.x * 2.0)) * step(laneEmptySpace, fract(uv.y * 10.0));
   float sideLines = step(1.0 - brokenLineWidth, fract((uv.x - laneWidth * (uLanes - 1.0)) * 2.0)) + step(brokenLineWidth, uv.x);
 
-  brokenLines = mix(brokenLines, sideLines, uv.x);
+  vec3 lineColor = mix(uBrokenLinesColor, uShoulderLinesColor, uv.x);
+  color = mix(color, lineColor, brokenLines);
 `;
 
 const roadFragment = roadBaseFragment
@@ -1029,7 +1030,7 @@ class App {
     this.camera.position.x = 0;
 
     this.scene = new THREE.Scene();
-    this.scene.background = null;
+    this.scene.background = new THREE.Color(options.colors.background);
 
     const fog = new THREE.Fog(
       options.colors.background,
@@ -1075,7 +1076,7 @@ class App {
     this.setSize = this.setSize.bind(this);
     this.onMouseDown = this.onMouseDown.bind(this);
     this.onMouseUp = this.onMouseUp.bind(this);
-    
+
     window.addEventListener("resize", this.onWindowResize.bind(this));
   }
 
@@ -1229,7 +1230,7 @@ class App {
 
   dispose() {
     this.disposed = true;
-    
+
     if (this.renderer) {
       this.renderer.dispose();
     }
@@ -1239,7 +1240,7 @@ class App {
     if (this.scene) {
       this.scene.clear();
     }
-    
+
     window.removeEventListener("resize", this.onWindowResize.bind(this));
     if (this.container) {
       this.container.removeEventListener("mousedown", this.onMouseDown);
@@ -1277,7 +1278,7 @@ const Hyperspeed: FC<HyperspeedProps> = ({ effectOptions = {} }) => {
   useEffect(() => {
     if (appRef.current) {
       appRef.current.dispose();
-      const container = document.getElementById('lights');
+      const container = document.getElementById("lights");
       if (container) {
         while (container.firstChild) {
           container.removeChild(container.firstChild);
@@ -1304,13 +1305,7 @@ const Hyperspeed: FC<HyperspeedProps> = ({ effectOptions = {} }) => {
     };
   }, [mergedOptions]);
 
-  return (
-    <div
-      id="lights"
-      className="w-full h-full"
-      ref={hyperspeed}
-    ></div>
-  );
+  return <div id="lights" className="w-full h-full  " ref={hyperspeed}></div>;
 };
 
 export default Hyperspeed;

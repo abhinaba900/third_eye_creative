@@ -144,6 +144,7 @@ const VelocityScroller: React.FC<{
         ref={i === 0 ? copyRef : null}
         style={{
           display: "flex",
+          alignItems: "center",
         }}
       >
         {items.map((item, idx) => (

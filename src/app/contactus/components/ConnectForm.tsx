@@ -112,7 +112,9 @@ export default function ConnectForm() {
 
             <div className="flex flex-col gap-1 mb-4 sm:mb-[1.75rem] relative">
               <label className="text-xs sm:text-sm font-medium text-purple-400 absolute left-0 -top-2.5 bg-[#181818] px-1 contact-us-form-label">
-                {activeTab === "start"? "Tell us a little about your project": "Your message"}
+                {activeTab === "start"
+                  ? "Tell us a little about your project"
+                  : "Your message"}
               </label>
               <textarea
                 className="w-full h-24 bg-transparent border border-white/20 p-2 sm:p-3 rounded placeholder-white/50 text-sm sm:text-base contact-us-form-inputs"
@@ -270,9 +272,9 @@ export default function ConnectForm() {
               carShiftX: [-0.8, 0.8],
               carFloorSeparation: [0, 5],
               colors: {
-                roadColor: 0x080808,
-                islandColor: 0x0a0a0a,
-                background: 0x3f3f3f,
+                roadColor: 0x181818,
+                islandColor: 0x181818, // <-- set under track background to #181818
+                background: 0x181818,
                 shoulderLines: 0xffffff,
                 brokenLines: 0xffffff,
                 leftCars: [0xd856bf, 0x6750a2, 0xc247ac],
