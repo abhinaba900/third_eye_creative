@@ -102,7 +102,7 @@ function ProjectShowcaseGrid() {
                   {hoveredId === project.id &&
                     (project.flag === "project" ? (
                       <div
-                        className="absolute pointer-events-none transition-transform duration-100"
+                        className="absolute pointer-events-none transition-transform duration-100 whitespace-nowrap"
                         style={{
                           top: cursorPos.y,
                           left: cursorPos.x,
@@ -129,7 +129,7 @@ function ProjectShowcaseGrid() {
                       </div>
                     ) : (
                       <div
-                        className="absolute pointer-events-none transition-transform duration-100"
+                        className="absolute pointer-events-none transition-transform duration-100 whitespace-nowrap"
                         style={{
                           top: cursorPos.y,
                           left: cursorPos.x,
