@@ -3,11 +3,12 @@
 import Aurora from "../../../Reactbits/Aurora/Aurora";
 import Counter from "../../../Reactbits/Counter/Counter";
 // import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
-import VariableProximity from "../../../Reactbits/VariableProximity/VariableProximity";
+// import VariableProximity from "../../../Reactbits/VariableProximity/VariableProximity";
 import { useRef } from "react";
 // import Script from "next/script";
 import SplineViewer from "./SplineViewer";
 import ScrollToBottomButton from "./ScrollToBottomButton";
+import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
 
 function HeroSection() {
   const containerRef = useRef(null);
@@ -46,36 +47,25 @@ function HeroSection() {
         </>
 
         <h3
-          className="d-flex align-items-center hero-title-1 text-center -mt-30 relative z-2 opacity-100"
+          className="flex justify-center items-center hero-title-1 text-center -mt-30 relative z-2 opacity-100"
           style={{ backgroundColor: "black", opacity: 1 }}
           ref={text2Ref}
         >
           We&apos; ve got a{" "}
           <span className="vision-text-gradient-desktop">
             {" "}
-            {/* <TextPressure
+            <TextPressure
               text=" VISION"
-              flex={false}
-              alpha={false}
-              stroke={false}
-              width={true}
-              weight={true}
-              italic={true}
-              textColor="#772BF2" // Solid color as fallback
-              strokeColor="#ff0000"
-              minFontSize={35}
-              inline={true}
-              className="gradient-text " // Add gradient via class
-            /> */}
-            <VariableProximity
-              label={"VISION"}
               className={"variable-proximity-demo"}
+            />
+            {/* <VariableProximity
+              label={"VISION"}
               fromFontVariationSettings="'wght' 400, 'opsz' 9"
               toFontVariationSettings="'wght' 1000, 'opsz' 40"
               containerRef={containerRef}
               radius={100}
               falloff="linear"
-            />
+            /> */}
           </span>
           <span className="vision-text-gradient-mobile">VISION</span>
         </h3>

@@ -539,6 +539,21 @@ html {
 
 /* hero section  */
 
+.variable-proximity-demo {
+  background: linear-gradient(0deg, #772bf2, #ec4b7b),
+    linear-gradient(180deg, #ec4b7b 0%, rgba(206, 10, 255, 0) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-family: var(--font-family-cabinet-grotesk-medium);
+  font-size: 128px;
+  line-height: 120%;
+  letter-spacing: -7%;
+  text-transform: uppercase;
+  opacity: 70%;
+}
+
 .counter-subtitle {
   font-family: var(--font-family-cabinet-grotesk-medium);
   font-weight: 500;
@@ -883,7 +898,7 @@ html {
 
 /* our expertise */
 
-.mobile-expertise{
+.mobile-expertise {
   display: none;
 }
 
@@ -1182,7 +1197,7 @@ html {
 }
 
 .view-more-button:hover::before {
- display: none;
+  display: none;
 }
 
 /* Full animated border around the button */
@@ -1529,22 +1544,20 @@ strong {
 
 .horizontal-scroller-card {
   padding: 1rem !important;
-  background: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.01),
-      rgba(255, 255, 255, 0.01)
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 54.17%,
-      rgba(255, 255, 255, 0.04) 100%
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(120, 123, 255, 0.06) 0%,
+      rgba(120, 123, 255, 0) 100%
     ),
     radial-gradient(
-        50% 50% at 50% 50%,
-        rgba(120, 123, 255, 0.06) 0%,
-        rgba(120, 123, 255, 0) 100%
-      )
-      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      circle at 70% 70%,
+      rgba(120, 123, 255, 0.06) 0%,
+      rgba(120, 123, 255, 0) 100%
+    ),
+    rgba(255, 255, 255, 0.2); /* White background with 20% opacity */
+  background-blend-mode: normal, normal, normal;
+
+  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
 }
 
 /* our partners section */
@@ -3115,8 +3128,6 @@ strong {
   padding-bottom: 10rem;
 }
 
-
-
 /* media quarry */
 
 @media (max-width: 768px) {
@@ -3566,7 +3577,7 @@ strong {
     padding-right: 0;
   }
 
-  .footer-section .footer-text-2{
+  .footer-section .footer-text-2 {
     top: 18rem;
   }
 }
