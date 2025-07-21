@@ -11,60 +11,60 @@ function OurPartners() {
   const partners: partner[] = [
     {
       name: "Partner 1",
-      logo: "/assets/shell.png",
+      logo: "/assets/shell.svg",
     },
     {
       name: "Partner 1",
-      logo: "/assets/Sathya sai.png",
+      logo: "/assets/Sathya sai.svg",
     },
     {
       name: "Partner 1",
-      logo: "/assets/indian ralways.png",
+      logo: "/assets/Indian Railways.svg",
     },
     {
       name: "Partner 1",
-      logo: "/assets/NDP.png",
+      logo: "/assets/NDP.svg",
     },
     {
       name: "Partner 1",
-      logo: "/assets/livguard.png",
+      logo: "/assets/livguard.svg",
     },
     {
       name: "Partner 1",
-      logo: "/assets/prokennex.png",
+      logo: "/assets/prokennex.svg",
     },
     {
       name: "Partner 1",
-      logo: "/assets/microtek.png",
+      logo: "/assets/microtek.svg",
     },
     {
       name: "Partner 1",
-      logo: "/assets/mesha.png",
+      logo: "/assets/mesha.svg",
     },
     {
       name: "Partner 1",
-      logo: "/assets/xplorion ai.png",
+      logo: "/assets/xplorion ai.svg",
     },
     {
       name: "Partner 1",
-      logo: "/assets/step gha.png",
+      logo: "/assets/step gha.svg",
     },
     {
       name: "Partner 1",
-      logo: "/assets/Naren_electrix.png",
+      logo: "/assets/naren electrix.svg",
     },
     {
       name: "Partner 1",
-      logo: "/assets/banna.png",
+      logo: "/assets/banna.svg",
     },
     
     {
       name: "Partner 1",
-      logo: "/assets/ksapcc.png",
+      logo: "/assets/KSAPCC logo.svg",
     },
     {
       name: "Partner 1",
-      logo: "/assets/empri.png",
+      logo: "/assets/Empri logo.svg",
     },
     
   ];

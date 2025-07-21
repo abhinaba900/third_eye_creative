@@ -874,11 +874,17 @@ html {
 .falling-text-container-highlight {
   height: 300px;
   max-width: 1200px;
-  margin: 5rem auto 0 auto;
+  margin: 5rem auto 2rem auto;
 }
 
 .falling-text-container-highlight.hovered {
   max-width: 100%;
+}
+
+/* our expertise */
+
+.mobile-expertise{
+  display: none;
 }
 
 /* workflow stages */
@@ -1148,7 +1154,7 @@ html {
   gap: 0.5rem;
   margin: 0 auto 10.143rem;
 
-  font: 700 2rem/1 var(--font-family-cabinet-grotesk-bold);
+  font: 500 2rem/1 var(--font-family-cabinet-grotesk-bold);
   text-align: center;
 
   background: black; /* or your intended background */
@@ -1165,7 +1171,6 @@ html {
 }
 
 .view-more-button:hover {
-  transform: scale(1.05);
   background: linear-gradient(0deg, #c883ff, #c883ff),
     linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
@@ -1174,6 +1179,10 @@ html {
 .view-more-button:hover .view-more-button-arrow {
   transform: rotate(-35deg);
   transition: transform 0.3s ease-in-out;
+}
+
+.view-more-button:hover::before {
+ display: none;
 }
 
 /* Full animated border around the button */
@@ -2649,8 +2658,7 @@ strong {
 .contact-title-main {
   font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 700;
-  font-style: Bold;
-  font-size: 11vw;
+  font-size: 10rem;
   word-wrap: normal;
   width: 100%;
   line-height: 120%;
@@ -3107,6 +3115,8 @@ strong {
   padding-bottom: 10rem;
 }
 
+
+
 /* media quarry */
 
 @media (max-width: 768px) {
@@ -3399,9 +3409,16 @@ strong {
   .text-section-in-navbar {
     gap: 0.6rem;
   }
+
+  .contact-title-main {
+    font-size: 13vw;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .contact-title-main {
+    font-size: 13vw;
+  }
   .navitems-section-wrapper .nav-item {
     padding: 0.3rem 0.8rem;
   }
@@ -3547,5 +3564,9 @@ strong {
   .about-us-hero-section-content-wrapper {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .footer-section .footer-text-2{
+    top: 18rem;
   }
 }

@@ -20,7 +20,7 @@ export default function ConnectForm() {
     classes.filter(Boolean).join(" ");
 
   return (
-    <div className="bg-black text-white px-4 pb-12 contectus-connect-form">
+    <div className="bg-black text-white  pb-12 contectus-connect-form">
       <div className="relative text-center h-40 md:h-48 lg:h-56">
         <Aurora
           colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}
@@ -28,14 +28,17 @@ export default function ConnectForm() {
           amplitude={1.0}
           speed={1}
         />
-        <h3 className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 contact-title-main text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+        <h3 className="absolute mt-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 contact-title-main text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
           LETS CONNECT
         </h3>
       </div>
 
       {/* Form Section */}
-      <div className="max-w-6xl mx-auto w-full md:min-h-[600px] lg:h-[800px] grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#181818] p-4 sm:p-6 md:p-8 lg:p-[3rem] -mt-8 sm:-mt-16 md:-mt-20 lg:-mt-[3.5rem] opacity-95 rounded-2xl shadow-xl overflow-hidden">
-        <div className="p-4 sm:p-6 md:p-8 lg:p-10 flex flex-col h-full justify-between rounded-[20px] border border-[#3F3F3F]">
+      <div className="max-w-6xl  mx-auto w-full md:min-h-[600px] lg:h-[800px] grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#181818] p-4 sm:p-6 md:p-8 lg:p-[3rem] mt-8 sm:-mt-16 md:-mt-20 lg:mt-[1rem] opacity-95 rounded-2xl shadow-xl overflow-hidden">
+        <div
+          className="p-4 sm:p-6 md:p-8 lg:p-10 overflow-y-scroll  flex flex-col h-full justify-between rounded-[20px] border border-[#3F3F3F]"
+          style={{ scrollbarWidth: "none" }}
+        >
           <div>
             <div className="flex justify-between items-center mb-4 sm:mb-6">
               <h2 className="text-xl sm:text-2xl font-bold contact-us-form-title">

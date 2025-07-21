@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import ShinyText from "../../../Reactbits/ShinyText/ShinyText";
 
 function Footer() {
   return (
@@ -98,8 +99,8 @@ function Footer() {
           </div>
         </div>
       </div>
-      <h3 className="footer-text-2">THIRD EYE</h3>
-      {/* <ShinyText text="THIRD EYE" disabled={false} speed={5} className='footer-text-2' /> */}
+      {/* <h3 className="footer-text-2">THIRD EYE</h3> */}
+      <ShinyText text="THIRD EYE" disabled={false} speed={5} className='footer-text-2' />
     </footer>
   );
 }
