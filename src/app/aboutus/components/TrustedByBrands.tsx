@@ -64,10 +64,10 @@ function TrustedByBrands() {
           renderCard={(item: itemData, index) => (
             <div
               key={index}
-              className={`text-left min-w-[360px] h-full horizontal-scroller-card backdrop-blur-md flex flex-col justify-start gap-4 `}
+              className={`text-left min-w-[180px] h-full horizontal-scroller-card backdrop-blur-md flex flex-col justify-start gap-4 `}
               style={{ margin: "0 8px", background: "transparent" }}
             >
-              <img src={item.image} alt="brand" />
+              <img src={item.image} className="w-[160px]" alt="brand" />
             </div>
           )}
         />
