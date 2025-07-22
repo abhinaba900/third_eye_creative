@@ -10,60 +10,60 @@ type partner = {
 function OurPartners() {
   const partners: partner[] = [
     {
-      name: "Partner 1",
-      logo: "/assets/shell.svg",
+      name: "Shell",
+      logo: "/assets/Shell.svg",
     },
     {
-      name: "Partner 1",
+      name: "Sathya Sai",
       logo: "/assets/Sathya sai.svg",
     },
     {
-      name: "Partner 1",
+      name: "Indian Railways",
       logo: "/assets/Indian Railways.svg",
     },
     {
-      name: "Partner 1",
+      name: "NDP",
       logo: "/assets/NDP.svg",
     },
     {
-      name: "Partner 1",
-      logo: "/assets/livguard.svg",
+      name: "Livguard",
+      logo: "/assets/Livguard.svg",
     },
     {
-      name: "Partner 1",
-      logo: "/assets/prokennex.svg",
+      name: "Prokennex",
+      logo: "/assets/Prokennex.svg",
     },
     {
-      name: "Partner 1",
-      logo: "/assets/microtek.svg",
+      name: "Microtek",
+      logo: "/assets/Microtek.svg",
     },
     {
-      name: "Partner 1",
+      name: "Mesha",
       logo: "/assets/mesha.svg",
     },
     {
-      name: "Partner 1",
+      name: "xplorion ai",
       logo: "/assets/xplorion ai.svg",
     },
     {
-      name: "Partner 1",
-      logo: "/assets/step gha.svg",
+      name: "Step GHA",
+      logo: "/assets/Step GHA.svg",
     },
     {
-      name: "Partner 1",
+      name: "Naren Electric",
       logo: "/assets/naren electrix.svg",
     },
     {
-      name: "Partner 1",
+      name: "Banna",
       logo: "/assets/banna.svg",
     },
     
     {
-      name: "Partner 1",
+      name: "KSAPCC",
       logo: "/assets/KSAPCC logo.svg",
     },
     {
-      name: "Partner 1",
+      name: "Empri",
       logo: "/assets/Empri logo.svg",
     },
     

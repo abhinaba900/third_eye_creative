@@ -544,6 +544,284 @@
       },
     ],
   },
+  {
+    id: "3",
+    herosection: {
+      tags: ["Mobile App", "UI Design"],
+      title:
+        "STEP – Byte-Sized, Gamified NEET PG Prep Designed for India’s Next-Gen Doctors",
+      footerimage: "/assets/Xplorion AI-hero-footer-image.png",
+    },
+    ExecutiveSummary:
+      "We built GHA Step, a Flutter-based mobile application designed to help medical students prepare for the NEET PG entrance exam through short, structured, and engaging learning experiences. The app features both free and paid video content, organized into byte-sized steps, with each step reinforced through pre-course and post-course MCQ tests. Additionally, it includes a unique real-time Player vs Player quiz mode, turning exam prep into a fun, competitive experience.",
+    ClientBackground: {
+      type: "2",
+      leftImage: "/assets/Xplorion AI client-backgournd-let-image-1.png",
+      leftImage2: "/assets/Xplorion AI client-backgournd-let-image-2.png",
+      rightContent: {
+        topIcon: "/assets/ClientBackground-right-top-icon.png",
+        title: "Gamifying NEET PG Prep for the Next-Gen Medico",
+        description:
+          "GHA STEP is a next-gen edtech solution built for ambitious medical students preparing for the NEET PG exam. The vision: break down complex prep into byte-sized, gamified learning experiences that keep students motivated, competitive, and exam-ready.",
+        footerContent: [
+          {
+            title: "EdTech",
+            description: "Industry",
+          },
+          {
+            title: "2025",
+            description: "Year of Implementation",
+          },
+          {
+            title: "6 Months",
+            description: "Time to Completion",
+          },
+          {
+            title: "GHA STEP",
+            description: "Client",
+          },
+        ],
+      },
+    },
+
+    ProblemStatement: {
+      title: "<span>Cracking the</span> NEET PG Prep <span>Rut</span>",
+      description:
+        "We replaced passive, overwhelming study methods with a bite-sized, gamified system that keeps medicos engaged, motivated, and exam-ready",
+      contentSection: {
+        icon: "/assets/ProblemStatement-contentSection-icon-2.png",
+        title: "Reimagining NEET PG Preparation",
+        description:
+          "For thousands of medical aspirants, NEET PG prep is often overwhelming — long hours of passive video watching, unstructured content, and no real way to test skills competitively in real time. STEP set out to break this monotony with a fresh approach: short, focused lessons and a gamified experience that keeps students motivated, sharp, and ahead of the curve.",
+        rightsideData: [
+          {
+            id: "1",
+            title:
+              "Traditional NEET PG prep can feel endless and exhausting, making it hard for students to stay focused",
+          },
+          {
+            id: "2",
+            title:
+              "Students struggle to tackle the vast syllabus without clear, bite-sized learning steps",
+          },
+          {
+            id: "3",
+            title:
+              "Passive video watching alone fails to keep learners fully engaged and motivated",
+          },
+          {
+            id: "4",
+            title:
+              "No single tool offered a dynamic, all-in-one planning experience",
+          },
+          {
+            id: "5",
+            title:
+              "Students often lack clear, real-time feedback to track progress and identify weak areas effectively",
+          },
+        ],
+      },
+    },
+    objectives: {
+      title: "<span>Byte-Sized,</span> Competitive <br /> <span>Engaging</span> ",
+      description:
+        "We designed STEP to turn overwhelming study sessions into clear, gamified, and structured learning experiences that keep students focused and motivated",
+      realTimeDiagnostics: {
+        icon: "/assets/objectives-realTimeDiagnostics-image-2.png",
+        title: "Break Down the Syllabus",
+        description:
+          "Transform the vast NEET PG syllabus into short, easy-to-consume steps.",
+        rightsideimage: "/assets/Xplorion App ss  objectives.png",
+      },
+      upsConnectivity: {
+        title: "Flexible Learning Options",
+        description:
+          "Blend free and paid video content to fit different study needs and budgets.",
+        image: "/assets/Dynamic updates - objectives.png",
+      },
+      smartReports: {
+        title: "Test at Every Step",
+        description:
+          "Integrate pre- and post-course MCQs to reinforce learning and track progress.",
+        image: "/assets/xplorean-objectives-realtime-content.png",
+      },
+      cloudSync: {
+        title: "Cross-Platform Ready",
+        icon: "/assets/objectives-cloudSync-icon-2.png",
+        description:
+          "Deliver a seamless experience on Android and iOS with a single Flutter codebase.",
+      },
+      unifiedProcess: {
+        title: "Gamify Learning",
+        icon: "/assets/objectives-unifiedProcess-icon-2.png",
+        description:
+          "Build a real-time Player vs Player quiz mode to boost competition and retention.",
+      },
+    },
+    Solution: {
+      layout: "2",
+      title: "<span>Smarter Prep,</span> <br/> Gamified",
+      description:
+        "A focused, bite-sized learning system designed to turn complex NEET PG prep into clear, competitive, and engaging study sessions",
+      offlineFunctionality: {
+        title: "Byte-Sized Steps",
+        description:
+          "Breaks the syllabus into short, topic-specific modules for easier mastery.",
+        image: "/assets/xplorean-solution-image-1.png",
+        buttonImage: "/assets/tsSolution-offlineFunctionality-button.png",
+      },
+      realTimeDiagnostics: {
+        title: "PvP Quiz Battles",
+        description:
+          "Real-time Player vs Player quizzes that make prep feel like a game.",
+        image: "/assets/xplorean-solution-image-2.png",
+      },
+
+      technologyBackbone: {
+        title: "Technology Backbone",
+        description:
+          "Built using a powerful tech stack including Flutter, Firebase,  Node.js and more.",
+        image: "/assets/Tech stack - in xplorean ai.png",
+      },
+
+      seamlessBluetoothIntegration: {
+        title: "Free & Premium Content",
+        description:
+          "Structured video paths covering core and advanced topics flexibly.",
+        image: "/assets/technologyBackbone-xplorean-ai-2.png",
+      },
+
+      technicianCommandCenter: {
+        title: "Pre/Post Tests",
+        description:
+          "MCQ-based tests bookend each topic to reinforce learning outcomes.",
+        image: "/assets/xplorean ai -       technicianCommandCenter.png",
+      },
+      cloudPoweredAnalytics: {
+        title: "Leaderboards",
+        description:
+          "Daily, weekly, and all-time rankings to boost healthy competition.",
+        image: "/assets/xplorean ai - cloudPoweredAnalytics.png",
+      },
+      automatedReporting: {
+        title: "Progress Tracker",
+        description:
+          "Personal dashboards to monitor performance trends and gaps.",
+        image: "/assets/xplorean ai - automatedReporting.png",
+      },
+
+      SaveandEditPlans: {
+        title: "19-Subject Notes",
+        description:
+          "Easily bookmark, customize, or reshuffle your itinerary on the go—flexible travel made simple.",
+        image: "/assets/xplorean ai - SaveandEditPlans.png",
+      },
+    },
+
+    ChallengesandResolutions: {
+      title: "<span>Solving for</span> <br /> Smarter Journeys",
+      description:
+        "We tackled real-world travel planning challenges with intelligent design, adaptive systems, and user-focused problem solving",
+      challenges: {
+        title: "What we were up against",
+        points: [
+          "Delivering personalization without compromising on practical logistics like location proximity and opening hours",
+          "Avoiding repetitive or generic suggestions in recommendations",
+          "Handling API rate limits and maintaining access to live data at scale",
+        ],
+        image: "/assets/ChallengesandResolutions-right-side-image.png",
+      },
+      solutions: {
+        title: "How we engineered the fix",
+        points: [
+          "Built a time-aware itinerary engine that smartly aligns user preferences with real-world constraints like travel time and slot availability",
+          "Introduced interest clustering and weighted preference scoring to deliver unique, personalized travel experiences",
+          "Integrated smart caching and request prioritization to ensure consistent data flow and optimal performance during key user actions",
+        ],
+        image: "/assets/Solution-ChallengesandResolutions-right-side-image.svg",
+      },
+    },
+    Results: {
+      title: "<span>Impact </span> that <br />  Travels Far",
+      description:
+        "From planning time saved to global adoption—here’s how Xplorion is transforming travel, one smart itinerary at a time.",
+      metrics: [
+        {
+          value: "~90%",
+          description: "of users planned trips without relying on other tools",
+        },
+        {
+          value: "40+ Countries",
+          description:
+            "where users have planned trips using Xplorion and counting",
+        },
+        {
+          value: "Highly Rated",
+          description:
+            "consistent user praise for personalization, flow & usability",
+        },
+        {
+          value: "~80%",
+          description:
+            "reduction in average time spent planning trips manually",
+        },
+        {
+          value: "Global-Ready",
+          description: "infrastructure designed for worldwide use",
+        },
+        {
+          value: "~30%",
+          description:
+            "increase in user retention from personalized travel experiences",
+        },
+        {
+          value: "<10 secs",
+          description:
+            "average time taken to generate an optimized day-wise itinerary",
+        },
+        {
+          value: "1-Tap Sharing",
+          description:
+            "Share full itineraries instantly with friends and co-travelers",
+        },
+      ],
+    },
+    gallery: [
+      {
+        type: "single",
+        image: "/assets/xplorean-galleryimage-1.png",
+      },
+      {
+        type: "multiple",
+        images: [
+          "/assets/xplorean-galleryimage-2.png",
+          "/assets/xplorean-galleryimage-3.png",
+        ],
+      },
+      {
+        type: "multiple",
+        images: [
+          "/assets/xplorean-galleryimage-4.png",
+          "/assets/xplorean-galleryimage-5.png",
+        ],
+      },
+      {
+        type: "single",
+        image: "/assets/xplorean-galleryimage-6.png",
+      },
+    ],
+    testimonials: [
+      {
+        leftVideo: "https://example.com/testimonial-video.mp4",
+        rightContent: {
+          title: "Naren Nagaraj",
+          description:
+            "Forget about spam, advertising mailings, hacking and attacking robots. Keep your real mailbox clean and secure. Temp Mail provides temporary, secure, anonymous, free, disposable email address. Stalkers and disgruntled acquaintances use the Internet to find addresses, phone numbers and other personal details about their targets. Identity thieves use personal information numbers and other personal details.",
+          details: "Founder, CEO  • Naren Electrix ",
+        },
+      },
+    ],
+  },
 ];
 
 export default workData;
