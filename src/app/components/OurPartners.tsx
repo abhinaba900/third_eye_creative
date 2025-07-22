@@ -39,7 +39,7 @@ function OurPartners() {
     },
     {
       name: "Mesha",
-      logo: "/assets/mesha.svg",
+      logo: "/assets/Mesha.svg",
     },
     {
       name: "xplorion ai",
@@ -55,7 +55,7 @@ function OurPartners() {
     },
     {
       name: "Banna",
-      logo: "/assets/banna.svg",
+      logo: "/assets/Banna.svg",
     },
     
     {
