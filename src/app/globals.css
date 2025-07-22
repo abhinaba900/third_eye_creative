@@ -1102,8 +1102,8 @@ html {
   vertical-align: middle;
 }
 .client-projects-container .client-projects-title span {
-  background: linear-gradient(0deg, #772bf2, #772bf2),
-    linear-gradient(180deg, #ec4b7b 0%, rgba(206, 10, 255, 0) 100%);
+  background: linear-gradient(0deg, #772bf2, #ec4b7b),
+    linear-gradient(180deg, #ce0aff 0%, rgba(206, 10, 255, 0) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* for Firefox */
@@ -1514,8 +1514,8 @@ strong {
 .absolute-container-testimonial-showcase
   .absolute-title-testimonial-showcase
   span {
-  background: linear-gradient(0deg, #c883ff, #c883ff),
-    linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
+  background: linear-gradient(0deg, #c883ff, #772bf2),
+    linear-gradient(180deg, #ce0aff 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 
   -webkit-background-clip: text;
@@ -1569,6 +1569,14 @@ strong {
 
 /* build-with-us-banner */
 
+.build-with-us-span-text {
+  font-family: var(--font-family-cabinet-grotesk-extrabold);
+  font-size: 6rem;
+  line-height: 120%;
+  letter-spacing: -4%;
+  display: inline;
+}
+
 .build-with-us-banner {
   background: linear-gradient(0deg, #772bf2, #772bf2),
     linear-gradient(180deg, #ec4b7b 0%, rgba(206, 10, 255, 0) 100%);
@@ -1617,6 +1625,34 @@ strong {
 }
 
 /* footer */
+
+/* ShinyText.css */
+.shiny-text {
+  color: rgba(181, 181, 181, 0.64);
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  background-size: 200% 100%;
+}
+
+.shiny-text.animated {
+  animation: shine-animation 1s linear infinite;
+}
+
+@keyframes shine-animation {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: -100% 50%;
+  }
+}
 
 /* From Uiverse.io by jolprince_5263 */
 .footer-social-links .card {
