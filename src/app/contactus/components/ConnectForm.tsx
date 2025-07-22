@@ -120,7 +120,8 @@ export default function ConnectForm() {
                   : "Your message"}
               </label>
               <textarea
-                className="w-full h-24 bg-transparent border border-white/20 p-2 sm:p-3 rounded placeholder-white/50 text-sm sm:text-base contact-us-form-inputs"
+                maxLength={500} // or whatever you need
+                className="w-full h-24 resize-none bg-transparent border border-white/20 p-2 sm:p-3 rounded placeholder-white/50 text-sm sm:text-base contact-us-form-inputs"
                 placeholder="Enter your message"
               ></textarea>
             </div>

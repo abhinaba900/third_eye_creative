@@ -362,7 +362,7 @@ export default function SolutionSection({ data }) {
                   </p>
                 </div>
 
-                <div className="grid relative grid-cols-1 items-center justify-center lg:grid-cols-1 gap-4 mt-4">
+                <div className="grid relative grid-cols-1 items-center justify-center lg:grid-cols-1 gap-4 mt-4 mx-auto">
                   {/* Main Image */}
                   {data.automatedReporting.image && (
                     <div className="w-full   mt-4">
@@ -388,7 +388,7 @@ export default function SolutionSection({ data }) {
                     {data.SaveandEditPlans.description}
                   </p>
                 </div>
-                <div className="grid relative grid-cols-1 items-center justify-center lg:grid-cols-1 gap-4 mt-4">
+                <div className="grid relative grid-cols-1 items-center justify-center lg:grid-cols-1 gap-4 mt-4 ">
                   {/* Main Image */}
                   {data.SaveandEditPlans.image && (
                     <div className="w-full  ">

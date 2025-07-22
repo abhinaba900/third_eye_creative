@@ -44,7 +44,7 @@ function Objectives({ data }) {
                   alt={data.realTimeDiagnostics.title}
                   width={800}
                   height={386}
-                  className="w-full h-full rounded-lg "
+                  className="w-100 h-100 rounded-lg ml-auto "
                 />
               </div>
             )}
@@ -139,7 +139,7 @@ function Objectives({ data }) {
                   alt={data.smartReports.title}
                   width={526}
                   height={486}
-                  className="w-full h-full my-auto block rounded-lg object-cover object-top"
+                  className="w-100 h-full rounded-lg ml-auto object-cover object-top"
                 />
               </div>
             )}

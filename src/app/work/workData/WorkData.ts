@@ -550,14 +550,14 @@
       tags: ["Mobile App", "UI Design"],
       title:
         "STEP – Byte-Sized, Gamified NEET PG Prep Designed for India’s Next-Gen Doctors",
-      footerimage: "/assets/Xplorion AI-hero-footer-image.png",
+      footerimage: "/assets/stepgha-hero-section-image.png",
     },
     ExecutiveSummary:
       "We built GHA Step, a Flutter-based mobile application designed to help medical students prepare for the NEET PG entrance exam through short, structured, and engaging learning experiences. The app features both free and paid video content, organized into byte-sized steps, with each step reinforced through pre-course and post-course MCQ tests. Additionally, it includes a unique real-time Player vs Player quiz mode, turning exam prep into a fun, competitive experience.",
     ClientBackground: {
       type: "2",
-      leftImage: "/assets/Xplorion AI client-backgournd-let-image-1.png",
-      leftImage2: "/assets/Xplorion AI client-backgournd-let-image-2.png",
+      leftImage: "/assets/stepgha-client-backgournd-let-image-1.png",
+      leftImage2: "/assets/stepgha-client-backgournd-let-image-2.png",
       rightContent: {
         topIcon: "/assets/ClientBackground-right-top-icon.png",
         title: "Gamifying NEET PG Prep for the Next-Gen Medico",
@@ -589,7 +589,7 @@
       description:
         "We replaced passive, overwhelming study methods with a bite-sized, gamified system that keeps medicos engaged, motivated, and exam-ready",
       contentSection: {
-        icon: "/assets/ProblemStatement-contentSection-icon-2.png",
+        icon: "/assets/ProblemStatement-contentSection-icon-3.png",
         title: "Reimagining NEET PG Preparation",
         description:
           "For thousands of medical aspirants, NEET PG prep is often overwhelming — long hours of passive video watching, unstructured content, and no real way to test skills competitively in real time. STEP set out to break this monotony with a fresh approach: short, focused lessons and a gamified experience that keeps students motivated, sharp, and ahead of the curve.",
@@ -627,33 +627,33 @@
       description:
         "We designed STEP to turn overwhelming study sessions into clear, gamified, and structured learning experiences that keep students focused and motivated",
       realTimeDiagnostics: {
-        icon: "/assets/objectives-realTimeDiagnostics-image-2.png",
+        icon: "/assets/objectives-realTimeDiagnostics-image-3.png",
         title: "Break Down the Syllabus",
         description:
           "Transform the vast NEET PG syllabus into short, easy-to-consume steps.",
-        rightsideimage: "/assets/Xplorion App ss  objectives.png",
+        rightsideimage: "/assets/stepgha-objectives.png",
       },
       upsConnectivity: {
         title: "Flexible Learning Options",
         description:
           "Blend free and paid video content to fit different study needs and budgets.",
-        image: "/assets/Dynamic updates - objectives.png",
+        image: "/assets/stepgha-Dynamic-updates-objectives.png",
       },
       smartReports: {
         title: "Test at Every Step",
         description:
           "Integrate pre- and post-course MCQs to reinforce learning and track progress.",
-        image: "/assets/xplorean-objectives-realtime-content.png",
+        image: "/assets/stepgha-objectives-realtime-content.png",
       },
       cloudSync: {
         title: "Cross-Platform Ready",
-        icon: "/assets/objectives-cloudSync-icon-2.png",
+        icon: "/assets/objectives-cloudSync-icon-3.png",
         description:
           "Deliver a seamless experience on Android and iOS with a single Flutter codebase.",
       },
       unifiedProcess: {
         title: "Gamify Learning",
-        icon: "/assets/objectives-unifiedProcess-icon-2.png",
+        icon: "/assets/objectives-unifiedProcess-icon-3.png",
         description:
           "Build a real-time Player vs Player quiz mode to boost competition and retention.",
       },
@@ -667,147 +667,147 @@
         title: "Byte-Sized Steps",
         description:
           "Breaks the syllabus into short, topic-specific modules for easier mastery.",
-        image: "/assets/xplorean-solution-image-1.png",
+        image: "/assets/stepgha-solution-image-1.png",
         buttonImage: "/assets/tsSolution-offlineFunctionality-button.png",
       },
       realTimeDiagnostics: {
         title: "PvP Quiz Battles",
         description:
           "Real-time Player vs Player quizzes that make prep feel like a game.",
-        image: "/assets/xplorean-solution-image-2.png",
+        image: "/assets/stepgha-solution-image-2.png",
       },
 
       technologyBackbone: {
         title: "Technology Backbone",
         description:
           "Built using a powerful tech stack including Flutter, Firebase,  Node.js and more.",
-        image: "/assets/Tech stack - in xplorean ai.png",
+        image: "/assets/Tech stack - in stepgha.png",
       },
 
       seamlessBluetoothIntegration: {
         title: "Free & Premium Content",
         description:
           "Structured video paths covering core and advanced topics flexibly.",
-        image: "/assets/technologyBackbone-xplorean-ai-2.png",
+        image: "/assets/technologyBackbone-stepgha-2.png",
       },
 
       technicianCommandCenter: {
         title: "Pre/Post Tests",
         description:
           "MCQ-based tests bookend each topic to reinforce learning outcomes.",
-        image: "/assets/xplorean ai -       technicianCommandCenter.png",
+        image: "/assets/stepgha-technicianCommandCenter.png",
       },
       cloudPoweredAnalytics: {
         title: "Leaderboards",
         description:
           "Daily, weekly, and all-time rankings to boost healthy competition.",
-        image: "/assets/xplorean ai - cloudPoweredAnalytics.png",
+        image: "/assets/stepgha-cloudPoweredAnalytics.png",
       },
       automatedReporting: {
         title: "Progress Tracker",
         description:
           "Personal dashboards to monitor performance trends and gaps.",
-        image: "/assets/xplorean ai - automatedReporting.png",
+        image: "/assets/stepgha-automatedReporting.png",
       },
 
       SaveandEditPlans: {
         title: "19-Subject Notes",
         description:
           "Easily bookmark, customize, or reshuffle your itinerary on the go—flexible travel made simple.",
-        image: "/assets/xplorean ai - SaveandEditPlans.png",
+        image: "/assets/stepgha-SaveandEditPlans.png",
       },
     },
 
     ChallengesandResolutions: {
-      title: "<span>Solving for</span> <br /> Smarter Journeys",
+      title: "<span>Solving for </span><br /> Smarter Prep",
       description:
-        "We tackled real-world travel planning challenges with intelligent design, adaptive systems, and user-focused problem solving",
+        "We tackled key challenges in modern exam prep with real-time tech, engaging and micro-content, all built to keep students motivated and protected",
       challenges: {
         title: "What we were up against",
         points: [
-          "Delivering personalization without compromising on practical logistics like location proximity and opening hours",
-          "Avoiding repetitive or generic suggestions in recommendations",
-          "Handling API rate limits and maintaining access to live data at scale",
+          "Keeping live quizzes synced between players without lag or unfair delays.",
+          "Ensuring students stay engaged with short learning content that could otherwise feel too light.",
+          "Securing premium video content while delivering it seamlessly to paying users.",
         ],
         image: "/assets/ChallengesandResolutions-right-side-image.png",
       },
       solutions: {
         title: "How we engineered the fix",
         points: [
-          "Built a time-aware itinerary engine that smartly aligns user preferences with real-world constraints like travel time and slot availability",
-          "Introduced interest clustering and weighted preference scoring to deliver unique, personalized travel experiences",
-          "Integrated smart caching and request prioritization to ensure consistent data flow and optimal performance during key user actions",
+          "Engineered a WebSocket-based quiz engine with sub-second latency for smooth, real-time gameplay.",
+          "Added micro-goals, achievement badges, and instant feedback loops to keep learners motivated.",
+          "Encrypted video streaming with dynamic access controls tied directly to each subscription.",
         ],
         image: "/assets/Solution-ChallengesandResolutions-right-side-image.svg",
       },
     },
     Results: {
-      title: "<span>Impact </span> that <br />  Travels Far",
+      title: "Where <span>Learning</span> <br />  meets <span>Results</span>",
       description:
-        "From planning time saved to global adoption—here’s how Xplorion is transforming travel, one smart itinerary at a time.",
+        "From higher engagement to viral features—see how STEP GHA is transforming exam prep for tomorrow’s doctors",
       metrics: [
         {
-          value: "~90%",
-          description: "of users planned trips without relying on other tools",
+          value: "+50%",
+          description: "Gamified quizzes and micro-goals boosted total study time",
         },
         {
-          value: "40+ Countries",
+          value: "65% Up",
           description:
-            "where users have planned trips using Xplorion and counting",
+            "Byte-sized steps lifted course completion rates by 65%",
         },
         {
-          value: "Highly Rated",
+          value: "Viral PvP",
           description:
-            "consistent user praise for personalization, flow & usability",
+            "Real-time quiz mode became the app’s most shared feature",
         },
         {
-          value: "~80%",
+          value: "10+ Cities",
           description:
-            "reduction in average time spent planning trips manually",
+            "Rapid adoption in medical colleges across multiple cities",
         },
         {
-          value: "Global-Ready",
-          description: "infrastructure designed for worldwide use",
+          value: "4.8⭐ Rated",
+          description: "Students loved the app’s usability and learning impact",
         },
         {
-          value: "~30%",
+          value: "40% Faster",
           description:
-            "increase in user retention from personalized travel experiences",
+            "Pre/post MCQs sped up topic revision by 40%",
         },
         {
-          value: "<10 secs",
+          value: "Better Recall",
           description:
-            "average time taken to generate an optimized day-wise itinerary",
+            "Micro-learning improved retention & boosted test scores",
         },
         {
-          value: "1-Tap Sharing",
+          value: "Cross-Platform",
           description:
-            "Share full itineraries instantly with friends and co-travelers",
+            "One Flutter build, same smooth experience everywhere",
         },
       ],
     },
     gallery: [
       {
         type: "single",
-        image: "/assets/xplorean-galleryimage-1.png",
+        image: "/assets/stepgha-galleryimage-1.png",
       },
       {
         type: "multiple",
         images: [
-          "/assets/xplorean-galleryimage-2.png",
-          "/assets/xplorean-galleryimage-3.png",
+          "/assets/stepgha-galleryimage-2.png",
+          "/assets/stepgha-galleryimage-3.png",
         ],
       },
       {
         type: "multiple",
         images: [
-          "/assets/xplorean-galleryimage-4.png",
-          "/assets/xplorean-galleryimage-5.png",
+          "/assets/stepgha-galleryimage-4.png",
+          "/assets/stepgha-galleryimage-5.png",
         ],
       },
       {
         type: "single",
-        image: "/assets/xplorean-galleryimage-6.png",
+        image: "/assets/stepgha-galleryimage-6.png",
       },
     ],
     testimonials: [

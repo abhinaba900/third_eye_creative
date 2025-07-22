@@ -78,15 +78,21 @@ function Footer() {
             </Link>
           </div>
           <div className="flex flex-col gap-5">
-            <Link href="#" className="footer-link flex items-center gap-2">
+            <Link
+              href="https://mail.google.com/mail/?view=cm&to=hi@thirdeyegfx.in"
+              className="footer-link flex items-center gap-2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Image
                 src="/assets/footer-email.png"
-                alt="facebook"
-                width={16}
+                alt="email"
+                width={16}  
                 height={16}
               />
               hi@thirdeyegfx.in
             </Link>
+
             <Link href="#" className="footer-link flex items-center gap-2">
               <Image
                 src="/assets/footer-phone.png"
@@ -100,7 +106,12 @@ function Footer() {
         </div>
       </div>
       {/* <h3 className="footer-text-2">THIRD EYE</h3> */}
-      <ShinyText text="THIRD EYE" disabled={false} speed={5} className='footer-text-2' />
+      <ShinyText
+        text="THIRD EYE"
+        disabled={false}
+        speed={5}
+        className="footer-text-2"
+      />
     </footer>
   );
 }

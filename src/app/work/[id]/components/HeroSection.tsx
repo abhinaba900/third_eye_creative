@@ -30,7 +30,7 @@ function HeroSection({ data }) {
           alt="Mobile Showcase"
           width={1920}
           height={600}
-          className="w-full h-full object-fit-cover"
+          className="w-full h-full max-h-[600px] mt-30 object-fit-cover"
         />
       </div>
 
