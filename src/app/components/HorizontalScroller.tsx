@@ -213,7 +213,7 @@ const HorizontalScroller: React.FC<HorizontalScrollerProps> = ({
       {data.map((items, index) => (
         <div
           key={index}
-          style={{ marginBottom: index !== data.length - 1 ? "16px" : "0" }}
+          style={{ marginBottom: index !== data.length - 1 ? "20px" : "0" }}
         >
           <VelocityScroller
             items={items}
