@@ -2,6 +2,7 @@
 import React from "react";
 import Silk from "../../../Reactbits/Silk/Silk";
 import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
+import VanishEffect from "./PrinceText";
 
 function BuildWithUsBanner() {
   return (
@@ -18,7 +19,10 @@ function BuildWithUsBanner() {
 
       <h3 className="">
         Ideas don’t build themselves
-        <TextPressure text=", We do " className={"build-with-us-span-text"} />
+        <VanishEffect
+          children={", We do"}
+          className={"build-with-us-span-text"}
+        />
       </h3>
 
       <button className="view-more-button">

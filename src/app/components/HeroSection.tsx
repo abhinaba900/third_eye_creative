@@ -8,7 +8,8 @@ import { useRef } from "react";
 // import Script from "next/script";
 import SplineViewer from "./SplineViewer";
 import ScrollToBottomButton from "./ScrollToBottomButton";
-import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
+// import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
+import PrinceText from "./PrinceText";
 
 function HeroSection() {
   const containerRef = useRef(null);
@@ -54,10 +55,12 @@ function HeroSection() {
           We&apos; ve got a{" "}
           <span className="vision-text-gradient-desktop">
             {" "}
-            <TextPressure
+            {/* <TextPressure
               text=" VISION"
               className={"variable-proximity-demo"}
-            />
+            /> */}
+
+            <PrinceText children={"VISION"} className="variable-proximity-demo" />
             {/* <VariableProximity
               label={"VISION"}
               fromFontVariationSettings="'wght' 400, 'opsz' 9"
