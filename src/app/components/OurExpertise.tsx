@@ -41,13 +41,13 @@ function OurExpertise() {
             "Brand Marketing",
             "Graphics Design",
           ]}
-          trigger="hover"
+          trigger="click"
           backgroundColor="transparent"
           wireframes={false}
           gravity={0.56}
           fontSize="1.8rem"
           setIsHoveredForAnimation={setIsHoveredForAnimation}
-          mouseConstraintStiffness={0.9}
+          mouseConstraintStiffness={1.2}
           
         />
       </div>
