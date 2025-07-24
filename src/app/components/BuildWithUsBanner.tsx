@@ -1,8 +1,8 @@
 ﻿import Image from "next/image";
 import React from "react";
 import Silk from "../../../Reactbits/Silk/Silk";
-import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
-import VanishEffect from "./PrinceText";
+// import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
+// import VanishEffect from "./PrinceText";
 
 function BuildWithUsBanner() {
   return (
@@ -19,10 +19,11 @@ function BuildWithUsBanner() {
 
       <h3 className="">
         Ideas don’t build themselves
-        <VanishEffect
+        <span className="build-with-us-span-text">, We do</span>
+        {/* <VanishEffect
           children={", We do"}
           className={"build-with-us-span-text"}
-        />
+        /> */}
       </h3>
 
       <button className="view-more-button">

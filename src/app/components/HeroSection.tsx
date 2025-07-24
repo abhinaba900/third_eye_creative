@@ -9,7 +9,8 @@ import { useRef } from "react";
 import SplineViewer from "./SplineViewer";
 import ScrollToBottomButton from "./ScrollToBottomButton";
 // import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
-import PrinceText from "./PrinceText";
+// import PrinceText from "./PrinceText";
+import TextType from "../../../Reactbits/TextType/TextType";
 
 function HeroSection() {
   const containerRef = useRef(null);
@@ -48,19 +49,33 @@ function HeroSection() {
         </>
 
         <h3
-          className="flex justify-center items-center hero-title-1 text-center -mt-30 relative z-2 opacity-100"
+          className="flex justify-center items-center hero-title-1 text-center -mt-30 relative z-2 opacity-100 -mb-25 h-80"
           style={{ backgroundColor: "black", opacity: 1 }}
           ref={text2Ref}
         >
-          We&apos; ve got a{" "}
+          {" "}
           <span className="vision-text-gradient-desktop">
             {" "}
             {/* <TextPressure
               text=" VISION"
               className={"variable-proximity-demo"}
             /> */}
-
-            <PrinceText children={"VISION"} className="variable-proximity-demo" />
+            {/* <PrinceText
+              children={"VISION"}
+              className="variable-proximity-demo"
+            /> */}
+            <TextType
+              text={["We've got a vision \n FOR YOUR BRAND", "We've got a vision \n FOR YOUR BRAND"]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="|"
+              highlightedText="vision"
+              highlightedClassName="variable-proximity-demo"
+              highlightedText2="FOR YOUR BRAND"
+              highlightedClassName2="hero-title-2"
+              
+            />
             {/* <VariableProximity
               label={"VISION"}
               fromFontVariationSettings="'wght' 400, 'opsz' 9"
@@ -70,10 +85,13 @@ function HeroSection() {
               falloff="linear"
             /> */}
           </span>
-          <span className="vision-text-gradient-mobile">VISION</span>
+          {/* <span className="vision-text-gradient-mobile">VISION</span> */}
         </h3>
+        {/* <h3 className="d-flex align-items-center hero-title-2 text-center -mb-25">
+          FOR YOUR BRAND
+        </h3> */}
 
-        <div className="w-full relative">
+        <div className="w-full relative"> 
           <Aurora
             colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}
             blend={0.1}
@@ -82,9 +100,7 @@ function HeroSection() {
           />
 
           <div className="hero-content-wrapper">
-            <h3 className="d-flex align-items-center hero-title-2 text-center">
-              FOR YOUR BRAND
-            </h3>
+            <div></div>
             <div
               className="hero-content-box-wrapper mb-10"
               ref={containerRef}
