@@ -91,14 +91,13 @@ function HeroSection() {
           FOR YOUR BRAND
         </h3> */}
 
-        <div className="w-full relative"> 
+        <div className="w-full relative z-5"> 
           <Aurora
             colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}
             blend={0.1}
             amplitude={1.0}
             speed={1}
           />
-
           <div className="hero-content-wrapper">
             <div></div>
             <div
