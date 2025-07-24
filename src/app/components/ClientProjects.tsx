@@ -71,7 +71,7 @@ function ClientProjects() {
       </p>
 
       {/* Project List */}
-      <div className="w-full h-full mx-auto project-data-container">
+      <div className="w-full h-full mx-auto  project-data-container ">
         {projects.map(({ title, client, year }, idx) => {
           const isActive = idx === activeIndex;
 
@@ -79,12 +79,18 @@ function ClientProjects() {
             <section
               key={idx}
               className="first:shadow-none shadow-[0_-1px_0_0_#fff]"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                maxHeight: "100vh",
+                height: isActive && "100vh",
+              }}
             >
               {/* Image Display Area */}
               {isActive && (
                 <div
                   ref={imageRef}
-                  className="relative w-full max-w-[1232px] h-[400px] md:h-[600px] lg:h-[714px] mx-auto overflow-hidden rounded-[40px] mb-6 "
+                  className="relative w-full max-w-[1232px] h-[80%] mx-auto overflow-hidden rounded-[40px] mb-6 "
                 >
                   <AnimatePresence mode="wait">
                     <motion.img
@@ -102,7 +108,7 @@ function ClientProjects() {
               )}
               <div
                 onClick={() => handleProjectClick(idx)}
-                className="group flex-1 relative overflow-hidden text-center flowing-menu-item-projects-data-container transition-colors duration-300 cursor-pointer"
+                className="group flex-1 h-[20%] relative overflow-hidden text-center flowing-menu-item-projects-data-container transition-colors duration-300 cursor-pointer"
               >
                 <a className="flex flex-col items-center justify-center h-full relative uppercase no-underline focus:text-white focus-visible:text-white">
                   <div className="flex justify-between w-full items-center">
