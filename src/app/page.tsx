@@ -28,7 +28,7 @@ import WorkflowStages from "./components/WorkflowStages";
 export default function Home() {
   return (
     <section>
-      <SplineViewerLoader />
+      {/* <SplineViewerLoader /> */}
       <HeroSection />
       <TextToRevealSection />
       <OurExpertise />
