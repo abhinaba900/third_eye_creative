@@ -1335,7 +1335,7 @@ html {
   gap: 1rem;
   font-family: var(--font-family);
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 28px;
   letter-spacing: -1%;
 }
