@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Bottomblur from "./components/Bottomblur";
+// import Bottomblur from "./components/Bottomblur";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +22,7 @@ export default function RootLayout({
         {children}
 
         {/* Glass morphism blur */}
-        <Bottomblur />
+        {/* <Bottomblur /> */}
         <Footer />
       </body>
     </html>

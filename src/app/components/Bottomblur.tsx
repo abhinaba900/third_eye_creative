@@ -1,6 +1,7 @@
 ﻿"use client";
 import React from "react";
 import { useEffect, useState } from "react";
+import Aurora from "../../../Reactbits/Aurora/Auroracopy";
 
 function Bottomblur() {
   const [isAtBottom, setIsAtBottom] = useState(false);
@@ -18,9 +19,16 @@ function Bottomblur() {
   }, []);
   return (
     <div
-      className="fixed bottom-0 left-0 right-0 h-16 z-10 glass-card"
+      className="fixed bottom-0 left-0 right-0 h-16 z-10 "
       style={{ display: !isAtBottom ? "block" : "none" }}
-    ></div>
+    >
+      <Aurora
+        colorStops={["black", "black", "black"]}
+        blend={0.4}
+        amplitude={0.5}
+        speed={0}
+      />
+    </div>
   );
 }
 

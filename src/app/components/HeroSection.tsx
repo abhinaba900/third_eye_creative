@@ -6,11 +6,12 @@ import Counter from "../../../Reactbits/Counter/Counter";
 // import VariableProximity from "../../../Reactbits/VariableProximity/VariableProximity";
 import { useRef } from "react";
 // import Script from "next/script";
-import SplineViewer from "./SplineViewer";
+// import SplineViewer from "./SplineViewer";
 import ScrollToBottomButton from "./ScrollToBottomButton";
 // import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
 // import PrinceText from "./PrinceText";
 import TextType from "../../../Reactbits/TextType/TextType";
+import MechanicalEye from "./MechanicalEye";
 
 function HeroSection() {
   const containerRef = useRef(null);
@@ -45,7 +46,10 @@ function HeroSection() {
             src="https://unpkg.com/@splinetool/viewer@1.10.32/build/spline-viewer.js"
             strategy="beforeInteractive"
           /> */}
-          <SplineViewer />
+          {/* <SplineViewer /> */}
+          <div className="flex justify-center items-center ">
+            <MechanicalEye />
+          </div>
         </>
 
         <h3
@@ -98,7 +102,7 @@ function HeroSection() {
             amplitude={1.0}
             speed={1}
           />
-          <div className="hero-content-wrapper">
+          <div className="hero-content-wrapper -mt-20">
             <div></div>
             <div
               className="hero-content-box-wrapper mb-10"

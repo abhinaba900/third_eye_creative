@@ -125,23 +125,47 @@ html {
 /* Glass Card */
 
 .glass-card {
-  /* Foggy gradient (semi-transparent white-to-black) */
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 0%,   /* Slight white fog at top */
-    rgba(0, 0, 0, 0.699) 30%,        /* Mid transition */
-    rgba(0, 0, 0, 0.845) 100%          /* Darker at bottom */
-  );
-  
-  /* Soften edges with inset shadow */
-  box-shadow: 
-    inset 0 1px 1px rgba(0, 0, 0, 0), /* Top highlight */
-    inset 0 -1px 1px rgba(0, 0, 0, 0.3);       /* Bottom shadow */
-  
-  /* Optional: subtle border for depth (remove if unwanted) */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  /* box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 0 2px 1px rgba(255, 255, 255, 0.1); */
+  position: relative;
+  overflow: hidden;
 }
 
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0),
+    transparent
+  );
+}
 
+.glass-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0),
+    transparent,
+    rgba(255, 255, 255, 0.3)
+  );
+}
 
 /* navbar CSS */
 
@@ -755,7 +779,6 @@ html {
 }
 
 .background-image-hero-section {
-  margin-top: -10%;
   left: 0;
   max-height: 1180px;
   min-height: 1180px;
@@ -767,17 +790,71 @@ html {
   display: none !important;
 }
 
+/* etyball */
+
+/* global 20 % shrink */
+.scale-80-percent {
+  transform: scale(0.5);
+  transform-origin: center;
+}
+
+/* eye assembly ------------------------------------------------------- */
+.eye {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* nothing leaks outside the lid */
+}
+.eye img {
+  display: block;
+  max-width: 100%;
+}
+
+/* 1) new sclera – lowest layer, fills whole inner opening */
+.sclera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 98%;
+  height: auto; /* auto-scale with lid */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 2) existing eyeball (pupil/iris) – tracks cursor */
+.eyeball {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-70%, -70%);
+  width: 39%;
+  height: auto; /* unchanged size tweak */
+  z-index: 1;
+  pointer-events: none;
+  transition: transform 0.08s linear;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+}
+
+/* 3) eyelid – top mask */
+.eyelid {
+  position: relative;
+  width: 1080px;
+  height: auto; /* native size, pre-scale */
+  z-index: 2;
+  pointer-events: none;
+}
+
 .hero-section-content-wrapper {
   position: absolute;
   z-index: 2;
-  bottom: -3%;
   width: 100%;
-  margin-top: 2rem;
+  
 }
 
 .hero-content-wrapper {
   position: absolute;
-  bottom: 0;
+  bottom: 7%;
   align-items: center;
   right: 0;
   left: 0;
