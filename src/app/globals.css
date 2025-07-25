@@ -122,6 +122,27 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Glass Card */
+
+.glass-card {
+  /* Foggy gradient (semi-transparent white-to-black) */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,   /* Slight white fog at top */
+    rgba(0, 0, 0, 0.699) 30%,        /* Mid transition */
+    rgba(0, 0, 0, 0.845) 100%          /* Darker at bottom */
+  );
+  
+  /* Soften edges with inset shadow */
+  box-shadow: 
+    inset 0 1px 1px rgba(0, 0, 0, 0), /* Top highlight */
+    inset 0 -1px 1px rgba(0, 0, 0, 0.3);       /* Bottom shadow */
+  
+  /* Optional: subtle border for depth (remove if unwanted) */
+}
+
+
+
 /* navbar CSS */
 
 .navitems-section-wrapper {
@@ -887,7 +908,7 @@ html {
 }
 
 .falling-text-container-highlight {
-  height: 300px;
+  height: 200px;
   max-width: 1200px;
   margin: 5rem auto 2rem auto;
 }
@@ -1575,7 +1596,7 @@ strong {
   line-height: 120%;
   letter-spacing: -4%;
   display: inline;
-  color: white ;
+  color: white;
 }
 
 .build-with-us-banner {

@@ -12,7 +12,7 @@ function OurExpertise() {
     "Web Design & Development",
     "Graphics Design",
     "UI/UX Design",
-  ]
+  ];
   return (
     <div className="our-expertise-wrapper max-w-[1232px] overflow-hidden mx-auto">
       <img
@@ -24,18 +24,16 @@ function OurExpertise() {
         Our <span>Expertise</span>
       </h3>
       <p className="text-center text-paragraph-our-expertise">
-        Our blend of creativity and technical finesse ensures solutions that
-        elevate brands and captivate audiences, leaving an imprint on the design
-        landscape
+        Blending creativity and tech to craft brands that inspire and engage.
       </p>
 
       <div
-        className={`falling-text-container-highlight  desktop-text ${
+        className={`falling-text-container-highlight   desktop-text ${
           isHoveredForAnimation ? "hovered" : ""
         }`}
       >
         <FallingText
-          text={`Branding & Content , Software Development , Brand Marketing , Web Design & Development, Graphics Design, UI/UX Design`}
+          text={`Branding & Content    Software Development    Brand Marketing    Web Design & Development    Graphics Design    UI/UX Design`}
           highlightWords={[
             "Branding & Content",
             "Brand Marketing",
@@ -44,11 +42,10 @@ function OurExpertise() {
           trigger="click"
           backgroundColor="transparent"
           wireframes={false}
-          gravity={0.56}
+          gravity={0.3}
           fontSize="1.8rem"
-          setIsHoveredForAnimation={setIsHoveredForAnimation}
+          // setIsHoveredForAnimation={setIsHoveredForAnimation}
           mouseConstraintStiffness={1.2}
-          
         />
       </div>
 

@@ -52,7 +52,7 @@ export default function ScrollToBottomButton({ containerRef, targetRef }) {
   return (
     <button
       onClick={scrollToBottom}
-      className="fixed bottom-5 right-5 z-50  h-fit pt-0 rounded-full  text-white  transition-opacity duration-500 opacity-100 "
+      className="fixed bottom-15 right-5 z-3  h-fit pt-0 rounded-full  text-white  transition-opacity duration-500 opacity-100 "
       aria-label="Scroll to bottom"
     >
       <div className="container_mouse">
