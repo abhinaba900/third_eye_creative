@@ -2663,6 +2663,9 @@ strong {
 }
 
 /* life at third eye */
+.lifeat-third-eye-wrapper{
+  position: relative;
+}
 
 .lifeat-third-eye-wrapper .lifeat-third-eye-title {
   font-family: var(--font-family-cabinet-grotesk-medium);

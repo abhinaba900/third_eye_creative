@@ -1,6 +1,7 @@
 ﻿"use client";
 import Image from "next/image";
 import React from "react";
+import MagicBento from "../../../../../Rectbits/MagicBento/MagicBento";
 
 export default function SolutionSection({ data }) {
   console.log("SolutionSection Data:", data);
@@ -18,6 +19,22 @@ export default function SolutionSection({ data }) {
           {data.description}
         </p>
       </div>
+
+      <div className="relative">
+          <div className="absolute top-0 left-0 w-full h-full">
+          <MagicBento
+            textAutoHide={false}
+            enableStars={false}
+            enableSpotlight={true}
+            enableBorderGlow={false}
+            enableTilt={false}
+            enableMagnetism={false}
+            clickEffect={false}
+            spotlightRadius={300}
+            particleCount={12}
+            glowColor="132, 0, 255"
+          />
+        </div>
 
       {data.layout === "1" ? (
         <>
@@ -406,6 +423,7 @@ export default function SolutionSection({ data }) {
           </div>
         </>
       )}
+      </div>
     </div>
   );
 }

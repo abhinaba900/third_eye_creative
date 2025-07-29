@@ -97,7 +97,7 @@ export default function TestimonialShowcase() {
             data={[testimonialsGroup1, testimonialsGroup2]}
             renderCard={(item: Testimonial, index) => (
               <SpotlightCard
-                className={`w-[360px] text-left min-w-[360px] h-full horizontal-scroller-card mx-2 bg-white/5 text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 ${
+                className={`w-[380px] text-left min-w-[380px] min-h-[250px] max-h-[250px] h-full horizontal-scroller-card mx-2 bg-white/5 text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 ${
                   hoveredCard === item.name ? "" : ""
                 }`}
                 // className={`w-[360px] text-left min-w-[360px] h-full horizontal-scroller-card mx-2 bg-white/5 text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 ${
