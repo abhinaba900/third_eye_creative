@@ -1,17 +1,17 @@
 ﻿import React from "react";
-import Masonry from "../../../../Rectbits/Masonry/Masonry";
+// import Masonry from "../../../../Rectbits/Masonry/Masonry";
 import CircularGallery from "../../../../Reactbits/CircularGallery/CircularGallery";
 
 function PhotoGallary() {
-  const items = [
-    { id: "1", img: "/assets/carrer-gallery-image-1.jpg", height: 400 },
-    { id: "2", img: "/assets/carrer-gallery-image-2.jpg", height: 500 },
-    { id: "3", img: "/assets/carrer-gallery-image-3.jpg", height: 700 },
-    { id: "4", img: "/assets/carrer-gallery-image-4.jpg", height: 400 },
-    { id: "5", img: "/assets/carrer-gallery-image-5.jpg", height: 600 },
-    { id: "6", img: "/assets/carrer-gallery-image-6.jpg", height: 500 },
-    { id: "7", img: "/assets/carrer-gallery-image-7.jpg", height: 700 },
-  ];
+  // const items = [
+  //   { id: "1", img: "/assets/carrer-gallery-image-1.jpg", height: 400 },
+  //   { id: "2", img: "/assets/carrer-gallery-image-2.jpg", height: 500 },
+  //   { id: "3", img: "/assets/carrer-gallery-image-3.jpg", height: 700 },
+  //   { id: "4", img: "/assets/carrer-gallery-image-4.jpg", height: 400 },
+  //   { id: "5", img: "/assets/carrer-gallery-image-5.jpg", height: 600 },
+  //   { id: "6", img: "/assets/carrer-gallery-image-6.jpg", height: 500 },
+  //   { id: "7", img: "/assets/carrer-gallery-image-7.jpg", height: 700 },
+  // ];
   const items2 = [
     {
       image: "/assets/carrer-gallery-image-1.jpg",
