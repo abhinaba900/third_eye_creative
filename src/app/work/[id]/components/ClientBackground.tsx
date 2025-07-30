@@ -15,7 +15,7 @@ function ClientBackground({ data }) {
       {/* Left Section - App Screenshot */}
       <div className="relative w-full h-full lg:w-[55%] aspect-video">
         {/* Glow/Blur Background */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/40 via-[#A772E3] to-[#621DBA] blur-2xl opacity-50 z-0" />
+        <div className="absolute inset-0 rounded-2xl border border-[rgba(154,106,255,0.1)] bg-gradient-to-br from-white/40 via-[#A772E3] to-[#621DBA] blur-2xl opacity-50 z-0" />
 
         {/* Screenshot Image with rounded corners and slight shadow */}
         {data.type === "1" ? (

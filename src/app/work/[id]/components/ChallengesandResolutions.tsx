@@ -17,7 +17,7 @@ function ChallengesandResolutions({ data }) {
 
         <div className="space-y-[1rem]">
           {/* Section: What we were up against */}
-          <div className="flex bg-[#1b1725] rounded-2xl p-6 items-start relative">
+          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-6 items-start relative">
             {/* Left Image Line */}
             <div className="relative w-10 h-full mr-4 ">
               <svg
@@ -183,7 +183,7 @@ function ChallengesandResolutions({ data }) {
           </div>
 
           {/* Section: How we engineered the fix */}
-          <div className="flex bg-[#1b1725] rounded-2xl p-6 items-start relative">
+          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-6 items-start relative">
             {/* Left Image Line */}
             <div className="relative w-10 h-full mr-4">
               <svg

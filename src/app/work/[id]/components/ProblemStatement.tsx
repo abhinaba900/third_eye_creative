@@ -4,8 +4,6 @@ import React from "react";
 function ProblemStatement({ data }) {
   console.log("ProblemStatement data:", data);
 
-
-
   return (
     <section className="bg-black text-white max-w-[1232px] mx-auto px-4 sm:px-6 lg:px-0 mb-[8.75rem]">
       <div className="text-center mb-12 sm:mb-16">
@@ -18,7 +16,7 @@ function ProblemStatement({ data }) {
         </p>
       </div>
 
-      <div className="bg-[#1A1A1A] rounded-[24px] overflow-hidden flex flex-col lg:flex-row">
+      <div className="bg-[#1A1A1A] rounded-[24px] overflow-hidden flex flex-col lg:flex-row border border-[rgba(255,255,255,0.1)] ">
         {/* Left Section */}
         <div className="w-full lg:w-1/2 p-6 sm:p-8 space-y-4">
           <Image
