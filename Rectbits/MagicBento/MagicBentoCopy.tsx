@@ -578,13 +578,12 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
   min-h-[200px] w-full max-w-full  rounded-[24px]
   border border-solid font-light overflow-hidden
   transition-all duration-300 ease-in-out
-  hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(0,0,0,0.15)]
+  hover:-translate-y-0.5 
   ${enableBorderGlow ? "card--border-glow" : ""}
 `;
 
   const cardStyle = {
     borderColor: "rgba(255, 255, 255, 0.1)", // ✅ Only override the color
-    backgroundColor: "rgba(5, 1, 13, 1)",
     color: "var(--white)",
     "--glow-x": "50%",
     "--glow-y": "50%",
