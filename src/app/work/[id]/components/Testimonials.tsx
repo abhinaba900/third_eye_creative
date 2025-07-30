@@ -7,8 +7,6 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-
-
 function Testimonials({ data }) {
   return (
     <div className="relative border-red-900">
@@ -28,7 +26,7 @@ function Testimonials({ data }) {
           What our clients say about creating with us
         </p>
 
-        <div className="bg-[#1a1a1a] p-6 rounded-xl max-w-[1232px] max-h-[500px] h-full mx-auto">
+        <div className="bg-[rgba(255,255,255,0.1)] p-6 rounded-xl max-w-[1232px] max-h-[500px] h-full mx-auto">
           <Swiper
             modules={[Pagination]}
             pagination={{ clickable: true }}
@@ -38,7 +36,7 @@ function Testimonials({ data }) {
           >
             {data.map((item, idx) => (
               <SwiperSlide key={idx}>
-                <div className="flex flex-col h-100 lg:flex-row gap-6 items-center bg-[#1a1a1a] rounded-xl p-6">
+                <div className="flex flex-col h-100 lg:flex-row gap-6 items-center rounded-xl p-6">
                   {/* Video Section */}
                   <div className="w-full lg:w-1/2 overflow-hidden rounded-xl h-full">
                     <video
@@ -49,7 +47,14 @@ function Testimonials({ data }) {
                   </div>
 
                   {/* Text Section */}
-                  <div className="w-full lg:w-1/2 bg-[#2a2a2a] p-6 rounded-xl relative h-full flex flex-col justify-between text-left">
+                  <div
+                    className="w-full lg:w-1/2 p-6 rounded-xl relative h-full flex flex-col justify-between text-left"
+                    style={{
+                      background:
+                        "linear-gradient(79.59deg, rgba(51, 51, 62, 0.16) 6.21%, rgba(83, 84, 108, 0.16) 98.02%)",
+                      border: "1px solid rgba(63, 63, 63, 1)",
+                    }}
+                  >
                     <div>
                       <Image
                         src="/assets/single-page-testimonial-left-coma.svg"
