@@ -15,7 +15,7 @@ function BuildWithUsBanner() {
         </h3>
 
         <button className="view-more-button mt-4 flex items-center gap-2">
-          Let's Build Something{" "}
+          Let&apos;s Build Something{" "}
           <Image
             src="/assets/project-data-button-arrow.png"
             alt="arrow"
