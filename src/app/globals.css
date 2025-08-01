@@ -138,7 +138,7 @@ html {
 }
 
 .glass-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -153,7 +153,7 @@ html {
 }
 
 .glass-card::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -849,7 +849,6 @@ html {
   position: absolute;
   z-index: 2;
   width: 100%;
-  
 }
 
 .hero-content-wrapper {
@@ -2663,7 +2662,7 @@ strong {
 }
 
 /* life at third eye */
-.lifeat-third-eye-wrapper{
+.lifeat-third-eye-wrapper {
   position: relative;
 }
 
@@ -3317,12 +3316,13 @@ strong {
 /* build with us banner */
 
 .single-page-build-with-us-banner {
-  background-image: url("../../public/assets/BuildWithUsBanner-bg-in-single-page.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* height: 100%;
+  max-height: 100vh; */
+  background: none;
   padding-top: 10rem;
   padding-bottom: 10rem;
+  position: relative;
+  overflow: visible;
 }
 
 /* media quarry */
