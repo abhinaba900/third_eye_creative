@@ -2,9 +2,21 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import { gsap } from "gsap";
 import Image from "next/image";
 
-type ObjectiveType = {
+type CardItem = {
+  icon: string;
   title: string;
   description: string;
+  rightsideimage?: string;
+  image?: string;
+};
+
+type CardColumn = CardItem[];
+
+type ObjectiveType = {
+  type?: string;
+  title: string;
+  description: string;
+  allSubDatas?: CardColumn[];
   realTimeDiagnostics: {
     icon: string;
     title: string;
@@ -559,7 +571,9 @@ const MagicBento: React.FC<BentoProps> = ({
   const shouldDisableAnimations = disableAnimations || isMobile;
 
   const baseClassName = `
-  card flex flex-col justify-between relative first:mb-4
+  card flex flex-col justify-between relative ${
+    cardDatas.type === "3" ? "first:mb-4 " : ""
+  }
   min-h-[200px] w-full max-w-full  rounded-[24px]
   border border-solid font-light overflow-hidden
   transition-all duration-300 ease-in-out
@@ -722,158 +736,10 @@ const MagicBento: React.FC<BentoProps> = ({
 
       {/* Real Time Diagnostics Card */}
       <BentoCardGrid gridRef2={gridRef2}>
-        <div
-          className={baseClassName}
-          style={cardStyle}
-          ref={(el) => {
-            if (!el) return;
-
-            const handleMouseMove = (e: MouseEvent) => {
-              if (shouldDisableAnimations) return;
-
-              const rect = el.getBoundingClientRect();
-              const x = e.clientX - rect.left;
-              const y = e.clientY - rect.top;
-              const centerX = rect.width / 2;
-              const centerY = rect.height / 2;
-
-              if (enableTilt) {
-                const rotateX = ((y - centerY) / centerY) * -10;
-                const rotateY = ((x - centerX) / centerX) * 10;
-
-                gsap.to(el, {
-                  rotateX,
-                  rotateY,
-                  duration: 0.1,
-                  ease: "power2.out",
-                  transformPerspective: 1000,
-                });
-              }
-
-              if (enableMagnetism) {
-                const magnetX = (x - centerX) * 0.05;
-                const magnetY = (y - centerY) * 0.05;
-
-                gsap.to(el, {
-                  x: magnetX,
-                  y: magnetY,
-                  duration: 0.3,
-                  ease: "power2.out",
-                });
-              }
-            };
-
-            const handleMouseLeave = () => {
-              if (shouldDisableAnimations) return;
-
-              if (enableTilt) {
-                gsap.to(el, {
-                  rotateX: 0,
-                  rotateY: 0,
-                  duration: 0.3,
-                  ease: "power2.out",
-                });
-              }
-
-              if (enableMagnetism) {
-                gsap.to(el, {
-                  x: 0,
-                  y: 0,
-                  duration: 0.3,
-                  ease: "power2.out",
-                });
-              }
-            };
-
-            const handleClick = (e: MouseEvent) => {
-              if (!clickEffect || shouldDisableAnimations) return;
-
-              const rect = el.getBoundingClientRect();
-              const x = e.clientX - rect.left;
-              const y = e.clientY - rect.top;
-
-              const maxDistance = Math.max(
-                Math.hypot(x, y),
-                Math.hypot(x - rect.width, y),
-                Math.hypot(x, y - rect.height),
-                Math.hypot(x - rect.width, y - rect.height)
-              );
-
-              const ripple = document.createElement("div");
-              ripple.style.cssText = `
-                                position: absolute;
-                                width: ${maxDistance * 2}px;
-                                height: ${maxDistance * 2}px;
-                                border-radius: 50%;
-                                background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
-                                left: ${x - maxDistance}px;
-                                top: ${y - maxDistance}px;
-                                pointer-events: none;
-                                z-index: 1000;
-                              `;
-
-              el.appendChild(ripple);
-
-              gsap.fromTo(
-                ripple,
-                {
-                  scale: 0,
-                  opacity: 1,
-                },
-                {
-                  scale: 1,
-                  opacity: 0,
-                  duration: 0.8,
-                  ease: "power2.out",
-                  onComplete: () => ripple.remove(),
-                }
-              );
-            };
-
-            el.addEventListener("mousemove", handleMouseMove);
-            el.addEventListener("mouseleave", handleMouseLeave);
-            el.addEventListener("click", handleClick);
-          }}
-        >
-          <div className=" p-6 bg-[rgba(255,255,255,0.1)] shadow-xl flex items-center lg:pr-0 ">
-            <div>
-              <Image
-                src={cardDatas.realTimeDiagnostics.icon}
-                alt="Icon"
-                width={50}
-                height={50}
-                className="object-contain mb-4"
-              />
-              <h3 className="text-lg font-semibold mb-2 single-work-page-objectives-real-time-diagnostics-title">
-                {cardDatas.realTimeDiagnostics.title}
-              </h3>
-              <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">
-                {cardDatas.realTimeDiagnostics.description}
-              </p>
-            </div>
-            <div className="flex gap-5 align-middle w-full">
-              {cardDatas.realTimeDiagnostics.rightsideimage && (
-                <div className="w-full mb-4">
-                  <img
-                    src={cardDatas.realTimeDiagnostics.rightsideimage}
-                    alt={cardDatas.realTimeDiagnostics.title}
-                    width={800}
-                    height={386}
-                    className="w-100 h-100 rounded-lg ml-auto"
-                  />
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-
-        <div className="grid gap-[1rem] sm:grid-cols-1 lg:grid-cols-2 mb-[1rem]">
-          {/* Left Column */}
-
-          <div className="h-full">
-            {/* UPS Connectivity Card */}
+        {cardDatas.type !== "3" ? (
+          <>
             <div
-              className={`${baseClassName}`}
+              className={baseClassName}
               style={cardStyle}
               ref={(el) => {
                 if (!el) return;
@@ -985,26 +851,31 @@ const MagicBento: React.FC<BentoProps> = ({
                 el.addEventListener("click", handleClick);
               }}
             >
-              <div
-                className={`bg-[rgba(255,255,255,0.1)] p-6  shadow-xl overflow-hidden`}
-              >
-                <div className="mb-[2.5rem]">
+              <div className=" p-6 bg-[rgba(255,255,255,0.1)] shadow-xl flex items-center lg:pr-0 ">
+                <div>
+                  <Image
+                    src={cardDatas.realTimeDiagnostics.icon}
+                    alt="Icon"
+                    width={50}
+                    height={50}
+                    className="object-contain mb-4"
+                  />
                   <h3 className="text-lg font-semibold mb-2 single-work-page-objectives-real-time-diagnostics-title">
-                    {cardDatas.upsConnectivity.title}
+                    {cardDatas.realTimeDiagnostics.title}
                   </h3>
                   <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">
-                    {cardDatas.upsConnectivity.description}
+                    {cardDatas.realTimeDiagnostics.description}
                   </p>
                 </div>
                 <div className="flex gap-5 align-middle w-full">
-                  {cardDatas.upsConnectivity.image && (
-                    <div className="w-full -mb-38">
+                  {cardDatas.realTimeDiagnostics.rightsideimage && (
+                    <div className="w-full mb-4">
                       <img
-                        src={cardDatas.upsConnectivity.image}
-                        alt={cardDatas.upsConnectivity.title}
+                        src={cardDatas.realTimeDiagnostics.rightsideimage}
+                        alt={cardDatas.realTimeDiagnostics.title}
                         width={800}
                         height={386}
-                        className="w-full h-full rounded-lg"
+                        className="w-100 h-100 rounded-lg ml-auto"
                       />
                     </div>
                   )}
@@ -1012,90 +883,90 @@ const MagicBento: React.FC<BentoProps> = ({
               </div>
             </div>
 
-            {/* Bottom Two Small Cards */}
-            <div
-              className={`grid gap-[1rem]  sm:grid-cols-2 lg:grid-cols-2 mt-[1rem]`}
-            >
-              {/* Cloud Sync Card */}
-              <div
-                className={`${baseClassName} `}
-                style={{ ...cardStyle, marginBottom: "0" }}
-                ref={(el) => {
-                  if (!el) return;
+            <div className="grid gap-[1rem] sm:grid-cols-1 lg:grid-cols-2 mb-[1rem]">
+              {/* Left Column */}
 
-                  const handleMouseMove = (e: MouseEvent) => {
-                    if (shouldDisableAnimations) return;
+              <div className="h-full">
+                {/* UPS Connectivity Card */}
+                <div
+                  className={`${baseClassName}`}
+                  style={cardStyle}
+                  ref={(el) => {
+                    if (!el) return;
 
-                    const rect = el.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
-                    const centerX = rect.width / 2;
-                    const centerY = rect.height / 2;
+                    const handleMouseMove = (e: MouseEvent) => {
+                      if (shouldDisableAnimations) return;
 
-                    if (enableTilt) {
-                      const rotateX = ((y - centerY) / centerY) * -10;
-                      const rotateY = ((x - centerX) / centerX) * 10;
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      const centerX = rect.width / 2;
+                      const centerY = rect.height / 2;
 
-                      gsap.to(el, {
-                        rotateX,
-                        rotateY,
-                        duration: 0.1,
-                        ease: "power2.out",
-                        transformPerspective: 1000,
-                      });
-                    }
+                      if (enableTilt) {
+                        const rotateX = ((y - centerY) / centerY) * -10;
+                        const rotateY = ((x - centerX) / centerX) * 10;
 
-                    if (enableMagnetism) {
-                      const magnetX = (x - centerX) * 0.05;
-                      const magnetY = (y - centerY) * 0.05;
+                        gsap.to(el, {
+                          rotateX,
+                          rotateY,
+                          duration: 0.1,
+                          ease: "power2.out",
+                          transformPerspective: 1000,
+                        });
+                      }
 
-                      gsap.to(el, {
-                        x: magnetX,
-                        y: magnetY,
-                        duration: 0.3,
-                        ease: "power2.out",
-                      });
-                    }
-                  };
+                      if (enableMagnetism) {
+                        const magnetX = (x - centerX) * 0.05;
+                        const magnetY = (y - centerY) * 0.05;
 
-                  const handleMouseLeave = () => {
-                    if (shouldDisableAnimations) return;
+                        gsap.to(el, {
+                          x: magnetX,
+                          y: magnetY,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
 
-                    if (enableTilt) {
-                      gsap.to(el, {
-                        rotateX: 0,
-                        rotateY: 0,
-                        duration: 0.3,
-                        ease: "power2.out",
-                      });
-                    }
+                    const handleMouseLeave = () => {
+                      if (shouldDisableAnimations) return;
 
-                    if (enableMagnetism) {
-                      gsap.to(el, {
-                        x: 0,
-                        y: 0,
-                        duration: 0.3,
-                        ease: "power2.out",
-                      });
-                    }
-                  };
+                      if (enableTilt) {
+                        gsap.to(el, {
+                          rotateX: 0,
+                          rotateY: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
 
-                  const handleClick = (e: MouseEvent) => {
-                    if (!clickEffect || shouldDisableAnimations) return;
+                      if (enableMagnetism) {
+                        gsap.to(el, {
+                          x: 0,
+                          y: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
 
-                    const rect = el.getBoundingClientRect();
-                    const x = e.clientX - rect.left;
-                    const y = e.clientY - rect.top;
+                    const handleClick = (e: MouseEvent) => {
+                      if (!clickEffect || shouldDisableAnimations) return;
 
-                    const maxDistance = Math.max(
-                      Math.hypot(x, y),
-                      Math.hypot(x - rect.width, y),
-                      Math.hypot(x, y - rect.height),
-                      Math.hypot(x - rect.width, y - rect.height)
-                    );
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
 
-                    const ripple = document.createElement("div");
-                    ripple.style.cssText = `
+                      const maxDistance = Math.max(
+                        Math.hypot(x, y),
+                        Math.hypot(x - rect.width, y),
+                        Math.hypot(x, y - rect.height),
+                        Math.hypot(x - rect.width, y - rect.height)
+                      );
+
+                      const ripple = document.createElement("div");
+                      ripple.style.cssText = `
                                 position: absolute;
                                 width: ${maxDistance * 2}px;
                                 height: ${maxDistance * 2}px;
@@ -1107,51 +978,331 @@ const MagicBento: React.FC<BentoProps> = ({
                                 z-index: 1000;
                               `;
 
-                    el.appendChild(ripple);
+                      el.appendChild(ripple);
 
-                    gsap.fromTo(
-                      ripple,
-                      {
-                        scale: 0,
-                        opacity: 1,
-                      },
-                      {
-                        scale: 1,
-                        opacity: 0,
-                        duration: 0.8,
-                        ease: "power2.out",
-                        onComplete: () => ripple.remove(),
-                      }
-                    );
-                  };
+                      gsap.fromTo(
+                        ripple,
+                        {
+                          scale: 0,
+                          opacity: 1,
+                        },
+                        {
+                          scale: 1,
+                          opacity: 0,
+                          duration: 0.8,
+                          ease: "power2.out",
+                          onComplete: () => ripple.remove(),
+                        }
+                      );
+                    };
 
-                  el.addEventListener("mousemove", handleMouseMove);
-                  el.addEventListener("mouseleave", handleMouseLeave);
-                  el.addEventListener("click", handleClick);
-                }}
-              >
-                <div className="p-6 bg-[rgba(255,255,255,0.1)] shadow-xl flex items-center h-full">
-                  <div className="">
-                    <Image
-                      src={cardDatas.cloudSync.icon}
-                      alt="Icon"
-                      width={50}
-                      height={50}
-                      className="object-contain mb-4"
-                    />
-                    <h3 className="text-lg font-semibold mb-2 single-work-page-objectives-real-time-diagnostics-title">
-                      {cardDatas.cloudSync.title}
-                    </h3>
-                    <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">
-                      {cardDatas.cloudSync.description}
-                    </p>
+                    el.addEventListener("mousemove", handleMouseMove);
+                    el.addEventListener("mouseleave", handleMouseLeave);
+                    el.addEventListener("click", handleClick);
+                  }}
+                >
+                  <div
+                    className={`bg-[rgba(255,255,255,0.1)] p-6  shadow-xl overflow-hidden`}
+                  >
+                    <div className="mb-[2.5rem]">
+                      <h3 className="text-lg font-semibold mb-2 single-work-page-objectives-real-time-diagnostics-title">
+                        {cardDatas.upsConnectivity.title}
+                      </h3>
+                      <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">
+                        {cardDatas.upsConnectivity.description}
+                      </p>
+                    </div>
+                    <div className="flex gap-5 align-middle w-full">
+                      {cardDatas.upsConnectivity.image && (
+                        <div className="w-full -mb-38">
+                          <img
+                            src={cardDatas.upsConnectivity.image}
+                            alt={cardDatas.upsConnectivity.title}
+                            width={800}
+                            height={386}
+                            className="w-full h-full rounded-lg"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom Two Small Cards */}
+                <div
+                  className={`grid gap-[1rem]  sm:grid-cols-2 lg:grid-cols-2 mt-[1rem]`}
+                >
+                  {/* Cloud Sync Card */}
+                  <div
+                    className={`${baseClassName} `}
+                    style={{ ...cardStyle, marginBottom: "0" }}
+                    ref={(el) => {
+                      if (!el) return;
+
+                      const handleMouseMove = (e: MouseEvent) => {
+                        if (shouldDisableAnimations) return;
+
+                        const rect = el.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+
+                        if (enableTilt) {
+                          const rotateX = ((y - centerY) / centerY) * -10;
+                          const rotateY = ((x - centerX) / centerX) * 10;
+
+                          gsap.to(el, {
+                            rotateX,
+                            rotateY,
+                            duration: 0.1,
+                            ease: "power2.out",
+                            transformPerspective: 1000,
+                          });
+                        }
+
+                        if (enableMagnetism) {
+                          const magnetX = (x - centerX) * 0.05;
+                          const magnetY = (y - centerY) * 0.05;
+
+                          gsap.to(el, {
+                            x: magnetX,
+                            y: magnetY,
+                            duration: 0.3,
+                            ease: "power2.out",
+                          });
+                        }
+                      };
+
+                      const handleMouseLeave = () => {
+                        if (shouldDisableAnimations) return;
+
+                        if (enableTilt) {
+                          gsap.to(el, {
+                            rotateX: 0,
+                            rotateY: 0,
+                            duration: 0.3,
+                            ease: "power2.out",
+                          });
+                        }
+
+                        if (enableMagnetism) {
+                          gsap.to(el, {
+                            x: 0,
+                            y: 0,
+                            duration: 0.3,
+                            ease: "power2.out",
+                          });
+                        }
+                      };
+
+                      const handleClick = (e: MouseEvent) => {
+                        if (!clickEffect || shouldDisableAnimations) return;
+
+                        const rect = el.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+
+                        const maxDistance = Math.max(
+                          Math.hypot(x, y),
+                          Math.hypot(x - rect.width, y),
+                          Math.hypot(x, y - rect.height),
+                          Math.hypot(x - rect.width, y - rect.height)
+                        );
+
+                        const ripple = document.createElement("div");
+                        ripple.style.cssText = `
+                                position: absolute;
+                                width: ${maxDistance * 2}px;
+                                height: ${maxDistance * 2}px;
+                                border-radius: 50%;
+                                background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
+                                left: ${x - maxDistance}px;
+                                top: ${y - maxDistance}px;
+                                pointer-events: none;
+                                z-index: 1000;
+                              `;
+
+                        el.appendChild(ripple);
+
+                        gsap.fromTo(
+                          ripple,
+                          {
+                            scale: 0,
+                            opacity: 1,
+                          },
+                          {
+                            scale: 1,
+                            opacity: 0,
+                            duration: 0.8,
+                            ease: "power2.out",
+                            onComplete: () => ripple.remove(),
+                          }
+                        );
+                      };
+
+                      el.addEventListener("mousemove", handleMouseMove);
+                      el.addEventListener("mouseleave", handleMouseLeave);
+                      el.addEventListener("click", handleClick);
+                    }}
+                  >
+                    <div className="p-6 bg-[rgba(255,255,255,0.1)] shadow-xl flex items-center h-full">
+                      <div className="">
+                        <Image
+                          src={cardDatas.cloudSync.icon}
+                          alt="Icon"
+                          width={50}
+                          height={50}
+                          className="object-contain mb-4"
+                        />
+                        <h3 className="text-lg font-semibold mb-2 single-work-page-objectives-real-time-diagnostics-title">
+                          {cardDatas.cloudSync.title}
+                        </h3>
+                        <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">
+                          {cardDatas.cloudSync.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Unified Process Card */}
+                  <div
+                    className={`${baseClassName}  `}
+                    style={cardStyle}
+                    ref={(el) => {
+                      if (!el) return;
+
+                      const handleMouseMove = (e: MouseEvent) => {
+                        if (shouldDisableAnimations) return;
+
+                        const rect = el.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
+
+                        if (enableTilt) {
+                          const rotateX = ((y - centerY) / centerY) * -10;
+                          const rotateY = ((x - centerX) / centerX) * 10;
+
+                          gsap.to(el, {
+                            rotateX,
+                            rotateY,
+                            duration: 0.1,
+                            ease: "power2.out",
+                            transformPerspective: 1000,
+                          });
+                        }
+
+                        if (enableMagnetism) {
+                          const magnetX = (x - centerX) * 0.05;
+                          const magnetY = (y - centerY) * 0.05;
+
+                          gsap.to(el, {
+                            x: magnetX,
+                            y: magnetY,
+                            duration: 0.3,
+                            ease: "power2.out",
+                          });
+                        }
+                      };
+
+                      const handleMouseLeave = () => {
+                        if (shouldDisableAnimations) return;
+
+                        if (enableTilt) {
+                          gsap.to(el, {
+                            rotateX: 0,
+                            rotateY: 0,
+                            duration: 0.3,
+                            ease: "power2.out",
+                          });
+                        }
+
+                        if (enableMagnetism) {
+                          gsap.to(el, {
+                            x: 0,
+                            y: 0,
+                            duration: 0.3,
+                            ease: "power2.out",
+                          });
+                        }
+                      };
+
+                      const handleClick = (e: MouseEvent) => {
+                        if (!clickEffect || shouldDisableAnimations) return;
+
+                        const rect = el.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+
+                        const maxDistance = Math.max(
+                          Math.hypot(x, y),
+                          Math.hypot(x - rect.width, y),
+                          Math.hypot(x, y - rect.height),
+                          Math.hypot(x - rect.width, y - rect.height)
+                        );
+
+                        const ripple = document.createElement("div");
+                        ripple.style.cssText = `
+                                position: absolute;
+                                width: ${maxDistance * 2}px;
+                                height: ${maxDistance * 2}px;
+                                border-radius: 50%;
+                                background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
+                                left: ${x - maxDistance}px;
+                                top: ${y - maxDistance}px;
+                                pointer-events: none;
+                                z-index: 1000;
+                              `;
+
+                        el.appendChild(ripple);
+
+                        gsap.fromTo(
+                          ripple,
+                          {
+                            scale: 0,
+                            opacity: 1,
+                          },
+                          {
+                            scale: 1,
+                            opacity: 0,
+                            duration: 0.8,
+                            ease: "power2.out",
+                            onComplete: () => ripple.remove(),
+                          }
+                        );
+                      };
+
+                      el.addEventListener("mousemove", handleMouseMove);
+                      el.addEventListener("mouseleave", handleMouseLeave);
+                      el.addEventListener("click", handleClick);
+                    }}
+                  >
+                    <div className="p-6 bg-[rgba(255,255,255,0.1)] h-full shadow-xl flex items-center">
+                      <div>
+                        <Image
+                          src={cardDatas.unifiedProcess.icon}
+                          alt="Icon"
+                          width={50}
+                          height={50}
+                          className="object-contain mb-4"
+                        />
+                        <h3 className="text-lg font-semibold mb-2 single-work-page-objectives-real-time-diagnostics-title">
+                          {cardDatas.unifiedProcess.title}
+                        </h3>
+                        <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">
+                          {cardDatas.unifiedProcess.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Unified Process Card */}
+              {/* Right Column - Smart Reports Card */}
               <div
-                className={`${baseClassName}  `}
+                className={baseClassName}
                 style={cardStyle}
                 ref={(el) => {
                   if (!el) return;
@@ -1263,164 +1414,172 @@ const MagicBento: React.FC<BentoProps> = ({
                   el.addEventListener("click", handleClick);
                 }}
               >
-                <div className="p-6 bg-[rgba(255,255,255,0.1)] h-full shadow-xl flex items-center">
+                <div className="p-6 bg-[rgba(255,255,255,0.1)]  shadow-xl h-full flex flex-col lg:pr-0 lg:pb-0">
                   <div>
-                    <Image
-                      src={cardDatas.unifiedProcess.icon}
-                      alt="Icon"
-                      width={50}
-                      height={50}
-                      className="object-contain mb-4"
-                    />
-                    <h3 className="text-lg font-semibold mb-2 single-work-page-objectives-real-time-diagnostics-title">
-                      {cardDatas.unifiedProcess.title}
+                    <h3 className="text-lg font-semibold mb-2">
+                      {cardDatas.smartReports.title}
                     </h3>
                     <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">
-                      {cardDatas.unifiedProcess.description}
+                      {cardDatas.smartReports.description}
                     </p>
                   </div>
+                  {cardDatas.smartReports.image && (
+                    <div className="w-full h-full max-h-[480px] my-auto">
+                      <Image
+                        src={cardDatas.smartReports.image}
+                        alt={cardDatas.smartReports.title}
+                        width={526}
+                        height={486}
+                        className="w-100 h-full rounded-lg ml-auto object-cover object-top"
+                      />
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
-          </div>
+          </>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {cardDatas.allSubDatas.map((cardColumn, index) => (
+              <div key={index} className="grid grid-cols-1">
+                {cardColumn.map((cardItem, subIndex) => (
+                  <div
+                    key={`card-${index}-${subIndex}`}
+                    className={`${baseClassName}  `}
+                    style={cardStyle}
+                    ref={(el) => {
+                      if (!el) return;
 
-          {/* Right Column - Smart Reports Card */}
-          <div
-            className={baseClassName}
-            style={cardStyle}
-            ref={(el) => {
-              if (!el) return;
+                      const handleMouseMove = (e: MouseEvent) => {
+                        if (shouldDisableAnimations) return;
 
-              const handleMouseMove = (e: MouseEvent) => {
-                if (shouldDisableAnimations) return;
+                        const rect = el.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
+                        const centerX = rect.width / 2;
+                        const centerY = rect.height / 2;
 
-                const rect = el.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
+                        if (enableTilt) {
+                          const rotateX = ((y - centerY) / centerY) * -10;
+                          const rotateY = ((x - centerX) / centerX) * 10;
 
-                if (enableTilt) {
-                  const rotateX = ((y - centerY) / centerY) * -10;
-                  const rotateY = ((x - centerX) / centerX) * 10;
+                          gsap.to(el, {
+                            rotateX,
+                            rotateY,
+                            duration: 0.1,
+                            ease: "power2.out",
+                            transformPerspective: 1000,
+                          });
+                        }
 
-                  gsap.to(el, {
-                    rotateX,
-                    rotateY,
-                    duration: 0.1,
-                    ease: "power2.out",
-                    transformPerspective: 1000,
-                  });
-                }
+                        if (enableMagnetism) {
+                          const magnetX = (x - centerX) * 0.05;
+                          const magnetY = (y - centerY) * 0.05;
 
-                if (enableMagnetism) {
-                  const magnetX = (x - centerX) * 0.05;
-                  const magnetY = (y - centerY) * 0.05;
+                          gsap.to(el, {
+                            x: magnetX,
+                            y: magnetY,
+                            duration: 0.3,
+                            ease: "power2.out",
+                          });
+                        }
+                      };
 
-                  gsap.to(el, {
-                    x: magnetX,
-                    y: magnetY,
-                    duration: 0.3,
-                    ease: "power2.out",
-                  });
-                }
-              };
+                      const handleMouseLeave = () => {
+                        if (shouldDisableAnimations) return;
 
-              const handleMouseLeave = () => {
-                if (shouldDisableAnimations) return;
+                        if (enableTilt) {
+                          gsap.to(el, {
+                            rotateX: 0,
+                            rotateY: 0,
+                            duration: 0.3,
+                            ease: "power2.out",
+                          });
+                        }
 
-                if (enableTilt) {
-                  gsap.to(el, {
-                    rotateX: 0,
-                    rotateY: 0,
-                    duration: 0.3,
-                    ease: "power2.out",
-                  });
-                }
+                        if (enableMagnetism) {
+                          gsap.to(el, {
+                            x: 0,
+                            y: 0,
+                            duration: 0.3,
+                            ease: "power2.out",
+                          });
+                        }
+                      };
 
-                if (enableMagnetism) {
-                  gsap.to(el, {
-                    x: 0,
-                    y: 0,
-                    duration: 0.3,
-                    ease: "power2.out",
-                  });
-                }
-              };
+                      const handleClick = (e: MouseEvent) => {
+                        if (!clickEffect || shouldDisableAnimations) return;
 
-              const handleClick = (e: MouseEvent) => {
-                if (!clickEffect || shouldDisableAnimations) return;
+                        const rect = el.getBoundingClientRect();
+                        const x = e.clientX - rect.left;
+                        const y = e.clientY - rect.top;
 
-                const rect = el.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
+                        const maxDistance = Math.max(
+                          Math.hypot(x, y),
+                          Math.hypot(x - rect.width, y),
+                          Math.hypot(x, y - rect.height),
+                          Math.hypot(x - rect.width, y - rect.height)
+                        );
 
-                const maxDistance = Math.max(
-                  Math.hypot(x, y),
-                  Math.hypot(x - rect.width, y),
-                  Math.hypot(x, y - rect.height),
-                  Math.hypot(x - rect.width, y - rect.height)
-                );
+                        const ripple = document.createElement("div");
+                        ripple.style.cssText = `
+                                  position: absolute;
+                                  width: ${maxDistance * 2}px;
+                                  height: ${maxDistance * 2}px;
+                                  border-radius: 50%;
+                                  background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
+                                  left: ${x - maxDistance}px;
+                                  top: ${y - maxDistance}px;
+                                  pointer-events: none;
+                                  z-index: 1000;
+                                `;
 
-                const ripple = document.createElement("div");
-                ripple.style.cssText = `
-                                position: absolute;
-                                width: ${maxDistance * 2}px;
-                                height: ${maxDistance * 2}px;
-                                border-radius: 50%;
-                                background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
-                                left: ${x - maxDistance}px;
-                                top: ${y - maxDistance}px;
-                                pointer-events: none;
-                                z-index: 1000;
-                              `;
+                        el.appendChild(ripple);
 
-                el.appendChild(ripple);
+                        gsap.fromTo(
+                          ripple,
+                          {
+                            scale: 0,
+                            opacity: 1,
+                          },
+                          {
+                            scale: 1,
+                            opacity: 0,
+                            duration: 0.8,
+                            ease: "power2.out",
+                            onComplete: () => ripple.remove(),
+                          }
+                        );
+                      };
 
-                gsap.fromTo(
-                  ripple,
-                  {
-                    scale: 0,
-                    opacity: 1,
-                  },
-                  {
-                    scale: 1,
-                    opacity: 0,
-                    duration: 0.8,
-                    ease: "power2.out",
-                    onComplete: () => ripple.remove(),
-                  }
-                );
-              };
-
-              el.addEventListener("mousemove", handleMouseMove);
-              el.addEventListener("mouseleave", handleMouseLeave);
-              el.addEventListener("click", handleClick);
-            }}
-          >
-            <div className="p-6 bg-[rgba(255,255,255,0.1)]  shadow-xl h-full flex flex-col lg:pr-0 lg:pb-0">
-              <div>
-                <h3 className="text-lg font-semibold mb-2">
-                  {cardDatas.smartReports.title}
-                </h3>
-                <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">
-                  {cardDatas.smartReports.description}
-                </p>
+                      el.addEventListener("mousemove", handleMouseMove);
+                      el.addEventListener("mouseleave", handleMouseLeave);
+                      el.addEventListener("click", handleClick);
+                    }}
+                  >
+                    <div className="flex-1 p-6 bg-[rgba(255,255,255,0.1)] shadow-xl flex items-start ">
+                      <div>
+                        <Image
+                          src={cardItem.icon}
+                          alt="Icon"
+                          width={50}
+                          height={50}
+                          className="object-contain mb-4 "
+                        />
+                        <h3 className="text-lg font-semibold mb-2 single-work-page-objectives-real-time-diagnostics-title">
+                          {cardItem.title}
+                        </h3>
+                        <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">
+                          {cardItem.description}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-              {cardDatas.smartReports.image && (
-                <div className="w-full h-full max-h-[480px] my-auto">
-                  <Image
-                    src={cardDatas.smartReports.image}
-                    alt={cardDatas.smartReports.title}
-                    width={526}
-                    height={486}
-                    className="w-100 h-full rounded-lg ml-auto object-cover object-top"
-                  />
-                </div>
-              )}
-            </div>
+            ))}
           </div>
-        </div>
+        )}
       </BentoCardGrid>
     </>
   );

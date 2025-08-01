@@ -4,7 +4,7 @@ import React from "react";
 function ClientBackground({ data }) {
   return (
     <div
-      className="flex max-w-[1232px]  mb-[9.063rem]  mx-auto flex-col lg:flex-row  items-center justify-between bg-gradient-to-br from-[#DCF9FF] via-[#621DBA] to-[#04001C] rounded-[1.5rem] p-8 lg:p-16 gap-10 lg:gap-20 text-white"
+      className="flex max-w-[1232px] relative mb-[9.063rem]  mx-auto flex-col lg:flex-row  items-center justify-between bg-gradient-to-br from-[#DCF9FF] via-[#621DBA] to-[#04001C] rounded-[1.5rem] p-8 lg:p-16 gap-10 lg:gap-20 text-white"
       style={{
         paddingLeft: data.type === "1" ? "0" : "",
         paddingTop: data.type === "1" ? "" : "0",
@@ -13,12 +13,19 @@ function ClientBackground({ data }) {
       }}
     >
       {/* Left Section - App Screenshot */}
-      <div className="relative w-full h-full lg:w-[55%] aspect-video">
+      <div
+        className={`relative w-full h-full lg:w-[55%] aspect-video ${
+          data.type === "3" ? "none" : ""
+        }`}
+        style={{
+          display: data?.type === "3" ? "none" : "block",
+        }}
+      >
         {/* Glow/Blur Background */}
         <div className="absolute inset-0 rounded-2xl border border-[rgba(154,106,255,0.1)] bg-gradient-to-br from-white/40 via-[#A772E3] to-[#621DBA] blur-2xl opacity-50 z-0" />
 
         {/* Screenshot Image with rounded corners and slight shadow */}
-        {data.type === "1" ? (
+        {data.type === "1" && (
           <>
             <div
               className="relative w-full h-100 max-h-[529px] z-1  left-[-50px]   shadow-xl"
@@ -32,7 +39,9 @@ function ClientBackground({ data }) {
               />
             </div>
           </>
-        ) : (
+        )}
+
+        {data.type === "2" && (
           <>
             <div className="relative flex">
               {/* First image aligned to the top */}
@@ -63,11 +72,20 @@ function ClientBackground({ data }) {
         )}
       </div>
 
+      {data.type === "3" && (
+        <Image
+          src={"/assets/client-background-overlay.png"} // Replace with your actual icon path
+          alt="Energy Icon"
+          width={949}
+          height={849}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0"
+        />
+      )}
       {/* Right Section - Project Info */}
       <div
         className={`flex flex-col gap-6 w-full lg:w-[40%] ${
           data.type === "1" ? "" : "p-8 lg:py-16 "
-        }`}
+        }  ${data.type === "3" ? "lg:w-[70%] mx-auto" : ""}`}
       >
         <div>
           <Image

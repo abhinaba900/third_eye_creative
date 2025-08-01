@@ -3,6 +3,13 @@ import { gsap } from "gsap";
 import Image from "next/image";
 
 type SolutionType = {
+  allSubDatas?: {
+    icon?: string;
+    title: string;
+    description: string;
+    image?: string;
+    buttonImage?: string;
+  }[];
   layout: string;
   title: string;
   description: string;
@@ -736,7 +743,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
 
       {/* Real Time Diagnostics Card */}
       <BentoCardGrid gridRef={gridRef}>
-        {cardDatas.layout === "1" ? (
+        {cardDatas.layout === "1" && (
           <>
             {/* Grid */}
             <div className="grid gap-[1rem] sm:grid-cols-2 lg:grid-cols-2">
@@ -1712,7 +1719,8 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
               )}
             </div>
           </>
-        ) : (
+        )}{" "}
+        {cardDatas.layout === "2" && (
           <>
             <div className="grid gap-[1rem] sm:grid-cols-2 lg:grid-cols-2">
               {cardDatas.offlineFunctionality && (
@@ -2833,6 +2841,171 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
             </div>
           </>
         )}
+        {cardDatas.layout === "3" &&
+          cardDatas.allSubDatas.map((_, rowIndex) => {
+            if (rowIndex % 3 !== 0) return null; // Only render once per row group (every 3 items)
+
+            const cardsInRow = cardDatas.allSubDatas.slice(
+              rowIndex,
+              rowIndex + 3
+            );
+            const isFirstRow = rowIndex === 0;
+
+            const gridClass = isFirstRow
+              ? "grid grid-cols-[0.7fr_1.3fr_0.7fr] gap-4 mb-6"
+              : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6";
+
+            return (
+              <div key={`row-${rowIndex}`} className={gridClass}>
+                {cardsInRow.map((cardColumn, columnIndex) => {
+                  const index = rowIndex + columnIndex;
+
+                  return (
+                    <div
+                      key={`card-${index}`}
+                      className={baseClassName}
+                      style={cardStyle}
+                      ref={(el) => {
+                        if (!el) return;
+
+                        const handleMouseMove = (e: MouseEvent) => {
+                          if (shouldDisableAnimations) return;
+
+                          const rect = el.getBoundingClientRect();
+                          const x = e.clientX - rect.left;
+                          const y = e.clientY - rect.top;
+                          const centerX = rect.width / 2;
+                          const centerY = rect.height / 2;
+
+                          if (enableTilt) {
+                            const rotateX = ((y - centerY) / centerY) * -10;
+                            const rotateY = ((x - centerX) / centerX) * 10;
+
+                            gsap.to(el, {
+                              rotateX,
+                              rotateY,
+                              duration: 0.1,
+                              ease: "power2.out",
+                              transformPerspective: 1000,
+                            });
+                          }
+
+                          if (enableMagnetism) {
+                            const magnetX = (x - centerX) * 0.05;
+                            const magnetY = (y - centerY) * 0.05;
+
+                            gsap.to(el, {
+                              x: magnetX,
+                              y: magnetY,
+                              duration: 0.3,
+                              ease: "power2.out",
+                            });
+                          }
+                        };
+
+                        const handleMouseLeave = () => {
+                          if (shouldDisableAnimations) return;
+
+                          if (enableTilt) {
+                            gsap.to(el, {
+                              rotateX: 0,
+                              rotateY: 0,
+                              duration: 0.3,
+                              ease: "power2.out",
+                            });
+                          }
+
+                          if (enableMagnetism) {
+                            gsap.to(el, {
+                              x: 0,
+                              y: 0,
+                              duration: 0.3,
+                              ease: "power2.out",
+                            });
+                          }
+                        };
+
+                        const handleClick = (e: MouseEvent) => {
+                          if (!clickEffect || shouldDisableAnimations) return;
+
+                          const rect = el.getBoundingClientRect();
+                          const x = e.clientX - rect.left;
+                          const y = e.clientY - rect.top;
+
+                          const maxDistance = Math.max(
+                            Math.hypot(x, y),
+                            Math.hypot(x - rect.width, y),
+                            Math.hypot(x, y - rect.height),
+                            Math.hypot(x - rect.width, y - rect.height)
+                          );
+
+                          const ripple = document.createElement("div");
+                          ripple.style.cssText = `
+                    position: absolute;
+                    width: ${maxDistance * 2}px;
+                    height: ${maxDistance * 2}px;
+                    border-radius: 50%;
+                    background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
+                    left: ${x - maxDistance}px;
+                    top: ${y - maxDistance}px;
+                    pointer-events: none;
+                    z-index: 1000;
+                  `;
+
+                          el.appendChild(ripple);
+
+                          gsap.fromTo(
+                            ripple,
+                            { scale: 0, opacity: 1 },
+                            {
+                              scale: 1,
+                              opacity: 0,
+                              duration: 0.8,
+                              ease: "power2.out",
+                              onComplete: () => ripple.remove(),
+                            }
+                          );
+                        };
+
+                        el.addEventListener("mousemove", handleMouseMove);
+                        el.addEventListener("mouseleave", handleMouseLeave);
+                        el.addEventListener("click", handleClick);
+                      }}
+                    >
+                      <div className="flex-1 p-6 bg-[rgba(255,255,255,0.1)] shadow-xl flex items-start justify-center">
+                        <div>
+                          {cardColumn.icon && (
+                            <Image
+                              src={cardColumn.icon}
+                              alt="Icon"
+                              width={50}
+                              height={50}
+                              className="object-contain mb-4"
+                            />
+                          )}
+                          <h3 className="text-lg font-semibold mb-2 single-work-page-objectives-real-time-diagnostics-title">
+                            {cardColumn.title}
+                          </h3>
+                          <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">
+                            {cardColumn.description}
+                          </p>
+                          {cardColumn.image && (
+                            <Image
+                              src={cardColumn.image}
+                              alt="Image"
+                              width={522}
+                              height={234}
+                              className="object-contain"
+                            />
+                          )}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
       </BentoCardGrid>
     </>
   );

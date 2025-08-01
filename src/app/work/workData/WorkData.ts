@@ -623,7 +623,8 @@
       },
     },
     objectives: {
-      title: "<span>Byte-Sized,</span> Competitive <br /> <span>Engaging</span> ",
+      title:
+        "<span>Byte-Sized,</span> Competitive <br /> <span>Engaging</span> ",
       description:
         "We designed STEP to turn overwhelming study sessions into clear, gamified, and structured learning experiences that keep students focused and motivated",
       realTimeDiagnostics: {
@@ -748,12 +749,12 @@
       metrics: [
         {
           value: "+50%",
-          description: "Gamified quizzes and micro-goals boosted total study time",
+          description:
+            "Gamified quizzes and micro-goals boosted total study time",
         },
         {
           value: "65% Up",
-          description:
-            "Byte-sized steps lifted course completion rates by 65%",
+          description: "Byte-sized steps lifted course completion rates by 65%",
         },
         {
           value: "Viral PvP",
@@ -771,8 +772,7 @@
         },
         {
           value: "40% Faster",
-          description:
-            "Pre/post MCQs sped up topic revision by 40%",
+          description: "Pre/post MCQs sped up topic revision by 40%",
         },
         {
           value: "Better Recall",
@@ -781,8 +781,7 @@
         },
         {
           value: "Cross-Platform",
-          description:
-            "One Flutter build, same smooth experience everywhere",
+          description: "One Flutter build, same smooth experience everywhere",
         },
       ],
     },
@@ -821,6 +820,343 @@
         },
       },
     ],
+  },
+  {
+    id: "4",
+    herosection: {
+      tags: ["Mobile App", "UI Design"],
+      title: "Streamlining Cash Flow Oversight for Shell India Markets",
+      footerimage:
+        "/assets/Streamlining Cash Flow Oversight for Shell India Markets.png",
+    },
+    ExecutiveSummary:
+      "Shell India Markets required a robust, centralized platform to seamlessly monitor and manage cash collections across hundreds of fuel retail outlets. We built a secure, PAN-India web application that empowers teams with real-time input, tracking, reconciliation, and comprehensive reporting. Today, this solution stands as a mission-critical backbone for Shell’s nationwide cash operations.",
+    ClientBackground: {
+      type: "3",
+      leftImage: "/assets/stepgha-client-backgournd-let-image-1.png",
+      leftImage2: "/assets/stepgha-client-backgournd-let-image-2.png",
+      rightContent: {
+        topIcon: "/assets/shellindia-right-top-icon.png",
+        title: "Empowering Retail Cash Intelligence",
+        description:
+          "Shell India Markets needed a centralized solution to monitor and manage cash collections across hundreds of fuel outlets. Our secure web app now powers real-time tracking, reconciliation, and reporting for their PAN-India operations.",
+        footerContent: [
+          {
+            title: "Fuel & Energy Retail",
+            description: "Industry",
+          },
+          {
+            title: "2024",
+            description: "Year of Implementation",
+          },
+          {
+            title: "4 Months",
+            description: "Time to Completion",
+          },
+          {
+            title: "Shell India Pvt. Ltd.",
+            description: "Client",
+          },
+        ],
+      },
+    },
+
+    ProblemStatement: {
+      title: "<span>Bridging</span> the Cash Flow <span>Gaps</span>",
+      description:
+        "Unifying collections for real-time visibility and tighter control",
+      contentSection: {
+        icon: "/assets/shellindia-contentSection-icon-3.png",
+        title: "Fixing the Gaps in Cash Flow Oversight",
+        description:
+          "Shell’s decentralized cash collection process made it challenging to gain real-time visibility and maintain consistency across hundreds of retail sites — resulting in avoidable delays and inefficiencies in daily operations.",
+        rightsideData: [
+          {
+            id: "1",
+            title:
+              "The cash collection process was fragmented across multiple retail sites with no unified system",
+          },
+          {
+            id: "2",
+            title:
+              "Headquarters lacked real-time visibility into daily cash deposits and site-level performance",
+          },
+          {
+            id: "3",
+            title:
+              "Reconciling deposits with bank slips was inconsistent and time-consuming",
+          },
+          {
+            id: "4",
+            title:
+              "Lack of central oversight caused data gaps and reporting issues",
+          },
+          {
+            id: "5",
+            title:
+              "Operational inefficiencies caused delays in tracking and verifying cash flow",
+          },
+        ],
+      },
+    },
+    objectives: {
+      type: "3",
+      title: "<span>Driving</span> Collection <span>Clarity</span>",
+      description:
+        "Creating a secure, unified system to centralize, track, and reconcile cash flow in real time—nationwide",
+      allSubDatas: [
+        [
+          {
+            icon: "/assets/shellindia-realTimeDiagnostics-image-3.png",
+            title: "Cloud Sync",
+            description:
+              "Unify and standardize the entire cash collection process for hundreds of fuel retail sites nationwide through one secure web application. By consolidating data entry, monitoring, and reporting in a single system, Shell gains clear oversight of daily cash flow, minimizes operational fragmentation, and ensures that every transaction is visible and traceable in real time.",
+            rightsideimage: "",
+          },
+          {
+            title: "Automated MIS Reporting",
+            icon: "/assets/shellindia-cloudSync-icon-3.png",
+            description:
+              "Generate precise, Management Information System (MIS) reports automatically, removing the need for repetitive manual data compilation which ensures that key stakeholders, have instant access to verified cash collection data, trends, and insights.",
+          },
+        ],
+        [
+          {
+            icon: "/assets/shellindia-upsConnectivity-image-3.png",
+            title: "Real-Time Data Entry",
+            description:
+              "Empower cash collection agents with an easy-to-use interface to enter daily cash figures instantly from any location—improving transparency and minimizing manual delays.",
+            image: "",
+          },
+          {
+            title: "Seamless Reconciliation",
+            icon: "/assets/shellindia-unifiedProcess-icon-3.png",
+            description:
+              "Ensure that every recorded cash collection aligns perfectly with its corresponding physical bank deposit slip through an automated reconciliation process. This minimizes manual cross-checking, reduces human error, and deters fraudulent reporting. By streamlining the matching of daily entries with actual deposits, Shell can maintain cleaner books, strengthen trust across teams, and uphold complete financial accountability at every site.",
+          },
+        ],
+        [
+          {
+            icon: "/assets/shellindia-smartReports-image-3.png",
+            title: "Daily Site Tracking",
+            description:
+              "Equip Shell’s management teams with powerful daily tracking tools to monitor cash collection performance at each retail site in real time. This granular visibility helps identify unusual patterns, spot potential discrepancies early, and address them before they escalate. With clear, site-wise insights, decision-makers can compare trends, optimize operations, and maintain steady, healthy cash flow across the entire network.",
+            image: "",
+          },
+
+          {
+            title: "User Access & Roles",
+            icon: "/assets/shellindia-userAccessAndRole-icon-3.png",
+            description:
+              "Maintain accountability and data integrity with robust multi-level user permissions and access controls.",
+          },
+        ],
+      ],
+      realTimeDiagnostics: {
+        icon: "/assets/shellindia-realTimeDiagnostics-image-3.png",
+        title: "Cloud Sync",
+        description:
+          "Unify and standardize the entire cash collection process for hundreds of fuel retail sites nationwide through one secure web application. By consolidating data entry, monitoring, and reporting in a single system, Shell gains clear oversight of daily cash flow, minimizes operational fragmentation, and ensures that every transaction is visible and traceable in real time.",
+        rightsideimage: "",
+      },
+      upsConnectivity: {
+        icon: "/assets/shellindia-upsConnectivity-image-3.png",
+        title: "Real-Time Data Entry",
+        description:
+          "Empower cash collection agents with an easy-to-use interface to enter daily cash figures instantly from any location—improving transparency and minimizing manual delays.",
+        image: "",
+      },
+      smartReports: {
+        icon: "/assets/shellindia-smartReports-image-3.png",
+        title: "Daily Site Tracking",
+        description:
+          "Equip Shell’s management teams with powerful daily tracking tools to monitor cash collection performance at each retail site in real time. This granular visibility helps identify unusual patterns, spot potential discrepancies early, and address them before they escalate. With clear, site-wise insights, decision-makers can compare trends, optimize operations, and maintain steady, healthy cash flow across the entire network.",
+        image: "",
+      },
+      cloudSync: {
+        title: "Automated MIS Reporting",
+        icon: "/assets/shellindia-cloudSync-icon-3.png",
+        description:
+          "Generate precise, Management Information System (MIS) reports automatically, removing the need for repetitive manual data compilation which ensures that key stakeholders, have instant access to verified cash collection data, trends, and insights.",
+      },
+      unifiedProcess: {
+        title: "Seamless Reconciliation",
+        icon: "/assets/shellindia-unifiedProcess-icon-3.png",
+        description:
+          "Ensure that every recorded cash collection aligns perfectly with its corresponding physical bank deposit slip through an automated reconciliation process. This minimizes manual cross-checking, reduces human error, and deters fraudulent reporting. By streamlining the matching of daily entries with actual deposits, Shell can maintain cleaner books, strengthen trust across teams, and uphold complete financial accountability at every site.",
+      },
+      userAccessAndRole: {
+        title: "User Access & Roles",
+        icon: "/assets/shellindia-userAccessAndRole-icon-3.png",
+        description:
+          "Maintain accountability and data integrity with robust multi-level user permissions and access controls.",
+      },
+    },
+    Solution: {
+      layout: "3",
+      title: "<span>Connected</span> Collections Clear <span>Control</span>",
+      description:
+        "A unified system for real-time cash tracking, seamless reconciliation, and clear oversight across all sites",
+
+      allSubDatas: [
+        {
+          icon: "/assets/shellindia-offlineFunctionality-icon-3.png",
+          title: "Cash Entry Interface",
+          description:
+            "A simple, secure input screen for agents to log daily cash collections at each site — keeping records clear and consistent. Each entry instantly updates the central database, ensuring data stays current and auditable.",
+          image: "",
+          buttonImage: "",
+        },
+        {
+          title: "Technology Backbone",
+          description:
+            "Built using a powerful tech stack including HTML CSS JS, PHP, PostgreSQL Managed DB and more.",
+          image: "/assets/Tech stack - in stepgha.png",
+        },
+        {
+          icon: "/assets/shellindia-technologyBackbone-icon-3.png",
+          title: "Headquarters Dashboard",
+          description:
+            "A simple, secure input screen for agents to log daily cash collections at each site — keeping records clear and consistent. Each entry instantly updates the central database, ensuring data stays current and auditable.",
+          image: "",
+        },
+        {
+          icon: "/assets/shellindia-seamlessBluetoothIntegration-icon-3.png",
+          title: "Reconciliation Module",
+          description:
+            "Automatically matches site cash entries with physical bank deposit slips, ensuring accuracy and reducing manual checks.",
+          image: "",
+        },
+        {
+          icon: "/assets/shellindia-technicianCommandCenter-icon-3.png",
+          title: "Performance Metrics",
+          description:
+            "Monitors site-wise collection trends, compares historical data, and highlights underperforming locations",
+          image: "",
+        },
+        {
+          icon: "/assets/shellindia-cloudPoweredAnalytics-icon-3.png",
+          title: "Automated MIS Reports",
+          description:
+            "Delivers daily, weekly, and monthly collection summaries directly to relevant departments, saving time and effort.",
+          image: "",
+        },
+      ],
+      offlineFunctionality: {
+        icon: "/assets/shellindia-offlineFunctionality-icon-3.png",
+        title: "Cash Entry Interface",
+        description:
+          "A simple, secure input screen for agents to log daily cash collections at each site — keeping records clear and consistent. Each entry instantly updates the central database, ensuring data stays current and auditable.",
+        image: "",
+        buttonImage: "",
+      },
+      realTimeDiagnostics: {
+        title: "Technology Backbone",
+        description:
+          "Built using a powerful tech stack including HTML CSS JS, PHP, PostgreSQL Managed DB and more.",
+        image: "/assets/stepgha-solution-image-2.png",
+      },
+
+      technologyBackbone: {
+        icon: "/assets/shellindia-technologyBackbone-icon-3.png",
+        title: "Headquarters Dashboard",
+        description:
+          "A simple, secure input screen for agents to log daily cash collections at each site — keeping records clear and consistent. Each entry instantly updates the central database, ensuring data stays current and auditable.",
+        image: "",
+      },
+
+      seamlessBluetoothIntegration: {
+        icon: "/assets/shellindia-seamlessBluetoothIntegration-icon-3.png",
+        title: "Reconciliation Module",
+        description:
+          "Automatically matches site cash entries with physical bank deposit slips, ensuring accuracy and reducing manual checks.",
+        image: "",
+      },
+
+      technicianCommandCenter: {
+        icon: "/assets/shellindia-technicianCommandCenter-icon-3.png",
+        title: "Performance Metrics",
+        description:
+          "Monitors site-wise collection trends, compares historical data, and highlights underperforming locations",
+        image: "",
+      },
+      cloudPoweredAnalytics: {
+        icon: "/assets/shellindia-cloudPoweredAnalytics-icon-3.png",
+        title: "Automated MIS Reports",
+        description:
+          "Delivers daily, weekly, and monthly collection summaries directly to relevant departments, saving time and effort.",
+        image: "",
+      },
+    },
+
+    ChallengesandResolutions: {
+      title:
+        "Solving for Scale, <br /> <span>Accuracy</span> & <span>Speed</span>",
+      description:
+        "Smart fixes for big challenges, built to scale fast and run smoothd",
+      challenges: {
+        title: "What we were up against",
+        points: [
+          "Maintaining consistent data from hundreds of decentralized agents",
+          "Matching physical deposit slips with daily digital entries accurately",
+          "Keeping the system fast and responsive as usage scaled nationwide",
+        ],
+        image: "/assets/ChallengesandResolutions-right-side-image.png",
+      },
+      solutions: {
+        title: "How we engineered the fix",
+        points: [
+          "Deployed smart validation rules, automated sync, and retry logic to prevent errors and data gaps",
+          "Built a robust cross-check system that flags mismatches instantly for quick resolution",
+          "Optimized database performance, used modular coding, and fine-tuned queries for seamless scalability",
+        ],
+        image: "/assets/Solution-ChallengesandResolutions-right-side-image.svg",
+      },
+    },
+    Results: {
+      title: "<span>Impact</span> at <span>Scale</span>",
+      description:
+        "Real-time visibility, faster operations, and smarter oversight across India",
+      metrics: [
+        {
+          value: "~100%",
+          description:
+            "real-time visibility into site-wise daily cash collections",
+        },
+        {
+          value: "~2x Faster",
+          description:
+            "reconciliation cycle — cut from 2 days to just a few hours",
+        },
+        {
+          value: "~90%",
+          description: "reduction in manual MIS reporting time for HQ teams",
+        },
+        {
+          value: "~500+ Sites",
+          description: "covered across India with centralized cash monitoring",
+        },
+        {
+          value: "100%",
+          description:
+            "accountability boost with site-level performance tracking",
+        },
+        {
+          value: "~99%",
+          description: "data accuracy through automated cross-checks",
+        },
+        {
+          value: "24/7",
+          description: "access to monitor, track &  reconcile cash flow",
+        },
+        {
+          value: "~95%",
+          description: "uptime for the system with robust performance ",
+        },
+      ],
+    },
+    gallery: [],
+    testimonials: [],
   },
 ];
 

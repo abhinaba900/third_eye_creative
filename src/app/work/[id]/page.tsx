@@ -50,9 +50,22 @@ type ProblemStatementType = {
   };
 };
 
-type ObjectiveType = {
+type CardItem = {
+  icon: string;
   title: string;
   description: string;
+  rightsideimage?: string;
+  image?: string;
+};
+
+type CardColumn = CardItem[];
+
+type ObjectiveType = {
+  type?: string;
+  title: string;
+  
+  description: string;
+  allSubDatas?: CardColumn[];
   realTimeDiagnostics: {
     icon: string;
     title: string;
@@ -116,7 +129,7 @@ type SolutionType = {
     description: string;
     image: string;
   };
-  automatedReporting: {
+  automatedReporting?: {
     title: string;
     description: string;
     image: string;
@@ -205,7 +218,7 @@ const Page = () => {
           <Objectives data={workDatas.objectives} />
           <SolutionSection data={workDatas.Solution} />
           <ChallengesandResolutions data={workDatas.ChallengesandResolutions} />
-          <Results data={workDatas.Results} />
+          <Results data={workDatas.Results} galleryData={workDatas.gallery} />
           <Gallery data={workDatas.gallery} />
           <Testimonials data={workDatas.testimonials} />
           <BuildWithUsBanner />

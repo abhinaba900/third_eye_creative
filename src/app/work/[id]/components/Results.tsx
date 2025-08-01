@@ -1,8 +1,12 @@
 ﻿import React from "react";
 
-function Results({ data }) {
+function Results({ data, galleryData }) {
   return (
-    <div className="max-w-[1232px] mx-auto mb-[8.75rem]">
+    <div
+      className={`max-w-[1232px] mx-auto ${
+        galleryData.length > 0 && "mb-[8.75rem]"
+      }`}
+    >
       <h2
         className="text-3xl md:text-5xl font-bold leading-tight single-page-solution-section-title single-page-results-section-title"
         dangerouslySetInnerHTML={{ __html: data.title }}
@@ -22,8 +26,12 @@ function Results({ data }) {
                 : ""
             }`}
           >
-            <h3 className="text-2xl font-semibold mb-2 single-page-results-metric-value">{metric.value}</h3>
-            <p className="text-sm single-page-results-metric-description">{metric.description}</p>
+            <h3 className="text-2xl font-semibold mb-2 single-page-results-metric-value">
+              {metric.value}
+            </h3>
+            <p className="text-sm single-page-results-metric-description">
+              {metric.description}
+            </p>
           </div>
         ))}
       </div>
