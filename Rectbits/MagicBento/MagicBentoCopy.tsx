@@ -1295,7 +1295,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     <p className="text-sm text-gray-300">
                       {cardDatas.technologyBackbone.description}
                     </p>
-                    <div className="relative w-full h-[200px] -ml-13 rounded-lg overflow-hidden">
+                    <div className="relative w-full h-[252px] -ml-13 rounded-lg overflow-hidden">
                       <img
                         src={cardDatas.technologyBackbone.image}
                         alt={cardDatas.technologyBackbone.title}
@@ -3547,7 +3547,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     <p className="text-sm text-gray-300">
                       {cardDatas.technologyBackbone.description}
                     </p>
-                    <div className="relative w-full h-[200px] -ml-13 rounded-lg overflow-hidden">
+                    <div className="relative w-full h-[252px] -ml-13 rounded-lg overflow-hidden">
                       <img
                         src={cardDatas.technologyBackbone.image}
                         alt={cardDatas.technologyBackbone.title}
