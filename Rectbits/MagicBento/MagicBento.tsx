@@ -739,7 +739,7 @@ const MagicBento: React.FC<BentoProps> = ({
         {cardDatas.type !== "3" ? (
           <>
             <div
-              className={baseClassName}
+              className={`${baseClassName} mb-4`}
               style={cardStyle}
               ref={(el) => {
                 if (!el) return;
@@ -851,7 +851,7 @@ const MagicBento: React.FC<BentoProps> = ({
                 el.addEventListener("click", handleClick);
               }}
             >
-              <div className=" p-6 bg-[rgba(255,255,255,0.1)] shadow-xl flex items-center lg:pr-0 ">
+              <div className=" p-6 bg-[rgba(255,255,255,0.1)] shadow-xl flex items-center lg:pr-0 " >
                 <div>
                   <Image
                     src={cardDatas.realTimeDiagnostics.icon}

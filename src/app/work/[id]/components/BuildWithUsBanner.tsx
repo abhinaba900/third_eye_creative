@@ -11,8 +11,14 @@ function BuildWithUsBanner() {
       />
       <div className="relative z-1 flex flex-col items-center justify-center h-full w-full text-center">
         <h3 className="text-white text-4xl font-semibold">
-          Ideas don’t build themselves<span >, We do</span>
+          Ideas don’t build themselves<span>, We do</span>
         </h3>
+        <img src="/assets/indevisual-page-build-with-us-text-bottom-image.svg" className="mb-6" alt="text-bottom" />
+
+        <p className="build-with-us-banner-description">
+          Share your vision , we’ll bring the strategy, design, and <br /> tech to make
+          it real
+        </p>
 
         <button className="view-more-button mt-4 flex items-center gap-2">
           Let&apos;s Build Something{" "}

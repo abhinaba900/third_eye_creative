@@ -55,6 +55,45 @@ const projects: Project[] = [
     description:
       "A NEET PG prep app designed for serious medical aspirants on the go. Built for structured, distraction-free study.",
   },
+  {
+    id: 5,
+    image: "/assets/project1.png",
+    categories: ["UI-UX Design", "Brand Marketing", "Web Development"],
+    title: "Naren Electrix — Smart Control, Simplified",
+    flag: "project",
+
+    description:
+      "An IoT mobile app that lets users control smart devices in real time. We combined functionality with sleek UI for smooth and seamless access.",
+  },
+  {
+    id: 6,
+    image: "/assets/project2.png",
+    categories: ["UI-UX Design", "Brand Marketing", "Web Development"],
+    title: "Xplorion AI — Travel, Reimagined",
+    flag: "project",
+
+    description:
+      "For Xplorion AI, we crafted an itinerary mobile app that blends AI-driven personalization with intuitive UX.",
+  },
+  {
+    id: 7,
+    image: "/assets/project3.png",
+    categories: ["UI-UX Design", "Brand Marketing", "Web Development"],
+    title: "Urbando — Artfully Engineered Living",
+    flag: "website",
+
+    description:
+      "A sleek, responsive website designed to showcase Urbando's premium homes with elegance and ease.",
+  },
+  {
+    id: 8,
+    image: "/assets/project4.png",
+    categories: ["UI-UX Design", "Brand Marketing", "Web Development"],
+    title: "STEP — The Smarter Way to Prep",
+    flag: "website",
+    description:
+      "A NEET PG prep app designed for serious medical aspirants on the go. Built for structured, distraction-free study.",
+  },
 ];
 
 function ProjectShowcaseGrid() {

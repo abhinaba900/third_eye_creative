@@ -1013,7 +1013,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     el.addEventListener("click", handleClick);
                   }}
                 >
-                  <div className="p-6 bg-[rgba(255,255,255,0.1)] h-fit  shadow-xl flex flex-col items-start lg:pb-0">
+                  <div className="p-6 bg-[rgba(255,255,255,0.1)] h-full  shadow-xl flex flex-col items-start lg:pb-0">
                     {/* Title and Description */}
                     <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                       {cardDatas.realTimeDiagnostics.title}
@@ -3006,6 +3006,970 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
               </div>
             );
           })}
+        {cardDatas?.layout === "4" && (
+          <>
+            <div className="grid gap-[1rem] sm:grid-cols-2 lg:grid-cols-2">
+              {cardDatas.offlineFunctionality && (
+                <div
+                  className={baseClassName}
+                  style={cardStyle}
+                  ref={(el) => {
+                    if (!el) return;
+
+                    const handleMouseMove = (e: MouseEvent) => {
+                      if (shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      const centerX = rect.width / 2;
+                      const centerY = rect.height / 2;
+
+                      if (enableTilt) {
+                        const rotateX = ((y - centerY) / centerY) * -10;
+                        const rotateY = ((x - centerX) / centerX) * 10;
+
+                        gsap.to(el, {
+                          rotateX,
+                          rotateY,
+                          duration: 0.1,
+                          ease: "power2.out",
+                          transformPerspective: 1000,
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        const magnetX = (x - centerX) * 0.05;
+                        const magnetY = (y - centerY) * 0.05;
+
+                        gsap.to(el, {
+                          x: magnetX,
+                          y: magnetY,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleMouseLeave = () => {
+                      if (shouldDisableAnimations) return;
+
+                      if (enableTilt) {
+                        gsap.to(el, {
+                          rotateX: 0,
+                          rotateY: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        gsap.to(el, {
+                          x: 0,
+                          y: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleClick = (e: MouseEvent) => {
+                      if (!clickEffect || shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+
+                      const maxDistance = Math.max(
+                        Math.hypot(x, y),
+                        Math.hypot(x - rect.width, y),
+                        Math.hypot(x, y - rect.height),
+                        Math.hypot(x - rect.width, y - rect.height)
+                      );
+
+                      const ripple = document.createElement("div");
+                      ripple.style.cssText = `
+                                                position: absolute;
+                                                width: ${maxDistance * 2}px;
+                                                height: ${maxDistance * 2}px;
+                                                border-radius: 50%;
+                                                background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
+                                                left: ${x - maxDistance}px;
+                                                top: ${y - maxDistance}px;
+                                                pointer-events: none;
+                                                z-index: 1000;
+                                              `;
+
+                      el.appendChild(ripple);
+
+                      gsap.fromTo(
+                        ripple,
+                        {
+                          scale: 0,
+                          opacity: 1,
+                        },
+                        {
+                          scale: 1,
+                          opacity: 0,
+                          duration: 0.8,
+                          ease: "power2.out",
+                          onComplete: () => ripple.remove(),
+                        }
+                      );
+                    };
+
+                    el.addEventListener("mousemove", handleMouseMove);
+                    el.addEventListener("mouseleave", handleMouseLeave);
+                    el.addEventListener("click", handleClick);
+                  }}
+                >
+                  <div className="bg-[rgba(255,255,255,0.1)]  h-fit  shadow-xl flex justify-between items-center lg:pb-0">
+                    <div className="p-6">
+                      {/* Title and Description */}
+                      <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
+                        {cardDatas.offlineFunctionality.title}
+                      </h3>
+                      <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                        {cardDatas.offlineFunctionality.description}
+                      </p>
+                    </div>
+                    <div className="">
+                      {/* Main Image */}
+                      {cardDatas.offlineFunctionality.image && (
+                        <div className="w-full ">
+                          <img
+                            src={cardDatas.offlineFunctionality.image}
+                            alt={cardDatas.offlineFunctionality.title}
+                            width={240}
+                            height={280}
+                            className="w-fit  h-[280px]  max-w-[230px] object-cover"
+                          />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+              {cardDatas.realTimeDiagnostics && (
+                <div
+                  className={baseClassName}
+                  style={cardStyle}
+                  ref={(el) => {
+                    if (!el) return;
+
+                    const handleMouseMove = (e: MouseEvent) => {
+                      if (shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      const centerX = rect.width / 2;
+                      const centerY = rect.height / 2;
+
+                      if (enableTilt) {
+                        const rotateX = ((y - centerY) / centerY) * -10;
+                        const rotateY = ((x - centerX) / centerX) * 10;
+
+                        gsap.to(el, {
+                          rotateX,
+                          rotateY,
+                          duration: 0.1,
+                          ease: "power2.out",
+                          transformPerspective: 1000,
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        const magnetX = (x - centerX) * 0.05;
+                        const magnetY = (y - centerY) * 0.05;
+
+                        gsap.to(el, {
+                          x: magnetX,
+                          y: magnetY,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleMouseLeave = () => {
+                      if (shouldDisableAnimations) return;
+
+                      if (enableTilt) {
+                        gsap.to(el, {
+                          rotateX: 0,
+                          rotateY: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        gsap.to(el, {
+                          x: 0,
+                          y: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleClick = (e: MouseEvent) => {
+                      if (!clickEffect || shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+
+                      const maxDistance = Math.max(
+                        Math.hypot(x, y),
+                        Math.hypot(x - rect.width, y),
+                        Math.hypot(x, y - rect.height),
+                        Math.hypot(x - rect.width, y - rect.height)
+                      );
+
+                      const ripple = document.createElement("div");
+                      ripple.style.cssText = `
+                                                position: absolute;
+                                                width: ${maxDistance * 2}px;
+                                                height: ${maxDistance * 2}px;
+                                                border-radius: 50%;
+                                                background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
+                                                left: ${x - maxDistance}px;
+                                                top: ${y - maxDistance}px;
+                                                pointer-events: none;
+                                                z-index: 1000;
+                                              `;
+
+                      el.appendChild(ripple);
+
+                      gsap.fromTo(
+                        ripple,
+                        {
+                          scale: 0,
+                          opacity: 1,
+                        },
+                        {
+                          scale: 1,
+                          opacity: 0,
+                          duration: 0.8,
+                          ease: "power2.out",
+                          onComplete: () => ripple.remove(),
+                        }
+                      );
+                    };
+
+                    el.addEventListener("mousemove", handleMouseMove);
+                    el.addEventListener("mouseleave", handleMouseLeave);
+                    el.addEventListener("click", handleClick);
+                  }}
+                >
+                  <div className=" h-fit bg-[rgba(255,255,255,0.1)]   shadow-xl flex justify-between items-center lg:pb-0">
+                    <div className="p-6">
+                      {/* Title and Description */}
+                      <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
+                        {cardDatas.realTimeDiagnostics.title}
+                      </h3>
+                      <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                        {cardDatas.realTimeDiagnostics.description}
+                      </p>
+                    </div>
+                    {/* Main Image */}
+                    {cardDatas.realTimeDiagnostics.image && (
+                      <div className="">
+                        <img
+                          src={cardDatas.realTimeDiagnostics.image}
+                          alt={cardDatas.realTimeDiagnostics.title}
+                          width={240}
+                          height={280}
+                          className="w-fit h-[280px] max-w-[230px] object-cover block mx-auto"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className="grid grid-cols-[0.7fr_1.3fr_0.7fr] gap-[1rem] my-[1rem] bg-black text-white">
+              {/* Column 1 */}
+              {"seamlessBluetoothIntegration" in cardDatas && (
+                <div
+                  className={baseClassName}
+                  style={cardStyle}
+                  ref={(el) => {
+                    if (!el) return;
+
+                    const handleMouseMove = (e: MouseEvent) => {
+                      if (shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      const centerX = rect.width / 2;
+                      const centerY = rect.height / 2;
+
+                      if (enableTilt) {
+                        const rotateX = ((y - centerY) / centerY) * -10;
+                        const rotateY = ((x - centerX) / centerX) * 10;
+
+                        gsap.to(el, {
+                          rotateX,
+                          rotateY,
+                          duration: 0.1,
+                          ease: "power2.out",
+                          transformPerspective: 1000,
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        const magnetX = (x - centerX) * 0.05;
+                        const magnetY = (y - centerY) * 0.05;
+
+                        gsap.to(el, {
+                          x: magnetX,
+                          y: magnetY,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleMouseLeave = () => {
+                      if (shouldDisableAnimations) return;
+
+                      if (enableTilt) {
+                        gsap.to(el, {
+                          rotateX: 0,
+                          rotateY: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        gsap.to(el, {
+                          x: 0,
+                          y: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleClick = (e: MouseEvent) => {
+                      if (!clickEffect || shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+
+                      const maxDistance = Math.max(
+                        Math.hypot(x, y),
+                        Math.hypot(x - rect.width, y),
+                        Math.hypot(x, y - rect.height),
+                        Math.hypot(x - rect.width, y - rect.height)
+                      );
+
+                      const ripple = document.createElement("div");
+                      ripple.style.cssText = `
+                                                position: absolute;
+                                                width: ${maxDistance * 2}px;
+                                                height: ${maxDistance * 2}px;
+                                                border-radius: 50%;
+                                                background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
+                                                left: ${x - maxDistance}px;
+                                                top: ${y - maxDistance}px;
+                                                pointer-events: none;
+                                                z-index: 1000;
+                                              `;
+
+                      el.appendChild(ripple);
+
+                      gsap.fromTo(
+                        ripple,
+                        {
+                          scale: 0,
+                          opacity: 1,
+                        },
+                        {
+                          scale: 1,
+                          opacity: 0,
+                          duration: 0.8,
+                          ease: "power2.out",
+                          onComplete: () => ripple.remove(),
+                        }
+                      );
+                    };
+
+                    el.addEventListener("mousemove", handleMouseMove);
+                    el.addEventListener("mouseleave", handleMouseLeave);
+                    el.addEventListener("click", handleClick);
+                  }}
+                >
+                  <div className="bg-[rgba(255,255,255,0.1)] rounded-2xl p-6 shadow-lg lg:pb-0 overflow-hidden h-full">
+                    <h3 className="text-xl font-semibold mb-3 single-page-solution-cards-title">
+                      {cardDatas.seamlessBluetoothIntegration.title}
+                    </h3>
+                    <p className="text-sm text-gray-300 mb-4 single-page-solution-cards-description">
+                      {cardDatas.seamlessBluetoothIntegration.description}
+                    </p>
+                    <div className="relative w-full h-48 rounded-lg overflow-hidden -mb-5">
+                      <Image
+                        src={cardDatas.seamlessBluetoothIntegration.image}
+                        alt="Bluetooth Integration"
+                        fill
+                        className="max-h-[280px] "
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Column 2 */}
+              {"technologyBackbone" in cardDatas && (
+                <div
+                  className={baseClassName}
+                  style={cardStyle}
+                  ref={(el) => {
+                    if (!el) return;
+
+                    const handleMouseMove = (e: MouseEvent) => {
+                      if (shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      const centerX = rect.width / 2;
+                      const centerY = rect.height / 2;
+
+                      if (enableTilt) {
+                        const rotateX = ((y - centerY) / centerY) * -10;
+                        const rotateY = ((x - centerX) / centerX) * 10;
+
+                        gsap.to(el, {
+                          rotateX,
+                          rotateY,
+                          duration: 0.1,
+                          ease: "power2.out",
+                          transformPerspective: 1000,
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        const magnetX = (x - centerX) * 0.05;
+                        const magnetY = (y - centerY) * 0.05;
+
+                        gsap.to(el, {
+                          x: magnetX,
+                          y: magnetY,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleMouseLeave = () => {
+                      if (shouldDisableAnimations) return;
+
+                      if (enableTilt) {
+                        gsap.to(el, {
+                          rotateX: 0,
+                          rotateY: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        gsap.to(el, {
+                          x: 0,
+                          y: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleClick = (e: MouseEvent) => {
+                      if (!clickEffect || shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+
+                      const maxDistance = Math.max(
+                        Math.hypot(x, y),
+                        Math.hypot(x - rect.width, y),
+                        Math.hypot(x, y - rect.height),
+                        Math.hypot(x - rect.width, y - rect.height)
+                      );
+
+                      const ripple = document.createElement("div");
+                      ripple.style.cssText = `
+                                                position: absolute;
+                                                width: ${maxDistance * 2}px;
+                                                height: ${maxDistance * 2}px;
+                                                border-radius: 50%;
+                                                background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
+                                                left: ${x - maxDistance}px;
+                                                top: ${y - maxDistance}px;
+                                                pointer-events: none;
+                                                z-index: 1000;
+                                              `;
+
+                      el.appendChild(ripple);
+
+                      gsap.fromTo(
+                        ripple,
+                        {
+                          scale: 0,
+                          opacity: 1,
+                        },
+                        {
+                          scale: 1,
+                          opacity: 0,
+                          duration: 0.8,
+                          ease: "power2.out",
+                          onComplete: () => ripple.remove(),
+                        }
+                      );
+                    };
+
+                    el.addEventListener("mousemove", handleMouseMove);
+                    el.addEventListener("mouseleave", handleMouseLeave);
+                    el.addEventListener("click", handleClick);
+                  }}
+                >
+                  <div className="bg-[rgba(255,255,255,0.1)] h-full rounded-2xl p-[3rem] shadow-lg overflow-hidden ">
+                    <h3 className="text-xl font-semibold mb-3">
+                      {cardDatas.technologyBackbone.title}
+                    </h3>
+                    <p className="text-sm text-gray-300">
+                      {cardDatas.technologyBackbone.description}
+                    </p>
+                    <div className="relative w-full h-[200px] -ml-13 rounded-lg overflow-hidden">
+                      <img
+                        src={cardDatas.technologyBackbone.image}
+                        alt={cardDatas.technologyBackbone.title}
+                        className=" object-cover w-100  h-full max-w-[500px]  max-h-[252px] "
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Column 3 */}
+              {"technicianCommandCenter" in cardDatas && (
+                <div
+                  className={baseClassName}
+                  style={cardStyle}
+                  ref={(el) => {
+                    if (!el) return;
+
+                    const handleMouseMove = (e: MouseEvent) => {
+                      if (shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      const centerX = rect.width / 2;
+                      const centerY = rect.height / 2;
+
+                      if (enableTilt) {
+                        const rotateX = ((y - centerY) / centerY) * -10;
+                        const rotateY = ((x - centerX) / centerX) * 10;
+
+                        gsap.to(el, {
+                          rotateX,
+                          rotateY,
+                          duration: 0.1,
+                          ease: "power2.out",
+                          transformPerspective: 1000,
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        const magnetX = (x - centerX) * 0.05;
+                        const magnetY = (y - centerY) * 0.05;
+
+                        gsap.to(el, {
+                          x: magnetX,
+                          y: magnetY,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleMouseLeave = () => {
+                      if (shouldDisableAnimations) return;
+
+                      if (enableTilt) {
+                        gsap.to(el, {
+                          rotateX: 0,
+                          rotateY: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        gsap.to(el, {
+                          x: 0,
+                          y: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleClick = (e: MouseEvent) => {
+                      if (!clickEffect || shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+
+                      const maxDistance = Math.max(
+                        Math.hypot(x, y),
+                        Math.hypot(x - rect.width, y),
+                        Math.hypot(x, y - rect.height),
+                        Math.hypot(x - rect.width, y - rect.height)
+                      );
+
+                      const ripple = document.createElement("div");
+                      ripple.style.cssText = `
+                                                position: absolute;
+                                                width: ${maxDistance * 2}px;
+                                                height: ${maxDistance * 2}px;
+                                                border-radius: 50%;
+                                                background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
+                                                left: ${x - maxDistance}px;
+                                                top: ${y - maxDistance}px;
+                                                pointer-events: none;
+                                                z-index: 1000;
+                                              `;
+
+                      el.appendChild(ripple);
+
+                      gsap.fromTo(
+                        ripple,
+                        {
+                          scale: 0,
+                          opacity: 1,
+                        },
+                        {
+                          scale: 1,
+                          opacity: 0,
+                          duration: 0.8,
+                          ease: "power2.out",
+                          onComplete: () => ripple.remove(),
+                        }
+                      );
+                    };
+
+                    el.addEventListener("mousemove", handleMouseMove);
+                    el.addEventListener("mouseleave", handleMouseLeave);
+                    el.addEventListener("click", handleClick);
+                  }}
+                >
+                  <div className="bg-[rgba(255,255,255,0.1)] rounded-2xl p-6 shadow-lg overflow-hidden h-full">
+                    <h3 className="text-xl font-semibold mb-3">
+                      {cardDatas.technicianCommandCenter.title}
+                    </h3>
+                    <p className="text-sm text-gray-300 mb-8">
+                      {cardDatas.technicianCommandCenter.description}
+                    </p>
+                    <div className="relative w-full h-[200px] rounded-lg overflow-hidden -mb-8">
+                      <Image
+                        src={cardDatas.technicianCommandCenter.image}
+                        alt="Command Center"
+                        fill
+                        className="max-h-[300px]"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+            <div className="grid gap-[1rem] sm:grid-cols-2 lg:grid-cols-[1.3fr_0.7fr] ">
+              {cardDatas.cloudPoweredAnalytics && (
+                <div
+                  className={baseClassName}
+                  style={cardStyle}
+                  ref={(el) => {
+                    if (!el) return;
+
+                    const handleMouseMove = (e: MouseEvent) => {
+                      if (shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      const centerX = rect.width / 2;
+                      const centerY = rect.height / 2;
+
+                      if (enableTilt) {
+                        const rotateX = ((y - centerY) / centerY) * -10;
+                        const rotateY = ((x - centerX) / centerX) * 10;
+
+                        gsap.to(el, {
+                          rotateX,
+                          rotateY,
+                          duration: 0.1,
+                          ease: "power2.out",
+                          transformPerspective: 1000,
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        const magnetX = (x - centerX) * 0.05;
+                        const magnetY = (y - centerY) * 0.05;
+
+                        gsap.to(el, {
+                          x: magnetX,
+                          y: magnetY,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleMouseLeave = () => {
+                      if (shouldDisableAnimations) return;
+
+                      if (enableTilt) {
+                        gsap.to(el, {
+                          rotateX: 0,
+                          rotateY: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        gsap.to(el, {
+                          x: 0,
+                          y: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleClick = (e: MouseEvent) => {
+                      if (!clickEffect || shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+
+                      const maxDistance = Math.max(
+                        Math.hypot(x, y),
+                        Math.hypot(x - rect.width, y),
+                        Math.hypot(x, y - rect.height),
+                        Math.hypot(x - rect.width, y - rect.height)
+                      );
+
+                      const ripple = document.createElement("div");
+                      ripple.style.cssText = `
+                                                position: absolute;
+                                                width: ${maxDistance * 2}px;
+                                                height: ${maxDistance * 2}px;
+                                                border-radius: 50%;
+                                                background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
+                                                left: ${x - maxDistance}px;
+                                                top: ${y - maxDistance}px;
+                                                pointer-events: none;
+                                                z-index: 1000;
+                                              `;
+
+                      el.appendChild(ripple);
+
+                      gsap.fromTo(
+                        ripple,
+                        {
+                          scale: 0,
+                          opacity: 1,
+                        },
+                        {
+                          scale: 1,
+                          opacity: 0,
+                          duration: 0.8,
+                          ease: "power2.out",
+                          onComplete: () => ripple.remove(),
+                        }
+                      );
+                    };
+
+                    el.addEventListener("mousemove", handleMouseMove);
+                    el.addEventListener("mouseleave", handleMouseLeave);
+                    el.addEventListener("click", handleClick);
+                  }}
+                >
+                  <div className="bg-[rgba(255,255,255,0.1)] h-fit p-6  shadow-xl flex flex-col items-start lg:pb-0 lg:pr-0 overflow-hidden">
+                    {/* Title and Description */}
+                    <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
+                      {cardDatas.cloudPoweredAnalytics.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                      {cardDatas.cloudPoweredAnalytics.description}
+                    </p>
+                    {/* Main Image */}
+                    {cardDatas.cloudPoweredAnalytics.image && (
+                      <div className="w-full  ml-auto block mt-4">
+                        <img
+                          src={cardDatas.cloudPoweredAnalytics.image}
+                          alt={cardDatas.cloudPoweredAnalytics.title}
+                          width={240}
+                          height={280}
+                          className="w-full h-[217px]   block ml-auto "
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+              {cardDatas.automatedReporting && (
+                <div
+                  className={baseClassName}
+                  style={cardStyle}
+                  ref={(el) => {
+                    if (!el) return;
+
+                    const handleMouseMove = (e: MouseEvent) => {
+                      if (shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+                      const centerX = rect.width / 2;
+                      const centerY = rect.height / 2;
+
+                      if (enableTilt) {
+                        const rotateX = ((y - centerY) / centerY) * -10;
+                        const rotateY = ((x - centerX) / centerX) * 10;
+
+                        gsap.to(el, {
+                          rotateX,
+                          rotateY,
+                          duration: 0.1,
+                          ease: "power2.out",
+                          transformPerspective: 1000,
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        const magnetX = (x - centerX) * 0.05;
+                        const magnetY = (y - centerY) * 0.05;
+
+                        gsap.to(el, {
+                          x: magnetX,
+                          y: magnetY,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleMouseLeave = () => {
+                      if (shouldDisableAnimations) return;
+
+                      if (enableTilt) {
+                        gsap.to(el, {
+                          rotateX: 0,
+                          rotateY: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+
+                      if (enableMagnetism) {
+                        gsap.to(el, {
+                          x: 0,
+                          y: 0,
+                          duration: 0.3,
+                          ease: "power2.out",
+                        });
+                      }
+                    };
+
+                    const handleClick = (e: MouseEvent) => {
+                      if (!clickEffect || shouldDisableAnimations) return;
+
+                      const rect = el.getBoundingClientRect();
+                      const x = e.clientX - rect.left;
+                      const y = e.clientY - rect.top;
+
+                      const maxDistance = Math.max(
+                        Math.hypot(x, y),
+                        Math.hypot(x - rect.width, y),
+                        Math.hypot(x, y - rect.height),
+                        Math.hypot(x - rect.width, y - rect.height)
+                      );
+
+                      const ripple = document.createElement("div");
+                      ripple.style.cssText = `
+                                                position: absolute;
+                                                width: ${maxDistance * 2}px;
+                                                height: ${maxDistance * 2}px;
+                                                border-radius: 50%;
+                                                background: radial-gradient(circle, rgba(${glowColor}, 0.4) 0%, rgba(${glowColor}, 0.2) 30%, transparent 70%);
+                                                left: ${x - maxDistance}px;
+                                                top: ${y - maxDistance}px;
+                                                pointer-events: none;
+                                                z-index: 1000;
+                                              `;
+
+                      el.appendChild(ripple);
+
+                      gsap.fromTo(
+                        ripple,
+                        {
+                          scale: 0,
+                          opacity: 1,
+                        },
+                        {
+                          scale: 1,
+                          opacity: 0,
+                          duration: 0.8,
+                          ease: "power2.out",
+                          onComplete: () => ripple.remove(),
+                        }
+                      );
+                    };
+
+                    el.addEventListener("mousemove", handleMouseMove);
+                    el.addEventListener("mouseleave", handleMouseLeave);
+                    el.addEventListener("click", handleClick);
+                  }}
+                >
+                  <div className="h-full p-6 bg-[rgba(255,255,255,0.1)]  shadow-xl flex flex-col  justify-center lg:pb-0 ">
+                    {/* Title and Description */}
+                    <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
+                      {cardDatas.automatedReporting.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                      {cardDatas.automatedReporting.description}
+                    </p>
+                    {/* Main Image */}
+                    {cardDatas.automatedReporting.image && (
+                      <div className="w-full  mx-auto block mt-4">
+                        <img
+                          src={cardDatas.automatedReporting.image}
+                          alt={cardDatas.automatedReporting.title}
+                          width={240}
+                          height={280}
+                          className="w-100 h-[217px]  block mx-auto"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          </>
+        )}
       </BentoCardGrid>
     </>
   );

@@ -824,7 +824,7 @@
   {
     id: "4",
     herosection: {
-      tags: ["Mobile App", "UI Design"],
+      tags: ["Desktop Dashboard", "UI Design"],
       title: "Streamlining Cash Flow Oversight for Shell India Markets",
       footerimage:
         "/assets/Streamlining Cash Flow Oversight for Shell India Markets.png",
@@ -1157,6 +1157,883 @@
     },
     gallery: [],
     testimonials: [],
+  },
+
+  {
+    id: "5",
+    herosection: {
+      tags: ["Mobile App", "Desktop Dashboard", "UI Design"],
+      title: "End-to-End Design for Mesha’s Data Management Solution",
+      footerimage: "/assets/mesha-electric-hero-section-image.png",
+    },
+    ExecutiveSummary:
+      "We developed a Flutter-based mobile application that connects via Bluetooth to UPS (Uninterruptible Power Supply) systems, fetching real-time parameters such as voltage, current, temperature, and battery health. This data is pushed to our cloud platform where it is analyzed and used to generate diagnostic reports. The system is used by service engineers and field technicians to instantly identify issues, leading to faster servicing and increased uptime for critical power systems.",
+    ClientBackground: {
+      type: "2",
+      leftImage: "/assets/mesha-electric-client-backgournd-let-image-1.png",
+      leftImage2: "/assets/mesha-electric-client-backgournd-let-image-2.png",
+      rightContent: {
+        topIcon: "/assets/ClientBackground-right-top-icon.png",
+        title: "Powering Energy Intelligence",
+        description:
+          "The client is a power systems manufacturer with a large installed base of UPS units across industries. Their field teams previously relied on manual readings and inconsistent diagnostic methods, which slowed response times and impacted maintenance efficiency.",
+        footerContent: [
+          {
+            title: "Energy Tech",
+            description: "Industry",
+          },
+          {
+            title: "2025",
+            description: "Year of Implementation",
+          },
+          {
+            title: "8 Months",
+            description: "Time to Completion",
+          },
+          {
+            title: "Mesha Energy",
+            description: "Client",
+          },
+        ],
+      },
+    },
+
+    ProblemStatement: {
+      title: "Solving <span>On-Site</span> Chaos",
+      description:
+        "Streamlined diagnostics with one tool—faster data, fewer errors, and complete fleet visibility",
+      contentSection: {
+        icon: "/assets/ProblemStatement-contentSection-mesha-electric-icon-3.png",
+        title: "Transforming Field Diagnostics",
+        description:
+          "Mesha’s field engineers lacked a standardized tool for capturing UPS data, relying on inconsistent, manual diagnostics prone to error. Without a centralized system for reporting or tracking, visibility into fleet performance was limited. This made it difficult to access real-time insights or make proactive, data-driven decisions.",
+        rightsideData: [
+          {
+            id: "1",
+            title: "Field engineers lacked a standard tool to collect UPS data",
+          },
+          {
+            id: "2",
+            title: "Diagnostics were manual, slow, and prone to errors",
+          },
+          {
+            id: "3",
+            title: "There was no centralized system for storing reports",
+          },
+          {
+            id: "4",
+            title: "Real-time fleet performance data was unavailable",
+          },
+          {
+            id: "5",
+            title: "The team couldn’t use data effectively for decision-making",
+          },
+        ],
+      },
+    },
+    objectives: {
+      title: "Behind the <span>Build</span>",
+      description:
+        "Building a unified diagnostic ecosystem for <br /> a smarter, faster UPS insights",
+      realTimeDiagnostics: {
+        icon: "/assets/objectives-realTimeDiagnostics-mesha-electric-image-3.png",
+        title: "Real-Time Diagnostics",
+        description:
+          "Access live data including voltage, current, temperature, and more. Get instant insights into the system’s performance right from the field.",
+        rightsideimage: "/assets/stepgha-objectives.png",
+      },
+      upsConnectivity: {
+        title: "UPS Connectivity",
+        description:
+          "Easily pair with any UPS unit via Bluetooth using the mobile app. Collect field data wirelessly without needing extra hardware or manual setup.",
+        image: "/assets/stepgha-Dynamic-updates-objectives.png",
+      },
+      smartReports: {
+        title: "Smart Reports",
+        description:
+          "Generate detailed diagnostic reports in seconds. Identify issues quickly with auto-processed insights, reducing human error and saving time.",
+        image: "/assets/mesha-electric-objectives-realtime-content.png",
+      },
+      cloudSync: {
+        title: "Cloud Sync",
+        icon: "/assets/objectives-cloudSync-mesha-electric-icon-3.png",
+        description:
+          "Automatically upload diagnostic logs to a centralized cloud. Make data accessible to teams across locations and maintain a secure digital record.",
+      },
+      unifiedProcess: {
+        title: "Unified Process",
+        icon: "/assets/objectives-unifiedProcess-mesha-electric-icon-3.png",
+        description:
+          "Streamline field operations with a standardized diagnostic workflow. One tool for all UPS models—ensuring consistent, reliable data collection.",
+      },
+    },
+    Solution: {
+      layout: "1",
+      title: "<span>Scalable Diagnostics</span> <br/> Centralized Intelligence",
+      description:
+        "Robust tools engineered to standardize, automate, and optimize UPS field operations at scale",
+      offlineFunctionality: {
+        title: "Offline Functionality",
+        description:
+          "Ensures uninterrupted operation by storing data locally when offline and syncing to cloud once connected.",
+        image: "/assets/tsSolution-offlineFunctionality-image.png",
+        buttonImage: "/assets/tsSolution-offlineFunctionality-button.png",
+      },
+      realTimeDiagnostics: {
+        title: "Real-Time Diagnostics",
+        description:
+          "Instantly captures and displays critical data like voltage, current, temperature, and battery cycles.",
+        image: "/assets/Solution-realTimeDiagnostics-mesha-electric-image.png",
+      },
+      seamlessBluetoothIntegration: {
+        title: "Seamless Bluetooth Integration",
+        description:
+          "Automatically detects and connects to nearby UPS devices for effortless setup and communication.",
+        image: "/assets/Solution-seamlessBluetoothIntegration-image.png",
+      },
+      technologyBackbone: {
+        title: "Technology Backbone",
+        description:
+          "Built using a powerful tech stack including Flutter, Firebase, GCP, and more.",
+        image: "/assets/technologyBackbone-xplorean-ai.png",
+      },
+      technicianCommandCenter: {
+        title: "Technician Command Center",
+        description:
+          "Offers a streamlined dashboard to track device history, current status, and actionable recommendations.",
+        image: "/assets/Solution-technicianCommandCenter-image.png",
+      },
+      cloudPoweredAnalytics: {
+        title: "Cloud-Powered Analytics",
+        description:
+          "Securely uploads diagnostic data for centralized tracking, analytics, and performance insights.",
+        image:
+          "/assets/Solution-cloudPoweredAnalytics-mesha-electric-image.png",
+      },
+      automatedReporting: {
+        title: "Automated Reporting",
+        description:
+          "Generates immediate, detailed reports highlighting faults, anomalies, and performance trends.",
+        image: "/assets/Solution-automatedReporting-image.png",
+      },
+    },
+
+    ChallengesandResolutions: {
+      title: "<span>Smart Solutions</span> <br /> for Complex Challenges",
+      description:
+        "Modular systems and adaptive technologies crafted to streamline UPS diagnostics and performance across all touchpoints",
+      challenges: {
+        title: "What we were up against",
+        points: [
+          "Handling diverse UPS firmware protocols across multiple models",
+          "Maintaining reliable data sync in low-connectivity environments",
+          "Achieving consistent performance across Android and iOS devices",
+        ],
+        image: "/assets/ChallengesandResolutions-right-side-image.png",
+      },
+      solutions: {
+        title: "How we engineered the fix",
+        points: [
+          "Developed a modular parser system that dynamically adapts to varying firmware architectures and ensures seamless compatibility",
+          "Engineered an offline-first architecture with intelligent retry logic to ensure uninterrupted operations and accurate data capture",
+          "Implemented Flutter for a unified codebase, ensuring cross-platform UI consistency and reduced development overhead.",
+        ],
+        image: "/assets/Solution-ChallengesandResolutions-right-side-image.svg",
+      },
+    },
+    Results: {
+      title: "Where <span>Strategy meets Tangible</span> <br /> Results",
+      description:
+        "From faster service cycles to smarter diagnostics — here’s how our solutions made measurable impact in the real world",
+      metrics: [
+        {
+          value: "~50%",
+          description: "reduction in issue diagnosis time during servicing",
+        },
+        {
+          value: "100%",
+          description: "of service visits now generate cloud-logged reports",
+        },
+        {
+          value: "Significant",
+          description: "drop in UPS downtime due to faster fault detection",
+        },
+        {
+          value: "~40%",
+          description:
+            "increased technician efficiency through streamlined workflows",
+        },
+        {
+          value: "Multi-region",
+          description:
+            "deployment with active usage by technicians across zones",
+        },
+        {
+          value: "Real-time",
+          description: "analytics enabling data-driven maintenance decisions",
+        },
+        {
+          value: "24/7",
+          description:
+            "system visibility enabled through real-time data logging",
+        },
+        {
+          value: "<5 mins",
+          description: "average time to generate & sync reports to the cloud",
+        },
+      ],
+    },
+    gallery: [
+      {
+        type: "single",
+        image: "/assets/mesha-electric-gallery-image-1.png",
+      },
+      {
+        type: "single",
+        image: "/assets/mesha-electric-gallery-image-2.png",
+      },
+      {
+        type: "single",
+        image: "/assets/mesha-electric-gallery-image-3.png",
+      },
+      {
+        type: "single",
+        image: "/assets/mesha-electric-gallery-image-4.png",
+      },
+      {
+        type: "multiple",
+        images: [
+          "/assets/mesha-electric-gallery-image-5.png",
+          "/assets/mesha-electric-gallery-image-6.png",
+        ],
+      },
+      {
+        type: "single",
+        image: "/assets/mesha-electric-gallery-image-7.png",
+      },
+      {
+        type: "single",
+        image: "/assets/mesha-electric-gallery-image-8.png",
+      },
+    ],
+    testimonials: [
+      {
+        leftVideo: "https://example.com/testimonial-video.mp4",
+        rightContent: {
+          title: "Naren Nagaraj",
+          description:
+            "Forget about spam, advertising mailings, hacking and attacking robots. Keep your real mailbox clean and secure. Temp Mail provides temporary, secure, anonymous, free, disposable email address. Stalkers and disgruntled acquaintances use the Internet to find addresses, phone numbers and other personal details about their targets. Identity thieves use personal information numbers and other personal details.",
+          details: "Founder, CEO  • Naren Electrix ",
+        },
+      },
+    ],
+  },
+
+  {
+    id: "6",
+    herosection: {
+      tags: ["Desktop Dashboard", "UI Design"],
+      title: "Retail Cloud: Streamlining Digital Payments for Shell India",
+      footerimage:
+        "/assets/Streamlining Cash Flow Oversight for Shell India Markets.png",
+    },
+    ExecutiveSummary:
+      "After the success of our cash monitoring system for Shell India Markets, we designed and developed Shell Retail Cloud — a secure, web-based digital payments interface that streamlines how Shell retailers manage non-cash transactions. Our solution gives retailers across India real-time visibility of digital sales, the ability to initiate swipe hold requests, and complete control over their digital payment workflows, transforming how Shell’s retail network operates at scale.",
+    ClientBackground: {
+      type: "3",
+      leftImage: "/assets/stepgha-client-backgournd-let-image-1.png",
+      leftImage2: "/assets/stepgha-client-backgournd-let-image-2.png",
+      rightContent: {
+        topIcon: "/assets/shellindia-right-top-icon.png",
+        title: "Powering Digital Payment Transparency",
+        description:
+          "Shell India Markets, a major energy leader with an expanding retail network, needed clear visibility and control over the surge in digital payments at fuel stations nationwide — ensuring every non-cash transaction stayed transparent, traceable, and efficient.",
+        footerContent: [
+          {
+            title: "Fuel & Energy Retail",
+            description: "Industry",
+          },
+          {
+            title: "2024",
+            description: "Year of Implementation",
+          },
+          {
+            title: "6 Months",
+            description: "Time to Completion",
+          },
+          {
+            title: "Shell India Pvt. Ltd.",
+            description: "Client",
+          },
+        ],
+      },
+    },
+
+    ProblemStatement: {
+      title:
+        "<span>Closing</span> the <span>Gaps</span> in Digital <br /> Payments",
+      description:
+        "Bringing real-time clarity and control to Shell’s retail transactions",
+      contentSection: {
+        icon: "/assets/shellindia-2-contentSection-icon-3.png",
+        title: "Untangling the Digital Knot",
+        description:
+          "As Shell’s digital payments expanded nationwide, disconnected systems, manual processes, and limited transparency slowed operations. We stepped in to unify, streamline, and secure every transaction, giving the team full control and real-time clarity.",
+        rightsideData: [
+          {
+            id: "1",
+            title:
+              "Payment data scattered across sites hindered smooth reporting and clear audits",
+          },
+          {
+            id: "2",
+            title:
+              "Cumbersome Swipe/Hold Process: Retailers handled swipe hold requests manually, leading to errors",
+          },
+          {
+            id: "3",
+            title:
+              "No streamlined way to match site-level digital payments with deposits",
+          },
+          {
+            id: "4",
+            title:
+              "Digital sales across sites lacked a unified monitoring system",
+          },
+          {
+            id: "5",
+            title:
+              "HQ had delayed or incomplete insight into transaction flow and status",
+          },
+        ],
+      },
+    },
+    objectives: {
+      type: "3",
+      title:
+        "<span>Streamlining</span> Digital Payments,<br /> <span>Nationwide</span>",
+      description:
+        "A unified, secure system for effortless tracking and control",
+      allSubDatas: [
+        [
+          {
+            icon: "/assets/shellindia-2-realTimeDiagnostics-image-3.png",
+            title: "Centralized Payment Control",
+            description:
+              "Unify and standardize the entire cash collection process for hundreds of fuel retail sites nationwide through one secure web application. By consolidating data entry, monitoring, and reporting in a single system, Shell gains clear oversight of daily cash flow, minimizes operational fragmentation, and ensures that every transaction is visible and traceable in real time.",
+            rightsideimage: "",
+          },
+          {
+            title: "Secure Swipe Hold Management",
+            icon: "/assets/shellindia-2-cloudSync-icon-3.png",
+            description:
+              "Enable retailers to easily raise swipe hold requests with built-in checks, approvals, and notifications, ensuring funds flow is smooth and transparent.",
+          },
+        ],
+        [
+          {
+            icon: "/assets/shellindia-2-upsConnectivity-image-3.png",
+            title: "Detailed Audit Trails",
+            description:
+              "Maintain comprehensive transaction histories and reconciliation logs to simplify audits, enhance trust, and make compliance with Shell’s financial governance effortless.",
+            image: "",
+          },
+          {
+            title: "Real-Time Settlement Visibility",
+            icon: "/assets/shellindia-2-unifiedProcess-icon-3.png",
+            description:
+              "Provide Shell’s finance teams with live dashboards showing the status of all digital payments, settlements, and discrepancies, cutting down lag in reporting and improving cash flow predictability.",
+          },
+        ],
+        [
+          {
+            icon: "/assets/shellindia-2-smartReports-image-3.png",
+            title: "Seamless System Integration",
+            description:
+              "Ensure the new digital payments interface connects smoothly with Shell’s wider financial systems, guaranteeing secure data exchange and minimizing manual handovers.",
+            image: "",
+          },
+
+          {
+            title: "Instant Insights",
+            icon: "/assets/shellindia-2-userAccessAndRole-icon-3.png",
+            description:
+              "Deliver a quick-glance dashboard for site managers to view payment statuses and take action on the go.",
+          },
+        ],
+      ],
+      realTimeDiagnostics: {
+        icon: "/assets/shellindia--realTimeDiagnostics-image-3.png",
+        title: "Cloud Sync",
+        description:
+          "Unify and standardize the entire cash collection process for hundreds of fuel retail sites nationwide through one secure web application. By consolidating data entry, monitoring, and reporting in a single system, Shell gains clear oversight of daily cash flow, minimizes operational fragmentation, and ensures that every transaction is visible and traceable in real time.",
+        rightsideimage: "",
+      },
+      upsConnectivity: {
+        icon: "/assets/shellindia-upsConnectivity-image-3.png",
+        title: "Real-Time Data Entry",
+        description:
+          "Empower cash collection agents with an easy-to-use interface to enter daily cash figures instantly from any location—improving transparency and minimizing manual delays.",
+        image: "",
+      },
+      smartReports: {
+        icon: "/assets/shellindia-smartReports-image-3.png",
+        title: "Daily Site Tracking",
+        description:
+          "Equip Shell’s management teams with powerful daily tracking tools to monitor cash collection performance at each retail site in real time. This granular visibility helps identify unusual patterns, spot potential discrepancies early, and address them before they escalate. With clear, site-wise insights, decision-makers can compare trends, optimize operations, and maintain steady, healthy cash flow across the entire network.",
+        image: "",
+      },
+      cloudSync: {
+        title: "Automated MIS Reporting",
+        icon: "/assets/shellindia-cloudSync-icon-3.png",
+        description:
+          "Generate precise, Management Information System (MIS) reports automatically, removing the need for repetitive manual data compilation which ensures that key stakeholders, have instant access to verified cash collection data, trends, and insights.",
+      },
+      unifiedProcess: {
+        title: "Seamless Reconciliation",
+        icon: "/assets/shellindia-unifiedProcess-icon-3.png",
+        description:
+          "Ensure that every recorded cash collection aligns perfectly with its corresponding physical bank deposit slip through an automated reconciliation process. This minimizes manual cross-checking, reduces human error, and deters fraudulent reporting. By streamlining the matching of daily entries with actual deposits, Shell can maintain cleaner books, strengthen trust across teams, and uphold complete financial accountability at every site.",
+      },
+      userAccessAndRole: {
+        title: "User Access & Roles",
+        icon: "/assets/shellindia-userAccessAndRole-icon-3.png",
+        description:
+          "Maintain accountability and data integrity with robust multi-level user permissions and access controls.",
+      },
+    },
+    Solution: {
+      layout: "3",
+      title:
+        "<span>Smarter</span> Way to Manage Digital <br /> <span>Payments</span>",
+      description:
+        "Seamless tools for tracking, reconciling, and reporting digital sales",
+
+      allSubDatas: [
+        {
+          icon: "/assets/shellindia-2-offlineFunctionality-icon-3.png",
+          title: "Swipe Hold Requests",
+          description:
+            "A simple, secure input screen for agents to log daily cash collections at each site — keeping records clear and consistent. Each entry instantly updates the central database, ensuring data stays current and auditable.",
+          image: "",
+          buttonImage: "",
+        },
+        {
+          title: "Technology Backbone",
+          description:
+            "Built using a powerful tech stack including Angular / React, Node.js, PostgreSQL, AWS and more.",
+          image: "/assets/Tech stack - in stepgha.png",
+        },
+        {
+          icon: "/assets/shellindia-2-technologyBackbone-icon-3.png",
+          title: "Retailer Logins",
+          description:
+            "Dedicated logins for each retail site or operator ensure accountability and controlled access. Individual credentials keep transaction data secure and role-based, with complete activity history. Retailers manage with transparency.",
+          image: "",
+        },
+        {
+          icon: "/assets/shellindia-2-seamlessBluetoothIntegration-icon-3.png",
+          title: "Transaction Dashboard",
+          description:
+            "A centralized dashboard displays real-time digital payment transactions across all retail sites. Managers get instant, data-driven insights.",
+          image: "",
+        },
+        {
+          icon: "/assets/shellindia-2-technicianCommandCenter-icon-3.png",
+          title: "Reconciliation Module",
+          description:
+            "Automatically syncs transactions with bank and gateway data to ensure error-free settlements.Cuts manual checks, boosts audit readiness.",
+          image: "",
+        },
+        {
+          icon: "/assets/shellindia-2-cloudPoweredAnalytics-icon-3.png",
+          title: "Automated MIS Reports",
+          description:
+            "Generates clear, actionable digital sales reports for finance and operations teams on demand. Faster reports, clearer cash flow.",
+          image: "",
+        },
+      ],
+      offlineFunctionality: {
+        icon: "/assets/shellindia-offlineFunctionality-icon-3.png",
+        title: "Cash Entry Interface",
+        description:
+          "A simple, secure input screen for agents to log daily cash collections at each site — keeping records clear and consistent. Each entry instantly updates the central database, ensuring data stays current and auditable.",
+        image: "",
+        buttonImage: "",
+      },
+      realTimeDiagnostics: {
+        title: "Technology Backbone",
+        description:
+          "Built using a powerful tech stack including HTML CSS JS, PHP, PostgreSQL Managed DB and more.",
+        image: "/assets/stepgha-solution-image-2.png",
+      },
+
+      technologyBackbone: {
+        icon: "/assets/shellindia-technologyBackbone-icon-3.png",
+        title: "Headquarters Dashboard",
+        description:
+          "A simple, secure input screen for agents to log daily cash collections at each site — keeping records clear and consistent. Each entry instantly updates the central database, ensuring data stays current and auditable.",
+        image: "",
+      },
+
+      seamlessBluetoothIntegration: {
+        icon: "/assets/shellindia-seamlessBluetoothIntegration-icon-3.png",
+        title: "Reconciliation Module",
+        description:
+          "Automatically matches site cash entries with physical bank deposit slips, ensuring accuracy and reducing manual checks.",
+        image: "",
+      },
+
+      technicianCommandCenter: {
+        icon: "/assets/shellindia-technicianCommandCenter-icon-3.png",
+        title: "Performance Metrics",
+        description:
+          "Monitors site-wise collection trends, compares historical data, and highlights underperforming locations",
+        image: "",
+      },
+      cloudPoweredAnalytics: {
+        icon: "/assets/shellindia-cloudPoweredAnalytics-icon-3.png",
+        title: "Automated MIS Reports",
+        description:
+          "Delivers daily, weekly, and monthly collection summaries directly to relevant departments, saving time and effort.",
+        image: "",
+      },
+    },
+
+    ChallengesandResolutions: {
+      title: "<span>Overcoming Hurdles</span>, Delivering <br /> Clarity",
+      description: "Making payments secure, simple, and seamless",
+      challenges: {
+        title: "What we were up against",
+        points: [
+          "Prevent unauthorized swipe hold requests across multiple retail sites",
+          "Maintain real-time updates and accuracy while integrating multiple payment gateways",
+          "Design an intuitive system for a wide range of non-technical retail operators",
+        ],
+        image: "/assets/ChallengesandResolutions-right-side-image.png",
+      },
+      solutions: {
+        title: "How we engineered the fix",
+        points: [
+          "Deployed strict multi-level access with OTP verification for every request.",
+          "Engineered a secure, robust API layer to ensure instant, accurate sync.",
+          "Crafted a clean, mobile-first UI with step-by-step guidance for smooth operations.",
+        ],
+        image: "/assets/Solution-ChallengesandResolutions-right-side-image.svg",
+      },
+    },
+    Results: {
+      title: "<span>Driving</span> Digital <span>Clarity</span>",
+      description:
+        "Real-time tracking, nationwide rollout, and streamlined payments",
+      metrics: [
+        {
+          value: "~100%",
+          description:
+            "real-time visibility into digital transactions across all sites",
+        },
+        {
+          value: "1-Click",
+          description: "swipe hold requests replaced lengthy manual processes",
+        },
+        {
+          value: "100%",
+          description: "rollout coverage across Shell fuel stations PAN India",
+        },
+        {
+          value: "95%+",
+          description:
+            "improvement in reconciliation accuracy and data integrity",
+        },
+        {
+          value: "10+ hrs saved",
+          description: "weekly by finance teams on payment audits",
+        },
+        {
+          value: "<30 Secs",
+          description:
+            "average time for a retailer to submit a swipe hold request",
+        },
+        {
+          value: "0 Downtime",
+          description:
+            "ensured with robust backend and secure API integrations",
+        },
+        {
+          value: "Future-Ready",
+          description:
+            "platform scalable to add new payment gateways & features",
+        },
+      ],
+    },
+    gallery: [],
+    testimonials: [],
+  },
+
+  {
+    id: "7",
+    herosection: {
+      tags: ["Mobile App", "UI Design"],
+      title:
+        "Naren Smart Connect Automating Farming with Offline-Ready SMS Control",
+      footerimage: "/assets/Naren-electric-hero-footer-image.png",
+    },
+    ExecutiveSummary:
+      "We developed Naren Smart Connect, a Flutter-based mobile application and admin panel for controlling and monitoring GSM-enabled motor controller devices via SMS. Unlike typical IoT systems that rely on internet connectivity, this solution ensures offline resilience by using SMS communication to operate devices such as pumps and controllers in remote or rural environments. The system also includes robust message parsing, device response handling, and real-time feedback, ensuring a seamless app-like experience for users, even when offline.",
+    ClientBackground: {
+      type: "2",
+      leftImage: "/assets/naren-electric-client-backgournd-let-image-1.png",
+      leftImage2: "/assets/naren-electric-client-backgournd-let-image-2.png",
+      rightContent: {
+        topIcon: "/assets/ClientBackground-right-top-icon.png",
+        title: "Reliable GSM Control for Remote Operations",
+        description:
+          "NAREN Electrix is a trusted hardware manufacturer providing GSM-based motor controller modules that ensure dependable remote control of motors and pumps. Designed for agriculture, rural water supply, and industrial automation, their solutions thrive even in areas with limited connectivity by prioritizing an SMS-first communication platform.",
+        footerContent: [
+          {
+            title: "Agritech & Automation",
+            description: "Industry",
+          },
+          {
+            title: "2025",
+            description: "Year of Implementation",
+          },
+          {
+            title: "4 Months",
+            description: "Time to Completion",
+          },
+          {
+            title: "Naren Electrix",
+            description: "Client",
+          },
+        ],
+      },
+    },
+
+    ProblemStatement: {
+      title:
+        "When the Signal <span>Drops</span>, <br /> So Does <span>Control</span>",
+      description:
+        "Unreliable IoT, clunky SMS commands, and no easy way to manage or monitor, farmers deserved better",
+      contentSection: {
+        icon: "/assets/naren-electric-ProblemStatement-contentSection-icon-2.png",
+        title: "Closing the Control Gap",
+        description:
+          "In poor-connectivity areas, IoT failed and manual SMS commands were confusing. Users couldn’t easily manage devices or track feedback — a simpler, smarter solution was needed.",
+        rightsideData: [
+          {
+            id: "1",
+            title: "Existing IoT systems failed in low-connectivity regions",
+          },
+          {
+            id: "2",
+            title: "Manual SMS commands were confusing and user-unfriendly",
+          },
+          {
+            id: "3",
+            title: "No centralized platform to manage devices and users",
+          },
+          {
+            id: "4",
+            title: "Tracking command status and feedback was unreliable",
+          },
+          {
+            id: "5",
+            title: "Farmers lacked an easy, efficient way to stay in control",
+          },
+        ],
+      },
+    },
+    objectives: {
+      title:
+        "Turning <span>Complexity</span> <br /> into <span>Control</span> ",
+      description:
+        "Clear goals to simplify GSM device management and make remote control effortless, no internet needed",
+      realTimeDiagnostics: {
+        icon: "/assets/naren-electric-objectives-realTimeDiagnostics-image-2.png",
+        title: "Intuitive SMS Control",
+        description:
+          "Design a user-friendly mobile app to operate GSM-enabled devices entirely through SMS commands.",
+        rightsideimage: "/assets/Xplorion App ss  objectives.png",
+      },
+      upsConnectivity: {
+        title: "Offline-First Reliability",
+        description:
+          "Minimize reliance on internet connectivity by leveraging SMS-based control instead of network-heavy IoT protocols.",
+        image: "/assets/Dynamic updates - objectives.png",
+      },
+      smartReports: {
+        title: "Real-Time Status Sync",
+        description:
+          "Parse incoming SMS replies to instantly update device status within the app.",
+        image: "/assets/naren-electric-objectives-realtime-content.png",
+      },
+      cloudSync: {
+        title: "Cross-Device Compatibility",
+        icon: "/assets/naren-electric-objectives-cloudSync-icon-2.png",
+        description:
+          "Ensure smooth performance across all Android devices, even with restrictive OEMs or custom OS variants.",
+      },
+      unifiedProcess: {
+        title: "Centralized Admin Panel",
+        icon: "/assets/naren-electric-objectives-unifiedProcess-icon-2.png",
+        description:
+          "Develop a robust backend panel to manage users, monitor devices, and streamline configurations.",
+      },
+    },
+    Solution: {
+      layout: "4",
+      title: "Reliable Control,<br /> <span>Zero</span> Connectivity <span>Worries</span>",
+      description:
+        "A smart offline-first system that mimics IoT ease while staying resilient through SMS automation",
+      offlineFunctionality: {
+        title: "SMS Command UI",
+        description:
+          "Control GSM-enabled devices with an intuitive app interface that sends secure SMS commands in the background.",
+        image: "/assets/naren-electric-offlineFunctionality-image.png",
+        buttonImage: "",
+      },
+      realTimeDiagnostics: {
+        title: "Real-Time Feedback",
+        description:
+          "Parse incoming SMS responses and reflect live status updates instantly within the app.",
+        image: "/assets/naren-electric-realTimeDiagnostics-image.png",
+      },
+      seamlessBluetoothIntegration: {
+        title: "Device Status Sync",
+        description:
+          "Store and sync device history and state seamlessly whenever connectivity is restored.",
+        image: "/assets/naren-electric-seamlessBluetoothIntegration-image.png",
+      },
+      technologyBackbone: {
+        title: "Technology Backbone",
+        description:
+          "Built using a powerful tech stack including Flutter, Firebase,  Node.js and more.",
+        image: "/assets/technologyBackbone-xplorean-ai.png",
+      },
+      technicianCommandCenter: {
+        title: "Offline Resilience",
+        description:
+          "Operate reliably without internet, leveraging telecom networks for remote control anywhere, anytime.",
+        image: "/assets/naren-electric-technicianCommandCenter-image.png",
+      },
+      cloudPoweredAnalytics: {
+        title: "Admin Panel",
+        description:
+          "Centrally manage registered devices, assign users, push firmware updates & monitor logs.",
+        image: "/assets/naren-electric-cloudPoweredAnalytics-image.png",
+      },
+      automatedReporting: {
+        title: "Field Installer Mode",
+        description:
+          "A lightweight, user-friendly dashboard built for on-site technicians to quickly configure, test, and activate new devices. It streamlines installation, ensures proper connectivity, and reduces setup time in the field.",
+        image: "",
+      },
+    },
+
+    ChallengesandResolutions: {
+      title: "Cracking the <span>Offline <br /> Control</span> Puzzle",
+      description:
+        "Overcoming device, network, and OEM hurdles to deliver real-time, SMS-based IoT control—without compromise",
+      challenges: {
+        title: "What we were up against",
+        points: [
+          "Guaranteeing SMS delivery and response parsing across countless Android device brands and OS customizations.",
+          "Creating an app experience that feels instant, even when SMS communication naturally has delays.",
+          "Managing multiple SMS response formats due to variations in firmware versions across devices.",
+        ],
+        image: "/assets/ChallengesandResolutions-right-side-image.png",
+      },
+      solutions: {
+        title: "How we engineered the fix",
+        points: [
+          "Engineered a custom Flutter plugin with device-specific SMS rules to handle OEM quirks reliably.",
+          "Designed asynchronous UI updates with smart state predictions and delayed confirmations to mimic real-time control.",
+          "Developed a flexible, regex-powered SMS parser that can be remotely updated to adapt to new formats on the fly.",
+        ],
+        image: "/assets/Solution-ChallengesandResolutions-right-side-image.svg",
+      },
+    },
+    Results: {
+      title: "<span>Field-Proven</span> <br /> Performance",
+      description:
+        "Reliable control, seamless adoption, and real-world performance that delivers",
+      metrics: [
+        {
+          value: "~100%",
+          description: "app-like control with zero internet needed",
+        },
+        {
+          value: ">99.5%",
+          description:
+            "command success rate even in low-signal zones",
+        },
+        {
+          value: "~85%",
+          description:
+            "reduction in training time for field operators",
+        },
+        {
+          value: "~5000+",
+          description:
+            "devices onboarded and actively managed",
+        },
+        {
+          value: "~80%",
+          description: "fewer manual SMS entry errors reported",
+        },
+        {
+          value: "100%",
+          description:
+            "adoption among partner technicians and farmers",
+        },
+        {
+          value: "~60%",
+          description:
+            "less downtime for operations due to instant pump control",
+        },
+        {
+          value: "~40%",
+          description:
+            "reduction in manual troubleshooting time per site",
+        },
+      ],
+    },
+    gallery: [
+      {
+        type: "single",
+        image: "/assets/naren-electric-galleryimage-1.png",
+      },
+      {
+        type: "multiple",
+        images: [
+          "/assets/naren-electric-galleryimage-2.png",
+          "/assets/naren-electric-galleryimage-3.png",
+        ],
+      },
+      {
+        type: "multiple",
+        images: [
+          "/assets/naren-electric-galleryimage-4.png",
+          "/assets/naren-electric-galleryimage-5.png",
+        ],
+      },
+      {
+        type: "single",
+        image: "/assets/naren-electric-galleryimage-6.png",
+      },
+    ],
+    testimonials: [
+      {
+        leftVideo: "https://example.com/testimonial-video.mp4",
+        rightContent: {
+          title: "Naren Nagaraj",
+          description:
+            "Forget about spam, advertising mailings, hacking and attacking robots. Keep your real mailbox clean and secure. Temp Mail provides temporary, secure, anonymous, free, disposable email address. Stalkers and disgruntled acquaintances use the Internet to find addresses, phone numbers and other personal details about their targets. Identity thieves use personal information numbers and other personal details.",
+          details: "Founder, CEO  • Naren Electrix ",
+        },
+      },
+    ],
   },
 ];
 
