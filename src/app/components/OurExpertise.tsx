@@ -3,16 +3,8 @@ import { useState } from "react";
 import FallingText from "../../../Reactbits/FallingText/FallingText";
 
 function OurExpertise() {
-  const [isHoveredForAnimation, setIsHoveredForAnimation] = useState(false);
+  const [isHoveredForAnimation] = useState(false);
 
-  const data = [
-    "Branding & Content",
-    "Software Development",
-    "Brand Marketing",
-    "Web Design & Development",
-    "Graphics Design",
-    "UI/UX Design",
-  ];
   return (
     <div className="our-expertise-wrapper max-w-[1232px] overflow-hidden mx-auto">
       <img
@@ -28,7 +20,7 @@ function OurExpertise() {
       </p>
 
       <div
-        className={`falling-text-container-highlight   desktop-text ${
+        className={`falling-text-container-highlight    ${
           isHoveredForAnimation ? "hovered" : ""
         }`}
       >
@@ -47,19 +39,6 @@ function OurExpertise() {
           // setIsHoveredForAnimation={setIsHoveredForAnimation}
           mouseConstraintStiffness={1.2}
         />
-      </div>
-
-      <div className="our-expertise-card-container-mobile mobile-expertise">
-        {data.map((item, index) => (
-          <div
-            key={index}
-            className="our-expertise-card"
-            onMouseEnter={() => setIsHoveredForAnimation(true)}
-            onMouseLeave={() => setIsHoveredForAnimation(false)}
-          >
-            <h4>{item}</h4>
-          </div>
-        ))}
       </div>
     </div>
   );

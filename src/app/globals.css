@@ -220,6 +220,17 @@ html {
   );
 }
 
+.active-nav-2 {
+  border: 2px solid #ffffff80;
+  border-radius: 100px;
+  color: #ffffff;
+  background: linear-gradient(
+    75.1deg,
+    rgba(0, 0, 0, 0.22) 21.7%,
+    rgba(255, 255, 255, 0) 115.18%
+  );
+}
+
 .navbar-wrapper {
   padding: 2rem 2rem 0 2rem;
   max-width: 1521px;
@@ -3395,9 +3406,47 @@ strong {
   .absolute-container-testimonial-showcase .absolute-title-testimonial-showcase,
   .build-with-us-banner h3,
   .lifeat-third-eye-wrapper .lifeat-third-eye-title,
-  .open-roles-wrapper .open-roles-wrapper-title {
+  .open-roles-wrapper .open-roles-wrapper-title,
+  .build-with-us-span-text,
+  .work-single-page-hero-title,
+  .single-work-page-problem-statement-title,
+  .single-work-page-objectives-title,
+  .single-page-solution-section-title {
     font-size: 3rem;
     line-height: 100%;
+  }
+
+  /* .indevisual-page-footer-image-container {
+    margin-top: 0;
+    margin-bottom: -30px;
+  } */
+
+  .single-work-page-problem-statement-content-description-tags {
+    font-size: 0.8rem;
+  }
+  .indevisual-page-client-background-container {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .indevisual-page-client-background-image-container {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .single-work-page-problem-statement-title {
+    margin-top: 2rem;
+  }
+
+  .build-with-us-banner h3 {
+    margin-bottom: 3rem;
   }
 
   .text-paragraph-our-expertise,
@@ -3406,8 +3455,61 @@ strong {
     .absolute-paragraph-testimonial-showcase,
   .view-more-button,
   .lifeat-third-eye-wrapper .lifeat-third-eye-desc,
-  .open-roles-wrapper .open-roles-wrapper-desc {
+  .open-roles-wrapper .open-roles-wrapper-desc,
+  .single-work-page-problem-statement-description,
+  .single-work-page-objectives-description,
+  .single-page-solution-section-description,
+  .single-work-page-bullet-point-description,
+  .single-page-results-metric-description {
     font-size: 1rem;
+  }
+
+  .single-work-page-objectives-description,
+  .single-page-solution-section-description {
+    line-height: 100%;
+  }
+
+  .indevisual-page-objectives-real-time-diagnostics-container {
+    flex-direction: column;
+  }
+
+  .indevisual-page-challenges-and-resolutions-container {
+    flex-direction: column-reverse;
+  }
+
+  .single-work-page-bullet-point-title,
+  .single-page-results-metric-value {
+    font-size: 1.5rem;
+  }
+
+  .indevisual-page-footer-upsconnectivity-image-container {
+    margin-bottom: -6rem;
+  }
+
+  .indevisual-page-solution-cards-image-container {
+    margin-left: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .indevisual-page-solution-cards-image-container img {
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .single-work-page-problem-statement-description {
+    line-height: 100%;
+  }
+
+  .indevesual-page-problem-statement-icon {
+    display: none;
+  }
+
+  .indevisual-page-problem-statement-icon-container,
+  .indevisual-page-problem-statement-icon-container {
+    border-left: none;
+    padding: 0.8rem;
   }
 
   .our-expertise-wrapper {
@@ -3596,6 +3698,7 @@ strong {
 
   .about-us-hero-section-content-wrapper {
     padding-left: 1rem;
+    padding-bottom: 3rem;
   }
 
   .about-us-hero-section-footer-wrapper {
@@ -3634,6 +3737,11 @@ strong {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .indevisual-page-problem-statement-icon-container,
+  .indevisual-page-problem-statement-icon-container {
+    border-left: none;
+    padding: 0.8rem;
+  }
   .contact-title-main {
     font-size: 13vw;
   }
@@ -3741,6 +3849,10 @@ strong {
 
   .nav-items-section {
     gap: 0.2rem;
+  }
+
+  .indevisual-page-challenges-and-resolutions-container {
+    flex-direction: column-reverse;
   }
 }
 

@@ -3,7 +3,6 @@ import React from "react";
 import ScrollReveal from "../../../../../Reactbits/ScrollReveal/ScrollReveal";
 
 function ExecutiveSummary({ data }) {
-    console.log("ExecutiveSummary Data:", data);
   return (
     <div className="executive-summary-container">
       <div className="desktop-text">

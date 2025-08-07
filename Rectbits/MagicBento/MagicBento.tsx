@@ -574,7 +574,7 @@ const MagicBento: React.FC<BentoProps> = ({
   card flex flex-col justify-between relative ${
     cardDatas.type === "3" ? "first:mb-4 " : ""
   }
-  min-h-[200px] w-full max-w-full  rounded-[24px]
+   w-full max-w-full  rounded-[24px]
   border border-solid font-light overflow-hidden
   transition-all duration-300 ease-in-out
   hover:-translate-y-0.5 
@@ -851,7 +851,7 @@ const MagicBento: React.FC<BentoProps> = ({
                 el.addEventListener("click", handleClick);
               }}
             >
-              <div className=" p-6 bg-[rgba(255,255,255,0.1)] shadow-xl flex items-center lg:pr-0 " >
+              <div className=" p-6 bg-[rgba(255,255,255,0.1)] shadow-xl indevisual-page-objectives-real-time-diagnostics-container flex items-center lg:pr-0 " >
                 <div>
                   <Image
                     src={cardDatas.realTimeDiagnostics.icon}
@@ -875,7 +875,7 @@ const MagicBento: React.FC<BentoProps> = ({
                         alt={cardDatas.realTimeDiagnostics.title}
                         width={800}
                         height={386}
-                        className="w-full h-100 rounded-lg ml-auto"
+                        className="w-full h-full max-h-[400px] rounded-lg ml-auto object-contain mr-0"
                       />
                     </div>
                   )}
@@ -1014,7 +1014,7 @@ const MagicBento: React.FC<BentoProps> = ({
                     </div>
                     <div className="flex gap-5 align-middle w-full">
                       {cardDatas.upsConnectivity.image && (
-                        <div className="w-full -mb-38">
+                        <div className="w-full -mb-38 indevisual-page-footer-upsconnectivity-image-container">
                           <img
                             src={cardDatas.upsConnectivity.image}
                             alt={cardDatas.upsConnectivity.title}

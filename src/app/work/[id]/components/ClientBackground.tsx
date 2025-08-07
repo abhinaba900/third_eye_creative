@@ -4,7 +4,7 @@ import React from "react";
 function ClientBackground({ data }) {
   return (
     <div
-      className="flex max-w-[1232px] relative mb-[9.063rem]  mx-auto flex-col lg:flex-row  items-center justify-between bg-gradient-to-br from-[#DCF9FF] via-[#621DBA] to-[#04001C] rounded-[1.5rem] p-8 lg:p-16 gap-10 lg:gap-20 text-white"
+      className="flex indevisual-page-client-background-container max-w-[1232px] relative mb-[9.063rem]  mx-auto flex-col lg:flex-row  items-center justify-between bg-gradient-to-br from-[#DCF9FF] via-[#621DBA] to-[#04001C] rounded-[1.5rem] p-2 lg:p-8 gap-5 lg:gap-5 text-white"
       style={{
         paddingLeft: data.type === "1" ? "0" : "",
         paddingTop: data.type === "1" ? "" : "0",
@@ -28,7 +28,7 @@ function ClientBackground({ data }) {
         {data.type === "1" && (
           <>
             <div
-              className="relative w-full h-100 max-h-[529px] z-1  left-[-50px]   shadow-xl"
+              className="relative w-full h-100 max-h-[529px] z-1  left-[-50px] indevisual-page-client-background-image-container  shadow-xl"
               style={{ boxShadow: "-50px 50px 150px 20px #000000CC" }}
             >
               <Image
@@ -43,9 +43,9 @@ function ClientBackground({ data }) {
 
         {data.type === "2" && (
           <>
-            <div className="relative flex">
+            <div className="relative flex ">
               {/* First image aligned to the top */}
-              <div className="relative w-1/2 h-[400px] -top-[8rem] flex items-start">
+              <div className="relative w-1/2 h-[400px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[8rem] flex items-start ">
                 <div className="relative w-full h-full">
                   <Image
                     src={data.leftImage}
@@ -57,7 +57,7 @@ function ClientBackground({ data }) {
               </div>
 
               {/* Second image aligned to the bottom */}
-              <div className="relative w-1/2 h-[400px] -bottom-[3.8rem] flex items-end">
+              <div className="relative w-1/2 h-[400px] sm:-top-[8rem] md:top-0 md:bottom-0 lg:top-[4.8rem] flex items-end">
                 <div className="relative w-full h-full">
                   <Image
                     src={data.leftImage2}

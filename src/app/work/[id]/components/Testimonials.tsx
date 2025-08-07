@@ -27,7 +27,7 @@ function Testimonials({ data }) {
             What our clients say about creating with us
           </p>
 
-          <div className="bg-[rgba(255,255,255,0.1)] p-6 rounded-xl max-w-[1232px] max-h-[500px] h-full mx-auto">
+          <div className="bg-[rgba(255,255,255,0.1)] p-6 rounded-xl max-w-[1232px] max-h-full h-full mx-auto">
             <Swiper
               modules={[Pagination]}
               pagination={{ clickable: true }}
@@ -37,7 +37,7 @@ function Testimonials({ data }) {
             >
               {data.map((item, idx) => (
                 <SwiperSlide key={idx}>
-                  <div className="flex flex-col h-100 lg:flex-row gap-6 items-center rounded-xl p-6">
+                  <div className="flex flex-col  lg:flex-row gap-6  items-center rounded-xl lg:p-6">
                     {/* Video Section */}
                     <div className="w-full lg:w-1/2 overflow-hidden rounded-xl h-full">
                       <video

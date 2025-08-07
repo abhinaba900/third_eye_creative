@@ -4,19 +4,32 @@ import Aurora from "../../../Reactbits/Aurora/Aurora";
 import Counter from "../../../Reactbits/Counter/Counter";
 // import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
 // import VariableProximity from "../../../Reactbits/VariableProximity/VariableProximity";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 // import Script from "next/script";
 // import SplineViewer from "./SplineViewer";
-import ScrollToBottomButton from "./ScrollToBottomButton";
+// import ScrollToBottomButton from "./ScrollToBottomButton";
 // import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
 // import PrinceText from "./PrinceText";
 import TextType from "../../../Reactbits/TextType/TextType";
 import MechanicalEye from "./MechanicalEye";
+import Image from "next/image";
 
 function HeroSection() {
   const containerRef = useRef(null);
   const containerref2 = useRef(null);
   const text2Ref = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 900);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <div
       ref={containerref2}
@@ -29,16 +42,18 @@ function HeroSection() {
         height={"100"}
         className="mx-auto my-4 background-image-hero-section"
       /> */}
-      <ScrollToBottomButton containerRef={containerref2} targetRef={text2Ref} />
+      {/* <ScrollToBottomButton containerRef={containerref2} targetRef={text2Ref} /> */}
       <div className="hero-section-content-wrapper">
-        {/* <Image
-          src="/assets/Main-image.png"
-          alt="Third Eye Creative Logo"
-          width={881}
-          height={450}
-          style={{ display: "block", margin: "auto" }}
-          className="m-auto d-block"
-        /> */}
+        {isMobile && (
+          <Image
+            src="/assets/Main-image.png"
+            alt="Third Eye Creative Logo"
+            width={881}
+            height={450}
+            style={{ display: "block", margin: "auto" }}
+            className="m-auto d-block relative z-3"
+          />
+        )}
 
         <>
           {/* <Script
@@ -47,9 +62,9 @@ function HeroSection() {
             strategy="beforeInteractive"
           /> */}
           {/* <SplineViewer /> */}
-          <div className="flex justify-center items-center ">
+          {!isMobile && <div className="flex justify-center items-center ">
             <MechanicalEye />
-          </div>
+          </div>}
         </>
 
         <h3
@@ -69,7 +84,10 @@ function HeroSection() {
               className="variable-proximity-demo"
             /> */}
             <TextType
-              text={["We've got a vision \n FOR YOUR BRAND", "We've got a vision \n FOR YOUR BRAND"]}
+              text={[
+                "We've got a vision \n FOR YOUR BRAND",
+                "We've got a vision \n FOR YOUR BRAND",
+              ]}
               typingSpeed={75}
               pauseDuration={1500}
               showCursor={true}
@@ -78,7 +96,6 @@ function HeroSection() {
               highlightedClassName="variable-proximity-demo"
               highlightedText2="FOR YOUR BRAND"
               highlightedClassName2="hero-title-2"
-              
             />
             {/* <VariableProximity
               label={"VISION"}
@@ -95,7 +112,7 @@ function HeroSection() {
           FOR YOUR BRAND
         </h3> */}
 
-        <div className="w-full relative z-5"> 
+        <div className="w-full relative z-5">
           <Aurora
             colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}
             blend={0.1}

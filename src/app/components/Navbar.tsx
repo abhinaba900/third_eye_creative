@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Particles from "../../../Reactbits/Particles/Particles";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaXmark } from "react-icons/fa6";
 
 function Navbar() {
   const items = [
@@ -80,7 +81,9 @@ function Navbar() {
 
   return (
     <div
-      className={`navbar-background  ${isScrolled || isHome ? "navbar-transparent" : ""}`}
+      className={`navbar-background  ${
+        isScrolled || isHome ? "navbar-transparent" : ""
+      }`}
     >
       <section className="flex items-center justify-between lg:py-2 lg:px-4 gap-2 text-white navbar-wrapper relative z-50">
         {/* Logo - Visible on all screens */}
@@ -105,47 +108,49 @@ function Navbar() {
         </Link>
 
         {/* Hamburger for Mobile & Tablet - Hidden on desktop */}
-        <button
-          className="lg:hidden z-50 relative w-5 h-5 focus:outline-none"
-          onClick={toggleMenu}
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-        >
-          <motion.div
-            className="flex flex-col justify-between w-full h-full"
-            initial={false}
-            animate={menuOpen ? "open" : "closed"}
+        {!menuOpen && (
+          <button
+            className="lg:hidden  relative w-5 h-5 focus:outline-none"
+            onClick={toggleMenu}
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
           >
-            {/* Top line */}
-            <motion.span
-              className="w-full h-0.5 bg-white block rounded-full"
-              variants={{
-                closed: { rotate: 0, y: 0 },
-                open: { rotate: 45, y: 7 },
-              }}
-              transition={{ duration: 0.2 }}
-            />
+            <motion.div
+              className="flex flex-col justify-between w-full h-full"
+              initial={false}
+              animate={menuOpen ? "open" : "closed"}
+            >
+              {/* Top line */}
+              <motion.span
+                className="w-full h-0.5 bg-white block rounded-full"
+                variants={{
+                  closed: { rotate: 0, y: 0 },
+                  open: { rotate: 45, y: 7 },
+                }}
+                transition={{ duration: 0.2 }}
+              />
 
-            {/* Middle line */}
-            <motion.span
-              className="w-full h-0.5 bg-white block rounded-full"
-              variants={{
-                closed: { opacity: 1 },
-                open: { opacity: 0 },
-              }}
-              transition={{ duration: 0.1 }}
-            />
+              {/* Middle line */}
+              <motion.span
+                className="w-full h-0.5 bg-white block rounded-full"
+                variants={{
+                  closed: { opacity: 1 },
+                  open: { opacity: 0 },
+                }}
+                transition={{ duration: 0.1 }}
+              />
 
-            {/* Bottom line */}
-            <motion.span
-              className="w-full h-0.5 bg-white block rounded-full"
-              variants={{
-                closed: { rotate: 0, y: 0 },
-                open: { rotate: -45, y: -7 },
-              }}
-              transition={{ duration: 0.2 }}
-            />
-          </motion.div>
-        </button>
+              {/* Bottom line */}
+              <motion.span
+                className="w-full h-0.5 bg-white block rounded-full"
+                variants={{
+                  closed: { rotate: 0, y: 0 },
+                  open: { rotate: -45, y: -7 },
+                }}
+                transition={{ duration: 0.2 }}
+              />
+            </motion.div>
+          </button>
+        )}
         <div className="hidden lg:block absolute w-fit left-0 right-0 mx-auto gap-8">
           <div className="navitems-section-wrapper relative">
             <Particles
@@ -210,11 +215,18 @@ function Navbar() {
               exit="hidden"
               variants={menuVariants}
             >
+              <FaXmark
+                className="absolute top-9 right-4 cursor-pointer"
+                size={28}
+                onClick={toggleMenu}
+              />
               {items.map((item, idx) => (
                 <motion.div
                   key={idx}
                   variants={itemVariants}
                   transition={{ type: "spring", stiffness: 100 }}
+                  className={`w-full ${active === idx ? "active-nav-2" : ""}`}
+                  style={{ padding: "0.3rem 1rem" }}
                 >
                   <Link
                     href={item.href}
@@ -222,9 +234,7 @@ function Navbar() {
                       setActive(idx);
                       setMenuOpen(false);
                     }}
-                    className={`nav-item text-xl w-full ${
-                      active === idx ? "active-nav" : ""
-                    }`}
+                    className={`nav-item text-xl w-full `}
                   >
                     {item.label}
                   </Link>

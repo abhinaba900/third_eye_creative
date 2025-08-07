@@ -1038,7 +1038,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
               )}
             </div>
 
-            <div className="grid grid-cols-[0.7fr_1.3fr_0.7fr] gap-[1rem] my-[1rem] bg-black text-white">
+            <div className="grid lg:grid-cols-[0.7fr_1.3fr_0.7fr] sm:grid-cols-1 gap-[1rem] my-[1rem] bg-black text-white">
               {/* Column 1 */}
               {"seamlessBluetoothIntegration" in cardDatas && (
                 <div
@@ -1154,7 +1154,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     el.addEventListener("click", handleClick);
                   }}
                 >
-                  <div className="bg-[rgba(255,255,255,0.1)] rounded-2xl p-6 shadow-lg lg:pb-0 overflow-hidden">
+                  <div className="bg-[rgba(255,255,255,0.1)] rounded-2xl p-6 shadow-lg lg:pb-0 overflow-hidden h-full">
                     <h3 className="text-xl font-semibold mb-3 single-page-solution-cards-title">
                       {cardDatas.seamlessBluetoothIntegration.title}
                     </h3>
@@ -1295,7 +1295,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     <p className="text-sm text-gray-300">
                       {cardDatas.technologyBackbone.description}
                     </p>
-                    <div className="relative w-full h-[252px] -ml-13 rounded-lg overflow-hidden">
+                    <div className="relative w-full h-[252px] -ml-13 rounded-lg overflow-hidden indevisual-page-solution-cards-image-container">
                       <img
                         src={cardDatas.technologyBackbone.image}
                         alt={cardDatas.technologyBackbone.title}
@@ -1421,7 +1421,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     el.addEventListener("click", handleClick);
                   }}
                 >
-                  <div className="bg-[rgba(255,255,255,0.1)] rounded-2xl p-6 shadow-lg overflow-hidden">
+                  <div className="bg-[rgba(255,255,255,0.1)] rounded-2xl p-6 shadow-lg overflow-hidden h-full">
                     <h3 className="text-xl font-semibold mb-3">
                       {cardDatas.technicianCommandCenter.title}
                     </h3>
@@ -1722,7 +1722,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
         )}{" "}
         {cardDatas.layout === "2" && (
           <>
-            <div className="grid gap-[1rem] sm:grid-cols-2 lg:grid-cols-2">
+            <div className="grid gap-[1rem] sm:grid-cols-1 lg:grid-cols-2">
               {cardDatas.offlineFunctionality && (
                 <div
                   className={baseClassName}
@@ -1837,7 +1837,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     el.addEventListener("click", handleClick);
                   }}
                 >
-                  <div className="bg-[rgba(255,255,255,0.1)]  h-fit  shadow-xl flex justify-between items-center lg:pb-0">
+                  <div className="bg-[rgba(255,255,255,0.1)] h-fit shadow-xl flex flex-col lg:flex-row items-center justify-center lg:justify-between pb-4 lg:pb-0">
                     <div className="p-6">
                       {/* Title and Description */}
                       <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
@@ -1978,7 +1978,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     el.addEventListener("click", handleClick);
                   }}
                 >
-                  <div className=" h-fit bg-[rgba(255,255,255,0.1)]   shadow-xl flex justify-between items-center lg:pb-0">
+                  <div className="bg-[rgba(255,255,255,0.1)] h-fit shadow-xl flex flex-col lg:flex-row items-center justify-center lg:justify-between pb-4 lg:pb-0">
                     <div className="p-6">
                       {/* Title and Description */}
                       <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
@@ -2004,7 +2004,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                 </div>
               )}
             </div>
-            <div className="grid grid-cols-2 gap-[1rem] my-[1rem] bg-black text-white">
+            <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-[1rem] my-[1rem] bg-black text-white">
               {/* Column 2 */}
               {"technologyBackbone" in cardDatas && (
                 <div
@@ -2127,7 +2127,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     <p className="text-sm text-gray-300">
                       {cardDatas.technologyBackbone.description}
                     </p>
-                    <div className="relative w-full h-full -ml-13 rounded-lg overflow-hidden">
+                    <div className="relative w-full h-full -ml-13 rounded-lg overflow-hidden indevisual-page-solution-cards-image-container">
                       <Image
                         src={cardDatas.technologyBackbone.image}
                         alt="Technology Stack"
@@ -2256,7 +2256,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                       el.addEventListener("click", handleClick);
                     }}
                   >
-                    <div className="h-full bg-[rgba(255,255,255,0.1)] rounded-2xl flex justify-between items-center  shadow-lg lg:pb-0 overflow-hidden">
+                    <div className="h-full bg-[rgba(255,255,255,0.1)] rounded-2xl flex flex-col lg:flex-row justify-between items-center  shadow-lg lg:pb-0 overflow-hidden">
                       <div className="p-6">
                         <h3 className="text-xl font-semibold mb-3 single-page-solution-cards-title">
                           {cardDatas.seamlessBluetoothIntegration.title}
@@ -2392,7 +2392,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                       el.addEventListener("click", handleClick);
                     }}
                   >
-                    <div className="bg-[rgba(255,255,255,0.1)] h-full rounded-2xl flex justify-between items-center flex-row-reverse shadow-lg overflow-hidden">
+                    <div className="bg-[rgba(255,255,255,0.1)] h-full rounded-2xl flex flex-col  justify-between items-center lg:flex-row-reverse shadow-lg overflow-hidden">
                       <div className="p-6">
                         <h3 className="text-xl font-semibold mb-3">
                           {cardDatas.technicianCommandCenter.title}
@@ -2531,7 +2531,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     el.addEventListener("click", handleClick);
                   }}
                 >
-                  <div className="bg-[rgba(255,255,255,0.1)] h-fit  shadow-xl flex flex-col items-start lg:pb-0">
+                  <div className="bg-[rgba(255,255,255,0.1)] h-full  shadow-xl flex flex-col items-start lg:pb-0">
                     <div className="pt-6 pl-6 pr-6">
                       {/* Title and Description */}
                       <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
@@ -2852,7 +2852,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
             const isFirstRow = rowIndex === 0;
 
             const gridClass = isFirstRow
-              ? "grid grid-cols-[0.7fr_1.3fr_0.7fr] gap-4 mb-6"
+              ? "grid lg:grid-cols-[0.7fr_1.3fr_0.7fr] gap-4 mb-6"
               : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6";
 
             return (
