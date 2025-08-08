@@ -68,7 +68,7 @@ function ClientProjects() {
       <p className="client-projects-description">
         From bold brand identities to powerful digital solutions, our projects
         reflect our passion for design, innovation, and measurable impact —
-        crafted to inspire and built to perform.
+        crafted to inspire and built to perform
       </p>
 
       {/* Project List */}

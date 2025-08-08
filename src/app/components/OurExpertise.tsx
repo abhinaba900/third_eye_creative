@@ -16,7 +16,7 @@ function OurExpertise() {
         Our <span>Expertise</span>
       </h3>
       <p className="text-center text-paragraph-our-expertise">
-        Blending creativity and tech to craft brands that inspire and engage.
+        Blending creativity and tech to craft brands that inspire and engage
       </p>
 
       <div

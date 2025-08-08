@@ -88,19 +88,11 @@ function Navbar() {
       <section className="flex items-center justify-between lg:py-2 lg:px-4 gap-2 text-white navbar-wrapper relative z-50">
         {/* Logo - Visible on all screens */}
         <Link href="/" className="btn flex items-center gap-2">
-          <strong className="text-section-in-navbar flex items-center gap-2">
-            <span>THIRD</span>
-            <Image
-              src="/assets/logo eye.png"
-              alt="logo"
-              width={24}
-              height={17}
-            />
-            <span>CREATIVE</span>
-          </strong>
+          <strong>THIRD EYE</strong>
           <div id="container-stars">
             <div id="stars"></div>
           </div>
+
           <div id="glow">
             <div className="circle"></div>
             <div className="circle"></div>
@@ -182,24 +174,17 @@ function Navbar() {
         <div className="hidden lg:block items-center gap-8">
           {/* Desktop Button - Hidden on mobile & tablet */}
           <div className="galaxy-button">
-            <button className="space-button start-project-button">
-              <span className="backdrop"></span>
-              <span className="galaxy"></span>
-              <label className="text relative flex items-center gap-2">
-                Start Project{" "}
-                <Image
-                  src="/assets/Navbar-start-project-arrow.png"
-                  alt="arrow"
-                  width={16}
-                  height={16}
-                />
-                <img
-                  src="/assets/navbar-start-project-background.png"
-                  className="buttom-background-in-navbar"
-                  alt="background"
-                />
-              </label>
-            </button>
+            <Link href="/" className="btn flex items-center gap-2">
+              <strong>START PROJECT</strong>
+              <div id="container-stars">
+                <div id="stars"></div>
+              </div>
+
+              <div id="glow">
+                <div className="circle"></div>
+                <div className="circle"></div>
+              </div>
+            </Link>
             <div className="bodydrop"></div>
           </div>
         </div>
@@ -243,19 +228,17 @@ function Navbar() {
 
               {/* Mobile Button */}
               <motion.div className="w-full mt-4" variants={itemVariants}>
-                <button className="space-button start-project-button w-full">
-                  <span className="backdrop"></span>
-                  <span className="galaxy"></span>
-                  <label className="text relative flex items-center justify-center gap-2 py-3">
-                    Start Project{" "}
-                    <Image
-                      src="/assets/Navbar-start-project-arrow.png"
-                      alt="arrow"
-                      width={16}
-                      height={16}
-                    />
-                  </label>
-                </button>
+                <Link href="/" className="btn flex items-center gap-2">
+                  <strong>START PROJECT</strong>
+                  <div id="container-stars">
+                    <div id="stars"></div>
+                  </div>
+
+                  <div id="glow">
+                    <div className="circle"></div>
+                    <div className="circle"></div>
+                  </div>
+                </Link>
               </motion.div>
             </motion.div>
           )}

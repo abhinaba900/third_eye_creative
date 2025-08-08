@@ -1,4 +1,5 @@
 ﻿import ScrollVelocity from "../../../Reactbits/ScrollVelocity/ScrollVelocity";
+import SpotlightCard from "../../../Reactbits/SpotlightCard/SpotlightCard";
 
 function WorkflowStages() {
   const stages = [
@@ -32,14 +33,18 @@ function WorkflowStages() {
       <div className="workflow-stages-grid-container">
         {stages.map((stage) => (
           <div key={stage.id} className="gradient-border">
-            <h4 className="workflow-stage-id">{stage.id}</h4>
-            <div>
-              <h3
-                className="workflow-stage-title"
-                dangerouslySetInnerHTML={{ __html: stage.name }}
-              />
-              <p className="workflow-stage-description">{stage.description}</p>
-            </div>
+            <SpotlightCard className="workflow-stage-card">
+              <h4 className="workflow-stage-id">{stage.id}</h4>
+              <div>
+                <h3
+                  className="workflow-stage-title"
+                  dangerouslySetInnerHTML={{ __html: stage.name }}
+                />
+                <p className="workflow-stage-description">
+                  {stage.description}
+                </p>
+              </div>
+            </SpotlightCard>
           </div>
         ))}
       </div>

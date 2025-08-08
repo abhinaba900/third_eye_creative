@@ -13,7 +13,7 @@ function InsideCreativeMind() {
       </h3>
       <p>
         Step into the studio with our founders and creative leads as they unpack
-        the passion, philosophy, and chaos behind every idea we bring to life.
+        the passion, philosophy, and chaos behind every idea we bring to life
       </p>
 
       <div className="video-wrapper">
