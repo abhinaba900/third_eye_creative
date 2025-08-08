@@ -175,20 +175,20 @@ export default function TestimonialShowcase() {
           <HorizontalScroller
             data={[testimonialsGroup1, testimonialsGroup1]}
             renderCard={(item: Testimonial, index) => (
-              <SpotlightCard
-                className={`w-[380px] text-left min-w-[380px] h-full horizontal-scroller-card mx-2 bg-[#000000] text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 ${
-                  hoveredCard === item.name ? "" : ""
-                }`}
-                // className={`w-[360px] text-left min-w-[360px] h-full horizontal-scroller-card mx-2 bg-white/5 text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 ${
-                //   hoveredCard === item.name ? "hovered-card-in-scroller" : ""
-                // }`}
-                spotlightColor="rgba(0, 229, 255, 0.2)"
+              <div
+                key={index}
+                style={{ margin: "0 8px" }} // 8px horizontal margin (equivalent to mx-2)
+                onMouseEnter={() => handleMouseEnter(item.name)}
+                onMouseLeave={() => setHoveredCard(null)}
               >
-                <div
-                  key={index}
-                  style={{ margin: "0 8px" }} // 8px horizontal margin (equivalent to mx-2)
-                  onMouseEnter={() => handleMouseEnter(item.name)}
-                  onMouseLeave={() => setHoveredCard(null)}
+                <SpotlightCard
+                  className={`w-[380px] text-left min-w-[380px] h-full horizontal-scroller-card mx-2  text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 ${
+                    hoveredCard === item.name ? "" : ""
+                  }`}
+                  // className={`w-[360px] text-left min-w-[360px] h-full horizontal-scroller-card mx-2 bg-white/5 text-white rounded-2xl p-5 shadow-lg border border-white/10 backdrop-blur-md flex flex-col justify-start gap-4 ${
+                  //   hoveredCard === item.name ? "hovered-card-in-scroller" : ""
+                  // }`}
+                  spotlightColor="rgba(0, 229, 255, 0.2)"
                 >
                   <div className="flex items-center gap-2">
                     <img
@@ -210,8 +210,8 @@ export default function TestimonialShowcase() {
                   <p className="text-sm text-gray-300 mt-4 line-clamp-6 testimonial-message">
                     {item.message}
                   </p>
-                </div>
-              </SpotlightCard>
+                </SpotlightCard>
+              </div>
             )}
           />
         </div>

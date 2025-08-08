@@ -1672,7 +1672,7 @@ strong {
 
 .horizontal-scroller-card {
   padding: 1rem !important;
-  background: #1d1f20;
+  background: #1d1f20 !important;
 
   /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
 }
