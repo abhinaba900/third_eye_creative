@@ -1368,7 +1368,7 @@ html {
 }
 
 /* From Uiverse.io by rubyreapergaming */
-@import url("s://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap");
 
 .btn {
   display: flex;
@@ -1385,11 +1385,11 @@ html {
   border: double 4px transparent;
   background-image: linear-gradient(#161a25, #161a25),
     linear-gradient(
-      137.48deg,
+      180deg, /* vertical gradient */
       #772bf2 10%,
       #ec4b7b 45%,
       #ce0aff 67%,
-      #161a25 87%
+      #772bf2 87%
     );
   background-origin: border-box;
   background-clip: content-box, border-box;
@@ -1415,13 +1415,11 @@ strong {
   font-size: 1.25rem;
   line-height: 28px;
   letter-spacing: -1%;
-
   color: transparent;
-  background: linear-gradient(90deg, #ffffff 0%, #999999 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #999999 100%); /* vertical text gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-
   text-shadow: 0 0 4px white;
 }
 
@@ -1527,7 +1525,6 @@ strong {
   from {
     transform: translateY(0);
   }
-
   to {
     transform: translateY(-135rem);
   }
@@ -1537,42 +1534,36 @@ strong {
   from {
     transform: rotate(360deg);
   }
-
   to {
     transform: rotate(0);
   }
 }
 
+/* UPDATED for vertical animation */
 @keyframes gradient_301 {
   0% {
-    background-position: 0% 50%;
+    background-position: 50% 0%;
   }
-
   50% {
-    background-position: 100% 50%;
+    background-position: 50% 100%;
   }
-
   100% {
-    background-position: 0% 50%;
+    background-position: 50% 0%;
   }
 }
 
 @keyframes pulse_3011 {
   0% {
-    transform: scale(0.75);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
   }
-
   70% {
-    transform: scale(1);
     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
   }
-
   100% {
-    transform: scale(0.75);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
+
 
 @keyframes animatedgradient_button {
   0% {
