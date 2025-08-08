@@ -22,7 +22,7 @@ function HeroSection() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 900);
+      setIsMobile(window.innerWidth < 1025);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -133,7 +133,9 @@ function HeroSection() {
                   padding={5}
                   gap={10}
                   textColor="white"
-                  fontWeight={"900"}
+                  counterClassName="counter-classes-in-hero-section"
+
+                  fontWeight={"700"}
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />
@@ -146,7 +148,9 @@ function HeroSection() {
                   padding={5}
                   gap={10}
                   textColor="white"
-                  fontWeight={"900"}
+                  counterClassName="counter-classes-in-hero-section"
+
+                  fontWeight={"700"}
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />
@@ -159,7 +163,9 @@ function HeroSection() {
                   padding={5}
                   gap={10}
                   textColor="white"
-                  fontWeight={"900"}
+                  counterClassName="counter-classes-in-hero-section"
+
+                  fontWeight={"700"}
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />
@@ -171,8 +177,9 @@ function HeroSection() {
                   fontSize={80}
                   padding={5}
                   gap={10}
+                  counterClassName="counter-classes-in-hero-section"
                   textColor="white"
-                  fontWeight={"900"}
+                  fontWeight={"700"}
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />

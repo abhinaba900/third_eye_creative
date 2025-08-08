@@ -623,6 +623,10 @@ html {
   background-clip: text;
 }
 
+.counter-classes-in-hero-section{
+  font-family: var(--font-family-subjectivity);
+}
+
 .container_mouse {
   text-align: center;
   color: var(--color);
@@ -891,9 +895,7 @@ html {
   font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 700;
   font-size: 9rem !important;
-  padding-bottom: -1rem !important;
   line-height: 100%;
-  letter-spacing: 3%;
   text-transform: uppercase;
   background: linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%);
   -webkit-background-clip: text;
@@ -3863,6 +3865,13 @@ strong {
   .indevisual-page-challenges-and-resolutions-container {
     flex-direction: column-reverse;
   }
+}
+
+@media only screen and (min-width: 911px) and (max-width: 1024px) {
+  .hero-section-wrapper{
+    padding-top: 8.5rem;
+  }
+  
 }
 
 @media (min-width: 1561px) and (max-width: 1920px) {
