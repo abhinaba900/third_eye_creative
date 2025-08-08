@@ -1341,11 +1341,17 @@ html {
   bottom: -1px;
   z-index: -1;
   border-radius: 100px; /* 20px + 3px border padding */
-  padding: 2px; /* This defines the border thickness */
+  padding: 2px; /* border thickness */
 
-  background: linear-gradient(60deg, #772bf2, #ec4b7b, #ce0aff);
+  background: linear-gradient(
+    180deg,
+    #772bf2,
+    #ec4b7b,
+    #ce0aff
+  ); /* vertical gradient */
   background-size: 300% 300%;
   animation: animatedgradient_button 3s ease infinite alternate;
+
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -1385,8 +1391,8 @@ html {
   border: double 4px transparent;
   background-image: linear-gradient(#161a25, #161a25),
     linear-gradient(
-      180deg, /* vertical gradient */
-      #772bf2 10%,
+      180deg,
+      /* vertical gradient */ #772bf2 10%,
       #ec4b7b 45%,
       #ce0aff 67%,
       #772bf2 87%
@@ -1416,7 +1422,11 @@ strong {
   line-height: 28px;
   letter-spacing: -1%;
   color: transparent;
-  background: linear-gradient(180deg, #ffffff 0%, #999999 100%); /* vertical text gradient */
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #999999 100%
+  ); /* vertical text gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1564,16 +1574,12 @@ strong {
   }
 }
 
-
 @keyframes animatedgradient_button {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    background-position: 50% 0%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 50% 100%;
   }
 }
 
