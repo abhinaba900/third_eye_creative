@@ -89,7 +89,7 @@ export default function Counter({
   padding = 0,
   gap = 8,
   borderRadius = 4,
-  horizontalPadding = 8,
+  horizontalPadding = 2,
   textColor = "white",
   fontWeight = "bold",
   containerClassName = "",
@@ -153,7 +153,7 @@ export default function Counter({
         className={`flex items-center h-[${fontSize}px] overflow-hidden leading-none shadow-none ${counterClassName}`}
         style={{
           fontSize: `${fontSize}px`,
-          gap: `${gap}px`,
+          gap: `${"0"}px`,
           borderRadius: `${borderRadius}px`,
           paddingLeft: `${horizontalPadding}px`,
           paddingRight: `${horizontalPadding}px`,

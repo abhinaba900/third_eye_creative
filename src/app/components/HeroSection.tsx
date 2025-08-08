@@ -150,7 +150,7 @@ function HeroSection() {
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />
-                <p>Years of Creative Impact</p>
+                <p className="counter-subtitle">Years of Creative Impact</p>
               </div>
               <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
                 <Counter
@@ -163,7 +163,7 @@ function HeroSection() {
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />
-                <p>Websites & Platforms Delivered</p>
+                <p className="counter-subtitle">Websites & Platforms Delivered</p>
               </div>
               <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
                 <Counter
@@ -176,7 +176,7 @@ function HeroSection() {
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />
-                <p>Mobile Apps Engineered</p>
+                <p className="counter-subtitle">Mobile Apps Engineered</p>
               </div>
             </div>
           </div>

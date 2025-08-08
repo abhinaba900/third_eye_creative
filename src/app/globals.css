@@ -1042,7 +1042,8 @@ html {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: start;
+  gap: 5.75rem;
 }
 .gradient-border:after {
   content: "";
@@ -1152,7 +1153,12 @@ html {
 }
 
 .inside-creative-mind-wrapper h3 span {
-  color: rgb(198, 90, 54);
+  background: linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
 }
 
 .inside-creative-mind-wrapper p {
@@ -1240,22 +1246,26 @@ html {
   font-family: var(--font-family-sequel-sans-random-display);
   font-weight: 410;
   font-size: 2rem;
-  line-height: 100%;
+  line-height: 1.3;
   letter-spacing: 0%;
   max-width: 608px;
   text-align: left;
+  text-transform: none;
 }
 
 .paragraph-text-in-projects-data {
   font-family: var(--font-family-sequel-sans-light-display);
   font-weight: 410;
   font-size: 2rem;
-  line-height: 100%;
+  line-height: 1.3;
   letter-spacing: 0%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: end;
+  text-transform: none;
+  font-style: italic;
+  padding-right: 0.6rem;
 }
 
 .project-data-container {
@@ -1274,8 +1284,9 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
   margin: 0 auto 10.143rem;
+  padding: 0 4rem;
 
   font: 500 2rem/1 var(--font-family-cabinet-grotesk-bold);
   text-align: center;
@@ -1287,16 +1298,28 @@ html {
   cursor: pointer;
   z-index: 1;
   color: white;
-  padding: 1rem 2rem; /* adds spacing inside */
+  padding: 1rem 4rem; /* adds spacing inside */
 
   /* to avoid overlap from pseudo-elements */
   /* overflow: hidden; */
 }
 
+.view-more-button-in-client-projects .view-more-button {
+  margin: 0 auto;
+}
+
 .view-more-button:hover {
-  background: linear-gradient(0deg, #c883ff, #c883ff),
+  background: linear-gradient(0deg, #c883ff, #772bf2),
     linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  box-shadow: 0px 10px 60px 0px #7d14d0cc;
+
+  box-shadow: 10px 20px 80px 0px #da259c4d;
+
+  box-shadow: -20px -20px 50px 0px #6643f266;
+
+  box-shadow: 0px 0px 10px 0px #ffffff66 inset;
+
   transition: all 0.3s ease-in-out;
 }
 .view-more-button:hover .view-more-button-arrow {
@@ -1312,31 +1335,26 @@ html {
 .view-more-button::before {
   content: "";
   position: absolute;
-  top: -1px;
-  left: -1px;
-  right: -1px;
-  bottom: -1px;
-  z-index: -1;
-  border-radius: 100px; /* 20px + 3px border padding */
-  padding: 3px; /* This defines the border thickness */
+  inset: 0;
+  padding: 1px; /* border thickness */
+  border-radius: 100px;
 
-  background: linear-gradient(
-    60deg,
-    #f79533,
-    #f37055,
-    #ef4e7b,
-    #a166ab,
-    #5073b8,
-    #1098ad,
-    #07b39b,
-    #6fba82
-  );
-  background-size: 300% 300%;
-  animation: animatedgradient_button 3s ease infinite alternate;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  /* 👇 Vertical gradient: pink (top) → purple (bottom) */
+  background: linear-gradient(180deg, #EC4B7B, #772BF2);
+
+  background-size: 100% 100%; /* no stretching */
+  background-repeat: no-repeat;
+
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+
+  pointer-events: none;
+  z-index: -1;
 }
+
 
 .text-section-in-navbar {
   display: flex;
@@ -1550,19 +1568,6 @@ strong {
   }
 }
 
-/* Gradient animation keyframes */
-@keyframes animatedgradient_button {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 /* testimonials showcase */
 
 .testimonial-name {
@@ -1662,7 +1667,7 @@ strong {
       rgba(120, 123, 255, 0.06) 0%,
       rgba(120, 123, 255, 0) 100%
     ),
-    rgba(255, 255, 255, 0.2); /* White background with 20% opacity */
+    rgba(255, 255, 255, 0.119); /* White background with 20% opacity */
   background-blend-mode: normal, normal, normal;
 
   /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
@@ -1719,13 +1724,13 @@ strong {
   text-align: center;
   text-transform: uppercase;
   max-width: 831px;
-  margin: 0 auto 0rem auto;
+  margin: 0 auto 5rem auto;
   position: relative;
   z-index: 1;
 }
 
 .build-with-us-banner h3 span {
-  font-family: var(--font-family-cabinet-grotesk-bold);
+  font-family: var(--font-family-cabinet-grotesk-extrabold);
   font-weight: 700;
 }
 
@@ -3897,6 +3902,6 @@ strong {
   }
 
   .footer-section .footer-text-2 {
-    top: 18rem;
+    top: 22rem;
   }
 }

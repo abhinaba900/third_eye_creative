@@ -153,7 +153,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
 
     return (
       <div
-        className={`${parallaxClassName} relative overflow-hidden`}
+        className={`${parallaxClassName} relative overflow-hidden `}
         style={parallaxStyle}
       >
         <motion.div
@@ -167,7 +167,7 @@ export const ScrollVelocity: React.FC<ScrollVelocityProps> = ({
   }
 
   return (
-    <section>
+    <section className="pt-5">
       {texts.map((text: string, index: number) => (
         <div
           key={index}
