@@ -1,5 +1,4 @@
-﻿import Image from "next/image";
-import ScrollVelocity from "../../../Reactbits/ScrollVelocity/ScrollVelocity";
+﻿import ScrollVelocity from "../../../Reactbits/ScrollVelocity/ScrollVelocity";
 
 function WorkflowStages() {
   const stages = [
