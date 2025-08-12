@@ -1,15 +1,7 @@
 ﻿"use client";
-// import Image from "next/image";
 import Aurora from "../../../Reactbits/Aurora/Aurora";
 import Counter from "../../../Reactbits/Counter/Counter";
-// import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
-// import VariableProximity from "../../../Reactbits/VariableProximity/VariableProximity";
-import { useEffect, useRef, useState } from "react";
-// import Script from "next/script";
-// import SplineViewer from "./SplineViewer";
-// import ScrollToBottomButton from "./ScrollToBottomButton";
-// import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
-// import PrinceText from "./PrinceText";
+import { useRef } from "react";
 import TextType from "../../../Reactbits/TextType/TextType";
 import MechanicalEye from "./MechanicalEye";
 import Image from "next/image";
@@ -18,53 +10,26 @@ function HeroSection() {
   const containerRef = useRef(null);
   const containerref2 = useRef(null);
   const text2Ref = useRef(null);
-  const [isMobile, setIsMobile] = useState(false);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 1025);
-    };
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
   return (
     <div
       ref={containerref2}
       className="hero-section-wrapper background-image-hero-section"
     >
-      {/* <Image
-        src="/assets/Glass effect for hero section.svg"
-        alt="Logo"
-        width={"100"}
-        height={"100"}
-        className="mx-auto my-4 background-image-hero-section"
-      /> */}
-      {/* <ScrollToBottomButton containerRef={containerref2} targetRef={text2Ref} /> */}
       <div className="hero-section-content-wrapper">
-        {isMobile && (
-          <Image
-            src="/assets/Main-image.png"
-            alt="Third Eye Creative Logo"
-            width={881}
-            height={450}
-            style={{ display: "block", margin: "auto" }}
-            className="m-auto d-block relative z-3"
-          />
-        )}
+        <Image
+          src="/assets/Main-image.png"
+          alt="Third Eye Creative Logo"
+          width={881}
+          height={450}
+          style={{ display: "block", margin: "auto" }}
+          className="m-auto d-block relative z-3 hero-section-third-eye-image"
+        />
 
         <>
-          {/* <Script
-            type="module"
-            src="https://unpkg.com/@splinetool/viewer@1.10.32/build/spline-viewer.js"
-            strategy="beforeInteractive"
-          /> */}
-          {/* <SplineViewer /> */}
-          {!isMobile && <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center third-eye-image-container-for-desktop">
             <MechanicalEye />
-          </div>}
+          </div>
         </>
 
         <h3
@@ -74,15 +39,6 @@ function HeroSection() {
         >
           {" "}
           <span className="vision-text-gradient-desktop">
-            {" "}
-            {/* <TextPressure
-              text=" VISION"
-              className={"variable-proximity-demo"}
-            /> */}
-            {/* <PrinceText
-              children={"VISION"}
-              className="variable-proximity-demo"
-            /> */}
             <TextType
               text={[
                 "We've got a vision \n FOR YOUR BRAND",
@@ -97,20 +53,8 @@ function HeroSection() {
               highlightedText2="FOR YOUR BRAND"
               highlightedClassName2="hero-title-2"
             />
-            {/* <VariableProximity
-              label={"VISION"}
-              fromFontVariationSettings="'wght' 400, 'opsz' 9"
-              toFontVariationSettings="'wght' 1000, 'opsz' 40"
-              containerRef={containerRef}
-              radius={100}
-              falloff="linear"
-            /> */}
           </span>
-          {/* <span className="vision-text-gradient-mobile">VISION</span> */}
         </h3>
-        {/* <h3 className="d-flex align-items-center hero-title-2 text-center -mb-25">
-          FOR YOUR BRAND
-        </h3> */}
 
         <div className="w-full relative z-5">
           <Aurora
@@ -134,7 +78,6 @@ function HeroSection() {
                   gap={10}
                   textColor="white"
                   counterClassName="counter-classes-in-hero-section"
-
                   fontWeight={"700"}
                   gradientFrom="transparent"
                   gradientTo="transparent"
@@ -149,7 +92,6 @@ function HeroSection() {
                   gap={10}
                   textColor="white"
                   counterClassName="counter-classes-in-hero-section"
-
                   fontWeight={"700"}
                   gradientFrom="transparent"
                   gradientTo="transparent"
@@ -164,12 +106,13 @@ function HeroSection() {
                   gap={10}
                   textColor="white"
                   counterClassName="counter-classes-in-hero-section"
-
                   fontWeight={"700"}
                   gradientFrom="transparent"
                   gradientTo="transparent"
                 />
-                <p className="counter-subtitle">Websites & Platforms Delivered</p>
+                <p className="counter-subtitle">
+                  Websites & Platforms Delivered
+                </p>
               </div>
               <div className="d-flex flex-column align-items-center justify-content-center hero-content-box">
                 <Counter

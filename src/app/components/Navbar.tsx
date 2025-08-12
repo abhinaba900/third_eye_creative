@@ -173,7 +173,7 @@ function Navbar() {
         <div className="hidden lg:block items-center gap-8">
           {/* Desktop Button - Hidden on mobile & tablet */}
           <div className="galaxy-button">
-            <Link href="/" className="btn flex items-center gap-2">
+            <Link href="/" className="btn flex items-center gap-2 start-project-button-in-navbar">
               <strong>START PROJECT</strong>
               <div id="container-stars">
                 <div id="stars"></div>
@@ -189,7 +189,7 @@ function Navbar() {
         </div>
 
         {/* Mobile Menu - Hidden on desktop */}
-        <AnimatePresence>
+        <AnimatePresence mode="wait">
           {menuOpen && (
             <motion.div
               className="fixed top-0 left-0 w-100 h-screen bg-black text-white flex flex-col items-start py-20 gap-6 lg:hidden z-40 overflow-y-auto"
@@ -200,7 +200,7 @@ function Navbar() {
               variants={menuVariants}
             >
               <FaXmark
-                className="absolute top-9 right-4 cursor-pointer"
+                className="absolute top-9 right-6 left-80 cursor-pointer transform translate-x-1/2"
                 size={28}
                 onClick={toggleMenu}
               />

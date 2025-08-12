@@ -142,6 +142,7 @@ const FallingText: React.FC<FallingTextProps> = ({
 
     if (!textRef.current) return;
     const wordSpans = textRef.current.querySelectorAll("span");
+    
     const wordBodies = [...wordSpans].map((elem) => {
       const rect = elem.getBoundingClientRect();
 
@@ -232,6 +233,19 @@ const FallingText: React.FC<FallingTextProps> = ({
     }
   };
 
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () =>
+      setIsMobile(window.innerWidth < 768);
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   return (
     <div
       ref={containerRef}
@@ -244,7 +258,7 @@ const FallingText: React.FC<FallingTextProps> = ({
         ref={textRef}
         className="inline-block"
         style={{
-          fontSize,
+          fontSize:!isMobile ? fontSize : "1.3rem",
           lineHeight: 1.4,
         }}
       />

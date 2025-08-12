@@ -114,6 +114,15 @@ export default function Counter({
     Math.pow(10, numDigits - 1 - i)
   );
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
   useEffect(() => {
     if (!isInView) return;
 
@@ -152,7 +161,7 @@ export default function Counter({
       <div
         className={`flex items-center h-[${fontSize}px] overflow-hidden leading-none shadow-none ${counterClassName}`}
         style={{
-          fontSize: `${fontSize}px`,
+          fontSize: `${!isMobile ? fontSize : fontSize / 2}px`,
           gap: `${"0"}px`,
           borderRadius: `${borderRadius}px`,
           paddingLeft: `${horizontalPadding}px`,
