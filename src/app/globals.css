@@ -1781,21 +1781,8 @@ strong {
     rgba(255, 255, 255, 0) 60%
   );
   background-size: 200% 100%;
+  background-position: 150% 50%;
 }
-
-.shiny-text.animated {
-  animation: shine-animation 1s linear infinite;
-}
-
-@keyframes shine-animation {
-  0% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: -100% 50%;
-  }
-}
-
 /* From Uiverse.io by jolprince_5263 */
 .footer-social-links .card {
   max-width: fit-content;
@@ -3962,7 +3949,6 @@ strong {
   .workflow-stages-container,
   .video-wrapper,
   .project-data-container {
-    
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
@@ -3971,7 +3957,7 @@ strong {
     aspect-ratio: 16/9; /* Wider aspect ratio for tablets */
     margin-bottom: 6rem;
   }
-  
+
   .responsive-player {
     border-radius: 32px; /* Slightly smaller radius */
   }
@@ -4042,7 +4028,7 @@ strong {
     padding-right: 1.25rem;
   }
 
-  .counter-subtitle{
+  .counter-subtitle {
     width: 50%;
     margin: 0 auto;
   }
