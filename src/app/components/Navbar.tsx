@@ -145,7 +145,7 @@ function Navbar() {
         <div className="hidden lg:block absolute w-fit left-0 right-0 mx-auto gap-8">
           <div className="navitems-section-wrapper relative">
             <Particles
-              particleCount={800}
+              particleCount={100}
               particleSpread={20}
               speed={0.3}
               particleBaseSize={40}

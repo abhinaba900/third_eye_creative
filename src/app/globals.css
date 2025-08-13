@@ -3381,7 +3381,7 @@ strong {
     font-size: 2.5rem;
   }
 
-  .hero-title-1{
+  .hero-title-1 {
     display: none;
   }
 
@@ -3819,7 +3819,7 @@ strong {
     padding: 1rem 2rem;
   }
 
-   .our-expertise-wrapper {
+  .our-expertise-wrapper {
     margin: 0 0.5rem;
   }
 }
@@ -3992,7 +3992,6 @@ strong {
   .hero-section-third-eye-image {
     display: block !important;
     position: relative;
-    top: -6rem;
   }
   .third-eye-image-container-for-desktop {
     display: none !important;
@@ -4031,6 +4030,11 @@ strong {
   .our-expertise-wrapper {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .counter-subtitle{
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
