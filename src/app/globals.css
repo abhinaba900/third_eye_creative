@@ -3364,16 +3364,24 @@ strong {
   }
 
   .hero-title-1,
-  .hero-title-2 {
+  .hero-title-2,
+  .variable-proximity-demo {
     font-size: 2.5rem;
+    height: 110px;
   }
 
   .hero-title-1 {
-    display: none;
+    display: flex;
+  }
+
+  .hero-content-wrapper {
+    bottom: 0;
+    height: 50%;
+    justify-content: end;
   }
 
   .vision-text-gradient-desktop {
-    display: none;
+    display: flex;
   }
 
   .vision-text-gradient-mobile {
@@ -3388,7 +3396,7 @@ strong {
   }
 
   .background-image-hero-section {
-    min-height: 600px;
+    min-height: 700px;
     max-height: 900px;
   }
 
@@ -3398,7 +3406,7 @@ strong {
   }
 
   .hero-section-content-wrapper {
-    bottom: -5%;
+    bottom: 0;
   }
 
   .desktop-text {
@@ -3751,6 +3759,7 @@ strong {
 
   .hero-section-third-eye-image {
     display: block !important;
+    margin-bottom: 8rem !important;
   }
 
   .third-eye-image-container-for-desktop {
@@ -3821,11 +3830,19 @@ strong {
   }
 
   .hero-title-1 {
-    display: none;
+    display: flex;
+  }
+
+  .hero-title-1,
+  .hero-title-2,
+  .variable-proximity-demo {
+    font-size: 3rem;
+    height: 110px;
   }
 
   .background-image-hero-section {
-    min-height: 800px;
+    min-height: 900px;
+    max-height: 1000px;
   }
 
   .plus-icon-in-counter {
@@ -3834,6 +3851,7 @@ strong {
 
   .hero-section-third-eye-image {
     display: block !important;
+    margin-bottom: 8rem !important;
   }
 
   .third-eye-image-container-for-desktop {
@@ -3872,7 +3890,7 @@ strong {
   }
 
   .vision-text-gradient-desktop {
-    display: none;
+    display: flex;
   }
 
   .vision-text-gradient-mobile {
@@ -3991,6 +4009,7 @@ strong {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-bottom: 0;
   }
 
   .workflow-stages-container,
@@ -4054,6 +4073,7 @@ strong {
     display: block !important;
     position: relative;
     width: 70%;
+    margin-bottom: 8rem !important;
   }
   .third-eye-image-container-for-desktop {
     display: none !important;
@@ -4071,11 +4091,21 @@ strong {
   }
 
   .hero-title-1 {
-    display: none;
+    display: flex;
+  }
+
+   .hero-title-1,
+  .hero-title-2,
+  .variable-proximity-demo {
+    font-size: 3.5rem;
+    height: 90px;
+    position: relative;
+    z-index: 5;
   }
 
   .background-image-hero-section {
-    min-height: 900px;
+    min-height: 950px;
+    max-height: 1200px;
   }
 
   .desktop-text {
