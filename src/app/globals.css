@@ -3381,6 +3381,10 @@ strong {
     font-size: 2.5rem;
   }
 
+  .hero-title-1{
+    display: none;
+  }
+
   .vision-text-gradient-desktop {
     display: none;
   }
@@ -3397,7 +3401,7 @@ strong {
   }
 
   .background-image-hero-section {
-    min-height: 900px;
+    min-height: 600px;
     max-height: 900px;
   }
 
@@ -3775,7 +3779,7 @@ strong {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -3811,8 +3815,18 @@ strong {
     padding-right: 0.5rem;
   }
 
-  .view-more-button-in-client-projects{
-   padding: 1rem 2rem;
+  .view-more-button-in-client-projects {
+    padding: 1rem 2rem;
+  }
+
+   .our-expertise-wrapper {
+    margin: 0 0.5rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 999px) {
+  .workflow-stages-grid-container > :last-child {
+    grid-column: span 2; /* make last item full width */
   }
 }
 
@@ -3878,10 +3892,6 @@ strong {
     right: 0;
     transform: none;
     gap: 1rem; /* optional for spacing */
-  }
-
-  .workflow-stages-grid-container > :last-child {
-    grid-column: span 2; /* make last item full width */
   }
 
   .custom-scroll-text-in-workflow-stages,
@@ -3968,6 +3978,12 @@ strong {
   .third-eye-image-container-for-desktop {
     display: none;
   }
+
+  .our-expertise-wrapper {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    margin: 0 1.25rem;
+  }
 }
 
 /* iPad Pro 12.9" */
@@ -3991,6 +4007,14 @@ strong {
     text-align: center;
   }
 
+  .hero-title-1 {
+    display: none;
+  }
+
+  .background-image-hero-section {
+    min-height: 900px;
+  }
+
   .desktop-text {
     display: block;
     padding-left: 1.5rem;
@@ -4003,7 +4027,8 @@ strong {
 
   .workflow-stages-container,
   .video-wrapper,
-  .project-data-container {
+  .project-data-container,
+  .our-expertise-wrapper {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
