@@ -4037,7 +4037,9 @@ strong {
     padding-right: 1.25rem;
   }
 
- 
+  .counter-subtitle{
+    font-size: 1.125rem;
+  }
 }
 
 @media (min-width: 1561px) and (max-width: 1920px) {
