@@ -3358,7 +3358,7 @@ strong {
 
 /* media quarry */
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar-wrapper {
     padding: 1rem 1rem 0 1rem;
   }
@@ -3815,6 +3815,43 @@ strong {
   .workflow-stages-grid-container > :last-child {
     grid-column: span 2; /* make last item full width */
   }
+
+  .hero-title-1 {
+    display: none;
+  }
+
+  .background-image-hero-section {
+    min-height: 800px;
+  }
+
+  .plus-icon-in-counter {
+    font-size: 4.5rem !important;
+  }
+
+  .hero-section-third-eye-image {
+    display: block !important;
+  }
+
+  .third-eye-image-container-for-desktop {
+    display: none;
+  }
+
+  .footer-section .footer-text-2 {
+    font-family: var(--font-family-cabinet-grotesk-bold);
+    font-weight: 700;
+    font-size: 19vw;
+    line-height: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5vw;
+    position: absolute;
+    top: 34rem;
+    bottom: 2px;
+    margin: 0 auto;
+    padding: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
@@ -3846,7 +3883,17 @@ strong {
   }
 
   .desktop-text {
-    display: none;
+    display: block;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .our-expertise-wrapper {
+    margin: 0 1.25rem;
+  }
+
+  .inside-creative-mind-wrapper p {
+    margin: 0 1.25rem;
   }
 
   .our-expertise-card-container-mobile {
@@ -3898,7 +3945,7 @@ strong {
     padding-right: 0.5rem;
   }
   .navbar-wrapper {
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
+    padding: 1rem 1.25rem 0.5rem 1.25rem;
   }
 
   .services-overview-content {
@@ -3991,6 +4038,10 @@ strong {
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait),
   only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
+
+    .footer-section .footer-text-2{
+      top: 32rem;
+    }
   .hero-section-third-eye-image {
     display: block !important;
     position: relative;
@@ -4037,7 +4088,7 @@ strong {
     padding-right: 1.25rem;
   }
 
-  .counter-subtitle{
+  .counter-subtitle {
     font-size: 1.125rem;
   }
 }
