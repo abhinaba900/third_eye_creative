@@ -3809,6 +3809,10 @@ strong {
   .our-expertise-wrapper {
     margin: 0 0.5rem;
   }
+
+  .inside-creative-mind-wrapper p {
+    line-height: 100%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 999px) {
@@ -3892,9 +3896,7 @@ strong {
     margin: 0 1.25rem;
   }
 
-  .inside-creative-mind-wrapper p {
-    margin: 0 1.25rem;
-  }
+  
 
   .our-expertise-card-container-mobile {
     position: relative;
