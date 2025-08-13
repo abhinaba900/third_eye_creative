@@ -3896,8 +3896,6 @@ strong {
     margin: 0 1.25rem;
   }
 
-  
-
   .our-expertise-card-container-mobile {
     position: relative;
     z-index: 2;
@@ -4040,10 +4038,18 @@ strong {
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait),
   only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
+  .video-wrapper {
+    aspect-ratio: 16/9; /* Wider aspect ratio for tablets */
+    margin-bottom: 6rem;
+  }
 
-    .footer-section .footer-text-2{
-      top: 32rem;
-    }
+  .responsive-player {
+    border-radius: 32px; /* Slightly smaller radius */
+  }
+
+  .footer-section .footer-text-2 {
+    top: 32rem;
+  }
   .hero-section-third-eye-image {
     display: block !important;
     position: relative;
