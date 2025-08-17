@@ -90,7 +90,7 @@ function Footer() {
                 width={16}  
                 height={16}
               />
-              hi@thirdeyegfx.in
+              <span>hi@thirdeyegfx.in</span>
             </Link>
 
             <Link href="#" className="footer-link flex items-center gap-2">
@@ -100,12 +100,12 @@ function Footer() {
                 width={16}
                 height={16}
               />
-              +91 9876543210
+              <span>+91 9876543210</span>
             </Link>
           </div>
         </div>
       </div>
-      {/* <h3 className="footer-text-2">THIRD EYE</h3> */}
+      <h3 className="footer-text-mobile">THIRD EYE</h3>
       <ShinyText
         text="THIRD EYE"
         disabled={false}

@@ -1,5 +1,5 @@
 ﻿"use client";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
@@ -44,6 +44,8 @@ function ClientProjects() {
     },
   ];
 
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
   const handleProjectClick = (idx: number) => {
     setActiveIndex(idx);
 
@@ -58,6 +60,20 @@ function ClientProjects() {
       }
     }, 0); // Small timeout ensures state update renders the image first
   };
+
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Check on mount
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <div className="w-full h-full mx-auto client-projects-container">
@@ -84,14 +100,14 @@ function ClientProjects() {
                 display: "flex",
                 flexDirection: "column",
                 maxHeight: "100vh",
-                height: isActive && "100vh",
+                height: isActive && (isMobile ? "82vh" : "100vh"),
               }}
             >
               {/* Image Display Area */}
               {isActive && (
                 <div
                   ref={imageRef}
-                  className="relative w-full max-w-[1232px] h-[80%] mx-auto overflow-hidden rounded-[40px] mb-6 "
+                  className="relative w-full max-w-[1232px] h-[70vh] sm:h-[50vh] md:h-[80vh] lg:h-[70vh] xl:h-[80vh] mx-auto overflow-hidden rounded-[40px] mb-6"
                 >
                   <AnimatePresence mode="wait">
                     <motion.img
@@ -109,7 +125,7 @@ function ClientProjects() {
               )}
               <div
                 onClick={() => handleProjectClick(idx)}
-                className="group flex-1 h-[20%] relative overflow-hidden text-center flowing-menu-item-projects-data-container transition-colors duration-300 cursor-pointer"
+                className="group flex-1 h-[10%] relative overflow-hidden text-center flowing-menu-item-projects-data-container transition-colors duration-300 cursor-pointer"
               >
                 <a className="flex flex-col items-center justify-center h-full relative uppercase no-underline focus:text-white focus-visible:text-white">
                   <div className="flex justify-between w-full items-center">
