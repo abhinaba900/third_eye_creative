@@ -3419,7 +3419,7 @@ strong {
     display: flex;
   }
 
-  .project-data-container{
+  .project-data-container {
     margin-bottom: 5rem;
   }
 
@@ -3521,12 +3521,14 @@ strong {
   .single-work-page-objectives-description,
   .single-page-solution-section-description,
   .single-work-page-bullet-point-description,
-  .single-page-results-metric-description {
+  .single-page-results-metric-description,
+  .client-projects-container .client-projects-description {
     font-size: 1rem;
   }
 
   .single-work-page-objectives-description,
-  .single-page-solution-section-description {
+  .single-page-solution-section-description,
+  .client-projects-container .client-projects-description {
     line-height: 100%;
   }
 
