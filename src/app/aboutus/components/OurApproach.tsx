@@ -7,7 +7,7 @@ function OurApproach() {
       <h3>
         Our <span>Approach</span>
       </h3>
-      <div className="our-approach-content-wrapper">
+      <div className="our-approach-content-wrapper ">
         <ScrollReveal
           baseOpacity={0}
           enableBlur={true}
@@ -19,6 +19,7 @@ function OurApproach() {
           startups to established enterprises, we craft digital experiences that
           inspire and perform.
         </ScrollReveal>
+        
       </div>
     </div>
   );

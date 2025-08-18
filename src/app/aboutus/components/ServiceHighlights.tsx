@@ -1,8 +1,9 @@
 ﻿"use client";
 import Image from "next/image";
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
+import {  useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import SpotlightCard from "../../../../Reactbits/SpotlightCard/SpotlightCard";
 
 function ServiceHighlights() {
   const controls = useAnimation();
@@ -50,37 +51,18 @@ function ServiceHighlights() {
     },
   ];
 
-  const cardVariants = {
-    hidden: { opacity: 0, x: 100 },
-    visible: (i: number) => ({
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay: i * 0.2,
-        duration: 0.5,
-      },
-    }),
-    exit: (i: number) => ({
-      opacity: 0,
-      x: 100,
-      transition: {
-        delay: (3 - i) * 0.1,
-        duration: 0.3,
-      },
-    }),
-  };
 
   return (
-    <div 
-      className="service-highlights overflow-hidden py-5" 
+    <div
+      className="service-highlights overflow-hidden py-5"
       ref={ref}
       style={{
         marginBottom: "8.75rem",
         maxWidth: "1260px",
         margin: "0 auto",
-        padding: "0 20px",
+        padding: "10px 16px",
         width: "100%",
-        boxSizing: "border-box"
+        boxSizing: "border-box",
       }}
     >
       <div
@@ -96,29 +78,27 @@ function ServiceHighlights() {
           width: "100%",
         }}
       >
-        {stages.map((stage, index) => (
-          <motion.div
-            key={stage.id}
-            className="gradient-border "
-            custom={index}
-            initial="hidden"
-            animate={controls}
-            variants={cardVariants}
-            style={{
-              padding: "20px",
-              borderRadius: "21px",
-            }}
-          >
-            <Image
-              src={stage.image}
-              alt="Stage Icon"
-              width={24}
-              height={24}
-              className="workflow-stage-icon"
-            />
-            <h3 className="workflow-stage-title">{stage.name}</h3>
-            <p className="workflow-stage-description">{stage.description}</p>
-          </motion.div>
+        {stages.map((stage) => (
+          <div key={stage.id} className="gradient-border gradient-border-2">
+            <SpotlightCard className="workflow-stage-card">
+              <Image
+                src={stage.image}
+                alt="Stage Icon"
+                width={24}
+                height={24}
+                className="workflow-stage-icon"
+              />
+              <div>
+                <h3
+                  className="workflow-stage-title"
+                  dangerouslySetInnerHTML={{ __html: stage.name }}
+                />
+                <p className="workflow-stage-description">
+                  {stage.description}
+                </p>
+              </div>
+            </SpotlightCard>
+          </div>
         ))}
       </div>
     </div>

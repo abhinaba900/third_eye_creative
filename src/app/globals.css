@@ -3718,12 +3718,36 @@ strong {
     align-items: center;
     text-align: center;
     gap: 0;
-    padding: 5rem 1.5rem;
+    padding: 5rem 1rem;
   }
 
-  .our-approach-wrapper .our-approach-content-wrapper p {
-    font-size: 1.25rem;
-    line-height: 100%;
+  .ScrollReveal_scroll-reveal-text__Td_gR {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .service-highlights .workflow-stage-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .our-approach-wrapper .our-approach-content-wrapper p,
+  .about-us-hero-section-content-wrapper h4,
+  .mobile-class-name-text-for-text-to-reveal,
+  .ScrollReveal_scroll-reveal-text__Td_gR {
+    font-size: 1.5rem !important;
+    line-height: 100% !important;
+  }
+
+  .our-approach-wrapper .our-approach-content-wrapper p,
+  .mobile-class-name-text-for-text-to-reveal {
+    padding: 0;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.797);
+  }
+
+  .about-us-hero-section-content-wrapper h4 {
+    padding-right: 1rem;
   }
 
   .impact-stats-wrapper {
@@ -3731,9 +3755,13 @@ strong {
   }
 
   .creative-team-intro-title {
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 100%;
     margin-bottom: 1.25rem;
+  }
+
+  .servicetags-text {
+    font-size: 1rem;
   }
 
   .text-section-in-creative-team {
@@ -3755,23 +3783,33 @@ strong {
   }
 
   .heading-content-holders h3 {
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 100%;
   }
   .heading-content-holders p {
     font-size: 1rem;
     line-height: 1.5rem;
+    margin-bottom: 5rem;
   }
 
   .services-overview-title {
-    font-size: 2rem;
+    font-size: 3rem;
     line-height: 100%;
     margin-bottom: 1.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .services-overview-description {
     font-size: 1rem;
     line-height: 1.5rem;
+    margin-bottom: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .service-overview-image {
+    max-height: 250px;
   }
 
   .services-overview-content {
@@ -3796,7 +3834,22 @@ strong {
   }
 
   .about-us-hero-section-footer-wrapper {
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+  }
+
+  .about-us-hero-section-wrapper {
+    border-radius: 0 0 20px 20px;
+  }
+
+  .about-us-page-hero canvas {
+    width: 100% !important;
+    height: 300px !important;
+  }
+
+  .our-approach-wrapper h3 {
+    font-size: 3rem;
   }
 
   .lets-build-something-button {
@@ -3923,6 +3976,26 @@ strong {
     transition: transform 0.3s ease-in-out;
   }
 
+  .view-more-button {
+    font-size: 1.3rem;
+    gap: 0.5rem;
+  }
+
+  .teem-members-icon-clickble,
+  .creative-team-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .mobile-background-in-pink-blurred-background,
+  .mobile-background-creative-team-info {
+    left: 0;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
   .impact-stats-wrapper {
     padding-top: 0;
     padding-bottom: 5rem;
@@ -3930,6 +4003,7 @@ strong {
 
   .impact-stats-counter {
     height: 60px;
+    overflow: hidden;
   }
 
   .impact-stats-divider p {
@@ -3954,7 +4028,7 @@ strong {
   }
 
   .creative-team-role {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   .avatar-image-in-creative-team:nth-child(2) {
@@ -4076,7 +4150,7 @@ strong {
 
     transition: all 0.3s ease-in-out;
   }
-  .view-more-button:hover .view-more-button-arrow {
+  .view-more-button:focus .view-more-button-arrow {
     transform: rotate(-35deg);
     transition: transform 0.3s ease-in-out;
   }

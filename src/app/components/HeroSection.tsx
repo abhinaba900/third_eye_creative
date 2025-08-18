@@ -1,5 +1,5 @@
 ﻿"use client";
-import Aurora from "../../../Reactbits/Aurora/Aurora";
+import Aurora from "../../../Reactbits/Aurora/Auroracopy2";
 import Counter from "../../../Reactbits/Counter/Counter";
 import { useRef } from "react";
 import TextType from "../../../Reactbits/TextType/TextType";

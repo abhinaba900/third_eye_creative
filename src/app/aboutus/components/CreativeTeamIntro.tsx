@@ -100,7 +100,7 @@ function CreativeTeamIntro() {
           <motion.div
             drag="x"
             dragConstraints={{ left: -300, right: 0 }}
-            className="flex gap-6 px-2"
+            className="flex md:gap-6 sm:gap-1 px-2"
           >
             {bannerimages.map((item, index) => (
               <div
@@ -109,7 +109,13 @@ function CreativeTeamIntro() {
                 className=" flex items-center justify-center p-4  rounded-md shadow hover:shadow-lg transition-shadow duration-300 hover:scale-105"
               >
                 <div className="brand-logo hover-fill-transition w-full flex justify-center creative-team-image">
-                  <Image src={item} alt="image" width={100} height={100} />
+                  <Image
+                    src={item}
+                    alt="image"
+                    width={100}
+                    height={100}
+                    className="teem-members-icon-clickble"
+                  />
                 </div>
               </div>
             ))}
@@ -145,14 +151,16 @@ function CreativeTeamIntro() {
           <img
             src="/assets/Pink background blurred.png"
             alt="background-image"
-            className="absolute -top-20 left-35 w-full h-[100%] z-2 right-0"
+            className="absolute -top-20 left-35 w-full h-[100%] z-2 right-0 mobile-background-in-pink-blurred-background
+           "
           />
           <Image
             width={785}
             height={499}
             src="/assets/background in creative team info.png"
             alt="background-image"
-            className="absolute -top-30 left-80  z-3 right-0"
+            className="absolute -top-30 left-80 z-3 right-0 mobile-background-creative-team-info
+           "
           />
 
           {/* Right: Image Stack */}

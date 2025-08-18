@@ -4,7 +4,7 @@ import Aurora from "../../../../Reactbits/Aurora/Aurora";
 
 function AboutUsHeroSection() {
   return (
-    <div className="relative h-fit about-us-hero-section ">
+    <div className="relative h-fit about-us-hero-section about-us-page-hero">
       {/* <Image
         src="/assets/Glass effect for hero section.svg"
         alt="Logo"
@@ -20,6 +20,7 @@ function AboutUsHeroSection() {
             blend={0.1}
             amplitude={1.0}
             speed={1}
+            mobileHeight={300}
           />
           <div className="about-us-hero-section-content-wrapper-inner">
             <div className=" about-us-hero-section-content-wrapper">
