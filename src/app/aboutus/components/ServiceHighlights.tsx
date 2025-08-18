@@ -78,7 +78,7 @@ function ServiceHighlights() {
         marginBottom: "8.75rem",
         maxWidth: "1260px",
         margin: "0 auto",
-        padding: "20px 20px",
+        padding: "0 20px",
         width: "100%",
         boxSizing: "border-box"
       }}
@@ -99,7 +99,7 @@ function ServiceHighlights() {
         {stages.map((stage, index) => (
           <motion.div
             key={stage.id}
-            className="gradient-border"
+            className="gradient-border "
             custom={index}
             initial="hidden"
             animate={controls}

@@ -199,6 +199,20 @@ export default function Counter({
   const places = Array.from({ length: numDigits }, (_, i) =>
     Math.pow(10, numDigits - 1 - i)
   );
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     if (!counterRef.current || hasStarted) return;
@@ -263,14 +277,14 @@ export default function Counter({
   return (
     <div
       ref={counterRef}
-      className={`flex items-center justify-center relative ${containerClassName}`}
+      className={`flex items-center justify-center relative h-[60%] ${containerClassName}`}
     >
       <div
         className={`flex items-center overflow-hidden leading-none shadow-none ${counterClassName}`}
         style={{
           fontSize: `clamp(${Math.min(
             120,
-            responsiveFontSize.base * 0.6
+            responsiveFontSize.base * 0.2
           )}px, 8vw, ${responsiveFontSize.xl}px)`,
           gap: `clamp(${responsiveGap.base * 0.5}px, 1vw, ${
             responsiveGap.xl

@@ -3717,11 +3717,13 @@ strong {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 0;
+    padding: 5rem 1.5rem;
   }
 
   .our-approach-wrapper .our-approach-content-wrapper p {
-    font-size: 1.5rem;
-    line-height: 2rem;
+    font-size: 1.25rem;
+    line-height: 100%;
   }
 
   .impact-stats-wrapper {
@@ -3731,6 +3733,7 @@ strong {
   .creative-team-intro-title {
     font-size: 2rem;
     line-height: 100%;
+    margin-bottom: 1.25rem;
   }
 
   .text-section-in-creative-team {
@@ -3763,6 +3766,7 @@ strong {
   .services-overview-title {
     font-size: 2rem;
     line-height: 100%;
+    margin-bottom: 1.25rem;
   }
 
   .services-overview-description {
@@ -3778,7 +3782,7 @@ strong {
 
   .services-overview-list p {
     font-size: 2rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
   }
 
   .services-overview-list img {
@@ -3918,11 +3922,69 @@ strong {
     transform: rotate(-35deg);
     transition: transform 0.3s ease-in-out;
   }
+
+  .impact-stats-wrapper {
+    padding-top: 0;
+    padding-bottom: 5rem;
+  }
+
+  .impact-stats-counter {
+    height: 60px;
+  }
+
+  .impact-stats-divider p {
+    font-size: 1.125rem;
+    line-height: 100%;
+  }
+
+  .impact-stats-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .creative-team-intro-wrapper {
+    margin-top: 5rem;
+  }
+  .services-overview-wrapper {
+    padding-bottom: 6rem;
+    padding-top: 5rem;
+  }
+
+  .creative-team-name {
+    font-size: 1.5rem;
+  }
+
+  .creative-team-role {
+    font-size: 1.125rem;
+  }
+
+  .avatar-image-in-creative-team:nth-child(2) {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 999px) {
-  .workflow-stages-grid-container > :last-child {
-    grid-column: span 2; /* make last item full width */
+  .our-approach-wrapper h3 {
+    font-size: 2rem;
+    line-height: 100%;
+    width: 48% !important;
+    margin-top: 1rem;
+  }
+
+  .services-overview-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .our-approach-wrapper,
+  .heading-content-holders,
+  .services-overview-title,
+  .text-wraper-in-creative-team {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .workflow-stages-grid-container > .gradient-border-2:last-of-type {
+    grid-column: span 2;
   }
 
   .hero-title-1 {
@@ -3984,6 +4046,21 @@ strong {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .about-us-hero-section-title {
+    font-size: 20vw;
+  }
+  .services-overview-title {
+    font-size: 4rem;
+  }
+  .impact-stats-wrapper {
+    padding-top: 0;
+  }
+
+  .about-us-hero-section-content-wrapper {
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
   .view-more-button:focus {
     background: linear-gradient(0deg, #c883ff, #772bf2),
       linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
@@ -4100,7 +4177,7 @@ strong {
   }
   .text-section-in-creative-team {
     justify-content: center;
-    align-items: center;
+    align-items: start;
     text-align: center;
   }
 
@@ -4156,6 +4233,9 @@ strong {
 }
 
 @media only screen and (min-width: 911px) and (max-width: 1024px) {
+  .impact-stats-wrapper {
+    padding-top: 0;
+  }
   .hero-section-wrapper {
     padding-top: 8.5rem;
   }
@@ -4183,6 +4263,18 @@ strong {
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
   .hero-section-third-eye-image {
     top: -5rem;
+  }
+
+  .about-us-hero-section-title {
+    font-size: 20vw;
+  }
+
+  .about-us-hero-section-content-wrapper {
+    padding-bottom: 3rem;
+  }
+
+  .impact-stats-wrapper {
+    padding-top: 0;
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait),

@@ -32,7 +32,7 @@ function WorkflowStages() {
 
       <div className="workflow-stages-grid-container">
         {stages.map((stage) => (
-          <div key={stage.id} className="gradient-border">
+          <div key={stage.id} className="gradient-border gradient-border-2">
             <SpotlightCard className="workflow-stage-card">
               <h4 className="workflow-stage-id">{stage.id}</h4>
               <div>

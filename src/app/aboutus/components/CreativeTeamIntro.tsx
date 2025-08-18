@@ -117,7 +117,7 @@ function CreativeTeamIntro() {
         </motion.div>
       </div>
       <div className=" overflow-hidden text-white  max-w-7xl mx-auto mb-[8.75rem]  relative">
-        <div className="flex flex-col lg:flex-row gap-12 items-center px-5 ">
+        <div className="flex flex-col lg:flex-row gap-12 sm:gap-4 md:gap-6 items-center px-5 ">
           {/* Left: Text Content */}
           <div className="lg:w-[40%] w-full space-y-6">
             <h2 className="text-3xl font-semibold leading-snug main-heading-tet-in-creative-team">
@@ -145,7 +145,7 @@ function CreativeTeamIntro() {
           <img
             src="/assets/Pink background blurred.png"
             alt="background-image"
-            className="absolute -top-20 left-35 w-full h-screen z-2 right-0"
+            className="absolute -top-20 left-35 w-full h-[100%] z-2 right-0"
           />
           <Image
             width={785}
@@ -164,7 +164,7 @@ function CreativeTeamIntro() {
                 alt={`Character ${idx}`}
                 width={360}
                 height={550}
-                className={`absolute top-0 transition-all duration-300
+                className={`absolute top-0 transition-all duration-300 avatar-image-in-creative-team
                 ${
                   idx === 0
                     ? "z-3 left-0 opacity-100"
@@ -178,7 +178,7 @@ function CreativeTeamIntro() {
 
             {/* Name Card Positioned Absolutely */}
             <div className="absolute bottom-0 right-0 left-0 z-40">
-              <div className="bg-gradient-to-r from-[#772BF2] via-[#EC4B7B] to-[#CE0AFF] p-[2px] rounded-xl mx-4">
+              <div className="bg-gradient-to-r from-[#772BF2] via-[#EC4B7B] to-[#CE0AFF] p-[2px] rounded-xl  sm:mx-0 md:mx-0 lg:mx-4">
                 <div className="bg-black px-6 py-4 rounded-xl flex flex-col items-start w-full relative overflow-hidden">
                   {/* Top Gradient Bar */}
                   <div className="absolute top-0 left-0 w-full h-3 rounded-t-xl bg-gradient-to-r from-[#ff73ff] via-[#d86cf8] to-[#9271f9]" />
