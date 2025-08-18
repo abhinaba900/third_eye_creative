@@ -199,20 +199,7 @@ export default function Counter({
   const places = Array.from({ length: numDigits }, (_, i) =>
     Math.pow(10, numDigits - 1 - i)
   );
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
+  
 
   useEffect(() => {
     if (!counterRef.current || hasStarted) return;
