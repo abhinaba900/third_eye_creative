@@ -2317,9 +2317,7 @@ strong {
 }
 
 .creative-team-intro-title span {
-  background: linear-gradient(0deg, #772bf2, #772bf2),
-    linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2458,7 +2456,7 @@ strong {
 }
 
 .heading-content-holders h3 span {
-  background: linear-gradient(0deg, #772bf2, #772bf2),
+  background: linear-gradient(0deg, #ce0aff, #772bf2),
     linear-gradient(180deg, #ec4b7b 0%, rgba(206, 10, 255, 0) 100%);
 
   -webkit-background-clip: text;
@@ -2515,7 +2513,7 @@ strong {
 }
 
 .services-overview-title span {
-  background: linear-gradient(0deg, #c883ff, #c883ff),
+  background: linear-gradient(0deg, #c883ff, #772BF2),
     linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 
