@@ -2356,6 +2356,10 @@ strong {
   cursor: pointer;
 }
 
+.creative-team-image.active-team-member-border {
+  border: 2px solid #9A6AFF;
+}
+
 .creative-team-image-wrapper {
   padding: 0 6.563rem 2rem 6.563rem;
   max-width: 1521px;

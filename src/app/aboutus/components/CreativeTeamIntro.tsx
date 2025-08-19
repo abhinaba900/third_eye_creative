@@ -150,9 +150,15 @@ function CreativeTeamIntro() {
               <div
                 key={index}
                 onClick={() => setActive(teamDatas[index].id)}
-                className=" flex items-center justify-center p-2 px-3  rounded-md shadow hover:shadow-lg transition-shadow duration-300 hover:scale-105"
+                className={`flex items-center justify-center p-2 px-3  rounded-md shadow hover:shadow-lg transition-shadow duration-300 hover:scale-105`}
               >
-                <div className="brand-logo hover-fill-transition w-full flex justify-center creative-team-image">
+                <div
+                  className={`brand-logo hover-fill-transition w-full flex justify-center creative-team-image ${
+                    teamDatas[index].id === teamMember.id
+                      ? "active-team-member-border"
+                      : ""
+                  }`}
+                >
                   <Image
                     src={item}
                     alt="image"
