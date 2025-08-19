@@ -4,7 +4,7 @@ import Aurora from "../../../../Reactbits/Aurora/Aurora";
 
 function AboutUsHeroSection() {
   return (
-    <div className="relative h-fit about-us-hero-section about-us-page-hero">
+    <div className="relative h-full min-h-[100vh] max-h-[100vh] about-us-hero-section about-us-page-hero">
       {/* <Image
         src="/assets/Glass effect for hero section.svg"
         alt="Logo"
@@ -12,7 +12,7 @@ function AboutUsHeroSection() {
         height={"100"}
         className="mx-auto my-4 background-image-hero-section-about-us"
       /> */}
-      <div className="about-us-hero-section-wrapper overflow-hidden">
+      <div className="about-us-hero-section-wrapper h-full overflow-hidden">
         <h3 className="about-us-hero-section-title">THIRD EYE</h3>
         <div className="relative w-full ">
           <Aurora

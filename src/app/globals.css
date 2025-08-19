@@ -2102,6 +2102,7 @@ strong {
   z-index: 1;
   left: 0;
   right: 0;
+  height: 100%;
 }
 
 .about-us-hero-section-wrapper canvas {
@@ -2360,7 +2361,7 @@ strong {
 }
 
 .creative-team-image-wrapper {
-  padding: 0 6.563rem 2rem 6.563rem;
+  padding: 0 6.563rem 5rem 6.563rem;
   max-width: 1521px;
   margin: auto;
 }
@@ -2404,6 +2405,7 @@ strong {
   font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0%;
+  max-width: 420px;
   background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2454,11 +2456,11 @@ strong {
 }
 
 .heading-content-holders {
-  padding: 0 6.563rem 7.5rem 6.563rem;
+  padding: 0 0 7.5rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1521px;
+  max-width: 1290px;
   margin: auto;
 }
 

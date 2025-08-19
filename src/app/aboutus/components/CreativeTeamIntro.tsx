@@ -173,7 +173,7 @@ function CreativeTeamIntro() {
         </motion.div>
       </div>
       <div className=" overflow-hidden text-white max-w-[1279px] w-full mx-auto mb-[8.75rem]  relative">
-        <div className="flex flex-col lg:flex-row gap-12 sm:gap-4 md:gap-6 items-center  ">
+        <div className="flex flex-col lg:flex-row gap-12 sm:gap-4 md:gap-6 lg:gap-[10%] items-start  ">
           {/* Left: Text Content */}
           <div className="lg:w-[40%] w-full space-y-6">
             <h2 className="text-3xl font-semibold leading-snug main-heading-tet-in-creative-team">
@@ -217,7 +217,7 @@ function CreativeTeamIntro() {
           />
 
           {/* Right: Image Stack */}
-          <div className="relative lg:w-[60%] w-full h-[500px] lg:h-[550px] overflow-hidden ">
+          <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] overflow-hidden ">
             {teamMember.images.map((src, idx) => (
               <Image
                 key={idx}
@@ -228,10 +228,10 @@ function CreativeTeamIntro() {
                 className={`absolute top-0 transition-all duration-300 avatar-image-in-creative-team
                 ${
                   idx === 0
-                    ? "z-3 left-0 opacity-100"
+                    ? "z-3 left-3 opacity-100"
                     : idx === 1
-                    ? "z-2 left-32 top-10"
-                    : "z-1 left-64 top-20"
+                    ? "z-2 left-37 top-10"
+                    : "z-1 left-70 top-20"
                 }
               `}
               />
@@ -239,8 +239,9 @@ function CreativeTeamIntro() {
 
             {/* Name Card Positioned Absolutely */}
             <div className="absolute bottom-0 right-0 left-0 z-3">
-              <div className="bg-gradient-to-r from-[#772BF2] via-[#EC4B7B] to-[#CE0AFF] p-[2px] rounded-xl  sm:mx-0 md:mx-0 lg:mx-4">
-                <div className="bg-black px-6 py-6 rounded-xl flex flex-col items-start w-full relative overflow-hidden">
+              <div className="bg-gradient-to-r from-[#772BF2] via-[#EC4B7B] to-[#CE0AFF] p-[2px] rounded-xl  sm:mx-0 md:mx-0 lg:mx-0
+              ">
+                <div className="bg-black px-6 py-6 pt-8 rounded-xl flex flex-col items-start w-full relative overflow-hidden">
                   {/* Top Gradient Bar */}
                   <div className="absolute top-0 left-0 w-full h-3 rounded-t-xl bg-gradient-to-r from-[#ff73ff] via-[#d86cf8] to-[#9271f9]" />
 
