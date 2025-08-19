@@ -2142,7 +2142,7 @@ strong {
 .about-us-hero-section-content-wrapper {
   max-width: 996px;
   padding-left: 7.292vw;
-  padding-bottom: 17.5vh;
+  padding-bottom: 4vh;
 }
 
 .about-us-hero-section-content-wrapper-inner {
@@ -2359,10 +2359,10 @@ strong {
 }
 
 .creative-team-image-wrapper {
-  padding: 0 6.563rem 7rem 6.563rem;
+  padding: 0 6.563rem 5rem 6.563rem;
   max-width: 1521px;
   margin: auto;
-  margin-top: -3rem;
+  margin-top: -2rem;
 }
 
 .main-heading-tet-in-creative-team {
@@ -3379,7 +3379,7 @@ strong {
 }
 
 .impact-stats-counter {
-  height: 130px;
+  height: 150px;
   overflow: hidden;
 }
 
@@ -4510,6 +4510,10 @@ strong {
 
   .footer-section .footer-text-2 {
     top: 22rem;
+  }
+  .impact-stats-counter {
+    height: 180px;
+    overflow: hidden;
   }
 }
 
