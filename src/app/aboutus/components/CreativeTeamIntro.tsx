@@ -38,7 +38,51 @@ const teamDatas: TeamData[] = [
     bannerimage: "/assets/creative team image ram banner image.png",
   },
   {
+    id: 3,
+    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    tags: [
+      "Digital Marketing",
+      "Brand Strategist",
+      "AI Tools",
+      "Graphic Design",
+      "SEO Specialist",
+      "Concept Art",
+    ],
+    description:
+      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+    images: [
+      "/assets/creative team image ram image 3.png",
+      "/assets/creative team image ram image 2.png",
+      "/assets/creative team image ram image 1.png",
+    ],
+    name: "RAMKRISHNA IYENGAR",
+    role: "Founder, CEO & Creative Director",
+    bannerimage: "/assets/creative team image ram banner image.png",
+  },
+  {
     id: 2,
+    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    tags: [
+      "Digital Marketing",
+      "Brand Strategist",
+      "AI Tools",
+      "Graphic Design",
+      "SEO Specialist",
+      "Concept Art",
+    ],
+    description:
+      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+    images: [
+      "/assets/creative team image siddharth image 1.png",
+      "/assets/creative team image ram image 2.png",
+      "/assets/creative team image siddharth image 2.png",
+    ],
+    name: "SIDDHARTH SHANKAR",
+    role: "CTO & Technical Head",
+    bannerimage: "/assets/creative team image ram banner image2.png",
+  },
+  {
+    id: 4,
     title: "Has more Illustrator shortcuts memorized than song lyrics.",
     tags: [
       "Digital Marketing",
@@ -100,13 +144,13 @@ function CreativeTeamIntro() {
           <motion.div
             drag="x"
             dragConstraints={{ left: -300, right: 0 }}
-            className="flex md:gap-6 sm:gap-1 px-2"
+            className="flex  px-2"
           >
             {bannerimages.map((item, index) => (
               <div
                 key={index}
-                onClick={() => setActive(index + 1)}
-                className=" flex items-center justify-center p-4  rounded-md shadow hover:shadow-lg transition-shadow duration-300 hover:scale-105"
+                onClick={() => setActive(teamDatas[index].id)}
+                className=" flex items-center justify-center p-2 px-3  rounded-md shadow hover:shadow-lg transition-shadow duration-300 hover:scale-105"
               >
                 <div className="brand-logo hover-fill-transition w-full flex justify-center creative-team-image">
                   <Image
@@ -188,7 +232,7 @@ function CreativeTeamIntro() {
             ))}
 
             {/* Name Card Positioned Absolutely */}
-            <div className="absolute bottom-0 right-0 left-0 z-40">
+            <div className="absolute bottom-0 right-0 left-0 z-3">
               <div className="bg-gradient-to-r from-[#772BF2] via-[#EC4B7B] to-[#CE0AFF] p-[2px] rounded-xl  sm:mx-0 md:mx-0 lg:mx-4">
                 <div className="bg-black px-6 py-4 rounded-xl flex flex-col items-start w-full relative overflow-hidden">
                   {/* Top Gradient Bar */}

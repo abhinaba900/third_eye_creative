@@ -880,13 +880,13 @@ html {
 
 .hero-content-wrapper {
   position: absolute;
-  bottom: 7%;
+  bottom: -4.5%;
   align-items: center;
   right: 0;
   left: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 100%;
 }
 
@@ -2218,7 +2218,7 @@ strong {
 .our-approach-wrapper .our-approach-content-wrapper p {
   max-width: 816px;
   font-family: var(--font-family-sequel-sans-book);
-  font-weight: 405;
+  font-weight: 600;
   font-size: 2.5rem;
   line-height: 56px;
   letter-spacing: 0%;
@@ -2357,7 +2357,7 @@ strong {
 }
 
 .creative-team-image-wrapper {
-  padding: 0 6.563rem 5rem 6.563rem;
+  padding: 0 6.563rem 2rem 6.563rem;
   max-width: 1521px;
   margin: auto;
   margin-top: -2rem;
@@ -2385,6 +2385,15 @@ strong {
   line-height: 24px;
   letter-spacing: 0%;
   vertical-align: middle;
+  opacity: 80%;
+
+  position: relative;
+  border-radius: 24px;
+  padding: 0.5rem 1rem; /* space so text doesn’t overlap border */
+  background: linear-gradient(#000, #000) padding-box,
+    /* inner background (black here, change as needed) */
+      linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%) border-box; /* gradient border */
+  border: 1px solid transparent;
 }
 
 .creative-team-description {
@@ -2393,6 +2402,11 @@ strong {
   font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0%;
+  background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
 }
 
 .creative-team-name {
@@ -2423,6 +2437,7 @@ strong {
   font-size: 1.25rem;
   line-height: 28px;
   letter-spacing: 0%;
+  opacity: 70%;
   background: linear-gradient(94.46deg, #ffffff 25.29%, #9c9c9c 107.3%);
 
   -webkit-background-clip: text;
@@ -2513,7 +2528,7 @@ strong {
 }
 
 .services-overview-title span {
-  background: linear-gradient(0deg, #c883ff, #772BF2),
+  background: linear-gradient(0deg, #c883ff, #772bf2),
     linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 
