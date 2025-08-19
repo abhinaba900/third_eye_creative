@@ -2208,7 +2208,7 @@ strong {
   height: 100%;
   max-width: 1360px;
   margin: 0 auto;
-  padding: 14.444vh 5.417vw 12.963vh 5.417vw;
+  padding: 14.444vh 5.417vw 3rem 5.417vw;
 }
 
 .our-approach-wrapper h3 {
@@ -2250,7 +2250,6 @@ strong {
 .impact-stats-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
   justify-content: space-between;
   align-items: start;
   height: 100%;
@@ -2364,7 +2363,6 @@ strong {
   padding: 0 6.563rem 2rem 6.563rem;
   max-width: 1521px;
   margin: auto;
-  margin-top: -2rem;
 }
 
 .main-heading-tet-in-creative-team {

@@ -172,8 +172,8 @@ function CreativeTeamIntro() {
           </motion.div>
         </motion.div>
       </div>
-      <div className=" overflow-hidden text-white  max-w-7xl mx-auto mb-[8.75rem]  relative">
-        <div className="flex flex-col lg:flex-row gap-12 sm:gap-4 md:gap-6 items-center px-5 ">
+      <div className=" overflow-hidden text-white max-w-[1279px] w-full mx-auto mb-[8.75rem]  relative">
+        <div className="flex flex-col lg:flex-row gap-12 sm:gap-4 md:gap-6 items-center  ">
           {/* Left: Text Content */}
           <div className="lg:w-[40%] w-full space-y-6">
             <h2 className="text-3xl font-semibold leading-snug main-heading-tet-in-creative-team">
@@ -181,7 +181,7 @@ function CreativeTeamIntro() {
             </h2>
 
             {/* Tags */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-3">
               {teamMember.tags.map((tag, i) => (
                 <span
                   key={i}
@@ -240,7 +240,7 @@ function CreativeTeamIntro() {
             {/* Name Card Positioned Absolutely */}
             <div className="absolute bottom-0 right-0 left-0 z-3">
               <div className="bg-gradient-to-r from-[#772BF2] via-[#EC4B7B] to-[#CE0AFF] p-[2px] rounded-xl  sm:mx-0 md:mx-0 lg:mx-4">
-                <div className="bg-black px-6 py-4 rounded-xl flex flex-col items-start w-full relative overflow-hidden">
+                <div className="bg-black px-6 py-6 rounded-xl flex flex-col items-start w-full relative overflow-hidden">
                   {/* Top Gradient Bar */}
                   <div className="absolute top-0 left-0 w-full h-3 rounded-t-xl bg-gradient-to-r from-[#ff73ff] via-[#d86cf8] to-[#9271f9]" />
 

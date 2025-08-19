@@ -3,7 +3,7 @@ import Counter from "./Counter";
 
 function ImpactStats() {
   return (
-    <div className="impact-stats-wrapper">
+    <div className="impact-stats-wrapper gap-x-8 gap-y-30">
       <div className="impact-stats-divider">
         <Counter
           value={20}
