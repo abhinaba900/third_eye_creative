@@ -109,7 +109,7 @@ function Footer() {
       <ShinyText
         text="THIRD EYE"
         disabled={false}
-        speed={5}
+        speed={3}
         className="footer-text-2"
       />
     </footer>

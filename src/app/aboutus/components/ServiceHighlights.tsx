@@ -1,7 +1,7 @@
 ﻿"use client";
 import Image from "next/image";
 import React from "react";
-import {  useAnimation } from "framer-motion";
+import { useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import SpotlightCard from "../../../../Reactbits/SpotlightCard/SpotlightCard";
 
@@ -24,9 +24,9 @@ function ServiceHighlights() {
     {
       id: "01",
       image: "/assets/service-highlite-image-1.png",
-      name: "Discover & Plan",
+      name: "Vision with Precision",
       description:
-        "We analyze your needs and create a strategic roadmap for your digital product.",
+        "We don’t just dream big — we back it with strategy, research, and execution. Our goal is to craft meaningful experiences that resonate and perform.",
     },
     {
       id: "02",
@@ -42,15 +42,7 @@ function ServiceHighlights() {
       description:
         "We deliver refined solutions and support you through a smooth launch, ensuring your brand makes a lasting impact and stays ahead.",
     },
-    {
-      id: "04",
-      image: "/assets/service-heighlite-image-2.png",
-      name: "Optimize & Scale",
-      description:
-        "Post-launch, we help refine and scale your solution to maximize performance and growth.",
-    },
   ];
-
 
   return (
     <div

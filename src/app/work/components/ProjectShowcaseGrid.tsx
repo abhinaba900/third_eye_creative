@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CategoryFilterBar from "./CategoryFilterBar";
 import Image from "next/image";
 import Link from "next/link";
@@ -104,6 +104,14 @@ function ProjectShowcaseGrid() {
   const filteredProjects = projects.filter((project) =>
     project.categories.includes(active)
   );
+
+  useEffect(() => {
+    const storedService = sessionStorage.getItem("activeService");
+    if (storedService) {
+      setActive(storedService);
+      sessionStorage.removeItem("activeService");
+    }
+  }, []);
 
   return (
     <div>

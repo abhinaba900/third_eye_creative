@@ -2206,10 +2206,13 @@ strong {
   justify-content: space-between;
   align-items: start;
   height: 100%;
-  max-width: 1521px;
+  max-width: 1360px;
   margin: 0 auto;
-
   padding: 14.444vh 5.417vw 12.963vh 5.417vw;
+}
+
+.our-approach-wrapper h3 {
+  margin-top: 1rem;
 }
 
 .our-approach-wrapper .our-approach-content-wrapper p {
@@ -2232,7 +2235,7 @@ strong {
 }
 
 .our-approach-wrapper h3 span {
-  background: linear-gradient(0deg, #772BF2, #c883ff),
+  background: linear-gradient(0deg, #772bf2, #c883ff),
     linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 
@@ -2251,7 +2254,7 @@ strong {
   justify-content: space-between;
   align-items: start;
   height: 100%;
-  padding: 14.444vh 5.417vw 12.963vh 5.417vw;
+  padding: 14.444vh 5.417vw 8.75rem 5.417vw;
 }
 .impact-stats-counter {
   font-family: var(--font-family-cabinet-grotesk-bold);
@@ -2287,8 +2290,8 @@ strong {
 }
 
 .service-highlights .workflow-stage-icon {
-  width: 100px;
-  height: 99.98622131347656px;
+  width: 80px;
+  height: 80px;
 }
 
 /* creative team intro */
@@ -2359,6 +2362,7 @@ strong {
   padding: 0 6.563rem 7rem 6.563rem;
   max-width: 1521px;
   margin: auto;
+  margin-top: -3rem;
 }
 
 .main-heading-tet-in-creative-team {
@@ -2409,6 +2413,10 @@ strong {
   -webkit-text-fill-color: transparent;
   background-clip: text; /* for Firefox */
   color: transparent;
+  /* Glowing text shadow */
+  text-shadow: 0 0 10px rgba(119, 43, 242, 0.496),
+    0 0 20px rgba(119, 43, 242, 0.353), 0 0 30px rgba(199, 131, 255, 0.534),
+    0 0 40px rgba(199, 131, 255, 0.708);
 }
 
 .creative-team-role {
@@ -2467,6 +2475,11 @@ strong {
   line-height: 32px;
   letter-spacing: 0%;
   vertical-align: middle;
+  background: linear-gradient(94.46deg, #ffffff 25.29%, #9c9c9c 107.3%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
 }
 
 /* Add this to your global CSS or module CSS */
@@ -2488,7 +2501,7 @@ strong {
 /* service overview  */
 
 .services-overview-wrapper {
-  padding: 8.75rem 0 12.5rem 0;
+  padding: 8.75rem 0 8.5rem 0;
 }
 
 .services-overview-title {
@@ -2498,6 +2511,7 @@ strong {
   line-height: 88px;
   letter-spacing: 0%;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .services-overview-title span {
@@ -3364,6 +3378,11 @@ strong {
   overflow: visible;
 }
 
+.impact-stats-counter {
+  height: 130px;
+  overflow: hidden;
+}
+
 /* media quarry */
 
 @media (max-width: 767px) {
@@ -3713,6 +3732,7 @@ strong {
   }
 
   /* about us */
+
   .our-approach-wrapper {
     flex-direction: column;
     align-items: center;

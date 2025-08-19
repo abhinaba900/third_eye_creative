@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const services = [
   { title: "Marketing", image: "/assets/srvice overview image 1.png" },
@@ -36,6 +37,7 @@ const services = [
 function ServicesOverview() {
   const [active, setActive] = useState(0);
   const [hovered, setHovered] = useState<number | null>(null);
+  const router = useRouter();
 
   const currentIndex = hovered !== null ? hovered : active;
   const currentService = services[currentIndex];
@@ -84,7 +86,11 @@ function ServicesOverview() {
                 key={index}
                 onMouseEnter={() => setHovered(index)}
                 onMouseLeave={() => setHovered(null)}
-                onClick={() => setActive(index)}
+                onClick={() => {
+                  setActive(index);
+                  sessionStorage.setItem("activeService", service.title);
+                  router.push("/work");
+                }}
                 className={`cursor-pointer text-xl font-semibold flex items-center gap-2 transition-all services-overview-list ${
                   isHighlight ? "text-white" : "text-gray-500"
                 }`}

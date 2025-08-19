@@ -151,16 +151,19 @@ function CreativeTeamIntro() {
           <img
             src="/assets/Pink background blurred.png"
             alt="background-image"
-            className="absolute -top-20 left-35 w-full h-[100%] z-2 right-0 mobile-background-in-pink-blurred-background
-           "
+            className="absolute top-1/2 left-1/2 w-full h-full z-2  object-contain opacity-90
+             -translate-x-1/2 -translate-y-1/2 
+             mobile-background-in-pink-blurred-background"
           />
+
           <Image
             width={785}
             height={499}
             src="/assets/background in creative team info.png"
             alt="background-image"
-            className="absolute -top-30 left-80 z-3 right-0 mobile-background-creative-team-info
-           "
+            className="absolute top-1/2 left-1/2 z-3  object-cover
+             -translate-x-1/2 -translate-y-1/2 
+             mobile-background-creative-team-info"
           />
 
           {/* Right: Image Stack */}
