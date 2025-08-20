@@ -2122,7 +2122,7 @@ strong {
 .about-us-hero-section-title {
   font-family: var(--font-family-cabinet-grotesk-bold);
   font-weight: 700;
-  font-size: 21vw;
+  font-size: 20vw;
   line-height: 120%;
   letter-spacing: -2%;
   text-align: center;
@@ -2357,7 +2357,7 @@ strong {
 }
 
 .creative-team-image.active-team-member-border {
-  border: 2px solid #9A6AFF;
+  border: 2px solid #9a6aff;
 }
 
 .creative-team-image-wrapper {
@@ -4025,13 +4025,20 @@ strong {
     height: 70px;
   }
 
-  .mobile-background-in-pink-blurred-background,
+  /* .mobile-background-in-pink-blurred-background,
   .mobile-background-creative-team-info {
-    left: 0;
-    top: 10%;
+    top: 50%;
+    left: 50%;
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    transform: translate(-50%, -50%); 
+  } */
+
+  .creative-team-info-wrapper-and-holder{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .impact-stats-wrapper {
@@ -4387,6 +4394,13 @@ strong {
 
   .impact-stats-wrapper {
     padding-top: 0;
+  }
+
+  .creative-team-info-wrapper-and-holder,
+  .heading-content-holders,
+  .our-approach-wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait),
