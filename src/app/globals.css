@@ -3401,6 +3401,58 @@ strong {
   overflow: hidden;
 }
 
+.glow-layer {
+  position: absolute;
+  inset: 0;
+  border-radius: 12px; /* rounded-xl */
+  background: linear-gradient(270deg, #772bf2, #ec4b7b, #ce0aff);
+  background-size: 200% 200%; /* makes gradient larger so it can move */
+  filter: blur(20px); /* glow effect */
+  opacity: 0.7;
+  animation: gradient-flow 6s ease infinite;
+  z-index: -1; /* behind content */
+
+}
+
+/* Gradient Flow Animation */
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.card-top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 12px; /* h-3 */
+  border-radius: 12px 12px 0 0; /* rounded-t-xl */
+  background: linear-gradient(90deg, #ff73ff, #d86cf8, #9271f9);
+  background-size: 200% 200%;
+  animation: gradient-flow 3s ease infinite;
+}
+
+/* Reuse the same gradient animation */
+@keyframes gradient-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
 /* media quarry */
 
 @media (max-width: 767px) {
@@ -4036,7 +4088,7 @@ strong {
     transform: translate(-50%, -50%); 
   } */
 
-  .creative-team-info-wrapper-and-holder{
+  .creative-team-info-wrapper-and-holder {
     padding-left: 1rem;
     padding-right: 1rem;
   }

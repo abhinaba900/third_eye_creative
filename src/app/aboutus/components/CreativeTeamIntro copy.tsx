@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 
 interface TeamData {
@@ -28,29 +28,14 @@ const teamDatas: TeamData[] = [
     ],
     description:
       "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
-    images: ["/assets/creative team image ram image 3.png"],
+    images: [
+      "/assets/creative team image ram image 3.png",
+      "/assets/creative team image ram image 2.png",
+      "/assets/creative team image ram image 1.png",
+    ],
     name: "RAMKRISHNA IYENGAR",
     role: "Founder, CEO & Creative Director",
     bannerimage: "/assets/creative team image ram banner image.png",
-  },
-
-  {
-    id: 2,
-    title: "Has more Illustrator shortcuts memorized than song lyrics.",
-    tags: [
-      "Digital Marketing",
-      "Brand Strategist",
-      "AI Tools",
-      "Graphic Design",
-      "SEO Specialist",
-      "Concept Art",
-    ],
-    description:
-      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
-    images: ["/assets/creative team image siddharth image 1.png"],
-    name: "SIDDHARTH SHANKAR",
-    role: "CTO & Technical Head",
-    bannerimage: "/assets/creative team image ram banner image2.png",
   },
   {
     id: 3,
@@ -65,10 +50,36 @@ const teamDatas: TeamData[] = [
     ],
     description:
       "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
-    images: ["/assets/creative team image ram image 3.png"],
+    images: [
+      "/assets/creative team image ram image 3.png",
+      "/assets/creative team image ram image 2.png",
+      "/assets/creative team image ram image 1.png",
+    ],
     name: "RAMKRISHNA IYENGAR",
     role: "Founder, CEO & Creative Director",
     bannerimage: "/assets/creative team image ram banner image.png",
+  },
+  {
+    id: 2,
+    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    tags: [
+      "Digital Marketing",
+      "Brand Strategist",
+      "AI Tools",
+      "Graphic Design",
+      "SEO Specialist",
+      "Concept Art",
+    ],
+    description:
+      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+    images: [
+      "/assets/creative team image siddharth image 1.png",
+      "/assets/creative team image ram image 2.png",
+      "/assets/creative team image siddharth image 2.png",
+    ],
+    name: "SIDDHARTH SHANKAR",
+    role: "CTO & Technical Head",
+    bannerimage: "/assets/creative team image ram banner image2.png",
   },
   {
     id: 4,
@@ -83,38 +94,27 @@ const teamDatas: TeamData[] = [
     ],
     description:
       "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
-    images: ["/assets/creative team image siddharth image 2.png"],
+    images: [
+      "/assets/creative team image siddharth image 1.png",
+      "/assets/creative team image ram image 2.png",
+      "/assets/creative team image siddharth image 2.png",
+    ],
     name: "SIDDHARTH SHANKAR",
     role: "CTO & Technical Head",
     bannerimage: "/assets/creative team image ram banner image2.png",
   },
 ];
 
-interface BannerImage {
-  id: number;
-  bannerImage: string;
-}
-
 function CreativeTeamIntro() {
-  const [bannerimages, setBannerImages] = React.useState<BannerImage[]>([]);
+  const [bannerimages, setBannerImages] = React.useState<string[]>([]);
   const [active, setActive] = React.useState<number>(1);
 
   const teamMember = teamDatas.find((project) => project.id === active)!;
-  // const combinedImage = teamDatas.reduce((acc, item) => {
-  //   return acc.concat(item.images);
-  // }, []);
 
   React.useEffect(() => {
-    const images: { id: number; bannerImage: string }[] = teamDatas.map(
-      (item) => ({
-        id: item.id,
-        bannerImage: item.bannerimage,
-      })
-    );
+    const images = teamDatas.map((item) => item.bannerimage);
     setBannerImages(images);
   }, []);
-
-  console.log(active, "active data", teamMember);
 
   return (
     <div className="creative-team-intro-wrapper">
@@ -152,7 +152,7 @@ function CreativeTeamIntro() {
             {bannerimages.map((item, index) => (
               <div
                 key={index}
-                onClick={() => setActive(item.id)}
+                onClick={() => setActive(teamDatas[index].id)}
                 className={`flex items-center justify-center p-2 px-3 rounded-md shadow hover:shadow-lg transition-shadow duration-300 hover:scale-105`}
               >
                 <div
@@ -163,7 +163,7 @@ function CreativeTeamIntro() {
                   }`}
                 >
                   <Image
-                    src={item.bannerImage}
+                    src={item}
                     alt="image"
                     width={100}
                     height={100}
@@ -222,84 +222,53 @@ function CreativeTeamIntro() {
              mobile-background-creative-team-info"
           />
 
-          {/* Right: Image Stack with 3-Layer PvP Animation */}
-          <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] overflow-hidden flex items-center justify-center ">
-            {teamDatas.map((member, idx) => {
-              const activeIndex = teamDatas.findIndex((m) => m.id === active);
-              const positionIndex =
-                (idx - activeIndex + teamDatas.length) % teamDatas.length;
-
-              // detect if mobile (<= 768px)
-              const isMobile =
-                typeof window !== "undefined" && window.innerWidth <= 768;
-
-              let styles = {
-                zIndex: 0,
-                opacity: 0,
-                scale: 0.8,
-                x: 0,
-              };
-
-              if (isMobile) {
-                // Mobile → only show active member
-                if (positionIndex === 0) {
-                  styles = { zIndex: 3, opacity: 1, scale: 1, x: 0 };
-                } else {
-                  return null;
-                }
-              } else {
-                // Desktop / tablet → show 3 stacked in FORWARD order (active, next, next-next)
-                if (positionIndex === 0) {
-                  // Active (center/highlight)
-                  styles = { zIndex: 3, opacity: 1, scale: 1, x: -150 };
-                } else if (positionIndex === 1) {
-                  // 2nd in array (next on the right)
-                  styles = { zIndex: 2, opacity: 0.8, scale: 0.9, x: -20 };
-                } else if (positionIndex === 2) {
-                  // 3rd in array (next-next; place on the left/back)
-                  styles = { zIndex: 1, opacity: 0.3, scale: 0.88, x: 80 };
-                } else {
-                  // Hide the rest
-                  return null;
-                }
-              }
-
-              return (
+          {/* Right: Image Stack with PvP Animation */}
+          <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] overflow-hidden">
+            <AnimatePresence mode="wait">
+              {teamMember.images.map((src, idx) => (
                 <motion.div
-                  key={member.id}
-                  animate={styles}
-                  initial={false}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
-                  className="absolute flex items-center justify-center"
+                  key={src + active}
+                  initial={{ x: 300, opacity: 0, scale: 1.1 }}
+                  animate={{ x: 0, opacity: 1, scale: 1 }}
+                  exit={{ x: -300, opacity: 0, scale: 0.9 }}
+                  transition={{
+                    duration: 0.8,
+                    ease: "easeInOut",
+                    delay: idx * 0.15, // staggered PvP effect
+                  }}
+                  className={`absolute top-0 ${
+                    idx === 0
+                      ? "z-3 left-3 opacity-100"
+                      : idx === 1
+                      ? "z-2 left-37 top-10"
+                      : "z-1 left-70 top-20"
+                  }`}
                 >
                   <Image
-                    src={member.images[0]}
-                    alt={member.name}
+                    src={src}
+                    alt={`Character ${idx}`}
                     width={360}
                     height={550}
-                    className={`rounded-xl transition-all duration-700 ${
-                      positionIndex === 0 ? "scale-100" : "scale-90"
-                    }`}
+                    className={`transition-all duration-300 avatar-image-in-creative-team
+                      
+                    `}
                   />
                 </motion.div>
-              );
-            })}
+              ))}
+            </AnimatePresence>
 
-            {/* Name Card for Active Member */}
-            <div className="absolute bottom-0 right-0 left-0 z-40">
-              <div className="relative rounded-xl p-[2px] overflow-hidden">
-                {/* Glow Layer */}
-                <div className="glow-layer" />
-
-                {/* Inner Card */}
-                <div className="relative bg-black px-6 py-6 pt-8 rounded-xl flex flex-col items-start w-full overflow-hidden">
-                  <div className="card-top-bar" />
+            {/* Name Card Positioned Absolutely */}
+            <div className="absolute bottom-0 right-0 left-0 z-3">
+              <div className="bg-gradient-to-r from-[#772BF2] via-[#EC4B7B] to-[#CE0AFF] p-[2px] rounded-xl">
+                <div className="bg-black px-6 py-6 pt-8 rounded-xl flex flex-col items-start w-full relative overflow-hidden">
+                  {/* Top Gradient Bar */}
+                  <div className="absolute top-0 left-0 w-full h-3 rounded-t-xl bg-gradient-to-r from-[#ff73ff] via-[#d86cf8] to-[#9271f9]" />
 
                   <h3 className="text-lg font-bold text-purple-200 z-10 creative-team-name">
-                    {teamMember?.name}
+                    {teamMember.name}
                   </h3>
                   <p className="text-sm text-gray-300 z-10 creative-team-role">
-                    {teamMember?.role}
+                    {teamMember.role}
                   </p>
                 </div>
               </div>

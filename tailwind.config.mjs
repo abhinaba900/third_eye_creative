@@ -43,6 +43,10 @@ module.exports = {
           "0%": { "background-position": "200% 0" }, // Changed to 200%
           "100%": { "background-position": "-200% 0" }, // Changed to -200%
         },
+        "gradient-move": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
       },
       animation: {
         marquee: "marquee 15s linear infinite",
@@ -51,6 +55,7 @@ module.exports = {
         "glitch-before":
           "glitch var(--before-duration) infinite linear alternate-reverse",
         shine: "shine 5s linear infinite",
+        "gradient-move": "gradient-move 6s ease infinite",
       },
     },
   },
