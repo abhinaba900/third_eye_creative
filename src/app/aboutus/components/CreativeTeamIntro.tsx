@@ -98,12 +98,44 @@ interface BannerImage {
 function CreativeTeamIntro() {
   const [bannerimages, setBannerImages] = React.useState<BannerImage[]>([]);
   const [active, setActive] = React.useState<number>(1);
-  const [direction, setDirection] = React.useState(1); // 1 = forward, -1 = backward
+  const [previousId, setPreviousId] = React.useState<number | null>(0);
+  const [direction, setDirection] = React.useState<number>(1);
 
   const teamMember = teamDatas.find((project) => project.id === active)!;
-  // const combinedImage = teamDatas.reduce((acc, item) => {
-  //   return acc.concat(item.images);
-  // }, []);
+
+  // ✅ track window size safely
+  const [isMobile, setIsMobile] = React.useState(false);
+  React.useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth <= 768);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  // ✅ better direction detection (circular)
+  const handleSelect = (newId: number) => {
+    if (newId === active) return;
+
+    const prevActive = active;
+    const prevIndex = teamDatas.findIndex((m) => m.id === prevActive);
+    const newIndex = teamDatas.findIndex((m) => m.id === newId);
+    const length = teamDatas.length;
+
+    const forwardDiff = (newIndex - prevIndex + length) % length;
+    const backwardDiff = (prevIndex - newIndex + length) % length;
+
+    let newDirection = 1;
+    if (forwardDiff === 0) {
+      return;
+    } else if (forwardDiff <= backwardDiff) {
+      newDirection = 1;
+    } else {
+      newDirection = -1;
+    }
+
+    setDirection(newDirection);
+    setActive(newId);
+  };
 
   React.useEffect(() => {
     const images: { id: number; bannerImage: string }[] = teamDatas.map(
@@ -114,8 +146,6 @@ function CreativeTeamIntro() {
     );
     setBannerImages(images);
   }, []);
-
-  console.log(active, "active data", teamMember);
 
   return (
     <div className="creative-team-intro-wrapper">
@@ -153,15 +183,7 @@ function CreativeTeamIntro() {
             {bannerimages.map((item, index) => (
               <div
                 key={index}
-                onClick={() => {
-                  const newIndex = item.id;
-                  if (newIndex > active) {
-                    setDirection(1); // forward
-                  } else {
-                    setDirection(-1); // backward
-                  }
-                  setActive(newIndex);
-                }}
+                onClick={() => handleSelect(item.id)}
                 className={`flex items-center justify-center p-2 px-3 rounded-md shadow hover:shadow-lg transition-shadow duration-300 hover:scale-105`}
               >
                 <div
@@ -233,15 +255,11 @@ function CreativeTeamIntro() {
 
           {/* Right: Image Stack with 3-Layer PvP Animation */}
           <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] overflow-hidden flex items-center justify-center ">
-            <AnimatePresence mode="popLayout">
+            <AnimatePresence initial={false} mode="popLayout">
               {teamDatas.map((member, idx) => {
                 const activeIndex = teamDatas.findIndex((m) => m.id === active);
                 const positionIndex =
                   (idx - activeIndex + teamDatas.length) % teamDatas.length;
-
-                // detect if mobile (<= 768px)
-                const isMobile =
-                  typeof window !== "undefined" && window.innerWidth <= 768;
 
                 let styles = {
                   zIndex: 0,
@@ -249,6 +267,24 @@ function CreativeTeamIntro() {
                   scale: 0.8,
                   x: 0,
                 };
+
+                const initialvalue =
+                  positionIndex === 0
+                    ? {
+                        x: direction === 1 ? 300 : -300,
+                        opacity: 0,
+                        scale: 1.1,
+                      }
+                    : { opacity: 0 };
+
+                const exitValue =
+                  positionIndex === 0
+                    ? {
+                        x: direction === 1 ? -300 : 300,
+                        opacity: 0,
+                        scale: 0.9,
+                      }
+                    : { opacity: 0 };
 
                 if (isMobile) {
                   // Mobile → only show active member
@@ -276,27 +312,11 @@ function CreativeTeamIntro() {
 
                 return (
                   <motion.div
-                    key={member.id}
+                    key={member.id + "-" + member.images[0]}
                     className="absolute flex items-center justify-center"
                     animate={styles}
-                    initial={
-                      positionIndex === 0
-                        ? {
-                            x: direction === 1 ? 300 : -300,
-                            opacity: 0,
-                            scale: 1.1,
-                          }
-                        : { opacity: 0 }
-                    }
-                    exit={
-                      positionIndex === 0
-                        ? {
-                            x: direction === 1 ? -300 : 300,
-                            opacity: 0,
-                            scale: 0.9,
-                          }
-                        : { opacity: 0 }
-                    }
+                    initial={initialvalue}
+                    exit={exitValue}
                     transition={{
                       duration: 0.8,
                       ease: "easeInOut",

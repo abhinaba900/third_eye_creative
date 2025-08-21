@@ -18,8 +18,8 @@ function BuildWithUsBanner() {
       </div>
 
       <h3 className="">
-        Ideas don’t build themselves
-        <span className="build-with-us-span-text">, We do</span>
+        Ideas don’t build themselves,
+        <span className="build-with-us-span-text"> We do</span>
         {/* <VanishEffect
           children={", We do"}
           className={"build-with-us-span-text"}
