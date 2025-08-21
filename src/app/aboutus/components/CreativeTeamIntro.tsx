@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 interface TeamData {
@@ -98,6 +98,7 @@ interface BannerImage {
 function CreativeTeamIntro() {
   const [bannerimages, setBannerImages] = React.useState<BannerImage[]>([]);
   const [active, setActive] = React.useState<number>(1);
+  const [direction, setDirection] = React.useState(1); // 1 = forward, -1 = backward
 
   const teamMember = teamDatas.find((project) => project.id === active)!;
   // const combinedImage = teamDatas.reduce((acc, item) => {
@@ -152,7 +153,15 @@ function CreativeTeamIntro() {
             {bannerimages.map((item, index) => (
               <div
                 key={index}
-                onClick={() => setActive(item.id)}
+                onClick={() => {
+                  const newIndex = item.id;
+                  if (newIndex > active) {
+                    setDirection(1); // forward
+                  } else {
+                    setDirection(-1); // backward
+                  }
+                  setActive(newIndex);
+                }}
                 className={`flex items-center justify-center p-2 px-3 rounded-md shadow hover:shadow-lg transition-shadow duration-300 hover:scale-105`}
               >
                 <div
@@ -224,66 +233,88 @@ function CreativeTeamIntro() {
 
           {/* Right: Image Stack with 3-Layer PvP Animation */}
           <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] overflow-hidden flex items-center justify-center ">
-            {teamDatas.map((member, idx) => {
-              const activeIndex = teamDatas.findIndex((m) => m.id === active);
-              const positionIndex =
-                (idx - activeIndex + teamDatas.length) % teamDatas.length;
+            <AnimatePresence mode="popLayout">
+              {teamDatas.map((member, idx) => {
+                const activeIndex = teamDatas.findIndex((m) => m.id === active);
+                const positionIndex =
+                  (idx - activeIndex + teamDatas.length) % teamDatas.length;
 
-              // detect if mobile (<= 768px)
-              const isMobile =
-                typeof window !== "undefined" && window.innerWidth <= 768;
+                // detect if mobile (<= 768px)
+                const isMobile =
+                  typeof window !== "undefined" && window.innerWidth <= 768;
 
-              let styles = {
-                zIndex: 0,
-                opacity: 0,
-                scale: 0.8,
-                x: 0,
-              };
+                let styles = {
+                  zIndex: 0,
+                  opacity: 0,
+                  scale: 0.8,
+                  x: 0,
+                };
 
-              if (isMobile) {
-                // Mobile → only show active member
-                if (positionIndex === 0) {
-                  styles = { zIndex: 3, opacity: 1, scale: 1, x: 0 };
+                if (isMobile) {
+                  // Mobile → only show active member
+                  if (positionIndex === 0) {
+                    styles = { zIndex: 3, opacity: 1, scale: 1, x: 0 };
+                  } else {
+                    return null;
+                  }
                 } else {
-                  return null;
+                  // Desktop / tablet → show 3 stacked in FORWARD order (active, next, next-next)
+                  if (positionIndex === 0) {
+                    // Active (center/highlight)
+                    styles = { zIndex: 3, opacity: 1, scale: 1, x: -150 };
+                  } else if (positionIndex === 1) {
+                    // 2nd in array (next on the right)
+                    styles = { zIndex: 2, opacity: 0.8, scale: 0.9, x: -20 };
+                  } else if (positionIndex === 2) {
+                    // 3rd in array (next-next; place on the left/back)
+                    styles = { zIndex: 1, opacity: 0.3, scale: 0.88, x: 80 };
+                  } else {
+                    // Hide the rest
+                    return null;
+                  }
                 }
-              } else {
-                // Desktop / tablet → show 3 stacked in FORWARD order (active, next, next-next)
-                if (positionIndex === 0) {
-                  // Active (center/highlight)
-                  styles = { zIndex: 3, opacity: 1, scale: 1, x: -150 };
-                } else if (positionIndex === 1) {
-                  // 2nd in array (next on the right)
-                  styles = { zIndex: 2, opacity: 0.8, scale: 0.9, x: -20 };
-                } else if (positionIndex === 2) {
-                  // 3rd in array (next-next; place on the left/back)
-                  styles = { zIndex: 1, opacity: 0.3, scale: 0.88, x: 80 };
-                } else {
-                  // Hide the rest
-                  return null;
-                }
-              }
 
-              return (
-                <motion.div
-                  key={member.id}
-                  animate={styles}
-                  initial={false}
-                  transition={{ duration: 0.6, ease: "easeInOut" }}
-                  className="absolute flex items-center justify-center"
-                >
-                  <Image
-                    src={member.images[0]}
-                    alt={member.name}
-                    width={360}
-                    height={550}
-                    className={`rounded-xl transition-all duration-700 ${
-                      positionIndex === 0 ? "scale-100" : "scale-90"
-                    }`}
-                  />
-                </motion.div>
-              );
-            })}
+                return (
+                  <motion.div
+                    key={member.id}
+                    className="absolute flex items-center justify-center"
+                    animate={styles}
+                    initial={
+                      positionIndex === 0
+                        ? {
+                            x: direction === 1 ? 300 : -300,
+                            opacity: 0,
+                            scale: 1.1,
+                          }
+                        : { opacity: 0 }
+                    }
+                    exit={
+                      positionIndex === 0
+                        ? {
+                            x: direction === 1 ? -300 : 300,
+                            opacity: 0,
+                            scale: 0.9,
+                          }
+                        : { opacity: 0 }
+                    }
+                    transition={{
+                      duration: 0.8,
+                      ease: "easeInOut",
+                    }}
+                  >
+                    <Image
+                      src={member.images[0]}
+                      alt={member.name}
+                      width={360}
+                      height={550}
+                      className={`rounded-xl transition-all duration-700 ${
+                        positionIndex === 0 ? "scale-100" : "scale-90"
+                      }`}
+                    />
+                  </motion.div>
+                );
+              })}
+            </AnimatePresence>
 
             {/* Name Card for Active Member */}
             <div className="absolute bottom-0 right-0 left-0 z-40">
