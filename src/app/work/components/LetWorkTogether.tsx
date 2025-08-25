@@ -37,50 +37,54 @@ function LetWorkTogether() {
         <form action="">
           <div className="grid grid-cols-2 gap-4 mb-[2.5rem]">
             <div className="relative">
-              <label className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214] z-10 input-label-in-let-work-together">
+              <label className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214]/20 backdrop-blur-md  z-10 input-label-in-let-work-together">
                 NAME
               </label>
               <input
                 type="text"
-                defaultValue="Rohan Canara"
+                placeholder="Enter your name"
                 className="w-full px-4 py-3 input-in-let-work-together text-white bg-transparent border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 placeholder:text-white/60 "
               />
             </div>
             <div className="relative">
-              <label className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214] z-10 input-label-in-let-work-together">
+              <label className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214]/20 backdrop-blur-md  z-10 input-label-in-let-work-together">
                 EMAIL ID
               </label>
               <input
                 type="text"
-                defaultValue="Rohan Canara"
+                placeholder="Enter your email ID"
                 className="w-full px-4 py-3 input-in-let-work-together text-white bg-transparent border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 placeholder:text-white/60 "
               />
             </div>
           </div>
           <div className="relative mb-[2.5rem]">
-            <label className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214] z-10 input-label-in-let-work-together">
+            <label
+              className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] 
+             bg-[#121214]/20 backdrop-blur-md rounded z-10 input-label-in-let-work-together"
+            >
               ABOUT YOUR PROJECT
             </label>
             <textarea
-              defaultValue="Rohan Canara"
+              placeholder="Tell us about your project..."
               rows={5}
               className="w-full px-4 py-3 text-white bg-transparent border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 placeholder:text-white/60 input-in-let-work-together"
             />
           </div>
 
           <p className="work-together-service-text">SERVICE(S) REQUIRED</p>
-          <div className="flex flex-wrap gap-3 p-4 mb-[5rem]">
+          <div className="flex flex-wrap gap-3 p-4 mb-[5rem] px-0">
             {services.map((service, index) => (
               <button
                 key={service + index}
                 type="button"
                 onClick={() => toggleSelect(service)}
                 className={clsx(
-                  "px-6 py-2 rounded-full text-white font-medium text-sm transition duration-300 let-work-together-button",
+                  "px-6 py-2 rounded-full text-white font-medium text-sm transition cursor-pointer duration-300 let-work-together-button",
                   selected.includes(service)
-                    ? "bg-gradient-to-r from-purple-600 to-pink-500"
-                    : "border border-purple-500 bg-transparent hover:bg-purple-900/20"
+                    ? "bg-custom-gradient"
+                    : "border border-purple-500 bg-transparent hover:bg-purple-900 "
                 )}
+                
               >
                 {service}
               </button>

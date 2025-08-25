@@ -15,7 +15,7 @@ function WorkHeroSection() {
       <div className="about-us-hero-section-wrapper ">
         <h3
           className="about-us-hero-section-title "
-          style={{ fontSize: "19vw" }}
+          style={{ fontSize: "18vw" }}
         >
           OUR WORK
         </h3>

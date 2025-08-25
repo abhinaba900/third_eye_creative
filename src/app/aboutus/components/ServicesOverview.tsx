@@ -65,7 +65,7 @@ function ServicesOverview() {
               e.currentTarget.src =
                 "https://via.placeholder.com/520x797?text=No+Image";
             }}
-            className="rounded-xl w-full object-cover service-overview-image"
+            className="rounded-xl w-full h-full object-cover service-overview-image"
             initial={{ opacity: 0.5, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}

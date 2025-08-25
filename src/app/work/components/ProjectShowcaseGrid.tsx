@@ -116,10 +116,10 @@ function ProjectShowcaseGrid() {
   return (
     <div>
       <CategoryFilterBar active={active} setActive={setActive} />
-      <div className="max-w-[1232px] mx-auto px-4 py-10 grid gap-10 md:grid-cols-2 mb-[8.75rem]">
+      <div className="max-w-[1232px] mx-auto px-4 py-10 grid gap-10 md:grid-cols-2 mb-[8.75rem] pt-0 pb-0">
         {filteredProjects.length > 0 ? (
           filteredProjects.map((project) => (
-            <div key={project.id} className="space-y-3 group">
+            <div key={project.id} className="space-y-4 group">
               <Link
                 href={`/work/${project.id}`}
                 className="relative block overflow-hidden"
@@ -206,9 +206,9 @@ function ProjectShowcaseGrid() {
               </Link>
 
               {/* Project details below the image */}
-              <div>
+              <div className="space-y-4">
                 {/* Tags */}
-                <div className="text-xs font-medium bg-gradient-to-r from-[#FF891D] to-[#EC4B7B] bg-clip-text text-transparent uppercase tracking-wide space-x-2">
+                <div className="text-xs project-showcase-tags font-medium bg-gradient-to-r from-[#FF891D] to-[#EC4B7B] bg-clip-text text-transparent uppercase tracking-wide space-x-2">
                   {project.categories.map((cat, i) => (
                     <span key={i}>
                       {cat}
@@ -218,12 +218,12 @@ function ProjectShowcaseGrid() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-semibold text-white leading-snug">
+                <h3 className="text-lg font-semibold text-white leading-snug project-showcase-title">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-gray-300">{project.description}</p>
+                <p className="project-showcase-description">{project.description}</p>
               </div>
             </div>
           ))

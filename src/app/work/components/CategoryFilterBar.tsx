@@ -12,8 +12,13 @@ const categories = [
   "Web Design",
 ];
 
-export default function CategoryFilterBar({active, setActive}:{active: string, setActive: (category: string) => void}) {
-
+export default function CategoryFilterBar({
+  active,
+  setActive,
+}: {
+  active: string;
+  setActive: (category: string) => void;
+}) {
   return (
     <motion.div
       className="max-w-[1232px] mx-auto cursor-grab overflow-hidden mb-[5rem]"
@@ -32,7 +37,7 @@ export default function CategoryFilterBar({active, setActive}:{active: string, s
               className={clsx(
                 "whitespace-nowrap rounded-full border px-4 py-1 text-sm font-medium transition-all work-grid-filter-button",
                 active === category
-                  ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
+                  ? "bg-custom-gradient text-white border-transparent"
                   : "border-[#C883FF] text-white hover:bg-purple-900"
               )}
             >
