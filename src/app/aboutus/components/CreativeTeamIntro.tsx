@@ -98,7 +98,7 @@ interface BannerImage {
 function CreativeTeamIntro() {
   const [bannerimages, setBannerImages] = React.useState<BannerImage[]>([]);
   const [active, setActive] = React.useState<number>(1);
-  const [previousId, setPreviousId] = React.useState<number | null>(0);
+  const [isTablate, setIsTablate] = React.useState<true | false>(false);
   const [direction, setDirection] = React.useState<number>(1);
 
   const teamMember = teamDatas.find((project) => project.id === active)!;
@@ -109,6 +109,22 @@ function CreativeTeamIntro() {
     const check = () => setIsMobile(window.innerWidth <= 768);
     check();
     window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
+  React.useEffect(() => {
+    const MOBILE_BREAKPOINT = { width: 1024, height: 1366 };
+
+    const check = () => {
+      setIsTablate(
+        window.innerWidth <= MOBILE_BREAKPOINT.width &&
+          window.innerHeight <= MOBILE_BREAKPOINT.height
+      );
+    };
+
+    check();
+    window.addEventListener("resize", check);
+
     return () => window.removeEventListener("resize", check);
   }, []);
 
@@ -290,6 +306,15 @@ function CreativeTeamIntro() {
                   // Mobile → only show active member
                   if (positionIndex === 0) {
                     styles = { zIndex: 3, opacity: 1, scale: 1, x: 0 };
+                  } else {
+                    return null;
+                  }
+                } else if (isTablate) {
+                  // Tablet → show 2 stacked (active, next)
+                  if (positionIndex === 0) {
+                    styles = { zIndex: 3, opacity: 1, scale: 1, x: -80 };
+                  } else if (positionIndex === 1) {
+                    styles = { zIndex: 2, opacity: 0.8, scale: 0.9, x: 60 };
                   } else {
                     return null;
                   }
