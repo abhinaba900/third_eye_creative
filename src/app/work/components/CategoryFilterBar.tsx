@@ -46,7 +46,7 @@ export default function CategoryFilterBar({
                 className={clsx(
                   "rounded-full px-6 py-2 text-sm font-medium transition duration-200 w-fit work-grid-filter-button whitespace-nowrap",
                   active === category
-                    ? "bg-[#a259ff] text-white"
+                    ? "bg-custom-gradient text-white"
                     : "bg-black text-white hover:bg-purple-900 "
                 )}
               >

@@ -978,9 +978,7 @@ html {
   letter-spacing: 0%;
   vertical-align: middle;
   color: Purple Gradient;
-  background: linear-gradient(0deg, #c883ff, #c883ff),
-    linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  background: linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -3537,6 +3535,16 @@ strong {
     padding: 5rem 0;
   }
 
+  .let-work-together-wrapper {
+    border-radius: 20px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .let-work-together-paragraph {
+    margin-bottom: 2rem;
+  }
+
   .hero-title-1,
   .hero-title-2,
   .variable-proximity-demo {
@@ -3662,7 +3670,7 @@ strong {
   .single-work-page-bullet-point-description,
   .single-page-results-metric-description,
   .client-projects-container .client-projects-description {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 
   .single-work-page-objectives-description,
@@ -3722,6 +3730,10 @@ strong {
 
   .our-expertise-wrapper {
     padding: 3rem 0.5rem 0.5rem 0.5rem;
+  }
+
+  .let-work-together-wrapper {
+    padding-bottom: 3rem;
   }
 
   .falling-text-container-highlight {
@@ -3871,6 +3883,10 @@ strong {
     line-height: 100% !important;
   }
 
+  .about-us-hero-section {
+    margin-bottom: 1.125rem;
+  }
+
   .our-approach-wrapper .our-approach-content-wrapper p,
   .mobile-class-name-text-for-text-to-reveal {
     padding: 0;
@@ -3921,6 +3937,10 @@ strong {
   .heading-content-holders p {
     font-size: 1rem;
     line-height: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .work-hero-section {
     margin-bottom: 5rem;
   }
 
@@ -3935,7 +3955,7 @@ strong {
   .services-overview-description {
     font-size: 1rem;
     line-height: 1.5rem;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -3982,6 +4002,8 @@ strong {
 
   .our-approach-wrapper h3 {
     font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
 
   .lets-build-something-button {
@@ -4085,9 +4107,7 @@ strong {
     margin-bottom: 5rem;
   }
 
-  
-
-  .background-image-our-expertise{
+  .background-image-our-expertise {
     border-radius: 20px;
   }
 
@@ -4119,9 +4139,13 @@ strong {
     transition: transform 0.3s ease-in-out;
   }
 
+  .view-more-button .view-more-button-arrow {
+    width: 20px;
+    height: 20px;
+  }
+
   .view-more-button {
-    font-size: 1.3rem;
-    gap: 0.5rem;
+    gap: 0.5rem !important;
   }
 
   .teem-members-icon-clickble,

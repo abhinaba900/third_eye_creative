@@ -4,24 +4,24 @@ import Aurora from "../../../../Reactbits/Aurora/Aurora";
 
 function WorkHeroSection() {
   return (
-    <div className="relative about-us-hero-section">
-      <div className="about-us-hero-section-wrapper ">
+    <div className="relative h-full about-us-hero-section about-us-page-hero work-hero-section">
+      <div className="about-us-hero-section-wrapper h-full overflow-hidden">
         <h3
-          className="about-us-hero-section-title "
+          className="about-us-hero-section-title"
           style={{ fontSize: "18vw" }}
         >
           OUR WORK
         </h3>
-        <div className="relative">
+        <div className="relative w-full ">
           <Aurora
             colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}
             blend={0.1}
             amplitude={1.0}
             speed={1}
-            mobileHeight={500}
+            mobileHeight={300}
           />
           <div className="about-us-hero-section-content-wrapper-inner">
-            <div className="relative about-us-hero-section-content-wrapper">
+            <div className=" about-us-hero-section-content-wrapper">
               <h4>
                 Pixels with Purpose, Code with Character, Results that{" "}
                 <span>Resonate</span>

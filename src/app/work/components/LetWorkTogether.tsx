@@ -35,7 +35,7 @@ function LetWorkTogether() {
 
       <div className="button-container-our-expertise-form falling-text-container-highlight ">
         <form action="">
-          <div className="grid  sm:grid-cols-1 md:grid-cols-2 gap-4 mb-[2.5rem]">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-4 mb-4 md:mb-[2.5rem]">
             <div className="relative">
               <label className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214]/20 backdrop-blur-md  z-10 input-label-in-let-work-together">
                 NAME
@@ -57,7 +57,7 @@ function LetWorkTogether() {
               />
             </div>
           </div>
-          <div className="relative mb-[2.5rem]">
+          <div className="relative mb-2 md:mb-[2.5rem]">
             <label
               className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] 
              bg-[#121214]/20 backdrop-blur-md rounded z-10 input-label-in-let-work-together"
@@ -72,7 +72,7 @@ function LetWorkTogether() {
           </div>
 
           <p className="work-together-service-text">SERVICE(S) REQUIRED</p>
-          <div className="flex flex-wrap gap-3 p-4 mb-[5rem] px-0">
+          <div className="flex flex-wrap gap-3 p-4 px-0 pt-0 sm:mb-4 md:mb-[5rem]">
             {services.map((service, index) => (
               <button
                 key={service + index}
@@ -84,7 +84,6 @@ function LetWorkTogether() {
                     ? "bg-custom-gradient"
                     : "border border-purple-500 bg-transparent hover:bg-purple-900 "
                 )}
-                
               >
                 {service}
               </button>
