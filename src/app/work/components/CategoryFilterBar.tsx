@@ -35,13 +35,22 @@ export default function CategoryFilterBar({
               key={category}
               onClick={() => setActive(category)}
               className={clsx(
-                "whitespace-nowrap rounded-full border px-4 py-1 text-sm font-medium transition-all work-grid-filter-button",
+                "relative whitespace-nowrap rounded-full p-[2px] text-sm font-medium transition-all work-grid-filter-button",
                 active === category
-                  ? "bg-custom-gradient text-white border-transparent"
-                  : "border-[#C883FF] text-white hover:bg-purple-900"
+                  ? "bg-custom-gradient text-white"
+                  : "bg-gradient-to-r from-[#C883FF] via-[#772BF2] to-[#CE0AFF]"
               )}
             >
-              {category}
+              <span
+                className={clsx(
+                  "flex items-center justify-center w-full h-full rounded-full px-4 py-1",
+                  active === category
+                    ? "bg-transparent text-white"
+                    : "bg-black text-white"
+                )}
+              >
+                {category}
+              </span>
             </button>
           ))}
         </div>

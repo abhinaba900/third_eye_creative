@@ -2659,6 +2659,15 @@ strong {
   cursor: pointer;
 }
 
+.gradient-border-in-work-grid {
+  border: 2px solid transparent; /* must be transparent */
+  border-image-slice: 1;
+  border-image-source: linear-gradient(0deg, #C883FF, #C883FF),
+    linear-gradient(180deg, #772BF2 0%, rgba(206, 10, 255, 0) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+}
+
+
 /* project showcase grid  */
 
 .project-tags-in-project-showcase-grid {
