@@ -31,27 +31,28 @@ export default function CategoryFilterBar({
       >
         <div className="flex gap-4 px-4 py-2 w-max">
           {categories.map((category) => (
-            <button
+            <div
               key={category}
-              onClick={() => setActive(category)}
-              className={clsx(
-                "relative whitespace-nowrap rounded-full p-[2px] text-sm font-medium transition-all work-grid-filter-button",
-                active === category
-                  ? "bg-custom-gradient text-white"
-                  : "bg-gradient-to-r from-[#C883FF] via-[#772BF2] to-[#CE0AFF]"
-              )}
+              className="rounded-full p-[2px] inline-block"
+              style={{
+                background: `linear-gradient(0deg, #C883FF, #C883FF), 
+                             linear-gradient(180deg, #772BF2 0%, rgba(206, 10, 255, 0) 100%), 
+                             linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))`,
+                backgroundBlendMode: "overlay",
+              }}
             >
-              <span
+              <button
+                onClick={() => setActive(category)}
                 className={clsx(
-                  "flex items-center justify-center w-full h-full rounded-full px-4 py-1",
+                  "rounded-full px-6 py-2 text-sm font-medium transition duration-200 w-fit work-grid-filter-button whitespace-nowrap",
                   active === category
-                    ? "bg-transparent text-white"
-                    : "bg-black text-white"
+                    ? "bg-[#a259ff] text-white"
+                    : "bg-black text-white hover:bg-purple-900 "
                 )}
               >
                 {category}
-              </span>
-            </button>
+              </button>
+            </div>
           ))}
         </div>
       </motion.div>
