@@ -248,5 +248,5 @@ export default function Aurora(props: AuroraProps) {
     };
   }, [amplitude, blend, colorStops, speed]);
 
-  return <div ref={ctnDom} className={`w-full  ${props.mobileHeight && "sm:h-[300px]"} md:h-[300px] lg:h-[50vh] -mt-20`}></div>;
+  return <div ref={ctnDom} className={`w-full  ${props.mobileHeight && "sm:h-[500px]"} sm:h-[120vh] md:h-[300px]  lg:h-[50vh] sm:mt-5 md:-mt-20`}></div>;
 }

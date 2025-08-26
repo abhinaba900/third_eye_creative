@@ -35,7 +35,7 @@ function LetWorkTogether() {
 
       <div className="button-container-our-expertise-form falling-text-container-highlight ">
         <form action="">
-          <div className="grid grid-cols-2 gap-4 mb-[2.5rem]">
+          <div className="grid  sm:grid-cols-1 md:grid-cols-2 gap-4 mb-[2.5rem]">
             <div className="relative">
               <label className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214]/20 backdrop-blur-md  z-10 input-label-in-let-work-together">
                 NAME
