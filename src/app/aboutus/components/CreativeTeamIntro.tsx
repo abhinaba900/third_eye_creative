@@ -249,28 +249,24 @@ function CreativeTeamIntro() {
               {teamMember.description}
             </p>
           </div>
-
-          {/* Background images */}
-          <img
-            src="/assets/Pink background blurred.png"
-            alt="background-image"
-            className="absolute top-1/2 left-1/2 w-full h-full z-2 object-contain opacity-90
-             -translate-x-1/2 -translate-y-1/2 
-             mobile-background-in-pink-blurred-background"
-          />
-
-          <Image
-            width={785}
-            height={499}
-            src="/assets/background in creative team info.png"
-            alt="background-image"
-            className="absolute top-1/2 left-1/2 z-3 object-cover
-             -translate-x-1/2 -translate-y-1/2 
-             mobile-background-creative-team-info"
-          />
+          {/* Background images (visible across breakpoints) */}
 
           {/* Right: Image Stack with 3-Layer PvP Animation */}
-          <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] overflow-hidden flex items-center justify-center ">
+          <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] flex items-cente1r justify-center ">
+            <img
+              src="/assets/Pink background blurred.png"
+              alt="background-image"
+              className="bg-image"
+            />
+
+            <Image
+              width={785}
+              height={499}
+              src="/assets/background in creative team info.png"
+              alt="background-image"
+              className="bg-image-foreground"
+            />
+
             <AnimatePresence initial={false} mode="popLayout">
               {teamDatas.map((member, idx) => {
                 const activeIndex = teamDatas.findIndex((m) => m.id === active);

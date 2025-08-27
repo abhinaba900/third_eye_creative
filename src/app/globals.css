@@ -1698,8 +1698,10 @@ strong {
   font-size: 6rem;
   line-height: 120%;
   letter-spacing: -4%;
-  display: inline;
   color: white;
+  white-space: normal; /* Allows wrapping */
+  overflow-wrap: break-word; /* Breaks words if necessary, but only at allowed break points */
+  word-break: keep-all;
 }
 
 .build-with-us-banner {
@@ -3493,11 +3495,47 @@ strong {
   }
 }
 
+.bg-image {
+  position: absolute;
+  z-index: 2;
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  top: -100px;
+  left: -150px;
+}
+
+.bg-image-foreground {
+  position: absolute;
+  z-index: 3;
+  object-fit: cover;
+  margin: 0 auto;
+  top: -100px;
+  left: -150px;
+}
+
 /* media quarry */
 
 @media (max-width: 767px) {
   .navbar-wrapper {
     padding: 1rem 1rem 0 1rem;
+  }
+
+   .bg-image {
+    top: -70px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .bg-image-foreground {
+    top: -50px;
+    left: -15px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .text-heading-our-expertise {
@@ -3529,6 +3567,10 @@ strong {
 
   .text-to-reveal-section-wrapper {
     margin: 5rem 0;
+  }
+
+  .about-us-hero-section-title {
+    margin-top: 2rem;
   }
 
   .workflow-stages-container {
@@ -3733,7 +3775,7 @@ strong {
   }
 
   .let-work-together-wrapper {
-    padding-bottom: 3rem;
+    padding-bottom: 2.5rem;
   }
 
   .falling-text-container-highlight {
@@ -3921,6 +3963,11 @@ strong {
 
   .creative-team-image-wrapper {
     padding: 1rem 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .text-section-in-creative-team {
+    margin-bottom: 1rem;
   }
 
   .heading-content-holders {
@@ -3940,8 +3987,11 @@ strong {
     margin-bottom: 2rem;
   }
 
-  .work-hero-section {
-    margin-bottom: 5rem;
+  .absolute-container-testimonial-showcase
+    .absolute-paragraph-testimonial-showcase {
+    line-height: 1.2;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .services-overview-title {
@@ -4083,7 +4133,7 @@ strong {
     color: rgba(255, 255, 255, 0.797);
   }
   .text-paragraph-our-expertise {
-    line-height: 100%;
+    line-height: 1.2;
   }
 
   .workflow-stages-container,
@@ -4223,6 +4273,8 @@ strong {
     gap: 1rem;
     padding: 1rem;
   }
+
+  
 
   .our-approach-wrapper,
   .heading-content-holders,
