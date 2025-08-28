@@ -946,18 +946,7 @@ html {
   border: 1px solid #3f3f3f;
   border-radius: 48px;
   overflow: hidden;
-}
-
-.background-image-our-expertise {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border: 1px solid #3f3f3f;
-  border-radius: 48px;
+  height: fit-content;
 }
 
 .text-heading-our-expertise {
@@ -2589,8 +2578,21 @@ strong {
 .let-work-together-wrapper {
   margin: 17.5rem auto 8.75rem auto;
   padding-bottom: 0;
+  background-image: url("/assets/Our-Expertise-background-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #3f3f3f;
+  border-radius: 48px;
 }
-
+.our-expertise-wrapper {
+  background-image: url("/assets/Our-Expertise-background-image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #3f3f3f;
+  border-radius: 48px;
+}
 .let-work-together-paragraph {
   margin-top: 1.5rem;
   margin-bottom: 4.25rem;
@@ -3522,17 +3524,26 @@ strong {
     padding: 1rem 1rem 0 1rem;
   }
 
-   .bg-image {
+  .bg-image {
     top: -70px;
-    left: -15px;
+    left: -5px;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
+  .work-grid-filter-button {
+    font-size: 1rem;
+  }
+
+  .project-showcase-tags,
+  .project-showcase-title {
+    margin-bottom: 0.2rem;
+  }
+
   .bg-image-foreground {
     top: -50px;
-    left: -15px;
+    left: -5px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -3596,6 +3607,11 @@ strong {
 
   .hero-title-1 {
     display: flex;
+    margin-top: 0;
+    position: relative;
+    z-index: 8;
+    height: 0px;
+    margin-bottom: -8rem;
   }
 
   .hero-content-wrapper {
@@ -3624,8 +3640,8 @@ strong {
   }
 
   .background-image-hero-section {
-    min-height: 700px;
-    max-height: 900px;
+    min-height: 100vh;
+    max-height: 100vh;
   }
 
   .hero-content-box-wrapper {
@@ -4088,7 +4104,7 @@ strong {
 
   .hero-section-third-eye-image {
     display: block !important;
-    margin-bottom: 8rem !important;
+    margin-bottom: 5rem !important;
   }
 
   .third-eye-image-container-for-desktop {
@@ -4152,9 +4168,13 @@ strong {
     margin: 0 1rem;
   }
 
-  .our-expertise-wrapper {
+  .let-work-together-wrapper {
     margin-top: 13rem;
     margin-bottom: 5rem;
+  }
+
+  .text-to-reveal-section-wrapper {
+    padding: 0;
   }
 
   .background-image-our-expertise {
@@ -4190,12 +4210,16 @@ strong {
   }
 
   .view-more-button .view-more-button-arrow {
-    width: 20px;
-    height: 20px;
+    width: 12px;
+    height: 12px;
   }
 
   .view-more-button {
     gap: 0.5rem !important;
+  }
+
+  .in-mobile-add-container-width {
+    width: 100%;
   }
 
   .teem-members-icon-clickble,
@@ -4273,8 +4297,6 @@ strong {
     gap: 1rem;
     padding: 1rem;
   }
-
-  
 
   .our-approach-wrapper,
   .heading-content-holders,
@@ -4574,7 +4596,7 @@ strong {
   .workflow-stages-container,
   .video-wrapper,
   .project-data-container,
-  .our-expertise-wrapper {
+  .let-work-together-wrapper {
     margin-top: 13rem;
     margin-bottom: 5rem;
   }

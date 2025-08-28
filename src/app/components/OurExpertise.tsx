@@ -7,11 +7,6 @@ function OurExpertise() {
 
   return (
     <div className="our-expertise-wrapper max-w-[1232px] overflow-hidden mx-auto">
-      <img
-        src="/assets/Our-Expertise-background-image.png"
-        alt="Our Expertise Background"
-        className="background-image-our-expertise"
-      />
       <h3 className="text-center text-heading-our-expertise">
         Our <span>Expertise</span>
       </h3>

@@ -154,7 +154,7 @@ function ClientProjects() {
 
       {/* View More Button */}
       <div className="flex items-center justify-center view-more-button-in-client-projects mt-10">
-        <button className="view-more-button ">
+        <button className="view-more-button in-mobile-add-container-width">
           View More{" "}
           <Image
             src="/assets/project-data-button-arrow.png"

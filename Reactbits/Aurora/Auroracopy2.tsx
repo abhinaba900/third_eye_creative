@@ -248,5 +248,5 @@ export default function Aurora(props: AuroraProps) {
     };
   }, [amplitude, blend, colorStops, speed]);
 
-  return <div ref={ctnDom} className={`w-full  h-[500px] -mt-20`}></div>;
+  return <div ref={ctnDom} className={`w-full  h-[500px] -mt-10`}></div>;
 }
