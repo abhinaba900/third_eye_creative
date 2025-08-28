@@ -43,7 +43,7 @@ function PhotoGallary() {
     },
   ];
   return (
-    <div className="relative h-[500px]   mb-[8.75rem]">
+    <div className="relative h-[500px]  mt-[5rem]  mb-[5rem]">
       <CircularGallery
         items={items2}
         bend={0}

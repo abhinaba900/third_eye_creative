@@ -2793,7 +2793,7 @@ strong {
   text-align: center;
 }
 .lifeat-third-eye-wrapper .lifeat-third-eye-title span {
-  background: linear-gradient(0deg, #c883ff, #c883ff),
+  background: linear-gradient(0deg, #C883FF, #772BF2),
     linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 
@@ -2873,7 +2873,7 @@ strong {
 }
 
 .open-roles-wrapper .open-roles-wrapper-title span {
-  background: linear-gradient(0deg, #c883ff, #c883ff),
+  background: linear-gradient(0deg, #c883ff, #772BF2),
     linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   -webkit-background-clip: text;

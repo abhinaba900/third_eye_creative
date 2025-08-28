@@ -3,7 +3,7 @@ import ScrollReveal from "../../../../Reactbits/ScrollReveal/ScrollReveal";
 
 function OurVision() {
   return (
-    <div className="our-approach-wrapper" style={{ paddingTop: "0px" }}>
+    <div className="our-approach-wrapper" style={{ paddingTop: "0px",paddingBottom:"0px" }}>
       <h3>
         Our <span>Vision</span>
       </h3>

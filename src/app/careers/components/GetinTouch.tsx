@@ -5,13 +5,13 @@ import React from "react";
 
 function GetinTouch() {
   return (
-    <div className="relative w-full overflow-hidden px-4 py-16 sm:py-20 md:py-32 bg-black text-white">
+    <div className="relative w-full px-4 py-16 sm:py-20 md:py-32 bg-black text-white overflow-visible">
       {/* SVG Background */}
       <svg
         viewBox="0 0 2227 1247"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 overflow-visible w-full z-1 h-full object-cover"
         preserveAspectRatio="xMidYMid slice"
       >
         <g filter="url(#filter0_f_941_2538)">
@@ -61,7 +61,10 @@ function GetinTouch() {
               in2="BackgroundImageFix"
               result="shape"
             />
-            <feGaussianBlur stdDeviation="100" result="effect1_foregroundBlur_941_2538" />
+            <feGaussianBlur
+              stdDeviation="100"
+              result="effect1_foregroundBlur_941_2538"
+            />
           </filter>
           <filter
             id="filter1_f_941_2538"
@@ -79,7 +82,10 @@ function GetinTouch() {
               in2="BackgroundImageFix"
               result="shape"
             />
-            <feGaussianBlur stdDeviation="125" result="effect1_foregroundBlur_941_2538" />
+            <feGaussianBlur
+              stdDeviation="125"
+              result="effect1_foregroundBlur_941_2538"
+            />
           </filter>
           <filter
             id="filter2_f_941_2538"
@@ -97,7 +103,10 @@ function GetinTouch() {
               in2="BackgroundImageFix"
               result="shape"
             />
-            <feGaussianBlur stdDeviation="150" result="effect1_foregroundBlur_941_2538" />
+            <feGaussianBlur
+              stdDeviation="150"
+              result="effect1_foregroundBlur_941_2538"
+            />
           </filter>
         </defs>
       </svg>
