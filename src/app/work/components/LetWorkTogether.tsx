@@ -38,7 +38,7 @@ function LetWorkTogether() {
             <div className="relative">
               <label
                 htmlFor="name"
-                className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214]/20 backdrop-blur-md z-10 input-label-in-let-work-together"
+                className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214]/20 backdrop-blur-md z-3 input-label-in-let-work-together"
               >
                 NAME
               </label>
@@ -53,7 +53,7 @@ function LetWorkTogether() {
             <div className="relative">
               <label
                 htmlFor="email"
-                className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214]/20 backdrop-blur-md z-10 input-label-in-let-work-together"
+                className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214]/20 backdrop-blur-md z-2 input-label-in-let-work-together"
               >
                 EMAIL ID
               </label>
@@ -70,7 +70,7 @@ function LetWorkTogether() {
           <div className="relative mb-4 md:mb-[2.5rem]">
             <label
               htmlFor="project"
-              className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214]/20 backdrop-blur-md rounded z-10 input-label-in-let-work-together"
+              className="absolute -top-3 left-3 px-1 text-sm font-medium text-[#9A6AFF] bg-[#121214]/20 backdrop-blur-md rounded z-2 input-label-in-let-work-together"
             >
               ABOUT YOUR PROJECT
             </label>
@@ -84,7 +84,7 @@ function LetWorkTogether() {
 
           {/* Services */}
           <p className="work-together-service-text">SERVICE(S) REQUIRED</p>
-          <div className="flex flex-wrap gap-3 p-7 px-0 pt-0 md:p-4 sm:pb-6 sm:mb-8 md:mb-[5rem]">
+          <div className="flex flex-wrap gap-3 p-8 px-0 pt-0 md:p-4 sm:pb-6 sm:mb-8 md:mb-[5rem]">
             {services.map((service, index) => (
               <button
                 key={service + index}

@@ -3534,6 +3534,7 @@ strong {
 
   .work-grid-filter-button {
     font-size: 1rem;
+    height: 32px;
   }
 
   .project-showcase-tags,
@@ -3935,10 +3936,15 @@ strong {
 
   .our-approach-wrapper .our-approach-content-wrapper p,
   .about-us-hero-section-content-wrapper h4,
-  .mobile-class-name-text-for-text-to-reveal,
-  .ScrollReveal_scroll-reveal-text__Td_gR {
+  .mobile-class-name-text-for-text-to-reveal {
     font-size: 1.5rem !important;
     line-height: 100% !important;
+  }
+
+  .our-approach-wrapper .our-approach-content-wrapper p,
+  .ScrollReveal_scroll-reveal-text__Td_gR {
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
   }
 
   .about-us-hero-section {
@@ -4115,7 +4121,7 @@ strong {
     padding: 0.5rem 1rem;
   }
 
-  .text-paragraph-our-expertise{
+  .text-paragraph-our-expertise {
     padding-bottom: 1.25rem;
   }
 
@@ -4216,6 +4222,7 @@ strong {
   .view-more-button .view-more-button-arrow {
     width: 12px;
     height: 12px;
+    margin-left: 0;
   }
 
   .view-more-button {
