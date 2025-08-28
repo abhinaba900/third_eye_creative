@@ -4115,6 +4115,10 @@ strong {
     padding: 0.5rem 1rem;
   }
 
+  .text-paragraph-our-expertise{
+    padding-bottom: 1.25rem;
+  }
+
   .hero-content-box-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
