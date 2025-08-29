@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import clsx from "clsx";
+import { useEffect, useRef, useState } from "react";
 
 const categories = [
   "Custom Software Development",
@@ -19,14 +20,38 @@ export default function CategoryFilterBar({
   active: string;
   setActive: (category: string) => void;
 }) {
+  const containerRef = useRef(null);
+  const innerRef = useRef(null);
+  const [constraints, setConstraints] = useState({ left: 0, right: 0 });
+
+  useEffect(() => {
+    const updateConstraints = () => {
+      if (containerRef.current && innerRef.current) {
+        const containerWidth = containerRef.current.offsetWidth;
+        const innerWidth = innerRef.current.scrollWidth;
+
+        // Calculate how much we can drag to the left
+        const maxDrag = containerWidth - innerWidth;
+
+        setConstraints({ left: maxDrag, right: 0 });
+      }
+    };
+
+    updateConstraints();
+    window.addEventListener("resize", updateConstraints);
+    return () => window.removeEventListener("resize", updateConstraints);
+  }, []);
+
   return (
     <motion.div
+      ref={containerRef}
       className="max-w-[1232px] mx-auto cursor-grab overflow-hidden mb-[5rem]"
       whileTap={{ cursor: "grabbing" }}
     >
       <motion.div
+        ref={innerRef}
         drag="x"
-        dragConstraints={{ left: -1000, right: 0 }}
+        dragConstraints={constraints}
         className="flex gap-6 px-2"
       >
         <div className="flex gap-4 px-4 py-2 w-max">
@@ -44,10 +69,10 @@ export default function CategoryFilterBar({
               <button
                 onClick={() => setActive(category)}
                 className={clsx(
-                  "rounded-full px-6 py-2 text-sm font-medium transition duration-200 w-fit work-grid-filter-button whitespace-nowrap",
+                  "rounded-full px-6 py-2 text-sm font-medium transition duration-200 w-fit whitespace-nowrap",
                   active === category
                     ? "bg-custom-gradient text-white"
-                    : "bg-black text-white hover:bg-purple-900 "
+                    : "bg-black text-white hover:bg-purple-900"
                 )}
               >
                 {category}

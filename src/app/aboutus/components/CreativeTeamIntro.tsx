@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
@@ -153,6 +153,28 @@ function CreativeTeamIntro() {
     setActive(newId);
   };
 
+  const containerRef = useRef(null);
+  const innerRef = useRef(null);
+  const [constraints, setConstraints] = useState({ left: 0, right: 0 });
+
+  useEffect(() => {
+    const updateConstraints = () => {
+      if (containerRef.current && innerRef.current) {
+        const containerWidth = containerRef.current.offsetWidth;
+        const innerWidth = innerRef.current.scrollWidth;
+
+        // Calculate how much we can drag to the left
+        const maxDrag = containerWidth - innerWidth;
+
+        setConstraints({ left: maxDrag, right: 0 });
+      }
+    };
+
+    updateConstraints();
+    window.addEventListener("resize", updateConstraints);
+    return () => window.removeEventListener("resize", updateConstraints);
+  }, []);
+
   React.useEffect(() => {
     const images: { id: number; bannerImage: string }[] = teamDatas.map(
       (item) => ({
@@ -190,11 +212,13 @@ function CreativeTeamIntro() {
         <motion.div
           className="horizontal-scroller-container-testimonial-showcase cursor-grab overflow-hidden"
           whileTap={{ cursor: "grabbing" }}
+          ref={containerRef}
         >
           <motion.div
             drag="x"
-            dragConstraints={{ left: -300, right: 0 }}
+            dragConstraints={constraints}
             className="flex  px-2"
+            ref={innerRef}
           >
             {bannerimages.map((item, index) => (
               <div
