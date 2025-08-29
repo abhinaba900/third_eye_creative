@@ -24,23 +24,14 @@ function Navbar() {
 
   // Animation variants
   const menuVariants = {
-    hidden: {
-      x: "-100%",
-      transition: {
-        when: "afterChildren",
-        staggerChildren: 0.02,
-        staggerDirection: -1,
-        duration: 0.2,
-      },
-    },
+    hidden: { x: "-100%" }, // initial
     visible: {
       x: 0,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.1,
-        staggerDirection: 1,
-        duration: 0.2,
-      },
+      transition: { duration: 0.25, staggerChildren: 0.1 },
+    },
+    exit: {
+      x: "-100%",
+      transition: { duration: 0.15 }, // fast close
     },
   };
 
@@ -173,7 +164,10 @@ function Navbar() {
         <div className="hidden lg:block items-center gap-8">
           {/* Desktop Button - Hidden on mobile & tablet */}
           <div className="galaxy-button">
-            <Link href="/" className="btn flex items-center gap-2 start-project-button-in-navbar">
+            <Link
+              href="/"
+              className="btn flex items-center gap-2 start-project-button-in-navbar"
+            >
               <strong>START PROJECT</strong>
               <div id="container-stars">
                 <div id="stars"></div>
