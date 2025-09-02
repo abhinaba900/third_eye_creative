@@ -2793,7 +2793,7 @@ strong {
   text-align: center;
 }
 .lifeat-third-eye-wrapper .lifeat-third-eye-title span {
-  background: linear-gradient(0deg, #C883FF, #772BF2),
+  background: linear-gradient(0deg, #c883ff, #772bf2),
     linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
 
@@ -2873,7 +2873,7 @@ strong {
 }
 
 .open-roles-wrapper .open-roles-wrapper-title span {
-  background: linear-gradient(0deg, #c883ff, #772BF2),
+  background: linear-gradient(0deg, #c883ff, #772bf2),
     linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   -webkit-background-clip: text;
@@ -2973,19 +2973,15 @@ strong {
 
 /* contact us  */
 
-.mobile-lets-connect-text{
-  top: 60%;
-}
-
-.lets-build-something-button-in-contact{
+.lets-build-something-button-in-contact {
   font-size: 1.5rem !important;
   margin-bottom: 0;
 }
 
-.lets-build-something-button-in-contact .view-more-button-arrow{
-   height: 1.2rem;
-   width: 1.5rem;
-   margin-left: 0;
+.lets-build-something-button-in-contact .view-more-button-arrow {
+  height: 1.2rem;
+  width: 1.5rem;
+  margin-left: 0;
 }
 
 .contact-title-main {
@@ -3527,6 +3523,9 @@ strong {
 /* media quarry */
 
 @media (max-width: 767px) {
+  .mobile-lets-connect-text {
+    top: 60%;
+  }
   .navbar-wrapper {
     padding: 1rem 1rem 0 1rem;
   }
@@ -4390,7 +4389,7 @@ strong {
     font-size: 20vw;
   }
 
-  .servicetags-text{
+  .servicetags-text {
     font-size: 1.5rem;
   }
   .services-overview-title {
