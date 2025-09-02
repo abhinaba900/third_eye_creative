@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Hyperspeed from "../../../../Reactbits/Hyperspeed/Hyperspeed";
 import Aurora from "./Aurora";
+import Image from "next/image";
 
 export default function ConnectForm() {
   const [activeTab, setActiveTab] = useState("start");
@@ -28,7 +29,7 @@ export default function ConnectForm() {
           amplitude={1.0}
           speed={1}
         />
-        <h3 className="absolute mt-20 left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 contact-title-main text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+        <h3 className="absolute mt-20 left-1/2 mobile-lets-connect-text -translate-x-1/2 top-1/2 -translate-y-1/2 contact-title-main text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
           LETS CONNECT
         </h3>
       </div>
@@ -46,13 +47,13 @@ export default function ConnectForm() {
               </h2>
             </div>
 
-            <div className="flex flex-wrap gap-2 sm:gap-4 mb-4 sm:mb-6">
+            <div className="flex flex-wrap gap-2 sm:gap-4 mb-7 md:mb-4">
               <button
                 className={classNames(
                   "px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-full border transition-all contact-change-tab-button",
                   activeTab === "work"
-                    ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
-                    : "text-white hover:bg-white/10"
+                    ? "bg-custom-gradient border-transparent"
+                    : "text-white hover:bg-purple-900"
                 )}
                 onClick={() => setActiveTab("work")}
               >
@@ -62,8 +63,8 @@ export default function ConnectForm() {
                 className={classNames(
                   "px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-full border transition-all contact-change-tab-button",
                   activeTab === "start"
-                    ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
-                    : "text-white hover:bg-white/10"
+                    ? "bg-custom-gradient border-transparent"
+                    : "text-white hover:bg-purple-900"
                 )}
                 onClick={() => setActiveTab("start")}
               >
@@ -71,13 +72,13 @@ export default function ConnectForm() {
               </button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-[1.75rem]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 md:gap-4 mb-[1.75rem] md:mb-4">
               <div className="flex flex-col gap-1 relative">
                 <label className="text-xs sm:text-sm font-medium text-purple-400 absolute left-0 -top-2.5 bg-[#181818] px-1 contact-us-form-label">
                   First Name
                 </label>
                 <input
-                  className="bg-transparent border border-white/20 p-2 sm:p-3 rounded placeholder-white/50 text-sm sm:text-base"
+                  className="bg-transparent border border-white/20 p-2 sm:p-3 rounded placeholder-white/50 text-sm sm:text-base h-[49.6px]"
                   placeholder="First name"
                 />
               </div>
@@ -86,19 +87,19 @@ export default function ConnectForm() {
                   Last Name
                 </label>
                 <input
-                  className="bg-transparent border border-white/20 p-2 sm:p-3 rounded placeholder-white/50 text-sm sm:text-base contact-us-form-inputs"
+                  className="h-[49.6px] bg-transparent border border-white/20 p-2 sm:p-3 rounded placeholder-white/50 text-sm sm:text-base contact-us-form-inputs"
                   placeholder="Last name"
                 />
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-[1.75rem]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 md:gap-3 sm:gap-4 mb-[1.75rem] md:mb-4">
               <div className="flex flex-col gap-1 relative">
                 <label className="text-xs sm:text-sm font-medium text-purple-400 absolute left-0 -top-2.5 bg-[#181818] px-1 contact-us-form-label">
                   Email
                 </label>
                 <input
-                  className="bg-transparent border border-white/20 p-2 sm:p-3 rounded placeholder-white/50 text-sm sm:text-base contact-us-form-inputs"
+                  className="h-[49.6px] bg-transparent border border-white/20 p-2 sm:p-3 rounded placeholder-white/50 text-sm sm:text-base contact-us-form-inputs"
                   placeholder="Email"
                 />
               </div>
@@ -107,7 +108,7 @@ export default function ConnectForm() {
                   Phone
                 </label>
                 <input
-                  className="bg-transparent border border-white/20 p-2 sm:p-3 rounded placeholder-white/50 text-sm sm:text-base contact-us-form-inputs"
+                  className="h-[49.6px] bg-transparent border border-white/20 p-2 sm:p-3 rounded placeholder-white/50 text-sm sm:text-base contact-us-form-inputs"
                   placeholder="Phone"
                 />
               </div>
@@ -140,8 +141,8 @@ export default function ConnectForm() {
                       className={classNames(
                         "px-3 py-1 sm:px-4 sm:py-2 text-xs sm:text-sm rounded-full border contact-us-form-service-button",
                         services.includes(service)
-                          ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
-                          : "border-white/30 text-white hover:bg-white/10"
+                          ? "bg-custom-gradient border-transparent"
+                          : "border-white/30 text-white hover:bg-purple-900"
                       )}
                       onClick={() => toggleService(service)}
                     >
@@ -241,8 +242,19 @@ export default function ConnectForm() {
             )}
           </div>
 
-          <button className="contact-us-form-submit-button w-full py-2 sm:py-3 bg-gradient-to-r from-purple-500 to-pink-500 border border-white/30 rounded-full hover:opacity-90 transition-all text-sm sm:text-base mt-4 sm:mt-0">
-            Lets Build Something →
+          {/* Submit Button */}
+          <button
+            className="view-more-button w-full lets-build-something-button lets-build-something-button-in-contact"
+            type="submit"
+          >
+            Lets Build Something{" "}
+            <Image
+              src="/assets/project-data-button-arrow.png"
+              alt="arrow"
+              width={32}
+              height={27.44}
+              className="view-more-button-arrow inline-block ml-2"
+            />
           </button>
         </div>
 

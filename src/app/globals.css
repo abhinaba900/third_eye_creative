@@ -2973,12 +2973,19 @@ strong {
 
 /* contact us  */
 
-.contectus-connect-form {
-  /* background-image: url("/assets/Glass effect for hero section.svg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
+.mobile-lets-connect-text{
+  top: 60%;
+}
+
+.lets-build-something-button-in-contact{
+  font-size: 1.5rem !important;
+  margin-bottom: 0;
+}
+
+.lets-build-something-button-in-contact .view-more-button-arrow{
+   height: 1.2rem;
+   width: 1.5rem;
+   margin-left: 0;
 }
 
 .contact-title-main {
@@ -4382,6 +4389,10 @@ strong {
   .about-us-hero-section-title {
     font-size: 20vw;
   }
+
+  .servicetags-text{
+    font-size: 1.5rem;
+  }
   .services-overview-title {
     font-size: 4rem;
     margin-bottom: 0;
@@ -4608,8 +4619,8 @@ strong {
   .video-wrapper,
   .project-data-container,
   .let-work-together-wrapper {
-    margin-top: 13rem;
-    margin-bottom: 5rem;
+    margin-top: 18rem;
+    margin-bottom: 10rem;
   }
 
   .footer-text-mobile {
