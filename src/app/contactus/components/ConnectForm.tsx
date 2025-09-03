@@ -35,7 +35,7 @@ export default function ConnectForm() {
       </div>
 
       {/* Form Section */}
-      <div className="max-w-6xl  mx-auto w-full md:min-h-[600px] lg:h-[800px] grid grid-cols-1 md:grid-cols-2 gap-6 bg-[#181818] p-4 sm:p-6 md:p-8 lg:p-[3rem] mt-8 sm:-mt-16 md:-mt-20 lg:mt-[1rem] opacity-95 rounded-2xl shadow-xl overflow-hidden">
+      <div className="max-w-6xl  mx-auto w-full md:min-h-[600px] lg:h-[800px] grid grid-cols-1 form-section-in-contact-us-section lg:grid-cols-2 gap-6 bg-[#181818] p-4 sm:p-6 md:p-8 lg:p-[3rem] mt-8 sm:-mt-16 md:-mt-20 lg:mt-[1rem] opacity-95 rounded-2xl shadow-xl overflow-hidden">
         <div
           className="p-4 sm:p-6 md:p-8 lg:p-10 overflow-y-scroll  flex flex-col h-full justify-between rounded-[20px] border border-[#3F3F3F]"
           style={{ scrollbarWidth: "none" }}
@@ -47,7 +47,7 @@ export default function ConnectForm() {
               </h2>
             </div>
 
-            <div className="flex flex-wrap gap-2 sm:gap-4 mb-7 md:mb-4">
+            <div className="flex flex-wrap gap-2 sm:gap-4 mb-7 md:mb-6">
               <button
                 className={classNames(
                   "px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-full border transition-all contact-change-tab-button",
@@ -72,7 +72,7 @@ export default function ConnectForm() {
               </button>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 md:gap-4 mb-[1.75rem] md:mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 md:gap-4 mb-[1.75rem] md:mb-6">
               <div className="flex flex-col gap-1 relative">
                 <label className="text-xs sm:text-sm font-medium text-purple-400 absolute left-0 -top-2.5 bg-[#181818] px-1 contact-us-form-label">
                   First Name
@@ -93,7 +93,7 @@ export default function ConnectForm() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 md:gap-3 sm:gap-4 mb-[1.75rem] md:mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-7 md:gap-3 sm:gap-4 mb-[1.75rem] md:mb-6">
               <div className="flex flex-col gap-1 relative">
                 <label className="text-xs sm:text-sm font-medium text-purple-400 absolute left-0 -top-2.5 bg-[#181818] px-1 contact-us-form-label">
                   Email
@@ -133,7 +133,7 @@ export default function ConnectForm() {
                 : "Or write to us at"}
             </p>
             {activeTab === "start" ? (
-              <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6">
+              <div className="flex flex-wrap gap-2 sm:gap-3 mb-9 md:mb-6">
                 {["Website Development", "App Development", "Web Design"].map(
                   (service) => (
                     <button
@@ -152,7 +152,7 @@ export default function ConnectForm() {
                 )}
               </div>
             ) : (
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-4">
+              <div className="flex flex-row sm:flex-row items-start sm:items-center justify-between gap-2 mb-5 md:mb-0 md:gap-4">
                 <div className="text-xs sm:text-sm text-purple-400">
                   <a
                     href="mailto:hi@thirdeyegfx.in"
@@ -259,7 +259,7 @@ export default function ConnectForm() {
         </div>
 
         {/* Visual Section - Hidden on mobile */}
-        <div className="relative hidden md:flex flex-col h-full rounded-[20px] bg-black/80 rounded-r-2xl overflow-hidden border border-[#3F3F3F]">
+        <div className="relative hidden visual-section-hyperspeed-section lg:flex flex-col h-full rounded-[20px] bg-black/80 rounded-r-2xl overflow-hidden border border-[#3F3F3F]">
           <Hyperspeed
             effectOptions={{
               onSpeedUp: () => {},

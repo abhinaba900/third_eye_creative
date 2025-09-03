@@ -3530,6 +3530,10 @@ strong {
     padding: 1rem 1rem 0 1rem;
   }
 
+  .contact-us-form-email-link{
+    font-size: 1rem;
+  }
+
   .bg-image {
     top: -70px;
     left: -5px;
@@ -4612,6 +4616,14 @@ strong {
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
   .hero-section-third-eye-image {
     top: -5rem;
+  }
+
+  .form-section-in-contact-us-section{
+    grid-template-columns: 1fr;
+  }
+
+  .visual-section-hyperspeed-section{
+    display: none ;
   }
 
   .workflow-stages-container,
