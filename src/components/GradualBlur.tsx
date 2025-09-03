@@ -1,4 +1,4 @@
-﻿"use client"
+﻿"use client";
 
 import React, { CSSProperties, useEffect, useRef, useState, useMemo, PropsWithChildren } from 'react';
 import * as math from 'mathjs';
@@ -23,7 +23,6 @@ type GradualBlurProps = PropsWithChildren<{
   mobileWidth?: string;
   tabletWidth?: string;
   desktopWidth?: string;
-
   preset?:
     | 'top'
     | 'bottom'
@@ -41,7 +40,6 @@ type GradualBlurProps = PropsWithChildren<{
   gpuOptimized?: boolean;
   hoverIntensity?: number;
   target?: 'parent' | 'page';
-
   onAnimationComplete?: () => void;
   className?: string;
   style?: CSSProperties;
@@ -70,17 +68,13 @@ const PRESETS: Record<string, Partial<GradualBlurProps>> = {
   bottom: { position: 'bottom', height: '6rem' },
   left: { position: 'left', height: '6rem' },
   right: { position: 'right', height: '6rem' },
-
   subtle: { height: '4rem', strength: 1, opacity: 0.8, divCount: 3 },
   intense: { height: '10rem', strength: 4, divCount: 8, exponential: true },
-
   smooth: { height: '8rem', curve: 'bezier', divCount: 10 },
   sharp: { height: '5rem', curve: 'linear', divCount: 4 },
-
   header: { position: 'top', height: '8rem', curve: 'ease-out' },
   footer: { position: 'bottom', height: '8rem', curve: 'ease-out' },
   sidebar: { position: 'left', height: '6rem', strength: 2.5 },
-
   'page-header': {
     position: 'top',
     height: '10rem',
@@ -117,37 +111,66 @@ const getGradientDirection = (position: string): string => {
   return directions[position] || 'to bottom';
 };
 
-const debounce = <T extends (...a: any[]) => void>(fn: T, wait: number) => {
-  let t: ReturnType<typeof setTimeout>;
-  return (...a: Parameters<T>) => {
-    clearTimeout(t);
-    t = setTimeout(() => fn(...a), wait);
+// Replaced `any[]` with `unknown[]` for better type safety in generic functions.
+const debounce = <T extends (...args: unknown[]) => void>(fn: T, wait: number) => {
+  let timeoutId: ReturnType<typeof setTimeout>;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => fn(...args), wait);
   };
 };
+
+// Dedicated map for responsive keys to ensure type safety for dynamic property access.
+const responsiveKeyMap = {
+  height: {
+    mobile: 'mobileHeight',
+    tablet: 'tabletHeight',
+    desktop: 'desktopHeight'
+  },
+  width: {
+    mobile: 'mobileWidth',
+    tablet: 'tabletWidth',
+    desktop: 'desktopWidth'
+  }
+} as const; // `as const` ensures keys and values are treated as literal types.
+
+type DimensionKey = keyof typeof responsiveKeyMap; // 'height' | 'width'
+
 const useResponsiveDimension = (
   responsive: boolean | undefined,
   config: Partial<GradualBlurProps>,
-  key: keyof GradualBlurProps
-) => {
-  const [val, setVal] = useState<any>(config[key]);
+  key: DimensionKey
+): string | undefined => {
+  const [dimensionValue, setDimensionValue] = useState<string | undefined>(config[key]);
+
   useEffect(() => {
     if (!responsive) return;
-    const calc = () => {
-      const w = window.innerWidth;
-      let v: any = config[key];
-      const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
-      const k = cap(key as string);
-      if (w <= 480 && (config as any)['mobile' + k]) v = (config as any)['mobile' + k];
-      else if (w <= 768 && (config as any)['tablet' + k]) v = (config as any)['tablet' + k];
-      else if (w <= 1024 && (config as any)['desktop' + k]) v = (config as any)['desktop' + k];
-      setVal(v);
+
+    const calculateDimension = () => {
+      const windowWidth = window.innerWidth;
+      const keys = responsiveKeyMap[key]; // Type-safe access to responsive keys.
+
+      let newDimension = config[key]; // Default to the base value.
+
+      if (windowWidth <= 480 && config[keys.mobile]) {
+        newDimension = config[keys.mobile];
+      } else if (windowWidth <= 768 && config[keys.tablet]) {
+        newDimension = config[keys.tablet];
+      } else if (windowWidth <= 1024 && config[keys.desktop]) {
+        newDimension = config[keys.desktop];
+      }
+
+      setDimensionValue(newDimension);
     };
-    const deb = debounce(calc, 100);
-    calc();
-    window.addEventListener('resize', deb);
-    return () => window.removeEventListener('resize', deb);
+
+    const debouncedCalculate = debounce(calculateDimension, 100);
+    calculateDimension(); // Initial calculation
+    window.addEventListener('resize', debouncedCalculate);
+
+    return () => window.removeEventListener('resize', debouncedCalculate);
   }, [responsive, config, key]);
-  return responsive ? val : (config as any)[key];
+
+  return responsive ? dimensionValue : config[key];
 };
 
 const useIntersectionObserver = (ref: React.RefObject<HTMLDivElement>, shouldObserve: boolean = false) => {
@@ -166,7 +189,7 @@ const useIntersectionObserver = (ref: React.RefObject<HTMLDivElement>, shouldObs
 };
 
 const GradualBlur: React.FC<GradualBlurProps> = props => {
-  const containerRef = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 
   const config = useMemo(() => {
@@ -228,7 +251,6 @@ const GradualBlur: React.FC<GradualBlurProps> = props => {
 
   const containerStyle: CSSProperties = useMemo(() => {
     const isVertical = ['top', 'bottom'].includes(config.position);
-    const isHorizontal = ['left', 'right'].includes(config.position);
     const isPageTarget = config.target === 'page';
 
     const baseStyle: CSSProperties = {
@@ -246,7 +268,7 @@ const GradualBlur: React.FC<GradualBlurProps> = props => {
       baseStyle[config.position] = 0;
       baseStyle.left = 0;
       baseStyle.right = 0;
-    } else if (isHorizontal) {
+    } else { // isHorizontal
       baseStyle.width = responsiveWidth || responsiveHeight;
       baseStyle.height = '100%';
       baseStyle[config.position] = 0;
@@ -257,11 +279,14 @@ const GradualBlur: React.FC<GradualBlurProps> = props => {
     return baseStyle;
   }, [config, responsiveHeight, responsiveWidth, isVisible]);
 
-  const { hoverIntensity, animated, onAnimationComplete, duration } = config as any;
+  // Removed the unnecessary `as any` cast here.
+  const { hoverIntensity, animated, onAnimationComplete, duration } = config;
+
   useEffect(() => {
     if (isVisible && animated === 'scroll' && onAnimationComplete) {
-      const t = setTimeout(() => onAnimationComplete(), parseFloat(duration) * 1000);
-      return () => clearTimeout(t);
+      const durationMs = parseFloat(duration) * 1000;
+      const timeoutId = setTimeout(() => onAnimationComplete(), durationMs);
+      return () => clearTimeout(timeoutId);
     }
   }, [isVisible, animated, onAnimationComplete, duration]);
 
@@ -281,9 +306,14 @@ const GradualBlur: React.FC<GradualBlurProps> = props => {
 
 const GradualBlurMemo = React.memo(GradualBlur);
 GradualBlurMemo.displayName = 'GradualBlur';
-(GradualBlurMemo as any).PRESETS = PRESETS;
-(GradualBlurMemo as any).CURVE_FUNCTIONS = CURVE_FUNCTIONS;
-export default GradualBlurMemo;
+
+// Replaced direct property assignment with Object.assign for a type-safe approach.
+const GradualBlurComponent = Object.assign(GradualBlurMemo, {
+  PRESETS,
+  CURVE_FUNCTIONS
+});
+
+export default GradualBlurComponent;
 
 const injectStyles = () => {
   if (typeof document === 'undefined') return;
@@ -294,6 +324,7 @@ const injectStyles = () => {
   el.textContent = `.gradual-blur{pointer-events:none;transition:opacity .3s ease-out}.gradual-blur-inner{pointer-events:none}`;
   document.head.appendChild(el);
 };
+
 if (typeof document !== 'undefined') {
   injectStyles();
 }

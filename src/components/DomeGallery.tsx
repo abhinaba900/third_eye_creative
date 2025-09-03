@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useEffect, useMemo, useRef, useCallback } from "react";
+import { useEffect, useMemo, useRef, useCallback, CSSProperties } from "react";
 import { useGesture } from "@use-gesture/react";
 
 type ImageItem = string | { src: string; alt?: string };
@@ -33,6 +33,20 @@ type ItemDef = {
   sizeX: number;
   sizeY: number;
 };
+
+// A dedicated type for CSS custom properties to ensure type safety in style objects.
+interface CSSCustomProperties extends CSSProperties {
+  "--segments-x"?: number;
+  "--segments-y"?: number;
+  "--overlay-blur-color"?: string;
+  "--tile-radius"?: string;
+  "--enlarge-radius"?: string;
+  "--image-filter"?: "grayscale(1)" | "none";
+  "--offset-x"?: number;
+  "--offset-y"?: number;
+  "--item-size-x"?: number;
+  "--item-size-y"?: number;
+}
 
 const DEFAULT_IMAGES: ImageItem[] = [
   {
@@ -366,9 +380,17 @@ export default function DomeGallery({
         stopInertia();
 
         const evt = event as PointerEvent;
-        pointerTypeRef.current = (evt.pointerType as any) || "mouse";
-        if (pointerTypeRef.current === "touch") evt.preventDefault();
-        if (pointerTypeRef.current === "touch") lockScroll();
+
+        // Type-safe assignment for pointerType without using `any`.
+        const pt = evt.pointerType;
+        pointerTypeRef.current =
+          pt === "touch" || pt === "pen" || pt === "mouse" ? pt : "mouse";
+
+        if (pointerTypeRef.current === "touch") {
+          evt.preventDefault();
+          lockScroll();
+        }
+
         draggingRef.current = true;
         cancelTapRef.current = false;
         movedRef.current = false;
@@ -431,7 +453,7 @@ export default function DomeGallery({
             }
           }
 
-          let [vMagX, vMagY] = velArr;
+          const [vMagX, vMagY] = velArr;
           const [dirX, dirY] = dirArr;
           let vx = vMagX * dirX;
           let vy = vMagY * dirY;
@@ -494,7 +516,8 @@ export default function DomeGallery({
         parent.style.setProperty("--rot-y-delta", `0deg`);
         parent.style.setProperty("--rot-x-delta", `0deg`);
         el.style.visibility = "";
-        (el.style as any).zIndex = 0;
+        // Fixed: Use a string for the zIndex property.
+        el.style.zIndex = "0";
         focusedElRef.current = null;
         rootRef.current?.removeAttribute("data-enlarging");
         openingRef.current = false;
@@ -571,7 +594,8 @@ export default function DomeGallery({
         requestAnimationFrame(() => {
           el.style.visibility = "";
           el.style.opacity = "0";
-          (el.style as any).zIndex = 0;
+          // Fixed: Use a string for the zIndex property.
+          el.style.zIndex = "0";
           focusedElRef.current = null;
           rootRef.current?.removeAttribute("data-enlarging");
 
@@ -655,7 +679,8 @@ export default function DomeGallery({
       height: tileR.height,
     };
     el.style.visibility = "hidden";
-    (el.style as any).zIndex = 0;
+    // Fixed: Use a string for the zIndex property.
+    el.style.zIndex = "0";
     const overlay = document.createElement("div");
     overlay.className = "enlarge";
     overlay.style.cssText = `position:absolute; left:${
@@ -733,6 +758,7 @@ export default function DomeGallery({
     };
   }, []);
 
+  // Fixed: CSS comments are now valid and scroll-lock style is enabled.
   const cssStyles = `
     .sphere-root {
       --radius: 520px;
@@ -769,10 +795,7 @@ export default function DomeGallery({
       width: calc(var(--item-width) * var(--item-size-x));
       height: calc(var(--item-height) * var(--item-size-y));
       position: absolute;
-      top: -999px;
-      bottom: -999px;
-      left: -999px;
-      right: -999px;
+      top: -999px; bottom: -999px; left: -999px; right: -999px;
       margin: auto;
       transform-origin: 50% 50%;
       backface-visibility: hidden;
@@ -794,16 +817,17 @@ export default function DomeGallery({
       }
     }
     
-    // body.dg-scroll-lock {
-    //   position: fixed !important;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100% !important;
-    //   height: 100% !important;
-    //   overflow: hidden !important;
-    //   touch-action: none !important;
-    //   overscroll-behavior: contain !important;
-    // }
+    body.dg-scroll-lock {
+      position: fixed !important;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+      overflow: hidden !important;
+      touch-action: none !important;
+      overscroll-behavior: contain !important;
+    }
+
     .item__image {
       position: absolute;
       inset: 10px;
@@ -830,15 +854,16 @@ export default function DomeGallery({
       <div
         ref={rootRef}
         className="sphere-root relative w-full h-full"
+        // The style prop now uses the dedicated CSSCustomProperties type.
         style={
           {
-            ["--segments-x" as any]: segments,
-            ["--segments-y" as any]: segments,
-            ["--overlay-blur-color" as any]: overlayBlurColor,
-            ["--tile-radius" as any]: imageBorderRadius,
-            ["--enlarge-radius" as any]: openedImageBorderRadius,
-            ["--image-filter" as any]: grayscale ? "grayscale(1)" : "none",
-          } as React.CSSProperties
+            "--segments-x": segments,
+            "--segments-y": segments,
+            "--overlay-blur-color": overlayBlurColor,
+            "--tile-radius": imageBorderRadius,
+            "--enlarge-radius": openedImageBorderRadius,
+            "--image-filter": grayscale ? "grayscale(1)" : "none",
+          } as CSSCustomProperties
         }
       >
         <main
@@ -861,17 +886,18 @@ export default function DomeGallery({
                   data-offset-y={it.y}
                   data-size-x={it.sizeX}
                   data-size-y={it.sizeY}
+                  // The style prop now uses the dedicated CSSCustomProperties type.
                   style={
                     {
-                      ["--offset-x" as any]: it.x,
-                      ["--offset-y" as any]: it.y,
-                      ["--item-size-x" as any]: it.sizeX,
-                      ["--item-size-y" as any]: it.sizeY,
+                      "--offset-x": it.x,
+                      "--offset-y": it.y,
+                      "--item-size-x": it.sizeX,
+                      "--item-size-y": it.sizeY,
                       top: "-999px",
                       bottom: "-999px",
                       left: "-999px",
                       right: "-999px",
-                    } as React.CSSProperties
+                    } as CSSCustomProperties
                   }
                 >
                   <div
