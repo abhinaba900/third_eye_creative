@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import GradualBlurMemo from "@/components/GradualBlur";
 // import Bottomblur from "./components/Bottomblur";
 
 export const metadata: Metadata = {
@@ -23,6 +24,17 @@ export default function RootLayout({
 
         {/* Glass morphism blur */}
         {/* <Bottomblur /> */}
+
+        <GradualBlurMemo
+          target="page"
+          position="bottom"
+          height="6rem"
+          strength={2}
+          divCount={5}
+          curve="bezier"
+          exponential={false}
+          opacity={1}
+        />
         <Footer />
       </body>
     </html>

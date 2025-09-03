@@ -134,12 +134,24 @@ export default function Aurora(props: AuroraProps) {
     const ctn = ctnDom.current;
     if (!ctn) return;
 
-    const renderer = new Renderer({
-      alpha: true,
-      premultipliedAlpha: true,
-      antialias: true,
-    });
+    let renderer: Renderer | null = null;
+
+    try {
+      renderer = new Renderer({
+        alpha: true,
+        premultipliedAlpha: true,
+        antialias: true,
+      });
+    } catch (e) {
+      console.error("WebGL not supported:", e);
+      return; // exit early so it doesn’t crash
+    }
+
     const gl = renderer.gl;
+    if (!gl) {
+      console.error("Unable to initialize WebGL context.");
+      return;
+    }
     gl.clearColor(0, 0, 0, 0);
     gl.enable(gl.BLEND);
     gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
@@ -248,5 +260,12 @@ export default function Aurora(props: AuroraProps) {
     };
   }, [amplitude, blend, colorStops, speed]);
 
-  return <div ref={ctnDom} className={`w-full  ${props.mobileHeight && "sm:h-[500px]"} sm:h-[120vh] md:h-[300px]  lg:h-[50vh] sm:mt-5 md:-mt-20`}></div>;
+  return (
+    <div
+      ref={ctnDom}
+      className={`w-full  ${
+        props.mobileHeight && "sm:h-[500px]"
+      } sm:h-[120vh] md:h-[300px]  lg:h-[50vh] sm:mt-5 md:-mt-20`}
+    ></div>
+  );
 }

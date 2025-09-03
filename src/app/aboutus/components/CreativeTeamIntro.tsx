@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import DarkVeil from "@/components/DarkVeil";
 
 interface TeamData {
   id: number;
@@ -248,155 +249,170 @@ function CreativeTeamIntro() {
       </div>
 
       {/* Main section */}
-      <div className="overflow-hidden text-white max-w-[1279px] w-full mx-auto mb-[8.75rem] md:px-6 lg:px-0 creative-team-info-wrapper-and-holder relative">
-        <div className="flex flex-col-reverse lg:flex-row gap-4 md:gap-6 lg:gap-[10%] items-start">
-          {/* Left: Text Content */}
-          <div className="lg:w-[40%] w-full space-y-6">
-            <h2 className="text-3xl font-semibold leading-snug main-heading-tet-in-creative-team">
-              {teamMember.title}
-            </h2>
+      <div className="relative max-w-[1300px] w-full mx-auto">
+        <div
+          style={{
+            width: "100%",
+            height: "600px",
+            position: "absolute",
+            top: 0,
+            left: 0,
+            zIndex: 0,
+          }}
+        >
+          <DarkVeil  speed={0.8}/>
+        </div>
+        <div className="overflow-hidden text-white max-w-[1279px] w-full mx-auto mb-[8.75rem] md:px-6 lg:px-0 creative-team-info-wrapper-and-holder relative">
+          <div className="flex flex-col-reverse lg:flex-row gap-4 md:gap-6 lg:gap-[10%] items-start">
+            {/* Left: Text Content */}
+            <div className="lg:w-[40%] w-full space-y-6">
+              <h2 className="text-3xl font-semibold leading-snug main-heading-tet-in-creative-team relative z-1">
+                {teamMember.title}
+              </h2>
 
-            {/* Tags */}
-            <div className="flex flex-wrap gap-3">
-              {teamMember.tags.map((tag, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 bg-white/10 border-2 border-[#FF891D] text-sm rounded-full text-white creative-team-tags"
-                >
-                  {tag}
-                </span>
-              ))}
+              {/* Tags */}
+              <div className="flex flex-wrap gap-3">
+                {teamMember.tags.map((tag, i) => (
+                  <span
+                    key={i}
+                    className="px-3 py-1 bg-white/10 border-2 border-[#FF891D] text-sm rounded-full text-white creative-team-tags"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Description */}
+              <p className="text-gray-300 leading-relaxed creative-team-description relative z-1">
+                {teamMember.description}
+              </p>
             </div>
 
-            {/* Description */}
-            <p className="text-gray-300 leading-relaxed creative-team-description">
-              {teamMember.description}
-            </p>
-          </div>
-          {/* Background images (visible across breakpoints) */}
+            {/* Background images (visible across breakpoints) */}
 
-          {/* Right: Image Stack with 3-Layer PvP Animation */}
-          <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] flex items-cente1r justify-center ">
-            <img
+            {/* Right: Image Stack with 3-Layer PvP Animation */}
+            <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] flex items-cente1r justify-center ">
+              {/* <img
               src="/assets/Pink background blurred.png"
               alt="background-image"
               className="bg-image"
             />
-
             <Image
               width={785}
               height={499}
               src="/assets/background in creative team info.png"
               alt="background-image"
               className="bg-image-foreground"
-            />
+            /> */}
 
-            <AnimatePresence initial={false} mode="popLayout">
-              {teamDatas.map((member, idx) => {
-                const activeIndex = teamDatas.findIndex((m) => m.id === active);
-                const positionIndex =
-                  (idx - activeIndex + teamDatas.length) % teamDatas.length;
+              <AnimatePresence initial={false} mode="popLayout">
+                {teamDatas.map((member, idx) => {
+                  const activeIndex = teamDatas.findIndex(
+                    (m) => m.id === active
+                  );
+                  const positionIndex =
+                    (idx - activeIndex + teamDatas.length) % teamDatas.length;
 
-                let styles = {
-                  zIndex: 0,
-                  opacity: 0,
-                  scale: 0.8,
-                  x: 0,
-                };
+                  let styles = {
+                    zIndex: 0,
+                    opacity: 0,
+                    scale: 0.8,
+                    x: 0,
+                  };
 
-                const initialvalue =
-                  positionIndex === 0
-                    ? {
-                        x: direction === 1 ? 300 : -300,
-                        opacity: 0,
-                        scale: 1.1,
-                      }
-                    : { opacity: 0 };
+                  const initialvalue =
+                    positionIndex === 0
+                      ? {
+                          x: direction === 1 ? 300 : -300,
+                          opacity: 0,
+                          scale: 1.1,
+                        }
+                      : { opacity: 0 };
 
-                const exitValue =
-                  positionIndex === 0
-                    ? {
-                        x: direction === 1 ? -300 : 300,
-                        opacity: 0,
-                        scale: 0.9,
-                      }
-                    : { opacity: 0 };
+                  const exitValue =
+                    positionIndex === 0
+                      ? {
+                          x: direction === 1 ? -300 : 300,
+                          opacity: 0,
+                          scale: 0.9,
+                        }
+                      : { opacity: 0 };
 
-                if (isMobile) {
-                  // Mobile → only show active member
-                  if (positionIndex === 0) {
-                    styles = { zIndex: 3, opacity: 1, scale: 1, x: 0 };
+                  if (isMobile) {
+                    // Mobile → only show active member
+                    if (positionIndex === 0) {
+                      styles = { zIndex: 3, opacity: 1, scale: 1, x: 0 };
+                    } else {
+                      return null;
+                    }
+                  } else if (isTablate) {
+                    // Tablet → show 2 stacked (active, next)
+                    if (positionIndex === 0) {
+                      styles = { zIndex: 3, opacity: 1, scale: 1, x: -80 };
+                    } else if (positionIndex === 1) {
+                      styles = { zIndex: 2, opacity: 0.8, scale: 0.9, x: 60 };
+                    } else {
+                      return null;
+                    }
                   } else {
-                    return null;
+                    // Desktop / tablet → show 3 stacked in FORWARD order (active, next, next-next)
+                    if (positionIndex === 0) {
+                      // Active (center/highlight)
+                      styles = { zIndex: 3, opacity: 1, scale: 1, x: -150 };
+                    } else if (positionIndex === 1) {
+                      // 2nd in array (next on the right)
+                      styles = { zIndex: 2, opacity: 0.8, scale: 0.9, x: -20 };
+                    } else if (positionIndex === 2) {
+                      // 3rd in array (next-next; place on the left/back)
+                      styles = { zIndex: 1, opacity: 0.3, scale: 0.88, x: 80 };
+                    } else {
+                      // Hide the rest
+                      return null;
+                    }
                   }
-                } else if (isTablate) {
-                  // Tablet → show 2 stacked (active, next)
-                  if (positionIndex === 0) {
-                    styles = { zIndex: 3, opacity: 1, scale: 1, x: -80 };
-                  } else if (positionIndex === 1) {
-                    styles = { zIndex: 2, opacity: 0.8, scale: 0.9, x: 60 };
-                  } else {
-                    return null;
-                  }
-                } else {
-                  // Desktop / tablet → show 3 stacked in FORWARD order (active, next, next-next)
-                  if (positionIndex === 0) {
-                    // Active (center/highlight)
-                    styles = { zIndex: 3, opacity: 1, scale: 1, x: -150 };
-                  } else if (positionIndex === 1) {
-                    // 2nd in array (next on the right)
-                    styles = { zIndex: 2, opacity: 0.8, scale: 0.9, x: -20 };
-                  } else if (positionIndex === 2) {
-                    // 3rd in array (next-next; place on the left/back)
-                    styles = { zIndex: 1, opacity: 0.3, scale: 0.88, x: 80 };
-                  } else {
-                    // Hide the rest
-                    return null;
-                  }
-                }
 
-                return (
-                  <motion.div
-                    key={member.id + "-" + member.images[0]}
-                    className="absolute flex items-center justify-center"
-                    animate={styles}
-                    initial={initialvalue}
-                    exit={exitValue}
-                    transition={{
-                      duration: 0.8,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <Image
-                      src={member.images[0]}
-                      alt={member.name}
-                      width={360}
-                      height={550}
-                      className={`rounded-xl transition-all duration-700 ${
-                        positionIndex === 0 ? "scale-100" : "scale-90"
-                      }`}
-                    />
-                  </motion.div>
-                );
-              })}
-            </AnimatePresence>
+                  return (
+                    <motion.div
+                      key={member.id + "-" + member.images[0]}
+                      className="absolute flex items-center justify-center"
+                      animate={styles}
+                      initial={initialvalue}
+                      exit={exitValue}
+                      transition={{
+                        duration: 0.8,
+                        ease: "easeInOut",
+                      }}
+                    >
+                      <Image
+                        src={member.images[0]}
+                        alt={member.name}
+                        width={360}
+                        height={550}
+                        className={`rounded-xl transition-all duration-700 ${
+                          positionIndex === 0 ? "scale-100" : "scale-90"
+                        }`}
+                      />
+                    </motion.div>
+                  );
+                })}
+              </AnimatePresence>
+              {/* Name Card for Active Member */}
+              <div className="absolute bottom-0 right-0 left-0 z-40">
+                <div className="relative rounded-xl p-[2px] overflow-hidden">
+                  {/* Glow Layer */}
+                  <div className="glow-layer" />
 
-            {/* Name Card for Active Member */}
-            <div className="absolute bottom-0 right-0 left-0 z-40">
-              <div className="relative rounded-xl p-[2px] overflow-hidden">
-                {/* Glow Layer */}
-                <div className="glow-layer" />
+                  {/* Inner Card */}
+                  <div className="relative bg-black px-6 py-6 pt-8 rounded-xl flex flex-col items-start w-full overflow-hidden">
+                    <div className="card-top-bar" />
 
-                {/* Inner Card */}
-                <div className="relative bg-black px-6 py-6 pt-8 rounded-xl flex flex-col items-start w-full overflow-hidden">
-                  <div className="card-top-bar" />
-
-                  <h3 className="text-lg font-bold text-purple-200 z-10 creative-team-name">
-                    {teamMember?.name}
-                  </h3>
-                  <p className="text-sm text-gray-300 z-10 creative-team-role">
-                    {teamMember?.role}
-                  </p>
+                    <h3 className="text-lg font-bold text-purple-200 z-10 creative-team-name">
+                      {teamMember?.name}
+                    </h3>
+                    <p className="text-sm text-gray-300 z-10 creative-team-role">
+                      {teamMember?.role}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

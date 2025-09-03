@@ -1,6 +1,7 @@
 ﻿import React from "react";
 // import Masonry from "../../../../Rectbits/Masonry/Masonry";
 import CircularGallery from "../../../../Reactbits/CircularGallery/CircularGallery";
+import DomeGallery from "@/components/DomeGallery";
 
 function PhotoGallary() {
   // const items = [
@@ -42,15 +43,20 @@ function PhotoGallary() {
       text: "",
     },
   ];
+
   return (
-    <div className="relative h-[500px]  mt-[5rem]  mb-[5rem]">
-      <CircularGallery
+    <div className="relative   mt-[5rem]  mb-[5rem]">
+      {/* <CircularGallery
         items={items2}
         bend={0}
         textColor="#ffffff"
         borderRadius={0.05}
         scrollEase={0.02}
-      />
+      /> */}
+
+      <div style={{ width: "100%" }} className="h-[600px]">
+        <DomeGallery fit={1} grayscale={false} />
+      </div>
 
       {/* <Masonry
         items={items}
