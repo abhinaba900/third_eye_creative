@@ -14,32 +14,32 @@ function PhotoGallary() {
   // ];
   // const items2 = [
   //   {
-  //     image: "/assets/carrer-gallery-image-1.jpg",
-  //     text: "",
+  //     src: "/assets/carrer-gallery-image-1.jpg",
+  //     alt: "",
   //   },
   //   {
-  //     image: "/assets/carrer-gallery-image-2.jpg",
-  //     text: "",
+  //     src: "/assets/carrer-gallery-image-2.jpg",
+  //     alt: "",
   //   },
   //   {
-  //     image: "/assets/carrer-gallery-image-3.jpg",
-  //     text: "",
+  //     src: "/assets/carrer-gallery-image-3.jpg",
+  //     alt: "",
   //   },
   //   {
-  //     image: "/assets/carrer-gallery-image-4.jpg",
-  //     text: "",
+  //     src: "/assets/carrer-gallery-image-4.jpg",
+  //     alt: "",
   //   },
   //   {
-  //     image: "/assets/carrer-gallery-image-5.jpg",
-  //     text: "",
+  //     src: "/assets/carrer-gallery-image-5.jpg",
+  //     alt: "",
   //   },
   //   {
-  //     image: "/assets/carrer-gallery-image-6.jpg",
-  //     text: "",
+  //     src: "/assets/carrer-gallery-image-6.jpg",
+  //     alt: "",
   //   },
   //   {
-  //     image: "/assets/carrer-gallery-image-7.jpg",
-  //     text: "",
+  //     src: "/assets/carrer-gallery-image-7.jpg",
+  //     alt: "",
   //   },
   // ];
 
@@ -54,7 +54,14 @@ function PhotoGallary() {
       /> */}
 
       <div style={{ width: "100%" }} className="h-[600px]">
-        <DomeGallery fit={1} grayscale={false} />
+        <DomeGallery
+          fit={0.8}
+          minRadius={600}
+          maxVerticalRotationDeg={0}
+          segments={34}
+          dragDampening={2}
+          grayscale={false}
+        />
       </div>
 
       {/* <Masonry

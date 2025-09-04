@@ -3,7 +3,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-import DarkVeil from "@/components/DarkVeil";
 
 interface TeamData {
   id: number;
@@ -250,7 +249,7 @@ function CreativeTeamIntro() {
 
       {/* Main section */}
       <div className="relative max-w-[1300px] w-full mx-auto">
-        <div
+        {/* <div
           style={{
             width: "100%",
             height: "600px",
@@ -261,7 +260,7 @@ function CreativeTeamIntro() {
           }}
         >
           <DarkVeil  speed={0.8}/>
-        </div>
+        </div> */}
         <div className="overflow-hidden text-white max-w-[1279px] w-full mx-auto mb-[8.75rem] md:px-6 lg:px-0 creative-team-info-wrapper-and-holder relative">
           <div className="flex flex-col-reverse lg:flex-row gap-4 md:gap-6 lg:gap-[10%] items-start">
             {/* Left: Text Content */}
@@ -292,7 +291,7 @@ function CreativeTeamIntro() {
 
             {/* Right: Image Stack with 3-Layer PvP Animation */}
             <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] flex items-cente1r justify-center ">
-              {/* <img
+              <img
               src="/assets/Pink background blurred.png"
               alt="background-image"
               className="bg-image"
@@ -303,7 +302,7 @@ function CreativeTeamIntro() {
               src="/assets/background in creative team info.png"
               alt="background-image"
               className="bg-image-foreground"
-            /> */}
+            />
 
               <AnimatePresence initial={false} mode="popLayout">
                 {teamDatas.map((member, idx) => {

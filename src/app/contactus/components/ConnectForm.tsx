@@ -47,7 +47,7 @@ export default function ConnectForm() {
               </h2>
             </div>
 
-            <div className="flex flex-wrap gap-2 sm:gap-4 mb-7 md:mb-6">
+            <div className="flex flex-wrap gap-2 sm:gap-4 mb-7 md:mb-9">
               <button
                 className={classNames(
                   "px-3 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-full border transition-all contact-change-tab-button",
