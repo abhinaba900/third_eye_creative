@@ -55,8 +55,8 @@ function PhotoGallary() {
 
       <div style={{ width: "100%" }} className="h-[600px]">
         <DomeGallery
-          fit={0.8}
-          minRadius={600}
+          fit={2}
+          minRadius={800}
           maxVerticalRotationDeg={0}
           segments={34}
           dragDampening={2}
