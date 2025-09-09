@@ -2196,13 +2196,13 @@ strong {
   justify-content: space-between;
   align-items: start;
   height: 100%;
-  max-width: 1360px;
+  max-width: 1365px;
   margin: 0 auto;
   padding: 14.444vh 5.417vw 3rem 5.417vw;
 }
 
 .our-approach-wrapper h3 {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
 }
 
 .our-approach-wrapper .our-approach-content-wrapper p {
@@ -2791,6 +2791,7 @@ strong {
   line-height: 88px;
   letter-spacing: 0%;
   text-align: center;
+  margin-bottom: 1.5rem;
 }
 .lifeat-third-eye-wrapper .lifeat-third-eye-title span {
   background: linear-gradient(0deg, #c883ff, #772bf2),
@@ -2818,7 +2819,7 @@ strong {
 .text-like-id-wrapper {
   font-family: var(--font-family-sequel-sans-medium);
   font-weight: 415;
-  font-size: 152px;
+  font-size: 7rem;
   line-height: 100%;
   letter-spacing: 3%;
   opacity: 40%;
@@ -2833,7 +2834,7 @@ strong {
 .text-like-header-wrapper {
   font-family: var(--font-family-sequel-sans-book);
   font-weight: 405;
-  font-size: 48px;
+  font-size: 2.5rem;
   line-height: 56px;
   letter-spacing: 0%;
   vertical-align: middle;
@@ -2916,7 +2917,7 @@ strong {
   font-family: var(--font-family-sequel-sans-book);
   font-weight: 405;
   font-size: 1.125rem;
-  line-height: 28px;
+  line-height: 24px;
   letter-spacing: 0%;
   background: linear-gradient(93.46deg, #c4c4c4 4.94%, #ffffff 98.78%);
 

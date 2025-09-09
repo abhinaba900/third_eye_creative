@@ -72,7 +72,7 @@ function LifeatThirdEye() {
                     enableBlur={true}
                     baseRotation={5}
                     blurStrength={10}
-                    textClassName="text-sm md:text-base text-white/70 text-like-paragraph-wrapper"
+                    textClassName="text-sm md:text-base text-white/70 text-like-paragraph-wrapper mb-[3.188rem]"
                   >
                     {item.desc}
                   </ScrollReveal>

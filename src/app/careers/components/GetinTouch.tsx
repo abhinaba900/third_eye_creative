@@ -5,13 +5,13 @@ import React from "react";
 
 function GetinTouch() {
   return (
-    <div className="relative w-full px-4 py-16 sm:py-20 md:py-32 bg-black text-white overflow-visible">
+    <div className="relative w-full px-4 py-16 sm:py-20 md:py-90 2xl:py-130 bg-black text-white overflow-visible overflow-x-hidden">
       {/* SVG Background */}
       <svg
         viewBox="0 0 2227 1247"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute inset-0 overflow-visible w-full z-1 h-full object-cover"
+        className="absolute top-0 bottom-0 overflow-visible w-full z-1 h-full object-contain "
         preserveAspectRatio="xMidYMid slice"
       >
         <g filter="url(#filter0_f_941_2538)">
