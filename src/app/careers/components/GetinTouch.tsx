@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import React from "react";
+import GlassSurface from "../../../../Rectbits/GlassSurface/GlassSurface";
 
 function GetinTouch() {
   return (
@@ -113,7 +114,7 @@ function GetinTouch() {
 
       {/* Content */}
       <div className="relative max-w-5xl mx-auto text-center z-2 w-full">
-        <h3 className="work-getintouch-title text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-8 whitespace-nowrap">
+        <h3 className="work-getintouch-title text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-0 whitespace-nowrap">
           Get in Touch
         </h3>
         <div className="flex flex-col md:flex-row  items-center gap-6 md:gap-[6.25rem] mb-10">
@@ -125,20 +126,27 @@ function GetinTouch() {
           </p>
         </div>
 
-        <button className="px-8 py-4 md:px-10 md:py-6 mx-auto block rounded-full bg-gradient-to-br from-[#fff6ed] to-[#ffdab9] shadow-[inset_0_0_10px_rgba(255,255,255,0.6)] border border-orange-300 relative text-orange-600 font-semibold text-lg md:text-2xl group hover:scale-105 transition-all duration-300">
-          <span className="bg-gradient-to-r from-[#772bf273] via-[#FF891D] to-[#EC4B7B] bg-clip-text text-[#c5553b] work-getintouch-button">
-            Let’s Connect
-          </span>
-          <span className="inline-block ml-2 -mb-2.5 transition-transform group-hover:translate-x-1">
-            <Image
-              src="/assets/work-getintouch-button-arrow.png"
-              alt="arrow"
-              className="getintouch-button-arrow"
-              width={45}
-              height={20}
-            />
-          </span>
-        </button>
+        <GlassSurface
+          width={"fit-content"}
+          height={"fit-content"}
+          borderRadius={114.71}
+          className="mx-auto hover:scale-105  p-4 "
+        >
+          <button className="lets-connect-button-in-careers-page px-8 py-4 md:px-10 md:py-6 mx-auto block rounded-[114.71px] bg-gradient-to-br from-[#fff6ed]/80 to-[#ffdab9]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.6)] border border-orange-300 relative text-orange-600 font-semibold text-lg md:text-2xl group transition-all duration-300">
+            <span className="bg-gradient-to-r from-[#772bf273] via-[#FF891D] to-[#EC4B7B] bg-clip-text text-[#c5553b] work-getintouch-button">
+              Let’s Connect
+            </span>
+            <span className="inline-block ml-2 -mb-2.5 transition-transform group-hover:translate-x-1">
+              <Image
+                src="/assets/work-getintouch-button-arrow.png"
+                alt="arrow"
+                className="getintouch-button-arrow"
+                width={45}
+                height={20}
+              />
+            </span>
+          </button>
+        </GlassSurface>
       </div>
     </div>
   );

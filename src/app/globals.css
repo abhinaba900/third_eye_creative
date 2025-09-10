@@ -2952,7 +2952,6 @@ strong {
   text-align: center;
   color: #ffffff;
   width: 100%;
-  margin-bottom: 2.5rem;
 }
 
 .work-getintouch-text {
@@ -3531,7 +3530,7 @@ strong {
     padding: 1rem 1rem 0 1rem;
   }
 
-  .contact-us-form-email-link{
+  .contact-us-form-email-link {
     font-size: 1rem;
   }
 
@@ -4619,12 +4618,12 @@ strong {
     top: -5rem;
   }
 
-  .form-section-in-contact-us-section{
+  .form-section-in-contact-us-section {
     grid-template-columns: 1fr;
   }
 
-  .visual-section-hyperspeed-section{
-    display: none ;
+  .visual-section-hyperspeed-section {
+    display: none;
   }
 
   .workflow-stages-container,
