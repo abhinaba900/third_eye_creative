@@ -41,17 +41,17 @@ function LifeatThirdEye() {
         collaboration, and doing work that matters
       </p>
 
-      <div className="bg-black text-white py-0 pt-[5rem] px-4 md:px-10 max-w-[1262px] mx-auto mb-[8.75rem]">
+      <div className="bg-black text-white py-0 pt-[5rem] px-4 md:px-10 max-w-[1262px] mx-auto mb-[3.75rem] lifeatthird-eye-values-wrapper md:mb-[4.75rem] lg:mb-[8.75rem]">
         {values.map((item, idx) => (
           <div key={idx} className="">
             <div className="flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
-              <div className="w-50 shrink-0 py-6">
+              <div className="w-50 shrink-0 py-6 pb-2 md:pb-6">
                 <ScrollReveal
                   baseOpacity={0}
                   enableBlur={true}
                   baseRotation={5}
                   blurStrength={10}
-                  textClassName="   mt-[3.188rem]"
+                  textClassName="   mt-[3.188rem] text-like-id-main-wrapper"
                 >
                   <span className="text-like-id-wrapper">
                     {item.id}

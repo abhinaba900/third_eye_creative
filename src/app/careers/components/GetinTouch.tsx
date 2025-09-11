@@ -113,11 +113,11 @@ function GetinTouch() {
       </svg>
 
       {/* Content */}
-      <div className="relative max-w-5xl mx-auto text-center z-2 w-full">
+      <div className="relative max-w-[1100px] mx-auto text-center z-2 w-full">
         <h3 className="work-getintouch-title text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-0 whitespace-nowrap">
           Get in Touch
         </h3>
-        <div className="flex flex-col md:flex-row  items-center gap-6 md:gap-[6.25rem] mb-10">
+        <div className="flex flex-col md:flex-row  items-center gap-1 md:gap-[6.25rem] mb-[5rem]">
           <p className="work-getintouch-text text-base sm:text-lg md:text-xl">
             Have a spark we haven’t listed?
           </p>
@@ -130,13 +130,13 @@ function GetinTouch() {
           width={"fit-content"}
           height={"fit-content"}
           borderRadius={114.71}
-          className="mx-auto hover:scale-105  p-4 "
+          className="mx-auto p-4 cursor-pointer group transition-transform duration-400 ease-in-out hover:scale-105 "
         >
-          <button className="lets-connect-button-in-careers-page px-8 py-4 md:px-10 md:py-6 mx-auto block rounded-[114.71px] bg-gradient-to-br from-[#fff6ed]/80 to-[#ffdab9]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.6)] border border-orange-300 relative text-orange-600 font-semibold text-lg md:text-2xl group transition-all duration-300">
-            <span className="bg-gradient-to-r from-[#772bf273] via-[#FF891D] to-[#EC4B7B] bg-clip-text text-[#c5553b] work-getintouch-button">
+          <button className="cursor-pointer lets-connect-button-in-careers-page px-8 py-4 md:px-10 md:py-6 mx-auto block rounded-[114.71px] bg-gradient-to-br from-[#fff6ed]/80 to-[#ffdab9]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.6)] border border-orange-300 relative text-orange-600 font-semibold text-lg md:text-2xl ">
+            <span className="bg-gradient-to-r from-[#FF891D]  to-[#EC4B7B] bg-clip-text text-transparent work-getintouch-button">
               Let’s Connect
             </span>
-            <span className="inline-block ml-2 -mb-2.5 transition-transform group-hover:translate-x-1">
+            <span className="inline-block ml-2 -mb-2.5 transition-transform duration-400 ease-in-out group-hover:translate-x-1 group-hover:rotate-[-30deg]">
               <Image
                 src="/assets/work-getintouch-button-arrow.png"
                 alt="arrow"

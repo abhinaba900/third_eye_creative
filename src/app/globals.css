@@ -2947,7 +2947,7 @@ strong {
   font-family: var(--font-family-cabinet-grotesk-extrabold);
   font-weight: 800;
   font-size: 12.5rem;
-  line-height: 120%;
+  line-height: 100%;
   letter-spacing: -4%;
   text-align: center;
   color: #ffffff;
@@ -3783,8 +3783,14 @@ strong {
     object-fit: contain;
   }
 
-  .single-work-page-problem-statement-description {
+  .single-work-page-problem-statement-description,
+  .open-roles-wrapper .open-roles-wrapper-desc {
     line-height: 100%;
+  }
+
+  .open-roles-wrapper .open-roles-wrapper-desc{
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .indevesual-page-problem-statement-icon {
@@ -3924,6 +3930,30 @@ strong {
     }
   }
 
+  .lifeat-third-eye-wrapper .lifeat-third-eye-desc {
+    line-height: 100% !important;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .lifeatthird-eye-values-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    margin-bottom: 0;
+  }
+
+  .text-like-id-main-wrapper {
+    margin-top: 0;
+  }
+
+  .text-like-header-wrapper {
+    margin-top: 0;
+  }
+
+  .text-like-paragraph-wrapper {
+    margin-bottom: 1rem !important;
+  }
+
   /* about us */
 
   .our-approach-wrapper {
@@ -3932,6 +3962,7 @@ strong {
     text-align: center;
     gap: 0;
     padding: 5rem 1rem;
+    margin-top: 4rem;
   }
 
   .ScrollReveal_scroll-reveal-text__Td_gR {
@@ -4093,13 +4124,14 @@ strong {
   }
 
   .text-like-header-wrapper {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 100%;
   }
 
   .work-getintouch-title {
     font-size: 3rem;
     line-height: 100%;
+    margin-bottom: 1rem;
   }
   .work-getintouch-button {
     font-size: 1.5rem;
@@ -4555,6 +4587,25 @@ strong {
     gap: 0.2rem;
   }
 
+  .text-like-header-wrapper {
+    font-size: 2rem;
+    line-height: 40px;
+  }
+
+  .text-like-paragraph-wrapper {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+
+  .open-roles-wrapper .open-roles-wrapper-title,
+  .lifeat-third-eye-wrapper .lifeat-third-eye-title {
+    font-size: 4rem;
+  }
+
+  .work-getintouch-title {
+    font-size: 8.5rem;
+  }
+
   .indevisual-page-challenges-and-resolutions-container {
     flex-direction: column-reverse;
   }
@@ -4591,6 +4642,14 @@ strong {
   }
   .hero-section-wrapper {
     padding-top: 8.5rem;
+  }
+
+  .work-getintouch-title {
+    font-size: 11rem;
+  }
+
+  .lifeatthird-eye-values-wrapper {
+    margin-bottom: 5rem;
   }
 
   .hero-section-wrapper {
@@ -4809,6 +4868,16 @@ strong {
   .impact-stats-counter {
     height: 180px;
     overflow: hidden;
+  }
+
+  .work-getintouch-button {
+    font-size: 4.125rem;
+  }
+
+  .getintouch-button-arrow {
+    height: 4rem;
+    width: 4rem;
+    margin-bottom: -0.5rem;
   }
 }
 
