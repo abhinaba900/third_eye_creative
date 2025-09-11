@@ -2821,14 +2821,14 @@ strong {
   font-weight: 415;
   font-size: 7rem;
   line-height: 100%;
-  letter-spacing: 3%;
-  opacity: 40%;
-  /* background: linear-gradient(94.46deg, #ffffff 25.29%, #9c9c9c 107.3%);
+  letter-spacing: 0.03em; /* fixed */
+  opacity: 0.4; /* fixed */
 
+  background: linear-gradient(94.46deg, #ffffff 25.29%, #9c9c9c 107.3%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-clip: text; /* for Firefox */
-  /* color: transparent;  */
+  background-clip: text; /* Firefox */
+  color: transparent; /* Firefox fix */
 }
 
 .text-like-header-wrapper {

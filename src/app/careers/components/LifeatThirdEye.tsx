@@ -51,9 +51,11 @@ function LifeatThirdEye() {
                   enableBlur={true}
                   baseRotation={5}
                   blurStrength={10}
-                  textClassName="  text-like-id-wrapper mt-[3.188rem]"
+                  textClassName="   mt-[3.188rem]"
                 >
-                  {item.id}
+                  <span className="text-like-id-wrapper">
+                    {item.id}
+                  </span>
                 </ScrollReveal>
               </div>
               <div>
@@ -78,7 +80,7 @@ function LifeatThirdEye() {
                   </ScrollReveal>
                 </div>
                 <hr
-                  className={`w-full h-[1px] bg-[#3F3F3F] opacity-30 ${
+                  className={`w-full h-[1px] bg-[#3F3F3F] opacity-20 ${
                     idx === values.length - 1 ? "hidden" : ""
                   }`}
                 />
