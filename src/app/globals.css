@@ -2943,6 +2943,13 @@ strong {
 
 /* get in touch */
 
+.get-in-touch-wrapper-careers-page {
+  background-image: url("../../public//assets/about-us-orange-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .work-getintouch-title {
   font-family: var(--font-family-cabinet-grotesk-extrabold);
   font-weight: 800;
@@ -2956,10 +2963,10 @@ strong {
 
 .work-getintouch-text {
   font-family: var(--font-family-cabinet-grotesk-bold);
-  font-weight: 700;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 24px;
-  letter-spacing: 3%;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
@@ -3520,6 +3527,9 @@ strong {
   left: -150px;
 }
 
+.mobile-text {
+  display: none;
+}
 /* media quarry */
 
 @media (max-width: 767px) {
@@ -3540,6 +3550,11 @@ strong {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .get-in-touch-wrapper-careers-page {
+    background-size: 200% 120%;
+    background-position: center;
   }
 
   .work-grid-filter-button {
@@ -3640,14 +3655,14 @@ strong {
   }
 
   .work-getintouch-text {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    line-height: 16px;
   }
 
   .get-in-touch-svg-background-careers-page {
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
-    height: 100%;
-    height: 70vh;
+    height: 120%;
   }
 
   .vision-text-gradient-mobile {
@@ -3712,6 +3727,16 @@ strong {
     margin-top: 0;
     margin-bottom: -30px;
   } */
+
+  .get-in-touch-text-wrapper-careers-page {
+    font-family: var(--font-family-cabinet-grotesk-bold);
+    font-weight: 300;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 3%;
+    text-transform: uppercase;
+  }
 
   .single-work-page-problem-statement-content-description-tags {
     font-size: 0.8rem;
@@ -4147,18 +4172,20 @@ strong {
   }
 
   .work-getintouch-title {
-    font-size: 3rem;
+    font-size: 16.5vw;
     line-height: 100%;
     margin-bottom: 1rem;
   }
   .work-getintouch-button {
     font-size: 1.5rem;
     line-height: 100%;
+    font-weight: 600 !important;
+    letter-spacing: 1px;
   }
 
   .getintouch-button-arrow {
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 1rem;
+    width: 1.2rem;
     margin-bottom: 0.5rem;
     object-fit: contain;
   }
@@ -4355,6 +4382,14 @@ strong {
 
   .avatar-image-in-creative-team:nth-child(2) {
     display: none;
+  }
+
+  .deskpot-text {
+    display: none;
+  }
+
+  .mobile-text {
+    display: block;
   }
 }
 
@@ -4659,6 +4694,10 @@ strong {
   .responsive-player {
     border-radius: 32px; /* Slightly smaller radius */
   }
+
+  .deskpot-text {
+    display: none;
+  }
 }
 
 @media only screen and (min-width: 911px) and (max-width: 1024px) {
@@ -4760,7 +4799,7 @@ strong {
   .lifeatthird-eye-values-wrapper {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
 
   .lifeat-third-eye-wrapper .lifeat-third-eye-title,

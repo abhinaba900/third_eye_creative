@@ -6,9 +6,9 @@ import GlassSurface from "../../../../Rectbits/GlassSurface/GlassSurface";
 
 function GetinTouch() {
   return (
-    <div className="relative w-full px-4 py-16 sm:py-20 md:py-90 2xl:py-130 bg-black text-white overflow-visible overflow-x-hidden">
+    <div className="relative w-full px-4 py-20 sm:py-20 md:py-90 2xl:py-130 bg-black text-white overflow-visible overflow-x-hidden get-in-touch-wrapper-careers-page">
       {/* SVG Background */}
-      <svg
+      {/* <svg
         viewBox="0 0 2227 1247"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -110,14 +110,14 @@ function GetinTouch() {
             />
           </filter>
         </defs>
-      </svg>
+      </svg> */}
 
       {/* Content */}
       <div className="relative max-w-[1100px] mx-auto text-center z-2 w-full">
         <h3 className="work-getintouch-title text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-0 whitespace-nowrap">
           Get in Touch
         </h3>
-        <div className="flex flex-col md:flex-row  items-center gap-1 md:gap-[6.25rem] mb-[3.75rem] get-in-touch-text-wrapper-careers-page">
+        <div className="flex flex-col md:flex-row  items-center gap-1 md:gap-[6.25rem] mb-[2.75rem] get-in-touch-text-wrapper-careers-page">
           <p className="work-getintouch-text text-base sm:text-lg md:text-xl">
             Have a spark we haven’t listed?
           </p>
@@ -130,7 +130,9 @@ function GetinTouch() {
           width={"fit-content"}
           height={"fit-content"}
           borderRadius={114.71}
-          className="mx-auto p-2 md:p-4 cursor-pointer group transition-transform duration-400 ease-in-out hover:scale-105 "
+          distortionScale={0}
+          className="mx-auto p-0 md:p-4 cursor-pointer group transition-transform duration-400 ease-in-out hover:scale-105 "
+          style={{}}
         >
           <button className="flex items-center cursor-pointer lets-connect-button-in-careers-page px-8 py-4 md:px-[50px] md:py-[32px] mx-auto  rounded-[114.71px] bg-gradient-to-br from-[#fff6ed]/80 to-[#ffdab9]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.6)] border border-orange-300 relative text-orange-600 font-semibold text-lg md:text-2xl ">
             <span

@@ -37,8 +37,12 @@ const jobs = [
 function OpenRoles() {
   return (
     <div className="open-roles-wrapper">
-      <h3 className="open-roles-wrapper-title">
+      <h3 className="open-roles-wrapper-title deskpot-text">
         <span>Open Roles,</span> Open Minds
+      </h3>
+      <h3 className="open-roles-wrapper-title mobile-text">
+        <span>Open Roles</span>
+        <br />Open Minds
       </h3>
       <p className="open-roles-wrapper-desc">
         Explore opportunities to craft, code, and create alongside a team that
