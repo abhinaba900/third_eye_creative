@@ -117,7 +117,7 @@ function GetinTouch() {
         <h3 className="work-getintouch-title text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-0 whitespace-nowrap">
           Get in Touch
         </h3>
-        <div className="flex flex-col md:flex-row  items-center gap-1 md:gap-[6.25rem] mb-[5rem]">
+        <div className="flex flex-col md:flex-row  items-center gap-1 md:gap-[6.25rem] mb-[3.75rem] get-in-touch-text-wrapper-careers-page">
           <p className="work-getintouch-text text-base sm:text-lg md:text-xl">
             Have a spark we haven’t listed?
           </p>
@@ -130,9 +130,9 @@ function GetinTouch() {
           width={"fit-content"}
           height={"fit-content"}
           borderRadius={114.71}
-          className="mx-auto p-4 cursor-pointer group transition-transform duration-400 ease-in-out hover:scale-105 "
+          className="mx-auto p-2 md:p-4 cursor-pointer group transition-transform duration-400 ease-in-out hover:scale-105 "
         >
-          <button className="cursor-pointer lets-connect-button-in-careers-page px-8 py-4 md:px-10 md:py-6 mx-auto block rounded-[114.71px] bg-gradient-to-br from-[#fff6ed]/80 to-[#ffdab9]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.6)] border border-orange-300 relative text-orange-600 font-semibold text-lg md:text-2xl ">
+          <button className="flex items-center cursor-pointer lets-connect-button-in-careers-page px-8 py-4 md:px-10 md:py-6 mx-auto  rounded-[114.71px] bg-gradient-to-br from-[#fff6ed]/80 to-[#ffdab9]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.6)] border border-orange-300 relative text-orange-600 font-semibold text-lg md:text-2xl ">
             <span className="bg-gradient-to-r from-[#FF891D]  to-[#EC4B7B] bg-clip-text text-transparent work-getintouch-button">
               Let’s Connect
             </span>

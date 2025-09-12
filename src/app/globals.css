@@ -3693,6 +3693,10 @@ strong {
     line-height: 100%;
   }
 
+  .open-roles-wrapper-title {
+    text-align: center;
+  }
+
   /* .indevisual-page-footer-image-container {
     margin-top: 0;
     margin-bottom: -30px;
@@ -3788,7 +3792,7 @@ strong {
     line-height: 100%;
   }
 
-  .open-roles-wrapper .open-roles-wrapper-desc{
+  .open-roles-wrapper .open-roles-wrapper-desc {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -3951,7 +3955,8 @@ strong {
   }
 
   .text-like-paragraph-wrapper {
-    margin-bottom: 1rem !important;
+    font-size: 1.25rem !important;
+    line-height: 24px !important;
   }
 
   /* about us */
@@ -4126,6 +4131,8 @@ strong {
   .text-like-header-wrapper {
     font-size: 1.8rem;
     line-height: 100%;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
   }
 
   .work-getintouch-title {
@@ -4139,7 +4146,10 @@ strong {
   }
 
   .getintouch-button-arrow {
-    height: 1.8rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-bottom: 0.5rem;
+    object-fit: contain;
   }
 
   .text-section-in-navbar {
@@ -4677,6 +4687,14 @@ strong {
     top: -5rem;
   }
 
+  .get-in-touch-text-wrapper-careers-page {
+    padding-left: 1.5rem;
+  }
+
+  .get-in-touch-text-wrapper-careers-page {
+    padding-left: 1.5rem;
+  }
+
   .form-section-in-contact-us-section {
     grid-template-columns: 1fr;
   }
@@ -4724,6 +4742,21 @@ strong {
 }
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait),
   only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: landscape) {
+  .lifeatthird-eye-values-wrapper {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .get-in-touch-text-wrapper-careers-page {
+    padding-left: 1.5rem;
+  }
+
+  .open-roles-cards-wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .creative-team-image-wrapper {
     padding: 0 1.5rem 5rem 1.5rem;
   }
