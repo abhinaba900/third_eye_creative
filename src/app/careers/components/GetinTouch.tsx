@@ -12,7 +12,7 @@ function GetinTouch() {
         viewBox="0 0 2227 1247"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="absolute top-0 bottom-0 overflow-visible w-full z-1 h-full object-contain "
+        className="absolute top-0 bottom-0 overflow-visible w-full z-1 h-full object-contain get-in-touch-svg-background-careers-page"
         preserveAspectRatio="xMidYMid slice"
       >
         <g filter="url(#filter0_f_941_2538)">
@@ -132,10 +132,16 @@ function GetinTouch() {
           borderRadius={114.71}
           className="mx-auto p-2 md:p-4 cursor-pointer group transition-transform duration-400 ease-in-out hover:scale-105 "
         >
-          <button className="flex items-center cursor-pointer lets-connect-button-in-careers-page px-8 py-4 md:px-10 md:py-6 mx-auto  rounded-[114.71px] bg-gradient-to-br from-[#fff6ed]/80 to-[#ffdab9]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.6)] border border-orange-300 relative text-orange-600 font-semibold text-lg md:text-2xl ">
-            <span className="bg-gradient-to-r from-[#FF891D]  to-[#EC4B7B] bg-clip-text text-transparent work-getintouch-button">
+          <button className="flex items-center cursor-pointer lets-connect-button-in-careers-page px-8 py-4 md:px-[50px] md:py-[32px] mx-auto  rounded-[114.71px] bg-gradient-to-br from-[#fff6ed]/80 to-[#ffdab9]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.6)] border border-orange-300 relative text-orange-600 font-semibold text-lg md:text-2xl ">
+            <span
+              className="bg-gradient-to-r from-[#FF891D] to-[#EC4B7B] bg-clip-text text-transparent work-getintouch-button"
+              style={{
+                textShadow: "0px 4.59px 9.18px rgba(250, 95, 2, 0.2)",
+              }}
+            >
               Let’s Connect
             </span>
+
             <span className="inline-block ml-2 -mb-2.5 transition-transform duration-400 ease-in-out group-hover:translate-x-1 group-hover:rotate-[-30deg]">
               <Image
                 src="/assets/work-getintouch-button-arrow.png"

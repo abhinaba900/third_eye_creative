@@ -2833,7 +2833,7 @@ strong {
 
 .text-like-header-wrapper {
   font-family: var(--font-family-sequel-sans-book);
-  font-weight: 405;
+  font-weight: 600;
   font-size: 2.5rem;
   line-height: 56px;
   letter-spacing: 0%;
@@ -3637,6 +3637,17 @@ strong {
 
   .project-data-container {
     margin-bottom: 5rem;
+  }
+
+  .work-getintouch-text {
+    font-size: 0.8rem;
+  }
+
+  .get-in-touch-svg-background-careers-page {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    height: 70vh;
   }
 
   .vision-text-gradient-mobile {
@@ -4593,6 +4604,10 @@ strong {
     font-size: 0.875rem;
   }
 
+  .job-card-apply-button {
+    gap: 0.5rem;
+  }
+
   .nav-items-section {
     gap: 0.2rem;
   }
@@ -4746,6 +4761,11 @@ strong {
     padding-top: 1rem;
     padding-bottom: 1rem;
     margin-bottom: 3rem;
+  }
+
+  .lifeat-third-eye-wrapper .lifeat-third-eye-title,
+  .open-roles-wrapper .open-roles-wrapper-title {
+    line-height: 100%;
   }
 
   .get-in-touch-text-wrapper-careers-page {
@@ -4908,9 +4928,8 @@ strong {
   }
 
   .getintouch-button-arrow {
-    height: 4rem;
+    height: 2.5rem;
     width: 4rem;
-    margin-bottom: -0.5rem;
   }
 }
 
