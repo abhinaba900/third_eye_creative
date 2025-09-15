@@ -1,6 +1,5 @@
 ﻿"use client";
 
-import Image from "next/image";
 import React from "react";
 import GlassSurface from "../../../../Rectbits/GlassSurface/GlassSurface";
 
@@ -160,7 +159,7 @@ function GetinTouch() {
                 <path
                   d="M26.7461 27.8311C25.9209 28.4352 24.7634 28.2573 24.1572 27.4346L24.1563 27.4346C23.6351 26.6573 23.7489 25.6179 24.4258 24.9717L29.874 19.5234C30.1869 19.2077 30.5524 18.949 30.9541 18.7588L31.377 18.5615L31.3291 18.3428L11.9063 18.3428C11.7988 18.3442 11.691 18.3365 11.585 18.3193C10.5748 18.1555 9.8888 17.2044 10.0508 16.1943C10.2292 15.2609 11.0621 14.5975 12.0117 14.6328L31.3584 14.6328L31.4053 14.4131L30.8184 14.1494C30.4663 13.9681 30.1443 13.7333 29.8643 13.4531L29.8643 13.4521L24.4277 7.99609L24.4258 7.99414C23.7489 7.34794 23.6361 6.30856 24.1572 5.53125C24.2048 5.46966 24.2556 5.41061 24.3105 5.35547C25.034 4.63004 26.2091 4.62817 26.9346 5.35156L26.9336 5.35156L36.7822 15.2002L36.7842 15.2012C37.5082 15.926 37.5071 17.1012 36.7822 17.8252L26.9355 27.6719C26.8761 27.729 26.8136 27.7832 26.7471 27.832L26.7461 27.8311Z"
                   stroke="#F8F8F8"
-                  stroke-width="0.229412"
+                  strokeWidth="0.229412"
                 />
               </g>
               <defs>
@@ -171,9 +170,9 @@ function GetinTouch() {
                   width="45.8842"
                   height="41.9623"
                   filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
+                  colorInterpolationFilters="sRGB"
                 >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feFlood floodOpacity="0" result="BackgroundImageFix" />
                   <feColorMatrix
                     in="SourceAlpha"
                     type="matrix"
@@ -207,8 +206,8 @@ function GetinTouch() {
                   y2="4.69528"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#FF891D" />
-                  <stop offset="1" stop-color="#EC4B7B" />
+                  <stop stopColor="#FF891D" />
+                  <stop offset="1" stopColor="#EC4B7B" />
                 </linearGradient>
               </defs>
             </svg>
