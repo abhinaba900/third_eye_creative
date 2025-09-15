@@ -3205,9 +3205,10 @@ strong {
 }
 
 .single-work-page-problem-statement-title span {
-  background: linear-gradient(0deg, #c883ff, #c883ff),
-    linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
+  background: linear-gradient(0deg, #c883ff, #772bf2),
+    linear-gradient(180deg, #ce0aff 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* for Firefox */
@@ -3371,9 +3372,10 @@ strong {
 }
 
 .single-work-page-challenges-and-resolutions-title span {
-  background: linear-gradient(0deg, #c883ff, #c883ff),
-    linear-gradient(180deg, #772bf2 0%, rgba(206, 10, 255, 0) 100%),
+  background: linear-gradient(0deg, #c883ff, #772bf2),
+    linear-gradient(180deg, #ce0aff 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text; /* for Firefox */
