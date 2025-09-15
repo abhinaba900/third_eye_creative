@@ -3530,6 +3530,10 @@ strong {
 .mobile-text {
   display: none;
 }
+
+.getintouch-button-arrow {
+  margin-top: 1rem;
+}
 /* media quarry */
 
 @media (max-width: 767px) {
@@ -4184,10 +4188,8 @@ strong {
   }
 
   .getintouch-button-arrow {
-    height: 1rem;
-    width: 1.2rem;
-    margin-bottom: 0.5rem;
-    object-fit: contain;
+    width: 1.8rem;
+    margin-top: 0.5rem;
   }
 
   .text-section-in-navbar {
