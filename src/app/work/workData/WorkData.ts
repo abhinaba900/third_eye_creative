@@ -994,7 +994,7 @@
     },
     Solution: {
       layout: "3",
-      title: "<span>Connected</span> Collections Clear <span>Control</span>",
+      title: "<span>Connected</span> Collections Clear <span class=\"saparate-controall-section-updated\">Control</span>",
       description:
         "A unified system for real-time cash tracking, seamless reconciliation, and clear oversight across all sites",
 

@@ -3375,6 +3375,7 @@ strong {
   background: linear-gradient(0deg, #c883ff, #772bf2),
     linear-gradient(180deg, #ce0aff 0%, rgba(206, 10, 255, 0) 100%),
     linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  opacity: 80%;
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -3536,6 +3537,16 @@ strong {
 .getintouch-button-arrow {
   margin-top: 1rem;
 }
+
+.single-page-solution-section-title .saparate-controall-section-updated {
+  background: linear-gradient(0deg, #772bf2, #ce0aff),
+    linear-gradient(180deg, #ce0aff 0%, rgba(206, 10, 255, 0) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
+
 /* media quarry */
 
 @media (max-width: 767px) {
