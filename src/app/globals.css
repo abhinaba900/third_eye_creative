@@ -1732,7 +1732,7 @@ strong {
   text-align: center;
   text-transform: uppercase;
   max-width: 831px;
-  margin: 0 auto 5rem auto;
+  margin: 0 auto 1rem auto;
   position: relative;
   z-index: 1;
 }
@@ -3428,9 +3428,9 @@ strong {
 }
 
 .single-page-testimonial-name {
-  font-family: var(--font-family-sequel-sans-random-display);
+  font-family: var(--font-family-sequel-sans-book-head);
   font-weight: 410;
-  font-size: 16px;
+  font-size: 1.5rem;
   line-height: 24px;
   letter-spacing: 0%;
 }
@@ -3438,31 +3438,31 @@ strong {
 .single-page-testimonial-title {
   font-family: var(--font-family-sequel-sans-light-display);
   font-weight: 400;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0%;
   color: #efedfd99;
-  opacity: 60%;
+  opacity: 50%;
 }
 
 .single-page-testimonial-description {
-  font-family: var(--font-family-sequel-sans-book);
+  font-family: var(--font-family-sequel-sans-book-head);
   font-weight: 405;
   font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0%;
-  color: #efedfdb2;
-  opacity: 70%;
+  color: #ffffff;
+  opacity: 80%;
+  margin-bottom: 5rem;
 }
 
 /* build with us banner */
 
 .single-page-build-with-us-banner {
-  /* height: 100%;
-  max-height: 100vh; */
+ 
   background: none;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+  padding-top: 20rem;
+  padding-bottom: 20rem;
   position: relative;
   overflow: visible;
 }

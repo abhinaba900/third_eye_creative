@@ -13,7 +13,6 @@ function BuildWithUsBanner() {
         <h3 className="text-white text-4xl font-semibold">
           Ideas don’t build themselves<span>, We do</span>
         </h3>
-        <img src="/assets/indevisual-page-build-with-us-text-bottom-image.svg" className="mb-6" alt="text-bottom" />
 
         <p className="build-with-us-banner-description">
           Share your vision , we’ll bring the strategy, design, and <br /> tech to make
