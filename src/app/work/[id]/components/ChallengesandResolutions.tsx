@@ -4,7 +4,7 @@ import React from "react";
 function ChallengesandResolutions({ data }) {
   return (
     <div>
-      <div className="bg-black text-white px-6 mb-[8.813rem] max-w-7xl mx-auto">
+      <div className="bg-black text-white px-6 mb-[9.036rem] max-w-7xl mx-auto">
         <h2
           className="text-3xl md:text-5xl font-bold leading-tight single-page-solution-section-title single-work-page-challenges-and-resolutions-title"
           dangerouslySetInnerHTML={{ __html: data.title }}
@@ -16,8 +16,8 @@ function ChallengesandResolutions({ data }) {
 
         <div className="space-y-[1rem]">
           {/* Section: What we were up against */}
-          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-6 items-start relative indevisual-page-challenges-and-resolutions-container">
-            <div className="flex">
+          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-[3rem] items-start justify-between relative indevisual-page-challenges-and-resolutions-container">
+            <div className="flex h-full">
               {/* Left Image Line */}
               <div className="relative w-10 h-full mr-4 hidden lg:block">
                 <svg
@@ -141,16 +141,16 @@ function ChallengesandResolutions({ data }) {
               </div>
               {/* Content */}
               <div className="flex-1 ">
-                <h2 className="text-white text-xl font-bold mb-4 single-work-page-bullet-point-title">
+                <h2 className="text-white text-xl font-bold mb-[2rem] single-work-page-bullet-point-title">
                   {data.challenges.title}
                 </h2>
                 <ul className="flex flex-col gap-[2rem] text-white">
                   {data.challenges.points.map((point, index) => (
                     <li
                       key={index}
-                      className="flex items-start max-w-[472px] single-work-page-bullet-point-description"
+                      className="flex items-start max-w-[472px] "
                     >
-                      <span className="text-yellow-400 mr-2">
+                      <span className="text-yellow-400 mr-2 single-work-page-bullet-point-description">
                         <svg
                           width="28"
                           height="28"
@@ -176,7 +176,7 @@ function ChallengesandResolutions({ data }) {
               </div>
             </div>
             {/* Right Icon */}
-            <div className="ml-auto -mt-5 -mr-5">
+            <div className="relative -right-12 -top-12 left-auto">
               <Image
                 src={data.challenges.image}
                 alt="Icon"
@@ -187,8 +187,8 @@ function ChallengesandResolutions({ data }) {
           </div>
 
           {/* Section: How we engineered the fix */}
-          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-6 items-start relative indevisual-page-challenges-and-resolutions-container">
-            <div className="flex ">
+          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-[3rem] items-start justify-between relative indevisual-page-challenges-and-resolutions-container">
+            <div className="flex  h-full">
               {/* Left Image Line */}
               <div className="relative w-10 h-full mr-4 hidden lg:block">
                 <svg
@@ -306,7 +306,7 @@ function ChallengesandResolutions({ data }) {
 
               {/* Content */}
               <div className="  ">
-                <h2 className="text-white text-xl font-bold mb-4 single-work-page-bullet-point-title">
+                <h2 className="text-white text-xl font-bold mb-[2rem] single-work-page-bullet-point-title">
                   {data.solutions.title}
                 </h2>
                 <ul className="flex flex-col gap-[2rem] text-white">
@@ -339,7 +339,7 @@ function ChallengesandResolutions({ data }) {
             </div>
 
             {/* Right Icon */}
-            <div className="ml-auto -mb-6 -mr-5">
+            <div className="relative -right-12 -bottom-12 left-auto">
               <Image
                 src={data.solutions.image}
                 alt="Icon"

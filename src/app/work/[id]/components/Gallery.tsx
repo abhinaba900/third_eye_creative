@@ -2,7 +2,7 @@
 
 function Gallery({ data }) {
   return (
-    <div className="grid gap-4 max-w-[1232px] mx-auto mb-[8.75rem]">
+    <div className="grid gap-4 max-w-[1232px] mx-auto mb-[9.036rem]">
       {data.map((item, index) => {
         if (item.type === "multiple") {
           return (

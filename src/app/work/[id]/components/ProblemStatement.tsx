@@ -5,7 +5,7 @@ function ProblemStatement({ data }) {
   console.log("ProblemStatement data:", data);
 
   return (
-    <section className="bg-black text-white max-w-[1232px] mx-auto px-4 sm:px-6 lg:px-0 mb-[8.75rem]">
+    <section className="bg-black text-white max-w-[1232px] mx-auto px-4 sm:px-6 lg:px-0 mb-[9.036rem]">
       <div className="text-center mb-12 sm:mb-16">
         <h2
           className="text-3xl sm:text-4xl font-bold leading-snug single-work-page-problem-statement-title"
@@ -35,11 +35,11 @@ function ProblemStatement({ data }) {
         </div>
 
         {/* Right Section */}
-        <div className="relative w-full lg:w-1/2 bg-[#191919] flex flex-col indevisual-page-problem-statement-icon-container gap-6 sm:gap-[2.438rem] justify-center px-4 sm:px-6 py-8 border-l border-dashed border-gray-700">
+        <div className="relative w-full lg:w-1/2 bg-[#191919] flex flex-col indevisual-page-problem-statement-icon-container gap-6 sm:gap-[2.438rem] justify-center px-4 sm:px-6 py-[2.5rem] border-l border-dashed border-gray-700">
           {data.contentSection.rightsideData.map((issue, index) => (
             <div
               key={index}
-              className="flex items-start sm:items-center gap-3 relative sm:-left-8 md:left-0 lg:-left-8 bg-[#191919]"
+              className="flex items-start sm:items-center gap-3 relative sm:-left-8 md:left-0 lg:-left-[4.25rem] bg-[#191919]"
             >
               <Image
                 src="/assets/problemStatement-right-sede-icon.png"

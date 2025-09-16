@@ -4,12 +4,13 @@ import React from "react";
 function ClientBackground({ data }) {
   return (
     <div
-      className="flex indevisual-page-client-background-container max-w-[1232px] relative mb-[9.063rem]  mx-auto flex-col lg:flex-row  items-center justify-between bg-gradient-to-br from-[#DCF9FF] via-[#621DBA] to-[#04001C] rounded-[1.5rem] p-2 lg:p-8 gap-5 lg:gap-5 text-white"
+      className="flex indevisual-page-client-background-container max-w-[1232px] relative mb-[9.063rem]  mx-auto flex-col lg:flex-row  items-center justify-between bg-gradient-to-br from-[#DCF9FF] via-[#621DBA] to-[#04001C] rounded-[1.5rem] gap-5 lg:gap-5 text-white"
       style={{
         paddingLeft: data.type === "1" ? "0" : "",
         paddingTop: data.type === "1" ? "" : "0",
         paddingBottom: data.type === "1" ? "" : "0",
         overflow: data.type === "1" ? "" : "hidden",
+        
       }}
     >
       {/* Left Section - App Screenshot */}
@@ -84,8 +85,9 @@ function ClientBackground({ data }) {
       {/* Right Section - Project Info */}
       <div
         className={`flex flex-col gap-6 w-full lg:w-[40%] ${
-          data.type === "1" ? "" : "p-8 lg:py-16 "
+          data.type === "1" ? "p-8 lg:py-[5rem]" : "p-8 lg:py-16 "
         }  ${data.type === "3" ? "lg:w-[70%] mx-auto" : ""}`}
+        
       >
         <div>
           <Image

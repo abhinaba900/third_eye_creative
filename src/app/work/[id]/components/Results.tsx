@@ -4,7 +4,7 @@ function Results({ data, galleryData }) {
   return (
     <div
       className={`max-w-[1232px] mx-auto ${
-        galleryData.length > 0 && "mb-[8.75rem]"
+        galleryData.length > 0 && "mb-[9.036rem]"
       }`}
     >
       <h2

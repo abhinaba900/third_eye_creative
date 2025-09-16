@@ -39,6 +39,11 @@
     format("opentype");
 }
 @font-face {
+  font-family: "Sequel Sans Book Display";
+  src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Book Disp.otf")
+    format("opentype");
+}
+@font-face {
   font-family: "Sequel Sans Medium Head";
   src: url("../../public/assets/font/Sequel\ Sans\ OTF/Sequel Sans Medium Head.otf")
     format("opentype");
@@ -93,6 +98,7 @@
   --foreground: #ffffff;
   --font-family: "Cabinet Grotesk", sans-serif;
   --font-family-sequel-sans-book: "Sequel Sans Book", sans-serif;
+  --font-family-sequel-sans-book-display: "Sequel Sans Book Display";
   --font-family-sequel-sans-medium: "Sequel Sans Medium", sans-serif;
   --font-family-sequel-sans-random-display: "Sequel Sans Random Display";
   --font-family-sequel-sans-roman-display: "Sequel Sans Roman Display";
@@ -3167,7 +3173,7 @@ strong {
 }
 
 .single-work-page-client-description {
-  font-family: var(--font-family-sequel-sans-book);
+  font-family: var(--font-family-sequel-sans-book-display);
   font-weight: 405;
   font-size: 1rem;
   line-height: 24px;
@@ -3186,7 +3192,7 @@ strong {
 }
 
 .single-work-page-client-footer-description {
-  font-family: var(--font-family-sequel-sans-book);
+  font-family: var(--font-family-sequel-sans-book-display);
   font-weight: 405;
   font-size: 0.875rem;
   line-height: 24px;
@@ -3235,7 +3241,7 @@ strong {
 }
 
 .single-work-page-problem-statement-content-description {
-  font-family: var(--font-family-sequel-sans-book);
+  font-family: var(--font-family-sequel-sans-book-display);
   font-weight: 405;
   font-size: 1rem;
   line-height: 24px;
@@ -3244,12 +3250,17 @@ strong {
 }
 
 .single-work-page-problem-statement-content-description-tags {
-  font-family: var(--font-family-sequel-sans-book);
+  font-family: var(--font-family-sequel-sans-book-display);
   font-weight: 405;
   font-size: 1rem;
   line-height: 24px;
   letter-spacing: 0px;
   text-align: left;
+  opacity: 80%;
+}
+
+.indevisual-page-problem-statement-icon-container {
+  padding-inline: 3.75rem;
 }
 
 /* objectives */
@@ -3294,7 +3305,7 @@ strong {
 }
 
 .single-work-page-objectives-real-time-diagnostics-description {
-  font-family: var(--font-family-sequel-sans-book);
+  font-family: var(--font-family-sequel-sans-book-display);
   font-weight: 405;
   font-size: 1rem;
   line-height: 24px;
@@ -3343,7 +3354,7 @@ strong {
 }
 
 .single-page-solution-cards-description {
-  font-family: var(--font-family-sequel-sans-book);
+  font-family: var(--font-family-sequel-sans-book-display);
   font-weight: 405;
   font-size: 1rem;
   line-height: 24px;
@@ -3364,11 +3375,12 @@ strong {
 }
 
 .single-work-page-bullet-point-description {
-  font-family: var(--font-family-sequel-sans-book);
+  font-family: var(--font-family-sequel-sans-book-display);
   font-weight: 405;
   font-size: 1.25rem;
   line-height: 140%;
   letter-spacing: 0%;
+  opacity: 80%;
 }
 
 .single-work-page-challenges-and-resolutions-title span {
@@ -3545,6 +3557,11 @@ strong {
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
   color: transparent !important;
+}
+
+.client-background-right-section-1 {
+  margin-top: 3.75rem !important;
+  border: 1px solid red;
 }
 
 /* media quarry */

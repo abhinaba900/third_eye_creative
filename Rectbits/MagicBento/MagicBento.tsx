@@ -851,8 +851,8 @@ const MagicBento: React.FC<BentoProps> = ({
                 el.addEventListener("click", handleClick);
               }}
             >
-              <div className=" p-6 bg-[rgba(255,255,255,0.1)] shadow-xl indevisual-page-objectives-real-time-diagnostics-container flex items-center lg:pr-0 " >
-                <div>
+              <div className=" py-[2rem] bg-[rgba(255,255,255,0.1)] shadow-xl indevisual-page-objectives-real-time-diagnostics-container flex items-center lg:pr-0 ">
+                <div className="pl-[3rem]">
                   <Image
                     src={cardDatas.realTimeDiagnostics.icon}
                     alt="Icon"
@@ -867,19 +867,17 @@ const MagicBento: React.FC<BentoProps> = ({
                     {cardDatas.realTimeDiagnostics.description}
                   </p>
                 </div>
-                <div className="flex gap-5 align-middle w-full">
-                  {cardDatas.realTimeDiagnostics.rightsideimage && (
-                    <div className="w-full mb-4">
-                      <img
-                        src={cardDatas.realTimeDiagnostics.rightsideimage}
-                        alt={cardDatas.realTimeDiagnostics.title}
-                        width={800}
-                        height={386}
-                        className="w-full h-full max-h-[400px] rounded-lg ml-auto object-contain mr-0"
-                      />
-                    </div>
-                  )}
-                </div>
+                {cardDatas.realTimeDiagnostics.rightsideimage && (
+                  <div className="w-full ">
+                    <img
+                      src={cardDatas.realTimeDiagnostics.rightsideimage}
+                      alt={cardDatas.realTimeDiagnostics.title}
+                      width={800}
+                      height={386}
+                      className="w-full h-full max-h-[400px] rounded-lg ml-auto object-contain mr-0"
+                    />
+                  </div>
+                )}
               </div>
             </div>
 
@@ -1002,9 +1000,9 @@ const MagicBento: React.FC<BentoProps> = ({
                   }}
                 >
                   <div
-                    className={`bg-[rgba(255,255,255,0.1)] p-6  shadow-xl overflow-hidden`}
+                    className={`bg-[rgba(255,255,255,0.1)]   shadow-xl overflow-hidden`}
                   >
-                    <div className="mb-[2.5rem]">
+                    <div className="mb-[2.5rem] pt-[3rem] px-[3rem]">
                       <h3 className="text-lg font-semibold mb-2 single-work-page-objectives-real-time-diagnostics-title">
                         {cardDatas.upsConnectivity.title}
                       </h3>
@@ -1146,7 +1144,7 @@ const MagicBento: React.FC<BentoProps> = ({
                       el.addEventListener("click", handleClick);
                     }}
                   >
-                    <div className="p-6 bg-[rgba(255,255,255,0.1)] shadow-xl flex items-center h-full">
+                    <div className="px-[1.5rem] py-6 bg-[rgba(255,255,255,0.1)] shadow-xl flex items-start h-full">
                       <div className="">
                         <Image
                           src={cardDatas.cloudSync.icon}
@@ -1279,7 +1277,7 @@ const MagicBento: React.FC<BentoProps> = ({
                       el.addEventListener("click", handleClick);
                     }}
                   >
-                    <div className="p-6 bg-[rgba(255,255,255,0.1)] h-full shadow-xl flex items-center">
+                    <div className="px-[1.5rem] py-6 bg-[rgba(255,255,255,0.1)] h-full shadow-xl flex items-start">
                       <div>
                         <Image
                           src={cardDatas.unifiedProcess.icon}
@@ -1414,9 +1412,9 @@ const MagicBento: React.FC<BentoProps> = ({
                   el.addEventListener("click", handleClick);
                 }}
               >
-                <div className="p-6 bg-[rgba(255,255,255,0.1)]  shadow-xl h-full flex flex-col lg:pr-0 lg:pb-0">
-                  <div>
-                    <h3 className="text-lg font-semibold mb-2">
+                <div className=" bg-[rgba(255,255,255,0.1)]  shadow-xl h-full flex flex-col lg:pr-0 lg:pb-0">
+                  <div className="pt-[3rem] px-[3rem]">
+                    <h3 className="text-lg font-semibold mb-2 single-work-page-objectives-real-time-diagnostics-title">
                       {cardDatas.smartReports.title}
                     </h3>
                     <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">

@@ -3,7 +3,7 @@ import MagicBento from "../../../../../Rectbits/MagicBento/MagicBento";
 
 function Objectives({ data }) {
   return (
-    <div className="max-w-[1232px] mx-auto mb-[7.75rem] relative">
+    <div className="max-w-[1232px] mx-auto mb-[9.036rem] relative">
       {/* Header */}
       <div className="text-center mb-14">
         <h2
