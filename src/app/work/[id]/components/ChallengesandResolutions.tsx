@@ -10,22 +10,32 @@ function ChallengesandResolutions({ data }) {
           dangerouslySetInnerHTML={{ __html: data.title }}
         />
 
-        <p className="mt-4 text-gray-300 text-sm md:text-base max-w-xl mx-auto single-page-solution-section-description mb-[5rem]">
+        <p className="mt-[1.5rem] text-gray-300 text-sm md:text-base max-w-xl mx-auto single-page-solution-section-description mb-[6.25rem]">
           {data.description}
         </p>
 
         <div className="space-y-[1rem]">
           {/* Section: What we were up against */}
-          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-[3rem] items-start justify-between relative indevisual-page-challenges-and-resolutions-container">
-            <div className="flex h-full">
+          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-[3rem] items-stretch justify-between relative indevisual-page-challenges-and-resolutions-container">
+            {/* FIX: Simplified the wrapper.
+              - The parent's `items-stretch` class is what makes this div full height.
+              - We keep `items-stretch` on this div to make its own children (the SVG wrapper and the text) the same height.
+            */}
+            <div className="flex items-stretch">
               {/* Left Image Line */}
-              <div className="relative w-10 h-full mr-4 hidden lg:block">
+              <div className="relative w-10 mr-4 hidden lg:block">
+                {/* FIX:
+                  - Set height to "100%" to fill the parent.
+                  - Added preserveAspectRatio="none" to allow vertical stretching.
+                  - Simplified the line to a single <line> element for clarity and reliable stretching.
+                */}
                 <svg
                   width="40"
-                  height="296"
+                  height="100%"
                   viewBox="0 0 40 296"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
                 >
                   <circle cx="20" cy="20" r="20" fill="#7950FF" />
                   <path
@@ -42,105 +52,18 @@ function ChallengesandResolutions({ data }) {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                  <g filter="url(#filter0_f_668_3400)">
-                    <line
-                      x1="21.2"
-                      y1="29.8726"
-                      x2="21.2"
-                      y2="287.234"
-                      stroke="#7950FF"
-                      strokeWidth="2.4"
-                    />
-                  </g>
-                  <g filter="url(#filter1_i_668_3400)">
-                    <line
-                      x1="21.2"
-                      y1="39.7241"
-                      x2="21.2"
-                      y2="288"
-                      stroke="url(#paint0_linear_668_3400)"
-                      strokeWidth="2.4"
-                    />
-                  </g>
-                  <defs>
-                    <filter
-                      id="filter0_f_668_3400"
-                      x="12"
-                      y="21.8726"
-                      width="18.4004"
-                      height="273.362"
-                      filterUnits="userSpaceOnUse"
-                      colorInterpolationFilters="sRGB"
-                    >
-                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="BackgroundImageFix"
-                        result="shape"
-                      />
-                      <feGaussianBlur
-                        stdDeviation="4"
-                        result="effect1_foregroundBlur_668_3400"
-                      />
-                    </filter>
-                    <filter
-                      id="filter1_i_668_3400"
-                      x="20"
-                      y="39.7241"
-                      width="2.40039"
-                      height="252.276"
-                      filterUnits="userSpaceOnUse"
-                      colorInterpolationFilters="sRGB"
-                    >
-                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="BackgroundImageFix"
-                        result="shape"
-                      />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset dy="4" />
-                      <feGaussianBlur stdDeviation="5" />
-                      <feComposite
-                        in2="hardAlpha"
-                        operator="arithmetic"
-                        k2="-1"
-                        k3="1"
-                      />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="shape"
-                        result="effect1_innerShadow_668_3400"
-                      />
-                    </filter>
-                    <linearGradient
-                      id="paint0_linear_668_3400"
-                      x1="21.5077"
-                      y1="39.7241"
-                      x2="21.0518"
-                      y2="261.145"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop offset="0.151484" stopColor="#7950FF" />
-                      <stop offset="1" stopColor="#6C55FF" stopOpacity="0" />
-                      <stop offset="1" stopColor="#7164FF" stopOpacity="0" />
-                    </linearGradient>
-                  </defs>
+                  <line
+                    x1="20"
+                    y1="40"
+                    x2="20"
+                    y2="296"
+                    stroke="#7950FF"
+                    strokeWidth="2.4"
+                  />
                 </svg>
               </div>
               {/* Content */}
-              <div className="flex-1 ">
+              <div className="">
                 <h2 className="text-white text-xl font-bold mb-[2rem] single-work-page-bullet-point-title">
                   {data.challenges.title}
                 </h2>
@@ -148,9 +71,10 @@ function ChallengesandResolutions({ data }) {
                   {data.challenges.points.map((point, index) => (
                     <li
                       key={index}
-                      className="flex items-start max-w-[472px] "
+                      className="flex items-start max-w-[472px]"
                     >
                       <span className="text-yellow-400 mr-2 single-work-page-bullet-point-description">
+                        {/* Bullet point SVG */}
                         <svg
                           width="28"
                           height="28"
@@ -187,16 +111,19 @@ function ChallengesandResolutions({ data }) {
           </div>
 
           {/* Section: How we engineered the fix */}
-          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-[3rem] items-start justify-between relative indevisual-page-challenges-and-resolutions-container">
-            <div className="flex  h-full">
+          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-[3rem] items-stretch justify-between relative indevisual-page-challenges-and-resolutions-container">
+            {/* FIX: Applied the same simplification here */}
+            <div className="flex items-stretch">
               {/* Left Image Line */}
-              <div className="relative w-10 h-full mr-4 hidden lg:block">
+              <div className="relative w-10 mr-4 hidden lg:block">
+                {/* FIX: Same SVG corrections as above */}
                 <svg
                   width="40"
-                  height="380"
+                  height="100%"
                   viewBox="0 0 40 380"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  preserveAspectRatio="none"
                 >
                   <circle cx="20" cy="20" r="20" fill="#098709" />
                   <path
@@ -206,106 +133,19 @@ function ChallengesandResolutions({ data }) {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                  <g filter="url(#filter0_f_672_3485)">
-                    <line
-                      x1="21.2"
-                      y1="38.585"
-                      x2="21.2"
-                      y2="371.01"
-                      stroke="#098709"
-                      strokeWidth="2.4"
-                    />
-                  </g>
-                  <g filter="url(#filter1_i_672_3485)">
-                    <line
-                      x1="21.2"
-                      y1="40"
-                      x2="21.2"
-                      y2="372"
-                      stroke="url(#paint0_linear_672_3485)"
-                      strokeWidth="2.4"
-                    />
-                  </g>
-                  <defs>
-                    <filter
-                      id="filter0_f_672_3485"
-                      x="12"
-                      y="30.585"
-                      width="18.4004"
-                      height="348.426"
-                      filterUnits="userSpaceOnUse"
-                      colorInterpolationFilters="sRGB"
-                    >
-                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="BackgroundImageFix"
-                        result="shape"
-                      />
-                      <feGaussianBlur
-                        stdDeviation="4"
-                        result="effect1_foregroundBlur_672_3485"
-                      />
-                    </filter>
-                    <filter
-                      id="filter1_i_672_3485"
-                      x="20"
-                      y="40"
-                      width="2.40039"
-                      height="336"
-                      filterUnits="userSpaceOnUse"
-                      colorInterpolationFilters="sRGB"
-                    >
-                      <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="BackgroundImageFix"
-                        result="shape"
-                      />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset dy="4" />
-                      <feGaussianBlur stdDeviation="5" />
-                      <feComposite
-                        in2="hardAlpha"
-                        operator="arithmetic"
-                        k2="-1"
-                        k3="1"
-                      />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="shape"
-                        result="effect1_innerShadow_672_3485"
-                      />
-                    </filter>
-                    <linearGradient
-                      id="paint0_linear_672_3485"
-                      x1="21.5077"
-                      y1="40"
-                      x2="20.6924"
-                      y2="336.088"
-                      gradientUnits="userSpaceOnUse"
-                    >
-                      <stop offset="0.151484" stopColor="#098709" />
-                      <stop offset="1" stopColor="#6C55FF" stopOpacity="0" />
-                      <stop offset="1" stopColor="#66FF66" stopOpacity="0" />
-                    </linearGradient>
-                  </defs>
+                  <line
+                    x1="20"
+                    y1="40"
+                    x2="20"
+                    y2="380"
+                    stroke="#098709"
+                    strokeWidth="2.4"
+                  />
                 </svg>
               </div>
 
               {/* Content */}
-              <div className="  ">
+              <div className="">
                 <h2 className="text-white text-xl font-bold mb-[2rem] single-work-page-bullet-point-title">
                   {data.solutions.title}
                 </h2>
@@ -313,6 +153,7 @@ function ChallengesandResolutions({ data }) {
                   {data.solutions.points.map((point, index) => (
                     <li key={index} className="flex items-start max-w-[472px]">
                       <span className="text-yellow-400 mr-2 single-work-page-bullet-point-description">
+                        {/* Bullet point SVG */}
                         <svg
                           width="28"
                           height="28"

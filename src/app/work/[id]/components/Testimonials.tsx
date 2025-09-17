@@ -23,7 +23,7 @@ function Testimonials({ data }) {
           <h3 className="absolute-title-testimonial-showcase">
             Voices of <span>Trust</span>
           </h3>
-          <p className="absolute-paragraph-testimonial-showcase max-w-[476px]">
+          <p className="absolute-paragraph-testimonial-showcase max-w-[476px] in-indevisual-work-page-testimonial-description">
             What our clients say about creating with us
           </p>
 

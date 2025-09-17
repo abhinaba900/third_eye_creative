@@ -6,12 +6,12 @@ function ProblemStatement({ data }) {
 
   return (
     <section className="bg-black text-white max-w-[1232px] mx-auto px-4 sm:px-6 lg:px-0 mb-[9.036rem]">
-      <div className="text-center mb-12 sm:mb-16">
+      <div className="text-center mb-[6.25rem] sm:mb-16">
         <h2
           className="text-3xl sm:text-4xl font-bold leading-snug single-work-page-problem-statement-title"
           dangerouslySetInnerHTML={{ __html: data.title }}
         />
-        <p className="mt-4 text-base sm:text-lg text-gray-300 max-w-[650px] mx-auto single-work-page-problem-statement-description">
+        <p className="mt-[1.5rem] text-base sm:text-lg text-gray-300 max-w-[650px] mx-auto single-work-page-problem-statement-description">
           {data.description}
         </p>
       </div>

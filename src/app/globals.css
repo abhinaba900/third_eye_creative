@@ -3584,6 +3584,11 @@ strong {
   border: 1px solid red;
 }
 
+.in-indevisual-work-page-testimonial-description{
+  margin-top: 1.5rem !important;
+  margin-bottom: 6.25rem !important;
+}
+
 /* media quarry */
 
 @media (max-width: 767px) {
