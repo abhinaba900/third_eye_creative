@@ -1,13 +1,6 @@
 ﻿import React from "react";
 
 function Results({ data, galleryData }) {
-  const gradientStyle = {
-    backgroundImage:
-      "linear-gradient(0deg, #772BF2, #EC4B7B), linear-gradient(180deg, #CE0AFF 0%, rgba(206, 10, 255, 0) 100%)",
-  };
-
-  // Usage in a component:
-  // <div style={gradientStyle}>...</div>
   return (
     <div
       className={`max-w-[1232px] mx-auto ${
@@ -31,9 +24,12 @@ function Results({ data, galleryData }) {
               p-6 text-center bg-black text-white transition duration-300
               hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-600 hover:text-white
               
+              /* --- GRADIENT BORDER SETUP --- */
               border-transparent
-              [border-image:linear-gradient(0deg,_#772BF2,_#EC4B7B)_1]
+              /* FIXED: Gradient direction changed from 0deg to 90deg */
+              [border-image:linear-gradient(90deg,_#772BF2,_#CE0AFF,_#EC4B7B)_1]
 
+              /* --- BORDER VISIBILITY LOGIC (applying width) --- */
               [&:nth-child(odd)]:border-r-[1px]
               [&:not(:nth-last-child(-n+2))]:border-b-[1px]
 
@@ -47,7 +43,6 @@ function Results({ data, galleryData }) {
                   : ""
               }
             `}
-            
           >
             <h3 className="text-2xl font-semibold mb-2 single-page-results-metric-value">
               {metric.value}
