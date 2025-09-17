@@ -866,7 +866,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                       {cardDatas.offlineFunctionality.title}
                     </h3>
-                    <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                    <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                       {cardDatas.offlineFunctionality.description}
                     </p>
                     <div className="grid grid-cols-1 items-center justify-center lg:grid-cols-2 gap-4 mt-4">
@@ -1018,7 +1018,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                       {cardDatas.realTimeDiagnostics.title}
                     </h3>
-                    <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                    <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                       {cardDatas.realTimeDiagnostics.description}
                     </p>
                     {/* Main Image */}
@@ -1159,7 +1159,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                       <h3 className="text-xl font-semibold mb-3 single-page-solution-cards-title">
                         {cardDatas.seamlessBluetoothIntegration.title}
                       </h3>
-                      <p className="text-sm text-gray-300 mb-4 single-page-solution-cards-description">
+                      <p className="text-sm text-gray-300 mb-4 single-work-page-objectives-real-time-diagnostics-description">
                         {cardDatas.seamlessBluetoothIntegration.description}
                       </p>
                     </div>
@@ -1291,7 +1291,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                   }}
                 >
                   <div className="bg-[rgba(255,255,255,0.1)] h-full rounded-2xl pt-[2rem] px-[3rem] flex flex-col justify-between shadow-lg overflow-hidden">
-                    <h3 className="text-xl font-semibold mb-3">
+                    <h3 className="text-xl font-semibold mb-3 single-page-solution-cards-title">
                       {cardDatas.technologyBackbone.title}
                     </h3>
                     <p className="text-sm text-gray-300">
@@ -1424,7 +1424,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                   }}
                 >
                   <div className="bg-[rgba(255,255,255,0.1)] px-[1.5rem] pt-[1.5rem] rounded-2xl flex flex-col justify-between shadow-lg lg:pb-0 overflow-hidden h-full">
-                    <h3 className="text-xl font-semibold mb-3">
+                    <h3 className="text-xl font-semibold mb-3 single-page-solution-cards-title">
                       {cardDatas.technicianCommandCenter.title}
                     </h3>
                     <p className="text-sm text-gray-300 mb-8">
@@ -1564,7 +1564,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                       {cardDatas.cloudPoweredAnalytics.title}
                     </h3>
-                    <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                    <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                       {cardDatas.cloudPoweredAnalytics.description}
                     </p>
                     {/* Main Image */}
@@ -1701,7 +1701,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                       {cardDatas.automatedReporting.title}
                     </h3>
-                    <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                    <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                       {cardDatas.automatedReporting.description}
                     </p>
                     {/* Main Image */}
@@ -1845,7 +1845,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                       <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                         {cardDatas.offlineFunctionality.title}
                       </h3>
-                      <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                      <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                         {cardDatas.offlineFunctionality.description}
                       </p>
                     </div>
@@ -1986,7 +1986,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                       <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                         {cardDatas.realTimeDiagnostics.title}
                       </h3>
-                      <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                      <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                         {cardDatas.realTimeDiagnostics.description}
                       </p>
                     </div>
@@ -2263,7 +2263,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                         <h3 className="text-xl font-semibold mb-3 single-page-solution-cards-title">
                           {cardDatas.seamlessBluetoothIntegration.title}
                         </h3>
-                        <p className="text-sm text-gray-300 mb-4 single-page-solution-cards-description">
+                        <p className="text-sm text-gray-300 mb-4 single-work-page-objectives-real-time-diagnostics-description">
                           {cardDatas.seamlessBluetoothIntegration.description}
                         </p>
                       </div>
@@ -2539,7 +2539,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                       <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                         {cardDatas.cloudPoweredAnalytics.title}
                       </h3>
-                      <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                      <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                         {cardDatas.cloudPoweredAnalytics.description}
                       </p>
                     </div>
@@ -2679,7 +2679,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                       <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                         {cardDatas.automatedReporting.title}
                       </h3>
-                      <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                      <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                         {cardDatas.automatedReporting.description}
                       </p>
                     </div>
@@ -2820,7 +2820,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                       <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                         {cardDatas.SaveandEditPlans.title}
                       </h3>
-                      <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                      <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                         {cardDatas.SaveandEditPlans.description}
                       </p>
                     </div>
@@ -3131,7 +3131,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                       <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                         {cardDatas.offlineFunctionality.title}
                       </h3>
-                      <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                      <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                         {cardDatas.offlineFunctionality.description}
                       </p>
                     </div>
@@ -3272,7 +3272,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                       <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                         {cardDatas.realTimeDiagnostics.title}
                       </h3>
-                      <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                      <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                         {cardDatas.realTimeDiagnostics.description}
                       </p>
                     </div>
@@ -3412,7 +3412,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     <h3 className="text-xl font-semibold mb-3 single-page-solution-cards-title">
                       {cardDatas.seamlessBluetoothIntegration.title}
                     </h3>
-                    <p className="text-sm text-gray-300 mb-4 single-page-solution-cards-description">
+                    <p className="text-sm text-gray-300 mb-4 single-work-page-objectives-real-time-diagnostics-description">
                       {cardDatas.seamlessBluetoothIntegration.description}
                     </p>
                     <div className="relative w-full h-48 rounded-lg overflow-hidden -mb-5">
@@ -3814,7 +3814,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                       {cardDatas.cloudPoweredAnalytics.title}
                     </h3>
-                    <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                    <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                       {cardDatas.cloudPoweredAnalytics.description}
                     </p>
                     {/* Main Image */}
@@ -3951,7 +3951,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                       {cardDatas.automatedReporting.title}
                     </h3>
-                    <p className="text-sm text-gray-400 max-w-[456px] single-page-solution-cards-description">
+                    <p className="text-sm text-gray-400 max-w-[456px] single-work-page-objectives-real-time-diagnostics-description">
                       {cardDatas.automatedReporting.description}
                     </p>
                     {/* Main Image */}
