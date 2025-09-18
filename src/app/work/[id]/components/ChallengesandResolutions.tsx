@@ -16,12 +16,12 @@ function ChallengesandResolutions({ data }) {
 
         <div className="space-y-[1rem]">
           {/* Section: What we were up against */}
-          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-[3rem] items-stretch justify-between relative indevisual-page-challenges-and-resolutions-container">
+          <div className="flex bg-[#1b1725]  border border-[rgba(255,255,255,0.1)] rounded-2xl p-[3rem] items-stretch justify-between relative indevisual-page-challenges-and-resolutions-container indevisual-page-challenges-and-resolutions-container-1">
             {/* FIX: Simplified the wrapper.
               - The parent's `items-stretch` class is what makes this div full height.
               - We keep `items-stretch` on this div to make its own children (the SVG wrapper and the text) the same height.
             */}
-            <div className="flex items-stretch">
+            <div className="flex items-start h-fit">
               {/* Left Image Line */}
               <div className="relative w-10 mr-4 hidden lg:block">
                 {/* FIX:
@@ -35,7 +35,8 @@ function ChallengesandResolutions({ data }) {
                   viewBox="0 0 40 296"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  preserveAspectRatio="none"
+                  preserveAspectRatio="xMidYMin meet"
+                  className="w-full h-full object-cover"
                 >
                   <circle cx="20" cy="20" r="20" fill="#7950FF" />
                   <path
@@ -63,16 +64,13 @@ function ChallengesandResolutions({ data }) {
                 </svg>
               </div>
               {/* Content */}
-              <div className="">
+              <div className="h-fit">
                 <h2 className="text-white text-xl font-bold mb-[2rem] single-work-page-bullet-point-title">
                   {data.challenges.title}
                 </h2>
                 <ul className="flex flex-col gap-[2rem] text-white">
                   {data.challenges.points.map((point, index) => (
-                    <li
-                      key={index}
-                      className="flex items-start max-w-[472px]"
-                    >
+                    <li key={index} className="flex items-start max-w-[472px]">
                       <span className="text-yellow-400 mr-2 single-work-page-bullet-point-description">
                         {/* Bullet point SVG */}
                         <svg

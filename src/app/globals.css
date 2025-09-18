@@ -3584,9 +3584,13 @@ strong {
   border: 1px solid red;
 }
 
-.in-indevisual-work-page-testimonial-description{
+.in-indevisual-work-page-testimonial-description {
   margin-top: 1.5rem !important;
   margin-bottom: 6.25rem !important;
+}
+
+.indevisual-page-challenges-and-resolutions-container-1 {
+  height: 400px !important;
 }
 
 /* media quarry */
@@ -4437,6 +4441,10 @@ strong {
     font-size: 1rem;
   }
 
+  .indevisual-page-challenges-and-resolutions-container-1 {
+    height: auto !important;
+  }
+
   .avatar-image-in-creative-team:nth-child(2) {
     display: none;
   }
@@ -4591,6 +4599,10 @@ strong {
 
   .vision-text-gradient-desktop {
     display: flex;
+  }
+
+  .indevisual-page-challenges-and-resolutions-container-1 {
+    height: auto !important;
   }
 
   .vision-text-gradient-mobile {
