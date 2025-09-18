@@ -3446,7 +3446,6 @@ strong {
   letter-spacing: 0%;
   text-align: center;
   color: rgba(229, 229, 229, 1);
-
 }
 
 .single-page-testimonial-name {
@@ -4768,6 +4767,15 @@ strong {
   .deskpot-text {
     display: none;
   }
+
+  .single-work-page-problem-statement-title,
+  .single-work-page-objectives-title,
+  .single-page-solution-section-title,
+  .absolute-container-testimonial-showcase
+    .absolute-title-testimonial-showcase {
+    font-size: 4rem;
+    line-height: 110%;
+  }
 }
 
 @media only screen and (min-width: 911px) and (max-width: 1024px) {
@@ -4809,6 +4817,45 @@ strong {
 @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
   .hero-section-third-eye-image {
     top: -5rem;
+  }
+
+  .client-background-main-container,
+  .problem-statement-main-container {
+    gap: 0.75rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+  }
+
+  .indevisual-page-challenges-and-resolutions-container{
+    flex-direction: row;
+  }
+
+  .hero-section-in-single-work{
+    min-height: 500px;
+    justify-content: top;
+  }
+
+  .problem-statement-main-container {
+    padding: 25px;
+  }
+
+  .text-section-container-in-client-background {
+    left: 0;
+  }
+  .indevesual-page-problem-statement-icon {
+    display: flex !important;
+  }
+
+  .project-objectives-container-section,
+  .result-page-main-container-individual-page,
+  .gallery-main-container-individual-page,
+  .testimonial-showcase-main-container-indevisual-page {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .indevisual-page-client-background-image-container {
+    left: -10px;
   }
 
   .get-in-touch-text-wrapper-careers-page {

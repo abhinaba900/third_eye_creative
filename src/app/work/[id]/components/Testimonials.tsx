@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 function Testimonials({ data }) {
   return (
     data.length > 0 && (
-      <div className="relative border-red-900">
+      <div className="relative border-red-900 testimonial-showcase-main-container-indevisual-page">
         <Image
           src="/assets/testimonial-showcase background image.png"
           alt="Testimonial Background"

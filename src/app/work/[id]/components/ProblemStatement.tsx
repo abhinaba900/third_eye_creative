@@ -16,7 +16,7 @@ function ProblemStatement({ data }) {
         </p>
       </div>
 
-      <div className="bg-[#1A1A1A] rounded-[24px] overflow-hidden flex flex-col lg:flex-row border border-[rgba(255,255,255,0.1)] ">
+      <div className="bg-[#1A1A1A] rounded-[24px] overflow-hidden flex flex-col lg:flex-row border border-[rgba(255,255,255,0.1)] problem-statement-main-container ">
         {/* Left Section */}
         <div className="w-full lg:w-1/2 p-6 sm:p-8 space-y-4 flex flex-col justify-center indevisual-page-problem-statement-icon-container">
           <Image
@@ -39,7 +39,7 @@ function ProblemStatement({ data }) {
           {data.contentSection.rightsideData.map((issue, index) => (
             <div
               key={index}
-              className="flex items-start sm:items-center gap-3 relative sm:-left-8 md:left-0 lg:-left-[4.25rem] bg-[#191919]"
+              className="flex items-start sm:items-center gap-3 relative left-0 sm:-left-8 md:left-0 lg:-left-[4.25rem] bg-[#191919] text-section-container-in-client-background"
             >
               <Image
                 src="/assets/problemStatement-right-sede-icon.png"

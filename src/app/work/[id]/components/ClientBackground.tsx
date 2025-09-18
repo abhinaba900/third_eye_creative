@@ -4,7 +4,7 @@ import React from "react";
 function ClientBackground({ data }) {
   return (
     <div
-      className="flex indevisual-page-client-background-container max-w-[1232px] relative mb-[9.063rem]  mx-auto flex-col lg:flex-row  items-center justify-between bg-gradient-to-br from-[#DCF9FF] via-[#621DBA] to-[#04001C] rounded-[1.5rem] gap-5 lg:gap-5 text-white"
+      className="flex indevisual-page-client-background-container max-w-[1232px] relative mb-[9.063rem]  mx-auto flex-col lg:flex-row  items-center  bg-gradient-to-br from-[#DCF9FF] via-[#621DBA] to-[#04001C] rounded-[1.5rem] client-background-main-container gap-5  text-white"
       style={{
         paddingLeft: data.type === "1" ? "0" : "",
         paddingTop: data.type === "1" ? "" : "0",

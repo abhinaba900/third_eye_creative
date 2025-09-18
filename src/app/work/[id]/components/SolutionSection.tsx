@@ -6,7 +6,7 @@ export default function SolutionSection({ data }) {
   console.log("SolutionSection Data:", data);
 
   return (
-    <div className="bg-black text-white px-6 mb-[9.036rem] max-w-7xl mx-auto">
+    <div className="bg-black text-white px-[1.25rem] mb-[9.036rem] max-w-7xl mx-auto">
       {/* Header */}
       <div className="text-center mb-[6.25rem]">
         <h2

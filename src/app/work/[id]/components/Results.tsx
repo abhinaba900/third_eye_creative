@@ -3,7 +3,7 @@
 function Results({ data, galleryData }) {
   return (
     <div
-      className={`max-w-[1232px] mx-auto ${
+      className={`max-w-[1232px] mx-auto result-page-main-container-individual-page ${
         galleryData.length > 0 && "mb-[9.036rem]"
       }`}
     >
