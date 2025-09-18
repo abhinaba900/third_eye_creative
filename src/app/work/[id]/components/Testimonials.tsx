@@ -27,7 +27,12 @@ function Testimonials({ data }) {
             What our clients say about creating with us
           </p>
 
-          <div className="bg-[rgba(255,255,255,0.1)] p-6 rounded-xl max-w-[1232px] max-h-full h-full mx-auto">
+          <div
+            className="bg-[rgba(255,255,255,0.1)] p-6 rounded-xl max-w-[1232px] max-h-full h-full mx-auto"
+            style={{
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+            }}
+          >
             <Swiper
               modules={[Pagination]}
               pagination={{ clickable: true }}
