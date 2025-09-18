@@ -91,7 +91,7 @@ function ChallengesandResolutions({ data }) {
                           />
                         </svg>
                       </span>
-                      {point}
+                      <span style={{ opacity: "0.8" }}>{point}</span>
                     </li>
                   ))}
                 </ul>
@@ -170,7 +170,7 @@ function ChallengesandResolutions({ data }) {
                           />
                         </svg>
                       </span>
-                      {point}
+                      <span style={{ opacity: "0.8" }}>{point}</span>
                     </li>
                   ))}
                 </ul>

@@ -3445,7 +3445,8 @@ strong {
   line-height: 24px;
   letter-spacing: 0%;
   text-align: center;
-  color: #e5e5e5;
+  color: rgba(229, 229, 229, 1);
+
 }
 
 .single-page-testimonial-name {
