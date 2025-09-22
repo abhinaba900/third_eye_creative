@@ -891,7 +891,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                             alt="Button"
                             width={120}
                             height={40}
-                            className="object-contain"
+                            className="object-contain button-image-in-off-button-card"
                           />
                         </div>
                       )}
@@ -1301,7 +1301,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                       <img
                         src={cardDatas.technologyBackbone.image}
                         alt={cardDatas.technologyBackbone.title}
-                        className=" object-cover w-100  h-full max-w-[500px]  max-h-[252px] "
+                        className=" object-cover w-100  h-full max-w-[500px]  max-h-[252px] single-work-page-objectives-real-time-diagnostics-description-image"
                       />
                     </div>
                   </div>

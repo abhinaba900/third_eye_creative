@@ -4587,7 +4587,6 @@ strong {
   }
   .indevisual-page-problem-statement-icon-container,
   .indevisual-page-problem-statement-icon-container {
-    border-left: none;
     padding: 0.8rem;
   }
   .contact-title-main {
@@ -4819,6 +4818,18 @@ strong {
     top: -5rem;
   }
 
+  .indevisual-page-client-background-image-container{
+    top: -3rem;
+  }
+
+  .single-work-page-objectives-real-time-diagnostics-description-image{
+    margin-left: -1.5rem;
+  }
+
+  .button-image-in-off-button-card{
+    margin-left: 3rem;
+  }
+
   .client-background-main-container,
   .problem-statement-main-container {
     gap: 0.75rem;
@@ -4840,7 +4851,7 @@ strong {
   }
 
   .text-section-container-in-client-background {
-    left: 0;
+    left: -1.3rem;
   }
   .indevesual-page-problem-statement-icon {
     display: flex !important;
