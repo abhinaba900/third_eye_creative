@@ -19,7 +19,7 @@ function InsideCreativeMind() {
       <div className="video-wrapper">
         <div className="responsive-player">
           <ReactPlayer
-            url="https://www.youtube.com/watch?v=LXb3EKWsInQ"
+            url="https://youtu.be/AYiWdIBxidI?si=R0aM3LcjvQUPNV30"
             controls
             width="100%"
             height="100%"
