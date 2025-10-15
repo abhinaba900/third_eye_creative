@@ -4,9 +4,9 @@ import Aurora from "../../../../../Reactbits/Aurora/Aurora";
 
 function HeroSection({ data }) {
   return (
-    <div className="relative w-full min-h-screen flex flex-col items-center justify-end hero-section-in-single-work  overflow-hidden text-white">
+    <div className="relative w-full min-h-full flex flex-col items-center justify-end hero-section-in-single-work  overflow-hidden text-white">
       {/* Tags */}
-      <div className="flex flex-wrap  space-x-3 mb-4  justify-center sm:space-x-3 space-y-3">
+      <div className="flex flex-wrap  space-x-3 mb-4 relative  justify-center sm:space-x-3 space-y-3">
         {data.tags?.map((tag) => (
           <span
             key={tag}
