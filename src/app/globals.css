@@ -3593,6 +3593,120 @@ strong {
   height: 400px !important;
 }
 
+/* whatsup section  */
+
+.span-diffrent-color-2 {
+  background: linear-gradient(0deg, #772bf2, #ec4b7b),
+    linear-gradient(180deg, #ce0aff 0%, rgba(206, 10, 255, 0) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important; /* for Firefox */
+  color: transparent !important;
+}
+
+.whatsup-hero-section {
+  max-width: 1061px;
+}
+
+.whatsup-hero-section-title {
+  font-family: var(--font-family-cabinet-grotesk-light);
+  font-weight: 300;
+  font-size: 128px;
+  line-height: 120%;
+  letter-spacing: -7px;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 70%;
+  text-align: left;
+  padding-left: 7.292vw;
+  max-width: 1521px;
+  margin: 0 auto;
+}
+
+.whatsup-hero-section-title span {
+  background: linear-gradient(0deg, #772bf2, #ec4b7b),
+    linear-gradient(180deg, #ce0aff 0%, rgba(206, 10, 255, 0) 100%);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+  opacity: 100%;
+}
+
+.whatsup-hero-section-title-2 {
+  font-family: var(--font-family-cabinet-grotesk-bold);
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 140px;
+  line-height: 120%;
+  letter-spacing: -4px;
+  text-transform: uppercase;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 7.292vw;
+  max-width: 1521px;
+  margin: 0 auto;
+}
+
+.whatsup-playground-culture-text {
+  background: linear-gradient(0deg, #c883ff, #772bf2),
+    linear-gradient(180deg, #ce0aff 0%, rgba(206, 10, 255, 0) 100%),
+    linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important; /* for Firefox */
+  color: transparent !important;
+}
+
+.gaming-section-wrapper {
+  margin-top: 5rem;
+}
+
+.inside-the-slider-title-section,
+.inside-the-slider-description {
+  text-align: left !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+.inside-the-slider-title-section {
+  font-family: var(--font-family-sequel-sans-bold-head);
+  font-weight: 420;
+  font-size: 36px;
+  line-height: 56px;
+  letter-spacing: 0%;
+  background: linear-gradient(0deg, #772bf2, #ec4b7b),
+    linear-gradient(180deg, #ce0aff 0%, rgba(206, 10, 255, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* for Firefox */
+  color: transparent;
+}
+.inside-the-slider-description {
+  font-family: var(--font-family-sequel-sans-book-display) !important;
+  font-weight: 405 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0px !important;
+  vertical-align: middle !important;
+  color: #ffffff !important;
+  opacity: 80%;
+}
+
+.events-slider-button {
+  margin-top: 1.75rem;
+  margin-bottom: 7rem;
+  font-family: var(--font-family-cabinet-grotesk-bold);
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 2rem;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
 /* media quarry */
 
 @media (max-width: 767px) {
@@ -4401,7 +4515,8 @@ strong {
     transform: translate(-50%, -50%); 
   } */
 
-  .creative-team-info-wrapper-and-holder {
+  .creative-team-info-wrapper-and-holder,
+  .gaming-section-wrapper {
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -4455,6 +4570,16 @@ strong {
 
   .mobile-text {
     display: block;
+  }
+  .whatsup-hero-section-title,
+  .whatsup-hero-section-title-2 {
+    font-size: 3.25rem !important;
+  }
+
+  .inside-the-slider-title-section{
+    font-size: 1.8rem;
+    line-height: 2rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -4544,6 +4669,11 @@ strong {
 @media (min-width: 768px) and (max-width: 1024px) {
   .about-us-hero-section-title {
     font-size: 20vw;
+  }
+
+  .whatsup-hero-section-title,
+  .whatsup-hero-section-title-2 {
+    font-size: 7.25rem !important;
   }
 
   .servicetags-text {
@@ -4749,7 +4879,8 @@ strong {
 
   .workflow-stages-container,
   .video-wrapper,
-  .project-data-container {
+  .project-data-container,
+  .gaming-section-wrapper {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
   }
@@ -4818,15 +4949,15 @@ strong {
     top: -5rem;
   }
 
-  .indevisual-page-client-background-image-container{
+  .indevisual-page-client-background-image-container {
     top: -3rem;
   }
 
-  .single-work-page-objectives-real-time-diagnostics-description-image{
+  .single-work-page-objectives-real-time-diagnostics-description-image {
     margin-left: -1.5rem;
   }
 
-  .button-image-in-off-button-card{
+  .button-image-in-off-button-card {
     margin-left: 3rem;
   }
 
@@ -4837,11 +4968,11 @@ strong {
     margin-right: 1.25rem;
   }
 
-  .indevisual-page-challenges-and-resolutions-container{
+  .indevisual-page-challenges-and-resolutions-container {
     flex-direction: row;
   }
 
-  .hero-section-in-single-work{
+  .hero-section-in-single-work {
     min-height: 500px;
     justify-content: top;
   }
@@ -4913,7 +5044,8 @@ strong {
 
   .creative-team-info-wrapper-and-holder,
   .heading-content-holders,
-  .our-approach-wrapper {
+  .our-approach-wrapper,
+  .gaming-section-wrapper {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
@@ -5063,7 +5195,9 @@ strong {
     margin-bottom: -5%;
   }
 
-  .about-us-hero-section-content-wrapper {
+  .about-us-hero-section-content-wrapper,
+  .whatsup-hero-section-title-2,
+  .whatsup-hero-section-title {
     padding-left: 0;
     padding-right: 0;
   }
@@ -5077,7 +5211,9 @@ strong {
     min-height: 1400px; */
   }
 
-  .about-us-hero-section-content-wrapper {
+  .about-us-hero-section-content-wrapper,
+  .whatsup-hero-section-title-2,
+  .whatsup-hero-section-title {
     padding-left: 0;
     padding-right: 0;
   }
@@ -5107,4 +5243,4 @@ strong {
   100% {
     background-position: 50% 100%;
   }
-}
+} 

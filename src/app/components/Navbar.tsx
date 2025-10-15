@@ -14,6 +14,7 @@ function Navbar() {
     { label: "Work", href: "/work" },
     { label: "Careers", href: "/careers" },
     { label: "Contact Us", href: "/contactus" },
+    { label: "What's Up", href: "/whatsup" },
   ];
 
   const [active, setActive] = useState(0);
