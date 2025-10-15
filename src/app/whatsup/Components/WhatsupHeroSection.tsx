@@ -3,7 +3,7 @@ import Aurora from "../../../../Reactbits/Aurora/Aurora";
 
 function WhatsupHeroSection() {
   return (
-    <div className="relative h-full about-us-hero-section about-us-page-hero">
+    <div className="relative h-full about-us-hero-section about-us-page-hero whatsup-journey-section">
       {/* <Image
                 src="/assets/Glass effect for hero section.svg"
                 alt="Logo"

@@ -7,7 +7,7 @@ function MoreAdventuresAWAIT() {
       <img
         src="/assets/BuildWithUsBanner-bg-in-single-page.svg"
         alt=""
-        className="absolute top-1/2 left-1/2 w-auto h-auto -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none object-contain"
+        className="absolute top-1/2 left-1/2 w-auto h-auto -translate-x-1/2 -translate-y-1/2 z-0 pointer-events-none object-contain mobile-bg-image-in-build-with-us-banner"
       />
       <div className="relative z-1 flex flex-col items-center justify-center h-full w-full text-center">
         <h3 className="text-white text-4xl font-semibold">
