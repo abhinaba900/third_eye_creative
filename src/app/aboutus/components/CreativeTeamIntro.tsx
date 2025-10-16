@@ -28,25 +28,23 @@ const teamDatas: TeamData[] = [
     ],
     description:
       "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
-    images: ["/assets/creative team image ram image 3.png"],
+    images: ["/assets/Ram 2.webp"],
     name: "RAMKRISHNA IYENGAR",
     role: "Founder, CEO & Creative Director",
-    bannerimage: "/assets/creative team image ram banner image.png",
+    bannerimage: "/assets/Ram 2-small.png",
   },
 
   {
     id: 2,
-    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    title: "Writes more scalable systems than grocery lists.",
     tags: [
-      "Digital Marketing",
-      "Brand Strategist",
-      "AI Tools",
-      "Graphic Design",
-      "SEO Specialist",
-      "Concept Art",
+      "Backend Master",
+      "Full-Stack Versatile",
+      "Calm & Confident",
+      "Can-Do Attitude",
     ],
     description:
-      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+      "Siddarth is the brain behind all the tech innovations at Third Eye Creative. A genius in system architecture and AI, he leads the development of our most ambitious projects with precision and vision. When he’s not building scalable systems or experimenting with emerging technologies, you’ll find him trading the markets or sharing his knowledge as a passionate teacher.",
     images: ["/assets/Siddharth.webp"],
     name: "SIDDHARTH SHANKAR",
     role: "CTO & Technical Head",
@@ -123,12 +121,7 @@ const teamDatas: TeamData[] = [
   {
     id: 7,
     title: "Runs on Python, caffeine, and progressive overload.",
-    tags: [
-      "Full Stack",
-      "Python & Java",
-      "Flutter & DevOps",
-      "Gym & Graffiti",
-    ],
+    tags: ["Full Stack", "Python & Java", "Flutter & DevOps", "Gym & Graffiti"],
     description:
       "Calm in presence but electrifying in execution, Aalishan is the force behind many of our most reliable builds at Third Eye Creative. Skilled in Python, Java, Flutter, and more, he seamlessly switches between development, DevOps, and server management without breaking stride.He thrives in all-night coding marathons, where most people run out of energy — he finds momentum. Outside the screen glow, he’s either deadlifting at the gym or experimenting with graffiti lettering, turning raw ideas into bold visuals.Steady mind. Relentless output. Built different.",
     images: ["/assets/Aalishan.webp"],
@@ -144,7 +137,6 @@ const teamDatas: TeamData[] = [
       "Python & Flutter",
       "TypeScript & AI",
       "Guitar & Gaming",
-      
     ],
     description:
       "Ashwin is a Full Stack Developer at Third Eye Creative, working across Python, Flutter, TypeScript, and AI-driven tech. A calm coder by nature, he builds efficient, user-focused software with the precision of a strategist and the flair of an artist. When he’s not crafting code, he’s riffing metal on his guitar or diving into worlds like Ghost of Tsushima and Attack on Titan. Late nights, lo-fi vibes, and grimoire-grade problem-solving — that’s his workflow.",
