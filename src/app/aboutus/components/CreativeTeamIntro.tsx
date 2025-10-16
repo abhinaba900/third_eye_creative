@@ -54,35 +54,32 @@ const teamDatas: TeamData[] = [
   },
   {
     id: 3,
-    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    title: "Has biked more trails than scrolled design references ",
     tags: [
+      "UI/UX Design",
+      "Branding & Strategy",
       "Digital Marketing",
-      "Brand Strategist",
-      "AI Tools",
-      "Graphic Design",
-      "SEO Specialist",
-      "Concept Art",
+      "Biking & Travel",
     ],
     description:
-      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+      "Description - Visionary by nature and meticulous by habit, Rohan is the creative force shaping digital experiences at Third Eye Creative. Skilled in UI/UX design, branding, and digital strategy, he brings ideas to life with precision, flair, and a keen eye for detail. From crafting intuitive interfaces to designing compelling visual narratives, he thrives on solving complex problems while keeping aesthetics at the forefront. Outside of work, he channels his curiosity into biking, traveling, photography, and sports. Strategic thinker. Creative powerhouse. Always designing the future.",
     images: ["/assets/Rohan.webp"],
     name: "Rohan Khanra",
-    role: "FouProduct Designer",
+    role: "Product Designer",
     bannerimage: "/assets/Rohan-small.png",
   },
   {
     id: 4,
-    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    title: "Writes apps with flair, watches anime with passion.",
     tags: [
-      "Digital Marketing",
-      "Brand Strategist",
-      "AI Tools",
-      "Graphic Design",
-      "SEO Specialist",
-      "Concept Art",
+      "Full Stack",
+      "MERN & Python",
+      "Flutter",
+      "Mobile & Web",
+      "Traveler",
     ],
     description:
-      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+      "Yashavantha is a skilled full stack developer with over a year of experience in building mobile applications and websites. Proficient in the MERN stack, Python, and Flutter. Outside of coding, Yashavantha enjoys watching anime, with favorites like Demon Slayer and One Piece, and loves to explore new places through travel.",
     images: ["/assets/Yashvantha.webp"],
     name: "Yashavantha Naik",
     role: "Full Stack Developer",
@@ -90,17 +87,16 @@ const teamDatas: TeamData[] = [
   },
   {
     id: 5,
-    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    title: "Writes backend code faster than he hits a cricket ball.",
     tags: [
-      "Digital Marketing",
-      "Brand Strategist",
-      "AI Tools",
-      "Graphic Design",
-      "SEO Specialist",
-      "Concept Art",
+      "Backend Dev",
+      "Flutter & FastAPI",
+      "Next.js & Golang",
+      "Databases",
+      "Cricket & Travel",
     ],
     description:
-      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+      "Arpit is a passionate backend developer with over 4 months of experience, contributing to robust and scalable systems at Third Eye Creative. Skilled in Flutter, FastAPI, Next.js, Flask, and Golang, and has a strong command over databases like MySQL and MongoDB. A natural problem-solver, Arpit enjoys tackling complex backend challenges and continuously learning new technologies. Outside of work, he loves playing cricket & exploring new places through travel. His curiosity, enthusiasm and versatility make him a valuable and forward-thinking member of the Third Eye team.",
     images: ["/assets/Ankit.webp"],
     name: "Arpit Kesharwani",
     role: "Backend Developer",
@@ -108,17 +104,17 @@ const teamDatas: TeamData[] = [
   },
   {
     id: 6,
-    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    title:
+      "Full-stack Kakashi: silent, skilled, and already three steps ahead.",
     tags: [
-      "Digital Marketing",
-      "Brand Strategist",
-      "AI Tools",
-      "Graphic Design",
-      "SEO Specialist",
-      "Concept Art",
+      "Full Stack",
+      "MERN & Flutter",
+      "UI & Backend",
+      "Night Coder",
+      "Strategist & Creator",
     ],
     description:
-      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+      "Afsar is a full-stack developer at Third Eye, equally at home crafting slick interfaces and building rock-solid backend systems. With two years of experience across the MERN stack and Flutter, he thrives in late-night coding sessions — headphones on, music loud, mind in flow. Calm by nature but electric when solving exciting challenges, he brings the balance of a strategist and a creator. Inspired by characters like Kakashi, he codes with quiet precision and unwavering focus, always learning, always evolving.",
     images: ["/assets/Afsar.webp"],
     name: "Afsar MD",
     role: "Integration Engineer",
@@ -126,17 +122,15 @@ const teamDatas: TeamData[] = [
   },
   {
     id: 7,
-    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    title: "Runs on Python, caffeine, and progressive overload.",
     tags: [
-      "Digital Marketing",
-      "Brand Strategist",
-      "AI Tools",
-      "Graphic Design",
-      "SEO Specialist",
-      "Concept Art",
+      "Full Stack",
+      "Python & Java",
+      "Flutter & DevOps",
+      "Gym & Graffiti",
     ],
     description:
-      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+      "Calm in presence but electrifying in execution, Aalishan is the force behind many of our most reliable builds at Third Eye Creative. Skilled in Python, Java, Flutter, and more, he seamlessly switches between development, DevOps, and server management without breaking stride.He thrives in all-night coding marathons, where most people run out of energy — he finds momentum. Outside the screen glow, he’s either deadlifting at the gym or experimenting with graffiti lettering, turning raw ideas into bold visuals.Steady mind. Relentless output. Built different.",
     images: ["/assets/Aalishan.webp"],
     name: "Aalishan Khan",
     role: "Full Stack Developer",
@@ -144,17 +138,16 @@ const teamDatas: TeamData[] = [
   },
   {
     id: 8,
-    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    title: "Late-night coder with a guitar-shaped grimoire.",
     tags: [
-      "Digital Marketing",
-      "Brand Strategist",
-      "AI Tools",
-      "Graphic Design",
-      "SEO Specialist",
-      "Concept Art",
+      "Full Stack",
+      "Python & Flutter",
+      "TypeScript & AI",
+      "Guitar & Gaming",
+      
     ],
     description:
-      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+      "Ashwin is a Full Stack Developer at Third Eye Creative, working across Python, Flutter, TypeScript, and AI-driven tech. A calm coder by nature, he builds efficient, user-focused software with the precision of a strategist and the flair of an artist. When he’s not crafting code, he’s riffing metal on his guitar or diving into worlds like Ghost of Tsushima and Attack on Titan. Late nights, lo-fi vibes, and grimoire-grade problem-solving — that’s his workflow.",
     images: ["/assets/Ashwin.webp"],
     name: "Ashwin Venkataraman",
     role: "Full Stack Developer",
@@ -162,17 +155,16 @@ const teamDatas: TeamData[] = [
   },
   {
     id: 9,
-    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    title: "Thinks in exploits, responds in payloads ",
     tags: [
-      "Digital Marketing",
-      "Brand Strategist",
-      "AI Tools",
-      "Graphic Design",
-      "SEO Specialist",
-      "Concept Art",
+      "Ethical Hacking",
+      "Penetration Testing",
+      "Offensive Security",
+      "Vulnerability Assessment",
+      "Kali Linux Toolkit",
     ],
     description:
-      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+      "Adheem is a calm, offence-focused cybersecurity analyst with ~4 years of hands-on experience in ethical hacking and Penetration testing. Working from a Kali VM toolkit (Nmap, Metasploit, Wireshark, OpenVAS, Aircrack-ng, and more), he specializes in recon, vulnerability assessments, and exploit testing to harden web apps and client systems. Driven by the belief that “nothing is uncrackable,” he hunts for discrepancies and hidden openings—helps teams close them—while keeping one eye on emerging tech and the other on a green-on-black terminal.",
     images: ["/assets/Adheem.webp"],
     name: "Adheem Rahman",
     role: "Cybersecurity Engineer",
@@ -180,17 +172,16 @@ const teamDatas: TeamData[] = [
   },
   {
     id: 10,
-    title: "Has more Illustrator shortcuts memorized than song lyrics.",
+    title: "Silence Coder: Chai Fueled, Asta Energy in Human Form",
     tags: [
-      "Digital Marketing",
-      "Brand Strategist",
-      "AI Tools",
-      "Graphic Design",
-      "SEO Specialist",
-      "Concept Art",
+      "Frontend Dev",
+      "React & Next.js",
+      "Speed Coder",
+      "Early-Morning Flow",
+      "AI/ML Explorer",
     ],
     description:
-      "Ramkrishna, the force behind Third Eye Creative — the Founder, CEO, and Creative Director who wears many hats with ease. Whether it’s managing teams, handling clients, or diving deep into design, he brings unmatched energy and passion to everything he does. A master of tools like Illustrator and Photoshop, he's always pushing creative boundaries, fueled by his love for AI, music, geopolitics, and lifelong learning.",
+      "Abhinaba is a frontend MERN developer specializing in React and Next.js, writing clean and efficient code with speed as his superpower. A calm early-morning coder and proud chai loyalist, he stays focused in silence — no distractions, just flow. Inspired by anime characters like Asta from Black Clover, he brings determination and grit to every build. Currently diving into AI/ML, he believes in building the future, one line at a time.",
     images: ["/assets/Abhinaba.webp"],
     name: "Abhinaba Jana",
     role: "Integration Engineer",
@@ -400,17 +391,17 @@ function CreativeTeamIntro() {
             {/* Right: Image Stack with 3-Layer PvP Animation */}
             <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] flex items-cente1r justify-center ">
               <img
-              src="/assets/Pink background blurred.png"
-              alt="background-image"
-              className="bg-image"
-            />
-            <Image
-              width={785}
-              height={499}
-              src="/assets/background in creative team info.png"
-              alt="background-image"
-              className="bg-image-foreground"
-            />
+                src="/assets/Pink background blurred.png"
+                alt="background-image"
+                className="bg-image"
+              />
+              <Image
+                width={785}
+                height={499}
+                src="/assets/background in creative team info.png"
+                alt="background-image"
+                className="bg-image-foreground"
+              />
 
               <AnimatePresence initial={false} mode="popLayout">
                 {teamDatas.map((member, idx) => {
