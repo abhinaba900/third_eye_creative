@@ -19,7 +19,7 @@ export const testimonialsGroup1: Testimonial[] = [
     company: "Centre for Environmental Excellence",
     image: "https://dummyimage.com/200x200/4a86e8/ffffff&text=CEE",
     message:
-      "Partnering with Third Eye Creative has transformed how we manage our environmental programs at CEE. Their intuitive solutions streamlined data tracking, improved reporting accuracy, and empowered our team with smarter tools to execute initiatives more efficiently in the field.",
+      "Partnering with Third Eye Creative transformed our environmental programs at CEE. Their intuitive solutions streamlined data tracking, improved reporting, and gave our team smarter tools for efficient field execution.",
   },
   {
     name: "Shailesh Pandey",
@@ -27,7 +27,7 @@ export const testimonialsGroup1: Testimonial[] = [
     company: "",
     image: "https://dummyimage.com/200x200/e67c73/ffffff&text=Cadaster",
     message:
-      "Partnering with Third Eye Creative transformed how we approach our digital marketing and branding initiatives. Their innovative strategies elevated our online presence, enhanced audience engagement, and provided us with clear, actionable insights that made every campaign more effective. Working with their team has equipped us with smarter tools and creative solutions to consistently stand out in the market.",
+      "Partnering with Third Eye Creative transformed our digital presence. Their innovative strategies boosted engagement, delivered clear insights, and equipped us with smart, creative tools to stand out in the market.",
   },
   {
     name: "Dr. Pandu Dasappa",
@@ -43,7 +43,7 @@ export const testimonialsGroup1: Testimonial[] = [
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Shell",
     message:
-      "Partnering with Third Eye helped us revolutionize how we manage cash and digital payments across shell's retail network. Their secure, real-time platforms streamlined operations, enhanced tracking, and gave our teams full control, making our nationwide processes more efficient and reliable.",
+      "Partnering with Third Eye revolutionized cash and digital payment management across Shell’s retail network. Their secure, real-time platforms streamlined operations, enhanced tracking, and gave our teams full control nationwide.",
   },
   {
     name: "Amogh Vishwanath",
@@ -51,7 +51,7 @@ export const testimonialsGroup1: Testimonial[] = [
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Banna",
     message:
-      "From redefining our graffiti can design to managing our buzzing social presence, Third Eye Creative has been our creative force. They’ve helped us run impactful contests, brand collabs, and an e-commerce site that keeps our community inspired.",
+      "From redesigning our graffiti cans to managing our vibrant social presence, Third Eye Creative has been our creative force—driving contests, brand collaborations, and an inspiring e-commerce experience for our community.",
   },
   {
     name: "Nagadri Sharma",
@@ -59,7 +59,7 @@ export const testimonialsGroup1: Testimonial[] = [
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Zero+%26+One",
     message:
-      "Partnering with Third Eye Creative brought our clientele's brands to life with clarity and precision. From branding to UI-UX and development, they crafted a seamless digital experience that reflects our vision and elevates our credibility online. ",
+      "Partnering with Third Eye Creative brought our clients’ brands to life with clarity. From branding to UI/UX and development, they crafted a seamless digital experience that reflects our vision and elevates our credibility.",
   },
   {
     name: "Naren Nagaraj",
@@ -75,7 +75,7 @@ export const testimonialsGroup1: Testimonial[] = [
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Nava",
     message:
-      "Partnering with Third Eye, helped us translate the soul of Nature Knots into a compelling digital experience. Their branding, design, and development brought our venue’s story to life online, capturing both its luxury and serenity with elegance.",
+      "Partnering with Third Eye helped us translate Nature Knots’ soul into a rich digital experience. Their branding and design brought our venue’s story to life, capturing both luxury and serenity with elegance.",
   },
   {
     name: "Monish",
@@ -91,7 +91,7 @@ export const testimonialsGroup1: Testimonial[] = [
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Sathya",
     message:
-      "Third Eye Creative has been instrumental in building our brand identity from the ground up. From our logo to digital outreach, patient education videos, doctor podcasts, and even staff outfits—they’ve made us stand out with heart and purpose.",
+      "Third Eye Creative helped build our brand from the ground up. From logo to digital outreach, patient videos, podcasts, and staff uniforms—they made us stand out with heart and purpose.",
   },
   {
     name: "Nagendra",
@@ -99,7 +99,7 @@ export const testimonialsGroup1: Testimonial[] = [
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Unique",
     message:
-      "Partnering with Third Eye, helped us communicate our complex vacuum engineering solutions with precision and professionalism. Their branding and website simplified technical details into clear value propositions, making it easier for clients to understand us and initiate business conversations.",
+      "Partnering with Third Eye helped us present complex vacuum engineering solutions with clarity. Their branding and website turned technical details into clear value, making it easier for clients to understand and connect with us.",
   },
   {
     name: "Renita Mateuis",
@@ -107,7 +107,7 @@ export const testimonialsGroup1: Testimonial[] = [
     company: "Karnataka Government",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=EMPRI",
     message:
-      "Third Eye Creative built us an intuitive platform that bridges the gap between departments and government oversight. The scheme submission, scoring, and approval system has streamlined our workflow and improved how we evaluate environmental initiatives.",
+      "Third Eye Creative built an intuitive platform that connects departments and government oversight. Their submission, scoring, and approval system streamlined our workflow and improved evaluation of environmental initiatives.",
   },
   {
     name: "Hemanth",
