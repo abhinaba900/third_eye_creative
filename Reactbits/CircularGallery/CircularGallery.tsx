@@ -693,7 +693,7 @@ class App {
 }
 
 interface CircularGalleryProps {
-  items?: { image: string; text: string }[];
+  items?: { src: string; alt: string }[];
   bend?: number;
   textColor?: string;
   borderRadius?: number;
@@ -714,8 +714,10 @@ export default function CircularGallery({
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
     if (!containerRef.current) return;
+    const mappedItems =
+      items?.map(({ src, alt }) => ({ image: src, text: alt })) ?? undefined;
     const app = new App(containerRef.current, {
-      items,
+      items: mappedItems,
       bend,
       textColor,
       borderRadius,

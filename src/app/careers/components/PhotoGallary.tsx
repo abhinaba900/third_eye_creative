@@ -1,6 +1,7 @@
 ﻿import React from "react";
 // import Masonry from "../../../../Rectbits/Masonry/Masonry";
-import DomeGallery from "@/components/DomeGallery";
+// import DomeGallery from "@/components/DomeGallery";
+import CircularGallery from "../../../../Reactbits/CircularGallery/CircularGallery";
 
 function PhotoGallary() {
   // const items = [
@@ -12,56 +13,57 @@ function PhotoGallary() {
   //   { id: "6", img: "/assets/carrer-gallery-image-6.jpg", height: 500 },
   //   { id: "7", img: "/assets/carrer-gallery-image-7.jpg", height: 700 },
   // ];
-  // const items2 = [
-  //   {
-  //     src: "/assets/carrer-gallery-image-1.jpg",
-  //     alt: "",
-  //   },
-  //   {
-  //     src: "/assets/carrer-gallery-image-2.jpg",
-  //     alt: "",
-  //   },
-  //   {
-  //     src: "/assets/carrer-gallery-image-3.jpg",
-  //     alt: "",
-  //   },
-  //   {
-  //     src: "/assets/carrer-gallery-image-4.jpg",
-  //     alt: "",
-  //   },
-  //   {
-  //     src: "/assets/carrer-gallery-image-5.jpg",
-  //     alt: "",
-  //   },
-  //   {
-  //     src: "/assets/carrer-gallery-image-6.jpg",
-  //     alt: "",
-  //   },
-  //   {
-  //     src: "/assets/carrer-gallery-image-7.jpg",
-  //     alt: "",
-  //   },
-  // ];
+  const items2 = [
+    {
+      src: "/assets/carrer-gallery-image-1.jpg",
+      alt: "",
+    },
+    {
+      src: "/assets/carrer-gallery-image-2.jpg",
+      alt: "",
+    },
+    {
+      src: "/assets/carrer-gallery-image-3.jpg",
+      alt: "",
+    },
+    {
+      src: "/assets/carrer-gallery-image-4.jpg",
+      alt: "",
+    },
+    {
+      src: "/assets/carrer-gallery-image-5.jpg",
+      alt: "",
+    },
+    {
+      src: "/assets/carrer-gallery-image-6.jpg",
+      alt: "",
+    },
+    {
+      src: "/assets/carrer-gallery-image-7.jpg",
+      alt: "",
+    },
+  ];
 
   return (
     <div className="relative   mt-[5rem] md:mt-[7rem] md:mb-[7rem] 2xl:mt-[9rem] 2xl:mb-[9rem] mb-[5rem]">
-      {/* <CircularGallery
-        items={items2}
-        bend={0}
-        textColor="#ffffff"
-        borderRadius={0.05}
-        scrollEase={0.02}
-      /> */}
-
-      <div style={{ width: "100%" }} className="h-[600px]">
-        <DomeGallery
+      <div style={{ width: "100%" }} className="h-[500px]">
+        <CircularGallery
+          items={items2}
+          bend={0}
+          textColor="#ffffff"
+          borderRadius={0.05}
+          scrollEase={0.15}
+          scrollSpeed={1.8}
+          
+        />
+        {/* <DomeGallery
           fit={2}
           minRadius={800}
           maxVerticalRotationDeg={0}
           segments={34}
           dragDampening={2}
           grayscale={false}
-        />
+        /> */}
       </div>
 
       {/* <Masonry
