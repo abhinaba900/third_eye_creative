@@ -4596,6 +4596,13 @@ strong {
     line-height: 2rem;
     margin-bottom: 0.5rem;
   }
+
+  .client-background-main-container{
+    margin: 8rem 0.5rem;
+  }
+  .executive-summary-container{
+    margin-bottom: 8rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 999px) {

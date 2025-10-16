@@ -12,7 +12,7 @@ function CareersHerosection() {
             className="mx-auto my-4 background-image-hero-section-about-us"
           /> */}
       <div className="about-us-hero-section-wrapper h-full overflow-hidden">
-        <h3 className="about-us-hero-section-title">CAREERS</h3>
+        <h1 className="about-us-hero-section-title">CAREERS</h1>
         <div className="relative w-full ">
           <Aurora
             colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}

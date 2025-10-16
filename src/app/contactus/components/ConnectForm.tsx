@@ -29,9 +29,9 @@ export default function ConnectForm() {
           amplitude={1.0}
           speed={1}
         />
-        <h3 className="absolute mt-20 left-1/2 mobile-lets-connect-text -translate-x-1/2 top-1/2 -translate-y-1/2 contact-title-main text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+        <h1 className="absolute mt-20 left-1/2 mobile-lets-connect-text -translate-x-1/2 top-1/2 -translate-y-1/2 contact-title-main text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
           LETS CONNECT
-        </h3>
+        </h1>
       </div>
 
       {/* Form Section */}

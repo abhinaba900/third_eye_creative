@@ -32,7 +32,7 @@ function HeroSection() {
           </div>
         </>
 
-        <h3
+        <h1
           className="flex justify-center items-center hero-title-1 text-center -mt-30 relative z-2 opacity-100 -mb-25 h-80"
           style={{ backgroundColor: "black", opacity: 1 }}
           ref={text2Ref}
@@ -54,7 +54,7 @@ function HeroSection() {
               highlightedClassName2="hero-title-2"
             />
           </span>
-        </h3>
+        </h1>
 
         <div className="w-full relative z-5">
           <Aurora

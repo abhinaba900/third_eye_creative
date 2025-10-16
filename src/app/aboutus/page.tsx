@@ -8,6 +8,12 @@ import CreativeTeamIntro from "./components/CreativeTeamIntro";
 import TrustedByBrands from "./components/TrustedByBrands";
 import ServicesOverview from "./components/ServicesOverview";
 import BuildWithUsBanner from "../components/BuildWithUsBanner";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: 'About Third Eye Creative | Creative Tech & Branding Studio in Bangalore',
+  description: 'We’re a multidisciplinary team turning bold ideas into brands, apps & stories. Discover the vision behind Third Eye Creative, Bangalore.',
+};
 
 function page() {
   return (

@@ -12,7 +12,7 @@ function WhatsupHeroSection() {
                 className="mx-auto my-4 background-image-hero-section-about-us"
               /> */}
       <div className="about-us-hero-section-wrapper h-full overflow-hidden">
-        <h3 className="about-us-hero-section-title whatsup-hero-section-title">BEYOND <span>WORK</span></h3>
+        <h1 className="about-us-hero-section-title whatsup-hero-section-title">BEYOND <span>WORK</span></h1>
         <h3 className="about-us-hero-section-title whatsup-hero-section-title-2">INTO PLAY</h3>
         <div className="relative w-full ">
           <Aurora

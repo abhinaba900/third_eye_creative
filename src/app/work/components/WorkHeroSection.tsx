@@ -6,12 +6,12 @@ function WorkHeroSection() {
   return (
     <div className="relative h-full about-us-hero-section about-us-page-hero work-hero-section">
       <div className="about-us-hero-section-wrapper h-full overflow-hidden">
-        <h3
+        <h1
           className="about-us-hero-section-title"
           style={{ fontSize: "18vw" }}
         >
           OUR WORK
-        </h3>
+        </h1>
         <div className="relative w-full ">
           <Aurora
             colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}

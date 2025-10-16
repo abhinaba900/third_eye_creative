@@ -76,6 +76,7 @@ const createParticleElement = (
     position: absolute;
     width: 4px;
     height: 4px;
+    
     border-radius: 50%;
     background: rgba(${color}, 1);
     box-shadow: 0 0 6px rgba(${color}, 0.6);
@@ -396,6 +397,7 @@ const GlobalSpotlight: React.FC<{
     spotlight.style.cssText = `
       position: fixed;
       width: 800px;
+      
       height: 800px;
       border-radius: 50%;
       pointer-events: none;
@@ -589,6 +591,7 @@ const MagicBento: React.FC<BentoProps> = ({
     "--glow-y": "50%",
     "--glow-intensity": "0",
     "--glow-radius": "200px",
+    width: "100%",
   } as React.CSSProperties;
 
   if (!cardDatas) {
