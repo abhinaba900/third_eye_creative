@@ -3,7 +3,7 @@ import CareersHerosection from "./components/CareersHerosection";
 import OurVision from "./components/OurVision";
 import PhotoGallary from "./components/PhotoGallary";
 import LifeatThirdEye from "./components/LifeatThirdEye";
-import OpenRoles from "./components/OpenRoles";
+// import OpenRoles from "./components/OpenRoles";
 import GetinTouch from "./components/GetinTouch";
 import type { Metadata } from "next";
 
