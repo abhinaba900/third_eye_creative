@@ -91,7 +91,7 @@ export const testimonialsGroup1: Testimonial[] = [
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Sathya",
     message:
-      "Third Eye Creative helped build our brand from the ground up. From logo to digital outreach, patient videos, podcasts, and staff uniforms—they made us stand out with heart and purpose.",
+      "Third Eye Creative helped us build our brand from the ground up. From our logo to digital outreach, patient education videos, podcasts, and staff uniforms—they made our brand stand out with heart and purpose.",
   },
   {
     name: "Nagendra",
