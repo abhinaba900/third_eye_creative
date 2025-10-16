@@ -20,7 +20,7 @@ function page() {
       <OurVision />
       <PhotoGallary />
       <LifeatThirdEye />
-      <OpenRoles />
+      {/* <OpenRoles /> */}
       <GetinTouch />
     </div>
   );

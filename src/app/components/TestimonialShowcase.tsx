@@ -14,55 +14,55 @@ interface Testimonial {
 
 export const testimonialsGroup1: Testimonial[] = [
   {
-    name: "Amogh V",
-    title: "KSAPCC",
-    company: "Karnataka Government",
-    image: "https://dummyimage.com/200x200/4a86e8/ffffff&text=KSAPCC",
+    name: "Rejini Simpson",
+    title: "CEE",
+    company: "Centre for Environmental Excellence",
+    image: "https://dummyimage.com/200x200/4a86e8/ffffff&text=CEE",
     message:
-      "KSAPCC needed a unified monitoring system — and Third Eye delivered. The dashboards and reports are clear, reliable, and user-friendly. Their team felt like an extension of ours — proactive, responsive, and committed. We’re proud of what we’ve achieved together.",
+      "Partnering with Third Eye Creative has transformed how we manage our environmental programs at CEE. Their intuitive solutions streamlined data tracking, improved reporting accuracy, and empowered our team with smarter tools to execute initiatives more efficiently in the field.",
   },
   {
-    name: "Sandeep V",
-    title: "Microtek",
+    name: "Shailesh Pandey",
+    title: "Cadaster",
     company: "",
-    image: "https://dummyimage.com/200x200/e67c73/ffffff&text=Microtek",
+    image: "https://dummyimage.com/200x200/e67c73/ffffff&text=Cadaster",
     message:
-      "With Third Eye Creative, we launched a field tool that replaced our outdated manual diagnostics with real-time, centralized insights. Their tech made it simple for our teams to service units faster and maintain higher uptime for our customers.",
+      "Partnering with Third Eye Creative transformed how we approach our digital marketing and branding initiatives. Their innovative strategies elevated our online presence, enhanced audience engagement, and provided us with clear, actionable insights that made every campaign more effective. Working with their team has equipped us with smarter tools and creative solutions to consistently stand out in the market.",
   },
   {
-    name: "Raj N",
-    title: "EMPRI",
-    company: "Karnataka Government",
-    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=EMPRI",
-    message:
-      "Third Eye Creative built us an intuitive platform that bridges the gap between departments and government oversight. The scheme submission, scoring, and approval system has streamlined our workflow and improved how we evaluate environmental initiatives.",
-  },
-  {
-    name: "Raj N",
-    title: "Livguard",
+    name: "Dr. Pandu Dasappa",
+    title: "DMIO",
     company: "",
-    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Livguard",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=DMIO",
     message:
-      "Partnering with Third Eye Creative helped us modernize how we handle UPS maintenance in the field. Their intuitive app streamlined fault detection, improved reporting, and equipped our technicians with smarter tools on every service call.",
+      "Partnering with Third Eye enhanced our cancer hospital’s digital presence and branding. Their team helped us showcase our services clearly, engage patients effectively, and communicate our care with impact.",
   },
   {
-    name: "Raj N",
-    title: "Banna",
+    name: "Afreen Naushad",
+    title: "Shell",
+    company: "",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Shell",
+    message:
+      "Partnering with Third Eye helped us revolutionize how we manage cash and digital payments across shell's retail network. Their secure, real-time platforms streamlined operations, enhanced tracking, and gave our teams full control, making our nationwide processes more efficient and reliable.",
+  },
+  {
+    name: "Amogh Vishwanath",
+    title: "Banna Sprays",
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Banna",
     message:
       "From redefining our graffiti can design to managing our buzzing social presence, Third Eye Creative has been our creative force. They’ve helped us run impactful contests, brand collabs, and an e-commerce site that keeps our community inspired.",
   },
   {
-    name: "Big Bite",
-    title: "Big Bite",
+    name: "Nagadri Sharma",
+    title: "Zero & One",
     company: "",
-    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Big+Bite",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Zero+%26+One",
     message:
-      "From branding to packaging to drool-worthy food photography, Third Eye Creative shaped Big Bite’s identity. Their team crafted every visual and design detail to make our food look irresistible, online and off.",
+      "Partnering with Third Eye Creative brought our clientele's brands to life with clarity and precision. From branding to UI-UX and development, they crafted a seamless digital experience that reflects our vision and elevates our credibility online. ",
   },
   {
-    name: "Naren Electrix",
+    name: "Naren Nagaraj",
     title: "Naren Electrix",
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Naren+Electrix",
@@ -70,15 +70,15 @@ export const testimonialsGroup1: Testimonial[] = [
       "With Third Eye Creative, we transformed how farmers use our products. They designed an app that lets farmers control equipment remotely via SMS, plus a user-friendly website that connects us directly with our customers.",
   },
   {
-    name: "Nava Karnataka",
-    title: "Nava Karnataka",
+    name: "Sharanya Vasu",
+    title: "Nature Knots",
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Nava",
     message:
-      "Third Eye Creative empowered us with an app that connects our constituency like never before. Citizens can submit grievances, access schemes, and stay informed, while our government teams handle issues efficiently—bridging people and governance digitally.",
+      "Partnering with Third Eye, helped us translate the soul of Nature Knots into a compelling digital experience. Their branding, design, and development brought our venue’s story to life online, capturing both its luxury and serenity with elegance.",
   },
   {
-    name: "STEP GHA",
+    name: "Monish",
     title: "STEP GHA",
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=STEP",
@@ -86,7 +86,7 @@ export const testimonialsGroup1: Testimonial[] = [
       "Third Eye Creative turned our vision for modern NEET PG prep into reality. Their bite-sized, gamified app keeps students engaged with quizzes, rankings, and smooth cross-platform access—raising the bar for exam prep.",
   },
   {
-    name: "Sathya Sai Hospital",
+    name: "Dr. Mahesh MNl",
     title: "Sathya Sai Hospital",
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Sathya",
@@ -94,23 +94,23 @@ export const testimonialsGroup1: Testimonial[] = [
       "Third Eye Creative has been instrumental in building our brand identity from the ground up. From our logo to digital outreach, patient education videos, doctor podcasts, and even staff outfits—they’ve made us stand out with heart and purpose.",
   },
   {
-    name: "Xplorion AI",
-    title: "Xplorion AI",
+    name: "Nagendra",
+    title: "Unique Vaccum Solutions",
     company: "",
-    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Xplorion",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Unique",
     message:
-      "Working with Third Eye Creative gave life to our idea of AI-powered travel. They built an intelligent itinerary app that personalizes every trip with live data and smart suggestions—making travel planning truly effortless.",
+      "Partnering with Third Eye, helped us communicate our complex vacuum engineering solutions with precision and professionalism. Their branding and website simplified technical details into clear value propositions, making it easier for clients to understand us and initiate business conversations.",
   },
   {
-    name: "Prokennex",
-    title: "Prokennex",
-    company: "",
-    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Prokennex",
+    name: "Renita Mateuis",
+    title: "EMPRI",
+    company: "Karnataka Government",
+    image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=EMPRI",
     message:
-      "Bringing Prokennex into the Indian market needed a bold strategy, and Third Eye Creative delivered. Their branding and social media campaigns helped us introduce our products to a whole new audience with style.",
+      "Third Eye Creative built us an intuitive platform that bridges the gap between departments and government oversight. The scheme submission, scoring, and approval system has streamlined our workflow and improved how we evaluate environmental initiatives.",
   },
   {
-    name: "Mesha",
+    name: "Hemanth",
     title: "Mesha",
     company: "",
     image: "https://dummyimage.com/200x200/5bba6f/ffffff&text=Mesha",
