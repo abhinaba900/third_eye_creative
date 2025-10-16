@@ -60,7 +60,7 @@ const teamDatas: TeamData[] = [
       "Biking & Travel",
     ],
     description:
-      "Description - Visionary by nature and meticulous by habit, Rohan is the creative force shaping digital experiences at Third Eye Creative. Skilled in UI/UX design, branding, and digital strategy, he brings ideas to life with precision, flair, and a keen eye for detail. From crafting intuitive interfaces to designing compelling visual narratives, he thrives on solving complex problems while keeping aesthetics at the forefront. Outside of work, he channels his curiosity into biking, traveling, photography, and sports. Strategic thinker. Creative powerhouse. Always designing the future.",
+      "Visionary by nature and meticulous by habit, Rohan is the creative force shaping digital experiences at Third Eye Creative. Skilled in UI/UX design, branding, and digital strategy, he brings ideas to life with precision, flair, and a keen eye for detail. From crafting intuitive interfaces to designing compelling visual narratives, he thrives on solving complex problems while keeping aesthetics at the forefront. Outside of work, he channels his curiosity into biking, traveling, photography, and sports. Strategic thinker. Creative powerhouse. Always designing the future.",
     images: ["/assets/Rohan.webp"],
     name: "Rohan Khanra",
     role: "Product Designer",
