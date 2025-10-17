@@ -1,24 +1,24 @@
 ﻿"use client";
 import React, { useState } from "react";
-import clsx from "clsx";
+// import clsx from "clsx";
 import Image from "next/image";
 
-const services = [
-  "Custom Software Development",
-  "UI-UX Design",
-  "Branding",
-  "Brand Marketing",
-  "Web Design",
-];
+// const services = [
+//   "Custom Software Development",
+//   "UI-UX Design",
+//   "Branding",
+//   "Brand Marketing",
+//   "Web Design",
+// ];
 
 function LetWorkTogether() {
-  const [selected, setSelected] = useState<string[]>([]);
+  // const [selected, setSelected] = useState<string[]>([]);
 
-  const toggleSelect = (item: string) => {
-    setSelected((prev) =>
-      prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item]
-    );
-  };
+  // const toggleSelect = (item: string) => {
+  //   setSelected((prev) =>
+  //     prev.includes(item) ? prev.filter((i) => i !== item) : [...prev, item]
+  //   );
+  // };
 
   return (
     <div className="max-w-[1232px] h-auto mx-auto py-12 px-4 let-work-together-wrapper">

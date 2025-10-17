@@ -7,15 +7,15 @@ import Image from "next/image";
 
 export default function ConnectForm() {
   const [activeTab, setActiveTab] = useState("start");
-  const [services, setServices] = useState<string[]>([]);
+  // const [services, setServices] = useState<string[]>([]);
 
-  const toggleService = (service: string) => {
-    setServices((prev) =>
-      prev.includes(service)
-        ? prev.filter((s) => s !== service)
-        : [...prev, service]
-    );
-  };
+  // const toggleService = (service: string) => {
+  //   setServices((prev) =>
+  //     prev.includes(service)
+  //       ? prev.filter((s) => s !== service)
+  //       : [...prev, service]
+  //   );
+  // };
 
   const classNames = (...classes: string[]) =>
     classes.filter(Boolean).join(" ");
