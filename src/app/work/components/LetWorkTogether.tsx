@@ -83,7 +83,7 @@ function LetWorkTogether() {
           </div>
 
           {/* Services */}
-          <p className="work-together-service-text">SERVICE(S) REQUIRED</p>
+          {/* <p className="work-together-service-text">SERVICE(S) REQUIRED</p>
           <div className="flex flex-wrap gap-3 p-8 px-0 pt-0 md:p-4 sm:pb-6 sm:mb-8 md:mb-[5rem]">
             {services.map((service, index) => (
               <button
@@ -100,7 +100,7 @@ function LetWorkTogether() {
                 {service}
               </button>
             ))}
-          </div>
+          </div> */}
 
           {/* Submit Button */}
           <button

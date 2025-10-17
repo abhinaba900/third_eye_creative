@@ -15,6 +15,7 @@ import Gallery from "./components/Gallery";
 import Testimonials from "./components/Testimonials";
 import BuildWithUsBanner from "./components/BuildWithUsBanner";
 
+
 // Types
 type HeroSectionType = {
   title: string;

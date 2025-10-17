@@ -6,31 +6,24 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 const services = [
-  { title: "Marketing", image: "/assets/srvice overview image 1.png" },
   {
-    title: "Graphics Design",
+    title: "Software that scales.",
+    image: "/assets/srvice overview image 1.png",
+  },
+  {
+    title: "Apps that click.",
     image:
       "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&auto=format&fit=crop&q=80",
   },
   {
-    title: "UI/UX Design",
+    title: "Marketing that moves.",
     image:
       "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=80",
   },
   {
-    title: "Branding & Content",
+    title: "Media that matters.",
     image:
       "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&auto=format&fit=crop&q=80",
-  },
-  {
-    title: "Software Development",
-    image:
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&auto=format&fit=crop&q=80",
-  },
-  {
-    title: "Web Design & Development",
-    image:
-      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&auto=format&fit=crop&q=80",
   },
 ];
 
@@ -45,7 +38,7 @@ function ServicesOverview() {
   return (
     <div className="services-overview-wrapper">
       <h3 className="services-overview-title">
-        What We <span>Bring</span> to the Table
+        We do <span>Four</span> things exactly
       </h3>
       <p className="services-overview-description">
         Turning bold ideas into powerful brands, experiences, and digital magic

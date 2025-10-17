@@ -5,7 +5,7 @@ function ProblemStatement({ data }) {
   console.log("ProblemStatement data:", data);
 
   return (
-    <section className="bg-black text-white max-w-[1232px] mx-auto px-4 sm:px-6 lg:px-0 mb-[9.036rem]">
+    <section className="bg-black text-white max-w-[1232px] mx-auto px-3 sm:px-6 lg:px-0 mb-[9.036rem]">
       <div className="text-center mb-[6.25rem] sm:mb-[6.25rem]">
         <h2
           className="text-3xl sm:text-4xl font-bold leading-snug single-work-page-problem-statement-title"

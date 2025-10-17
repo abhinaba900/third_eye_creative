@@ -4,7 +4,7 @@ import React from "react";
 function ChallengesandResolutions({ data }) {
   return (
     <div>
-      <div className="bg-black text-white px-6 mb-[9.036rem] max-w-7xl mx-auto">
+      <div className="bg-black text-white px-3 mb-[9.036rem] max-w-7xl mx-auto">
         <h2
           className="text-3xl md:text-5xl font-bold leading-tight single-page-solution-section-title single-work-page-challenges-and-resolutions-title"
           dangerouslySetInnerHTML={{ __html: data.title }}

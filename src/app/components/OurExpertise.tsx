@@ -20,12 +20,8 @@ function OurExpertise() {
         }`}
       >
         <FallingText
-          text={`Branding & Content    Software Development    Brand Marketing    Web Design & Development    Graphics Design    UI/UX Design`}
-          highlightWords={[
-            "Branding & Content",
-            "Brand Marketing",
-            "Graphics Design",
-          ]}
+          text={`Software that scales.    Apps that click.    Marketing that moves.    Media that matters.`}
+          highlightWords={["Apps that click.", "Media that matters."]}
           trigger="click"
           backgroundColor="transparent"
           wireframes={false}

@@ -7,11 +7,10 @@ type Service = {
 };
 
 const serviceData: Service[] = [
-  { name: "Marketing" },
-  { name: "Branding" },
-  { name: "Custom Software Development" },
-  { name: "Content Making" },
-  { name: "UI/UX Design" },
+  { name: "Software that scales." },
+  { name: "Apps that click." },
+  { name: "Marketing that moves." },
+  { name: "Media that matters." },
 ];
 
 function ServiceTags() {

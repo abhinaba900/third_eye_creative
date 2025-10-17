@@ -23,21 +23,21 @@ function ServiceHighlights() {
   const stages = [
     {
       id: "01",
-      image: "/assets/service-highlite-image-1.png",
+      image: "/assets/Eye.svg",
       name: "Vision with Precision",
       description:
         "We don’t just dream big — we back it with strategy, research, and execution. Our goal is to craft meaningful experiences that resonate and perform.",
     },
     {
       id: "02",
-      image: "/assets/service-highlite-image-1.png",
+      image: "/assets/software-development.svg",
       name: "Design & Develop",
       description:
         "From concept to execution, we craft thoughtful designs and build seamless digital experiences tailored to your vision.",
     },
     {
       id: "03",
-      image: "/assets/service-heighlite-image-2.png",
+      image: "/assets/Pen tool.svg",
       name: "Launch & Elevate",
       description:
         "We deliver refined solutions and support you through a smooth launch, ensuring your brand makes a lasting impact and stays ahead.",

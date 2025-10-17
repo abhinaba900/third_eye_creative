@@ -64,16 +64,16 @@ function Footer() {
         </div>
         <div className="footer-links-container ">
           <div className="footer-links">
-            <Link href="#" className="footer-link">
+            <Link href="/aboutus" className="footer-link">
               About Us
             </Link>
-            <Link href="#" className="footer-link">
+            <Link href="/careers" className="footer-link">
               Careers
             </Link>
-            <Link href="#" className="footer-link">
+            <Link href="/work" className="footer-link">
               Work
             </Link>
-            <Link href="#" className="footer-link">
+            <Link href="/contactus" className="footer-link">
               Contact Us
             </Link>
           </div>

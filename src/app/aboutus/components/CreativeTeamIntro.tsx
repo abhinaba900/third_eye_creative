@@ -77,7 +77,7 @@ const teamDatas: TeamData[] = [
       "Traveler",
     ],
     description:
-      "Yashavantha is a skilled full stack developer with over a year of experience in building mobile applications and websites. Proficient in the MERN stack, Python, and Flutter. Outside of coding, Yashavantha enjoys watching anime, with favorites like Demon Slayer and One Piece, and loves to explore new places through travel.",
+      "Yashavantha is a skilled full stack developer with 2 years of experience in building mobile applications and websites. Proficient in the MERN stack, Python, and Flutter. Outside of coding, Yashavantha enjoys watching anime, with favorites like Demon Slayer and One Piece, and loves to explore new places through travel.",
     images: ["/assets/Yashvantha.webp"],
     name: "Yashavantha Naik",
     role: "Full Stack Developer",
@@ -89,12 +89,11 @@ const teamDatas: TeamData[] = [
     tags: [
       "Backend Dev",
       "Flutter & FastAPI",
-      "Next.js & Golang",
       "Databases",
       "Cricket & Travel",
     ],
     description:
-      "Arpit is a passionate backend developer with over 4 months of experience, contributing to robust and scalable systems at Third Eye Creative. Skilled in Flutter, FastAPI, Next.js, Flask, and Golang, and has a strong command over databases like MySQL and MongoDB. A natural problem-solver, Arpit enjoys tackling complex backend challenges and continuously learning new technologies. Outside of work, he loves playing cricket & exploring new places through travel. His curiosity, enthusiasm and versatility make him a valuable and forward-thinking member of the Third Eye team.",
+      "Arpit is a passionate backend developer with over 1 year of experience, contributing to robust and scalable systems at Third Eye Creative. Skilled in Flutter, FastAPI, Next.js, Flask, and Golang, and has a strong command over databases like MySQL and MongoDB. A natural problem-solver, Arpit enjoys tackling complex backend challenges and continuously learning new technologies. Outside of work, he loves playing cricket & exploring new places through travel. His curiosity, enthusiasm and versatility make him a valuable and forward-thinking member of the Third Eye team.",
     images: ["/assets/Ankit.webp"],
     name: "Arpit Kesharwani",
     role: "Backend Developer",

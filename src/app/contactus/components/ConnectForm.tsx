@@ -127,12 +127,12 @@ export default function ConnectForm() {
               ></textarea>
             </div>
 
-            <p className="mb-2 text-xs sm:text-sm text-purple-400 contact-us-form-text-info-title">
+            {/* <p className="mb-2 text-xs sm:text-sm text-purple-400 contact-us-form-text-info-title">
               {activeTab === "start"
                 ? "Services Required"
                 : "Or write to us at"}
-            </p>
-            {activeTab === "start" ? (
+            </p> */}
+            {/* {activeTab === "start" ? (
               <div className="flex flex-wrap gap-2 sm:gap-3 mb-9 md:mb-6">
                 {["Website Development", "App Development", "Web Design"].map(
                   (service) => (
@@ -239,7 +239,7 @@ export default function ConnectForm() {
                   Send us an email
                 </a>
               </div>
-            )}
+            )} */}
           </div>
 
           {/* Submit Button */}
