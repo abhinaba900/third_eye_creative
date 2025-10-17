@@ -2,11 +2,11 @@
 
 function Gallery({ data }) {
   return (
-    <div className="grid gap-4 max-w-[1232px] mx-auto mb-[9.036rem] gallery-main-container-individual-page">
+    <div className="grid gap-4 max-w-[1232px] px-3 sm:px-0 mx-auto mb-[9.036rem] gallery-main-container-individual-page margin-buttom-for-mobile">
       {data.map((item, index) => {
         if (item.type === "multiple") {
           return (
-            <div key={index} className="grid grid-cols-2 gap-4">
+            <div key={index} className="grid grid-cols-2 gap-4 items-stretch">
               {item.images.map((img, i) => (
                 <img
                   key={i}

@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -34,6 +34,19 @@ function ServicesOverview() {
 
   const currentIndex = hovered !== null ? hovered : active;
   const currentService = services[currentIndex];
+
+  useEffect(() => {
+    const storedServiceTitle = sessionStorage.getItem("activeService");
+    if (storedServiceTitle) {
+      const storedIndex = services.findIndex(
+        (service) => service.title === storedServiceTitle
+      );
+      if (storedIndex !== -1) {
+        setActive(storedIndex);
+      }
+    }
+  }, []);
+  console.log(hovered);
 
   return (
     <div className="services-overview-wrapper">
@@ -96,16 +109,17 @@ function ServicesOverview() {
                       animate={{ x: 0, opacity: 1 }}
                       exit={{ x: -20, opacity: 0 }}
                       transition={{ duration: 0.3 }}
+                      className="flex items-center justify-center w-[50px] h-[42px]" // ✅ Fixed container size
                     >
-                      <Image
+                      <img
                         src={"/assets/service overview arrow.png"}
                         alt="arrow"
-                        width={50}
-                        height={42}
+                        className="w-full h-full object-contain" // ✅ Arrow fully fills container
                       />
                     </motion.span>
                   )}
                 </AnimatePresence>
+
                 <p>{service.title}</p>
               </div>
             );

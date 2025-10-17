@@ -4,7 +4,7 @@
     herosection: {
       tags: ["Mobile App", "Desktop Dashboard", "UI Design"],
       title: "End-to-End Design for Mesha’s Data Management Solution",
-      footerimage: "/assets/work-hero-footer-image.png",
+      footerimage: "/assets/Artboard 1.png",
     },
     ExecutiveSummary:
       "We developed a Flutter-based mobile application that connects via Bluetooth to UPS (Uninterruptible Power Supply) systems, fetching real-time parameters such as voltage, current, temperature, and battery health. This data is pushed to our cloud platform where it is analyzed and used to generate diagnostic reports. The system is used by service engineers and field technicians to instantly identify issues, leading to faster servicing and increased uptime for critical power systems.",
@@ -253,10 +253,29 @@
         type: "single",
         image: "/assets/work-gallery-image-8.png",
       },
+      {
+        type: "single",
+        image: "/assets/Artboard 2.jpg",
+      },
+      {
+        type: "single",
+        image: "/assets/Artboard 3.jpg",
+      },
+      {
+        type: "multiple",
+        images: [
+          "/assets/Artboard 6.jpg",
+          "/assets/Artboard 5.jpg",
+        ],
+      },
+       {
+        type: "single",
+        image: "/assets/Artboard 4.jpg",
+      },
     ],
     testimonials: [
       {
-        leftVideo: "https://example.com/testimonial-video.mp4",
+        leftVideo: "https://www.youtube.com/watch?v=DwYJ4fqS4kw",
         rightContent: {
           title: "Naren Nagaraj",
           description:

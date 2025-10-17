@@ -5,13 +5,13 @@ function ProblemStatement({ data }) {
   console.log("ProblemStatement data:", data);
 
   return (
-    <section className="bg-black text-white max-w-[1232px] mx-auto px-3 sm:px-6 lg:px-0 mb-[9.036rem]">
-      <div className="text-center mb-[6.25rem] sm:mb-[6.25rem]">
+    <section className="bg-black text-white max-w-[1232px] mx-auto px-3 sm:px-6 lg:px-0 mb-[9.036rem] margin-buttom-for-mobile">
+      <div className="text-center mb-[3rem] sm:mb-[6.25rem]">
         <h2
           className="text-3xl sm:text-4xl font-bold leading-snug single-work-page-problem-statement-title"
           dangerouslySetInnerHTML={{ __html: data.title }}
         />
-        <p className="mt-[1.5rem] text-base sm:text-lg text-gray-300 max-w-[650px] mx-auto single-work-page-problem-statement-description">
+        <p className="mt-[1rem] sm:mt-[1.5rem] text-base sm:text-lg text-gray-300 max-w-[650px] mx-auto single-work-page-problem-statement-description">
           {data.description}
         </p>
       </div>

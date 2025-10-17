@@ -3,7 +3,7 @@
 function Results({ data, galleryData }) {
   return (
     <div
-      className={`max-w-[1232px] mx-auto result-page-main-container-individual-page ${
+      className={`max-w-[1232px] mx-auto result-page-main-container-individual-page margin-buttom-for-mobile ${
         galleryData.length > 0 && "mb-[9.036rem]"
       }`}
     >
@@ -12,11 +12,11 @@ function Results({ data, galleryData }) {
         dangerouslySetInnerHTML={{ __html: data.title }}
       />
 
-      <p className="mt-[1.5rem] text-gray-300 text-sm md:text-base max-w-xl mx-auto single-page-solution-section-description mb-[6.25rem]">
+      <p className="mt-[1rem] sm:mt-[1.5rem] text-gray-300 text-sm md:text-base max-w-xl mx-auto single-page-solution-section-description mb-[3rem] sm:mb-[6.25rem]">
         {data.description}
       </p>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 rounded-lg overflow-hidden">
+      <div className="grid grid-cols-2 md:grid-cols-4 rounded-lg overflow-hidden px-3 sm:px-0">
         {data.metrics.map((metric, index) => (
           <div
             key={index}

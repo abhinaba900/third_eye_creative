@@ -85,7 +85,7 @@ function ClientBackground({ data }) {
       {/* Right Section - Project Info */}
       <div
         className={`flex flex-col gap-6 w-full lg:w-[40%] ${
-          data.type === "1" ? "p-8 lg:py-[5rem]" : "p-8 lg:py-16 "
+          data.type === "1" ? "p-5 lg:py-[5rem]" : "p-8 lg:py-16 "
         }  ${data.type === "3" ? "lg:w-[70%] mx-auto" : ""}`}
         
       >

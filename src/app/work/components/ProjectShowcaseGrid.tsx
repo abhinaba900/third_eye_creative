@@ -109,7 +109,6 @@ function ProjectShowcaseGrid() {
     const storedService = sessionStorage.getItem("activeService");
     if (storedService) {
       setActive(storedService);
-      sessionStorage.removeItem("activeService");
     }
   }, []);
 

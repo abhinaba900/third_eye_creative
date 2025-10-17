@@ -4,19 +4,19 @@ import React from "react";
 function ChallengesandResolutions({ data }) {
   return (
     <div>
-      <div className="bg-black text-white px-3 mb-[9.036rem] max-w-7xl mx-auto">
+      <div className="bg-black text-white px-3 mb-[9.036rem] max-w-7xl mx-auto margin-buttom-for-mobile">
         <h2
           className="text-3xl md:text-5xl font-bold leading-tight single-page-solution-section-title single-work-page-challenges-and-resolutions-title"
           dangerouslySetInnerHTML={{ __html: data.title }}
         />
 
-        <p className="mt-[1.5rem] text-gray-300 text-sm md:text-base max-w-xl mx-auto single-page-solution-section-description mb-[6.25rem]">
+        <p className="mt-[1rem] sm:mt-[1.5rem] text-gray-300 text-sm md:text-base max-w-xl mx-auto single-page-solution-section-description mb-[3rem] sm:mb-[6.25rem]">
           {data.description}
         </p>
 
         <div className="space-y-[1rem]">
           {/* Section: What we were up against */}
-          <div className="flex bg-[#1b1725]  border border-[rgba(255,255,255,0.1)] rounded-2xl p-[3rem] items-stretch justify-between relative indevisual-page-challenges-and-resolutions-container indevisual-page-challenges-and-resolutions-container-1">
+          <div className="flex bg-[#1b1725]  border border-[rgba(255,255,255,0.1)] rounded-2xl p-[1.2rem] sm:p-[3rem] items-stretch justify-between relative indevisual-page-challenges-and-resolutions-container indevisual-page-challenges-and-resolutions-container-1 ">
             {/* FIX: Simplified the wrapper.
               - The parent's `items-stretch` class is what makes this div full height.
               - We keep `items-stretch` on this div to make its own children (the SVG wrapper and the text) the same height.
@@ -98,7 +98,7 @@ function ChallengesandResolutions({ data }) {
               </div>
             </div>
             {/* Right Icon */}
-            <div className="relative -right-12 -top-12 left-auto">
+            <div className="relative -right-12 -top-12 left-auto inmobile-fix-top-margin">
               <Image
                 src={data.challenges.image}
                 alt="Icon"
@@ -109,7 +109,7 @@ function ChallengesandResolutions({ data }) {
           </div>
 
           {/* Section: How we engineered the fix */}
-          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-[3rem] items-stretch justify-between relative indevisual-page-challenges-and-resolutions-container">
+          <div className="flex bg-[#1b1725] border border-[rgba(255,255,255,0.1)] rounded-2xl p-[1.2rem] sm:p-[3rem] items-stretch justify-between relative indevisual-page-challenges-and-resolutions-container">
             {/* FIX: Applied the same simplification here */}
             <div className="flex items-stretch">
               {/* Left Image Line */}
@@ -178,7 +178,7 @@ function ChallengesandResolutions({ data }) {
             </div>
 
             {/* Right Icon */}
-            <div className="relative -right-12 -bottom-12 left-auto">
+            <div className="relative -right-12 -bottom-12 left-auto inmobile-image-position-fix">
               <Image
                 src={data.solutions.image}
                 alt="Icon"

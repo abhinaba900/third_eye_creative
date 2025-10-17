@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import ReactPlayer from "react-player";
 
 function Testimonials({ data }) {
   return (
@@ -42,19 +43,31 @@ function Testimonials({ data }) {
             >
               {data.map((item, idx) => (
                 <SwiperSlide key={idx}>
-                  <div className="flex flex-col  lg:flex-row gap-6  items-center rounded-xl lg:p-6">
+                  <div className="flex flex-col lg:flex-row gap-6 items-stretch rounded-xl lg:p-6">
                     {/* Video Section */}
-                    <div className="w-full lg:w-1/2 overflow-hidden rounded-xl h-full">
-                      <video
-                        src={item.video}
-                        controls
-                        className="w-full h-full object-cover rounded-xl"
-                      />
+                    <div className="w-full lg:w-1/2 h-full flex">
+                      <div className="w-full h-full rounded-xl overflow-hidden">
+                        <ReactPlayer
+                          url={item.leftVideo}
+                          controls
+                          width="100%"
+                          height="400px"
+                          className="rounded-xl"
+                          style={{ height: "100%" }}
+                          config={{
+                            file: {
+                              attributes: {
+                                style: { borderRadius: "12px", height: "100%" },
+                              },
+                            },
+                          }}
+                        />
+                      </div>
                     </div>
 
                     {/* Text Section */}
                     <div
-                      className="w-full lg:w-1/2 p-6 rounded-xl relative h-full flex flex-col justify-between text-left"
+                      className="w-full lg:w-1/2 p-6 rounded-xl relative flex flex-col justify-between text-left"
                       style={{
                         background:
                           "linear-gradient(79.59deg, rgba(51, 51, 62, 0.16) 6.21%, rgba(83, 84, 108, 0.16) 98.02%)",
@@ -84,7 +97,7 @@ function Testimonials({ data }) {
                         alt="Right Coma"
                         width={40}
                         height={40}
-                        className=" absolute bottom-4 right-4"
+                        className="absolute bottom-4 right-4"
                       />
                     </div>
                   </div>

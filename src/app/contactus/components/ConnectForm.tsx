@@ -35,12 +35,12 @@ export default function ConnectForm() {
       </div>
 
       {/* Form Section */}
-      <div className="max-w-6xl  mx-auto w-full md:min-h-[600px] lg:h-[800px] grid grid-cols-1 form-section-in-contact-us-section lg:grid-cols-2 gap-6 bg-[#181818] p-4 sm:p-6 md:p-8 lg:p-[3rem] mt-8 sm:-mt-16 md:-mt-20 lg:mt-[1rem] opacity-95 rounded-2xl shadow-xl overflow-hidden">
+      <div className="max-w-6xl  mx-auto w-full md:min-h-[600px] lg:h-[700px] grid grid-cols-1 form-section-in-contact-us-section lg:grid-cols-2 gap-6 bg-[#181818] p-4 sm:p-6 md:p-8 lg:p-[3rem] mt-8 sm:-mt-16 md:-mt-20 lg:mt-[1rem] opacity-95 rounded-2xl shadow-xl overflow-hidden">
         <div
           className="p-4 sm:p-6 md:p-8 lg:p-10 overflow-y-scroll  flex flex-col h-full justify-between rounded-[20px] border border-[#3F3F3F]"
           style={{ scrollbarWidth: "none" }}
         >
-          <div>
+          {/* <div> */}
             <div className="flex justify-between items-center mb-4 sm:mb-6">
               <h2 className="text-xl sm:text-2xl font-bold contact-us-form-title">
                 Connect with Us
@@ -125,7 +125,7 @@ export default function ConnectForm() {
                 className="w-full h-24 resize-none bg-transparent border border-white/20 p-2 sm:p-3 rounded placeholder-white/50 text-sm sm:text-base contact-us-form-inputs"
                 placeholder="Enter your message"
               ></textarea>
-            </div>
+            {/* </div> */}
 
             {/* <p className="mb-2 text-xs sm:text-sm text-purple-400 contact-us-form-text-info-title">
               {activeTab === "start"
