@@ -31,6 +31,7 @@ function ServicesOverview() {
   const [active, setActive] = useState(0);
   const [hovered, setHovered] = useState<number | null>(null);
   const router = useRouter();
+  const [sessionActive, setSessionActive] = useState<number | null>(0);
 
   const currentIndex = hovered !== null ? hovered : active;
   const currentService = services[currentIndex];
@@ -43,6 +44,7 @@ function ServicesOverview() {
       );
       if (storedIndex !== -1) {
         setActive(storedIndex);
+        setSessionActive(storedIndex);
       }
     }
   }, []);
@@ -66,12 +68,12 @@ function ServicesOverview() {
             src={currentService.image}
             alt={currentService.title}
             width={520}
-            height={797}
+            height={607}
             onError={(e) => {
               e.currentTarget.src =
                 "https://via.placeholder.com/520x797?text=No+Image";
             }}
-            className="rounded-xl w-full h-full object-cover service-overview-image"
+            className="rounded-xl w-full h-[607px] object-cover service-overview-image"
             initial={{ opacity: 0.5, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
@@ -90,8 +92,14 @@ function ServicesOverview() {
             return (
               <div
                 key={index}
-                onMouseEnter={() => setHovered(index)}
-                onMouseLeave={() => setHovered(null)}
+                onMouseEnter={() => {
+                  setHovered(index);
+                  setActive(null);
+                }}
+                onMouseLeave={() => {
+                  setHovered(null);
+                  setActive(sessionActive);
+                }}
                 onClick={() => {
                   setActive(index);
                   sessionStorage.setItem("activeService", service.title);

@@ -224,11 +224,11 @@
     gallery: [
       {
         type: "single",
-        image: "/assets/work-gallery-image-1.png",
+        image: "/assets/Artboard 2.jpg",
       },
       {
         type: "single",
-        image: "/assets/work-gallery-image-2.png",
+        image: "/assets/Artboard 3.jpg",
       },
       {
         type: "single",
@@ -236,12 +236,12 @@
       },
       {
         type: "single",
-        image: "/assets/work-gallery-image-4.png",
+        image: "/assets/Artboard 4.jpg",
       },
       {
         type: "multiple",
         images: [
-          "/assets/work-gallery-image-5.png",
+          "/assets/Artboard 5.jpg",
           "/assets/work-gallery-image-6.png",
         ],
       },
@@ -251,26 +251,7 @@
       },
       {
         type: "single",
-        image: "/assets/work-gallery-image-8.png",
-      },
-      {
-        type: "single",
-        image: "/assets/Artboard 2.jpg",
-      },
-      {
-        type: "single",
-        image: "/assets/Artboard 3.jpg",
-      },
-      {
-        type: "multiple",
-        images: [
-          "/assets/Artboard 6.jpg",
-          "/assets/Artboard 5.jpg",
-        ],
-      },
-       {
-        type: "single",
-        image: "/assets/Artboard 4.jpg",
+        image: "/assets/Artboard 6.jpg",
       },
     ],
     testimonials: [
@@ -1013,7 +994,8 @@
     },
     Solution: {
       layout: "3",
-      title: "<span>Connected</span> Collections Clear <span class=\"saparate-controall-section-updated\">Control</span>",
+      title:
+        '<span>Connected</span> Collections Clear <span class="saparate-controall-section-updated">Control</span>',
       description:
         "A unified system for real-time cash tracking, seamless reconciliation, and clear oversight across all sites",
 
@@ -1902,7 +1884,8 @@
     },
     Solution: {
       layout: "4",
-      title: "Reliable Control,<br /> <span>Zero</span> Connectivity <span>Worries</span>",
+      title:
+        "Reliable Control,<br /> <span>Zero</span> Connectivity <span>Worries</span>",
       description:
         "A smart offline-first system that mimics IoT ease while staying resilient through SMS automation",
       offlineFunctionality: {
@@ -1984,18 +1967,15 @@
         },
         {
           value: ">99.5%",
-          description:
-            "command success rate even in low-signal zones",
+          description: "command success rate even in low-signal zones",
         },
         {
           value: "~85%",
-          description:
-            "reduction in training time for field operators",
+          description: "reduction in training time for field operators",
         },
         {
           value: "~5000+",
-          description:
-            "devices onboarded and actively managed",
+          description: "devices onboarded and actively managed",
         },
         {
           value: "~80%",
@@ -2003,8 +1983,7 @@
         },
         {
           value: "100%",
-          description:
-            "adoption among partner technicians and farmers",
+          description: "adoption among partner technicians and farmers",
         },
         {
           value: "~60%",
@@ -2013,8 +1992,7 @@
         },
         {
           value: "~40%",
-          description:
-            "reduction in manual troubleshooting time per site",
+          description: "reduction in manual troubleshooting time per site",
         },
       ],
     },
