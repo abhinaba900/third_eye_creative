@@ -7,21 +7,21 @@ import { useRouter } from "next/navigation";
 
 const services = [
   {
-    title: "Software that scales.",
+    title: "Software that scales",
     image: "/assets/srvice overview image 1.png",
   },
   {
-    title: "Apps that click.",
+    title: "Apps that click",
     image:
       "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&auto=format&fit=crop&q=80",
   },
   {
-    title: "Marketing that moves.",
+    title: "Marketing that moves",
     image:
       "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=80",
   },
   {
-    title: "Media that matters.",
+    title: "Media that matters",
     image:
       "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&auto=format&fit=crop&q=80",
   },
@@ -45,6 +45,7 @@ function ServicesOverview() {
       if (storedIndex !== -1) {
         setActive(storedIndex);
         setSessionActive(storedIndex);
+        sessionStorage.removeItem("activeService");
       }
     }
   }, []);
