@@ -7,10 +7,10 @@ type Service = {
 };
 
 const serviceData: Service[] = [
-  { name: "Software that scales." },
-  { name: "Apps that click." },
-  { name: "Marketing that moves." },
-  { name: "Media that matters." },
+  { name: "Software that scales" },
+  { name: "Apps that click" },
+  { name: "Marketing that moves" },
+  { name: "Media that matters" },
 ];
 
 function ServiceTags() {
