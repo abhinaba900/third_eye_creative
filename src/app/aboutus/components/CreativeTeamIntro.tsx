@@ -86,12 +86,7 @@ const teamDatas: TeamData[] = [
   {
     id: 5,
     title: "Writes backend code faster than he hits a cricket ball.",
-    tags: [
-      "Backend Dev",
-      "Flutter & FastAPI",
-      "Databases",
-      "Cricket & Travel",
-    ],
+    tags: ["Backend Dev", "Flutter & FastAPI", "Databases", "Cricket & Travel"],
     description:
       "Arpit is a passionate backend developer with over 1 year of experience, contributing to robust and scalable systems at Third Eye Creative. Skilled in Flutter, FastAPI, Next.js, Flask, and Golang, and has a strong command over databases like MySQL and MongoDB. A natural problem-solver, Arpit enjoys tackling complex backend challenges and continuously learning new technologies. Outside of work, he loves playing cricket & exploring new places through travel. His curiosity, enthusiasm and versatility make him a valuable and forward-thinking member of the Third Eye team.",
     images: ["/assets/Ankit.webp"],
@@ -250,8 +245,9 @@ function CreativeTeamIntro() {
   useEffect(() => {
     const updateConstraints = () => {
       if (containerRef.current && innerRef.current) {
-        const containerWidth = containerRef.current.offsetWidth;
-        const innerWidth = innerRef.current.scrollWidth;
+        const containerWidth = (containerRef.current as HTMLElement)
+          .offsetWidth;
+        const innerWidth = (innerRef.current as HTMLElement).scrollWidth;
 
         // Calculate how much we can drag to the left
         const maxDrag = containerWidth - innerWidth;
@@ -323,12 +319,19 @@ function CreativeTeamIntro() {
                       : ""
                   }`}
                 >
+                  {/*
+                    ---------------------------------
+                    THIS IS THE CHANGED SECTION
+                    ---------------------------------
+                  */}
                   <Image
                     src={item.bannerImage}
                     alt="image"
                     width={100}
                     height={100}
-                    className="teem-members-icon-clickble"
+                    className={`teem-members-icon-clickble transition-all duration-300 ${
+                      item.id !== active ? "grayscale" : ""
+                    }`}
                   />
                 </div>
               </div>
