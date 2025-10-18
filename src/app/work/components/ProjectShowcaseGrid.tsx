@@ -1,7 +1,7 @@
 ﻿"use client";
 
-import React, { useEffect, useState } from "react";
-import CategoryFilterBar from "./CategoryFilterBar";
+import React, {  useState } from "react";
+// import CategoryFilterBar from "./CategoryFilterBar";
 import Image from "next/image";
 import Link from "next/link";
 import Router from "next/router";
@@ -19,105 +19,98 @@ const projects: Project[] = [
   {
     id: 1,
     image: "/assets/project1.png",
-    categories: ["UI-UX Design", "Brand Marketing", "Web Development"],
-    title: "Naren Electrix — Smart Control, Simplified",
+    categories: ["IOT", "Diagnostics", "Data Logging"],
+    title: "Mesha IoT — Real-Time EV Battery Insights",
     flag: "project",
 
     description:
-      "An IoT mobile app that lets users control smart devices in real time. We combined functionality with sleek UI for smooth and seamless access.",
+      "A scalable cloud-based platform that captures live voltage, current, temperature, and location data from thousands of EV autos across India — transforming raw telemetry into actionable diagnostics for faster issue resolution.",
   },
   {
     id: 2,
     image: "/assets/project2.png",
-    categories: ["UI-UX Design", "Brand Marketing", "Web Development"],
+    categories: ["AI", "Travel", "Assistant"],
     title: "Xplorion AI — Travel, Reimagined",
     flag: "project",
 
     description:
-      "For Xplorion AI, we crafted an itinerary mobile app that blends AI-driven personalization with intuitive UX.",
+      "For Xplorion AI, we crafted a smart itinerary mobile app that blends AI-driven personalization with intuitive UX, turning travel planning into an effortless, tailored experience.",
   },
   {
     id: 3,
-    image: "/assets/project3.png",
-    categories: ["UI-UX Design", "Brand Marketing", "Web Development"],
-    title: "Urbando — Artfully Engineered Living",
-    flag: "website",
-
-    description:
-      "A sleek, responsive website designed to showcase Urbando's premium homes with elegance and ease.",
-  },
-  {
-    id: 4,
     image: "/assets/project4.png",
-    categories: ["UI-UX Design", "Brand Marketing", "Web Development"],
+
+    categories: ["IOT", "Diagnostics", "Data Logging"],
     title: "STEP — The Smarter Way to Prep",
     flag: "website",
-    description:
-      "A NEET PG prep app designed for serious medical aspirants on the go. Built for structured, distraction-free study.",
-  },
-  {
-    id: 5,
-    image: "/assets/project1.png",
-    categories: ["UI-UX Design", "Brand Marketing", "Web Development"],
-    title: "Naren Electrix — Smart Control, Simplified",
-    flag: "project",
 
     description:
-      "An IoT mobile app that lets users control smart devices in real time. We combined functionality with sleek UI for smooth and seamless access.",
-  },
-  {
-    id: 6,
-    image: "/assets/project2.png",
-    categories: ["UI-UX Design", "Brand Marketing", "Web Development"],
-    title: "Xplorion AI — Travel, Reimagined",
-    flag: "project",
-
-    description:
-      "For Xplorion AI, we crafted an itinerary mobile app that blends AI-driven personalization with intuitive UX.",
-  },
-  {
-    id: 7,
-    image: "/assets/project3.png",
-    categories: ["UI-UX Design", "Brand Marketing", "Web Development"],
-    title: "Urbando — Artfully Engineered Living",
-    flag: "website",
-
-    description:
-      "A sleek, responsive website designed to showcase Urbando's premium homes with elegance and ease.",
+      "A NEET PG prep app designed for serious med aspirants on the go. We built a structured, distraction-free interface for focus and performance.",
   },
   {
     id: 8,
-    image: "/assets/project4.png",
-    categories: ["UI-UX Design", "Brand Marketing", "Web Development"],
-    title: "STEP — The Smarter Way to Prep",
+    image: "/assets/project3.png",
+
+    categories: ["Real Estate Website", "UI/UX Design", "Web Development"],
+    title: "Urbando — Artfully Engineered Living",
     flag: "website",
     description:
-      "A NEET PG prep app designed for serious medical aspirants on the go. Built for structured, distraction-free study.",
+      " A sleek, responsive website designed to showcase Urbando’s premium homes with elegance and ease. We blended visual minimalism with high-conversion layouts for a refined user experience.",
+  },
+  {
+    id: 4,
+    image: "/assets/project5.png",
+    categories: ["Finops", "Reporting", "Reconciliation"],
+    title: "Shell India – Digital Payment Command Center",
+    flag: "project",
+
+    description:
+      "A secure and scalable web platform built to centralize digital transactions across fuel retail sites. Designed for reliability and real-time visibility, it streamlines payment operations with precision and control.",
+  },
+  {
+    id: 6,
+    image: "/assets/project6.png",
+    categories: ["Finops", "Reporting", "Reconciliation"],
+    title: "Shell Retail Cloud — Unified Digital Payments Interface",
+    flag: "project",
+
+    description:
+      "A robust, web-based dashboard enabling retailers and HQ to track, reconcile, and manage all digital payment activity with absolute clarity and speed.",
+  },
+  {
+    id: 7,
+    image: "/assets/project7.png",
+    categories: ["Agritech", "IoT", "Operation"],
+    title: "Naren IoT — Connected Control, Anytime Anywhere",
+    flag: "website",
+
+    description:
+      "A unified IoT dashboard built to monitor, manage, and automate industrial devices in real-time. Designed for reliability, remote accessibility, and data-backed decision-making.",
+  },
+  {
+    id: 5,
+    image: "/assets/project8.png",
+    categories: ["IOT", "Diagnostics", "Data Logging"],
+    title: "Mesha Data Manager — Real-Time UPS Insights",
+    flag: "website",
+    description:
+      "The Mesha app turns UPS servicing into a connected workflow — Bluetooth data collection on-site, cloud analytics off-site. Engineers now diagnose issues in seconds instead of hours.",
   },
 ];
 
 function ProjectShowcaseGrid() {
-  const [active, setActive] = useState("Brand Marketing");
+  const [active] = useState("");
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [hoveredId, setHoveredId] = useState<number | null>(null);
 
-  const filteredProjects = projects.filter((project) =>
-    project.categories.includes(active)
-  );
-
-  useEffect(() => {
-    const storedService = sessionStorage.getItem("activeService");
-    if (storedService) {
-      setActive(storedService);
-    }
-  }, []);
+ 
 
   return (
     <div>
-      <CategoryFilterBar active={active} setActive={setActive} />
+      {/* <CategoryFilterBar active={active} setActive={setActive} /> */}
       <div className="max-w-[1232px] mx-auto px-4 py-10 grid gap-10 gap-y-15 md:grid-cols-2 mb-[8.75rem] pt-0 pb-0">
-        {filteredProjects.length > 0 ? (
-          filteredProjects.map((project) => (
+        {projects.length > 0 ? (
+          projects.map((project) => (
             <div key={project.id} className="space-y-4 group">
               <Link
                 href={`/work/${project.id}`}
@@ -207,11 +200,25 @@ function ProjectShowcaseGrid() {
               {/* Project details below the image */}
               <div className="space-y-4">
                 {/* Tags */}
-                <div className="text-xs project-showcase-tags font-medium bg-gradient-to-r from-[#FF891D] to-[#EC4B7B] bg-clip-text text-transparent uppercase tracking-wide space-x-2">
+                <div className="flex flex-wrap gap-3">
                   {project.categories.map((cat, i) => (
-                    <span key={i}>
+                    <span
+                      key={`single-${i}`}
+                      className="
+                text-xs font-medium text-white
+                px-4 py-1 rounded-full 
+                border-2 border-transparent  /* 1. Set a transparent border of the desired thickness */
+
+                /* 2. Define two backgrounds: solid black first, then the gradient */
+                bg-[linear-gradient(black,black),linear-gradient(90deg,#C883FF,#772BF2,#CE0AFF)]
+
+                bg-origin-border          /* 3. Make sure backgrounds originate from the border edge */
+
+                /* 4. Clip the first background (black) to the padding-box, and the second (gradient) to the border-box */
+                [background-clip:padding-box,border-box]
+              "
+                    >
                       {cat}
-                      {i < project.categories.length - 1 && " · "}
                     </span>
                   ))}
                 </div>
@@ -222,7 +229,9 @@ function ProjectShowcaseGrid() {
                 </h3>
 
                 {/* Description */}
-                <p className="project-showcase-description">{project.description}</p>
+                <p className="project-showcase-description">
+                  {project.description}
+                </p>
               </div>
             </div>
           ))

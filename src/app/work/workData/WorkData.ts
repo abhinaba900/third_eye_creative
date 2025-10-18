@@ -3,30 +3,30 @@
     id: "1",
     herosection: {
       tags: ["Mobile App", "Desktop Dashboard", "UI Design"],
-      title: "End-to-End Design for Mesha’s Data Management Solution",
+      title: "IoT Data Logger for EV Autos — Scalable Battery Insights",
       footerimage: "/assets/Artboard 1.png",
     },
     ExecutiveSummary:
-      "We developed a Flutter-based mobile application that connects via Bluetooth to UPS (Uninterruptible Power Supply) systems, fetching real-time parameters such as voltage, current, temperature, and battery health. This data is pushed to our cloud platform where it is analyzed and used to generate diagnostic reports. The system is used by service engineers and field technicians to instantly identify issues, leading to faster servicing and increased uptime for critical power systems.",
+      "We developed and deployed a scalable IoT Data Logging System for a leading battery manufacturer in the EV auto space. The system captures real-time, time-series data such as location, voltage, current, and temperature from thousands of EV autos across India. This data is pushed to our cloud platform, which generates actionable diagnostic reports to identify performance issues—especially in response to range complaints. The platform has become a critical diagnostic tool and is now deployed across thousands of vehicles.",
     ClientBackground: {
       type: "1",
       leftImage: "/assets/ClientBackground-left-image.png",
       rightContent: {
         topIcon: "/assets/ClientBackground-right-top-icon.png",
-        title: "Powering Energy Intelligence",
+        title: "Driving Battery Intelligence",
         description:
-          "The client is a power systems manufacturer with a large installed base of UPS units across industries. Their field teams previously relied on manual readings and inconsistent diagnostic methods, which slowed response times and impacted maintenance efficiency.",
+          "Our client is a leading EV battery manufacturer serving electric auto-rickshaws and other light commercial vehicles. Faced with rising range complaints and performance concerns, they needed a scalable IoT solution to remotely monitor and diagnose battery health in real time across their growing fleet.",
         footerContent: [
           {
-            title: "Energy Tech",
+            title: "EV & Battery Tech",
             description: "Industry",
           },
           {
-            title: "2025",
+            title: "2024",
             description: "Year of Implementation",
           },
           {
-            title: "8 Months",
+            title: "6 Months",
             description: "Time to Completion",
           },
           {
@@ -38,186 +38,192 @@
     },
 
     ProblemStatement: {
-      title: "Solving <span>On-Site</span> Chaos",
+      title:
+        "Unraveling the Chaos: <span>Real-Time</span> Battery <span>Diagnostics</span> at Scale",
       description:
-        "Streamlined diagnostics with one tool—faster data, fewer errors, and complete fleet visibility",
+        "Addressing EV Auto Range Complaints Through Streamlined Field Insights and Scalable Fleet-Wide Visibility",
       contentSection: {
         icon: "/assets/ProblemStatement-contentSection-icon.png",
-        title: "Transforming Field Diagnostics",
+        title: "Redefining Battery Issue Resolution",
         description:
-          "Mesha’s field engineers lacked a standardized tool for capturing UPS data, relying on inconsistent, manual diagnostics prone to error. Without a centralized system for reporting or tracking, visibility into fleet performance was limited. This made it difficult to access real-time insights or make proactive, data-driven decisions.",
+          "Range complaints in EV autos were difficult to validate without standardized field diagnostics. The absence of real-time battery insights slowed root cause analysis and delayed resolution. With a rapidly growing fleet, the client needed a scalable system to monitor performance across thousands of vehicles.",
         rightsideData: [
           {
             id: "1",
-            title: "Field engineers lacked a standard tool to collect UPS data",
+            title:
+              "Lack of field diagnostics made it difficult to validate customer-reported battery range issues",
           },
           {
             id: "2",
-            title: "Diagnostics were manual, slow, and prone to errors",
+            title:
+              "Absence of live battery performance data hindered proactive monitoring and quick response",
           },
           {
             id: "3",
-            title: "There was no centralized system for storing reports",
+            title:
+              "Diagnosing issues was time-consuming without direct access to on-ground performance metrics",
           },
           {
             id: "4",
-            title: "Real-time fleet performance data was unavailable",
+            title:
+              "Existing systems couldn’t support diagnostics and monitoring across a rapidly expanding fleet",
           },
           {
             id: "5",
-            title: "The team couldn’t use data effectively for decision-making",
+            title:
+              "Engineers lacked tools for efficient diagnostics, leading to delays and potential errors",
           },
         ],
       },
     },
     objectives: {
-      title: "Behind the <span>Build</span>",
+      title: " Powering <span>Smarter Diagnostics</span> ",
       description:
-        "Building a unified diagnostic ecosystem for a smarter, faster UPS insights",
+        "Building real-time, scalable EV battery insights",
       realTimeDiagnostics: {
-        icon: "/assets/objectives-realTimeDiagnostics-image.png",
-        title: "Real-Time Diagnostics",
+        icon: "/assets/div.YourPlayground_icon__ITdeD.png",
+        title: "Comprehensive Data Capture",
         description:
-          "Access live data including voltage, current, temperature, and more. Get instant insights into the system’s performance right from the field.",
+          "Collect time-series data from EV batteries, including metrics like location, voltage, current, and temperature for in-depth analysis",
         rightsideimage: "/assets/objectives-realTimeDiagnostics-icons.png",
       },
       upsConnectivity: {
-        title: "UPS Connectivity",
+        title: "Faster Issue Validation",
         description:
-          "Easily pair with any UPS unit via Bluetooth using the mobile app. Collect field data wirelessly without needing extra hardware or manual setup.",
+          "Enable quick and accurate validation of range-related complaints using real operational data.",
         image: "/assets/objectives-upsConnectivity-image.png",
       },
       smartReports: {
-        title: "Smart Reports",
+        title: "Visual Diagnostic Reporting",
         description:
-          "Generate detailed diagnostic reports in seconds. Identify issues quickly with auto-processed insights, reducing human error and saving time.",
+          "Generate clear, visual reports to simplify battery performance analysis and fault detection.",
         image: "/assets/objectives-smartReports-image.png",
       },
       cloudSync: {
-        title: "Cloud Sync",
-        icon: "/assets/objectives-cloudSync-icon.png",
+        title: "Real-Time Cloud Sync",
+        icon: "/assets/div.YourPlayground_icon__ITdeD-real-time.png",
         description:
-          "Automatically upload diagnostic logs to a centralized cloud. Make data accessible to teams across locations and maintain a secure digital record.",
+          "Continuously push battery data to a centralized cloud platform for instant access and monitoring.",
       },
       unifiedProcess: {
-        title: "Unified Process",
-        icon: "/assets/objectives-unifiedProcess-icon.png",
+        title: "Scalable System Design",
+        icon: "/assets/div.YourPlayground_icon__ITdeD-system-design.png",
         description:
-          "Streamline field operations with a standardized diagnostic workflow. One tool for all UPS models—ensuring consistent, reliable data collection.",
+          "Create an architecture capable of supporting diagnostics across thousands of EVs seamlessly",
       },
     },
     Solution: {
       layout: "1",
-      title: "<span>Scalable Diagnostics</span> <br/> Centralized Intelligence",
+      title: "Connected Intelligence for <br/> <span>Scalable</span> EV <span>Diagnostics</span> ",
       description:
         "Robust tools engineered to standardize, automate, and optimize UPS field operations at scale",
       offlineFunctionality: {
-        title: "Offline Functionality",
+        title: "Secure Cloud Sync",
         description:
-          "Ensures uninterrupted operation by storing data locally when offline and syncing to cloud once connected.",
+          "Transmit data reliably and with low latency to a centralized cloud system using MQTT for smooth, scalable integration",
         image: "/assets/tsSolution-offlineFunctionality-image.png",
         buttonImage: "/assets/tsSolution-offlineFunctionality-button.png",
       },
       realTimeDiagnostics: {
-        title: "Real-Time Diagnostics",
+        title: "Real-Time Data Capture",
         description:
-          "Instantly captures and displays critical data like voltage, current, temperature, and battery cycles.",
+          "Collects key parameters such as voltage, current, GPS location, temperature and (SOC) from EV batteries for accurate diagnostics",
         image: "/assets/Solution-realTimeDiagnostics-image.png",
       },
       seamlessBluetoothIntegration: {
-        title: "Seamless Bluetooth Integration",
+        title: "Graphical Diagnostics",
         description:
-          "Automatically detects and connects to nearby UPS devices for effortless setup and communication.",
+          "Use a web-based portal featuring visual charts and graphs to enable quick fault detection and simplify analysis for field engineers",
         image: "/assets/Solution-seamlessBluetoothIntegration-image.png",
       },
       technologyBackbone: {
         title: "Technology Backbone",
         description:
-          "Built using a powerful tech stack including Flutter, Firebase, GCP, and more.",
+          "Built with custom IoT hardware, MQTT firmware, TimescaleDB backend, React frontend and scalable cloud on AWS/GCP",
         image: "/assets/technologyBackbone-xplorean-ai.png",
       },
       technicianCommandCenter: {
-        title: "Technician Command Center",
+        title: "Complaint Validation",
         description:
-          "Offers a streamlined dashboard to track device history, current status, and actionable recommendations.",
+          "Leverage historical time-series data to investigate and validate range-related complaints with evidence-based insights",
         image: "/assets/Solution-technicianCommandCenter-image.png",
       },
       cloudPoweredAnalytics: {
-        title: "Cloud-Powered Analytics",
+        title: "Scalable Infrastructure",
         description:
-          "Securely uploads diagnostic data for centralized tracking, analytics, and performance insights.",
+          "A backend architecture designed to handle data ingestion and processing across thousands of vehicles without performance degradation.",
         image: "/assets/Solution-cloudPoweredAnalytics-image.png",
       },
       automatedReporting: {
-        title: "Automated Reporting",
+        title: "Remote Accessibility",
         description:
-          "Generates immediate, detailed reports highlighting faults, anomalies, and performance trends.",
+          "Enable stakeholders to access diagnostics and insights from anywhere, facilitating timely decision-making and remote support",
         image: "/assets/Solution-automatedReporting-image.png",
       },
     },
 
     ChallengesandResolutions: {
-      title: "<span>Smart Solutions</span> <br /> for Complex Challenges",
+      title: "<span>Smart Fixes</span> for Scaled EV <br /> Challenges",
       description:
-        "Modular systems and adaptive technologies crafted to streamline UPS diagnostics and performance across all touchpoints",
+        "Tailored solutions using adaptive tech—built to manage real-time data, ensure precision tracking, and deliver insights for every user",
       challenges: {
         title: "What we were up against",
         points: [
-          "Handling diverse UPS firmware protocols across multiple models",
-          "Maintaining reliable data sync in low-connectivity environments",
-          "Achieving consistent performance across Android and iOS devices",
+          "Streaming and processing data from thousands of moving EVs was resource-intensive and hard to manage",
+          "Vehicle location data needed to be both precise and fast to support diagnostics and analysis",
+          "Operators needed clear, actionable insights without reading complex data",
         ],
         image: "/assets/ChallengesandResolutions-right-side-image.png",
       },
       solutions: {
         title: "How we engineered the fix",
         points: [
-          "Developed a modular parser system that dynamically adapts to varying firmware architectures and ensures seamless compatibility",
-          "Engineered an offline-first architecture with intelligent retry logic to ensure uninterrupted operations and accurate data capture",
-          "Implemented Flutter for a unified codebase, ensuring cross-platform UI consistency and reduced development overhead",
+          "Used a time-series database and scalable cloud architecture to handle large volumes of real-time data",
+          "Applied GPS filtering and edge-side processing to improve accuracy and reduce latency",
+          "Designed clean, visual reports with key metrics and alerts, enabling quick understanding and decision-making",
         ],
         image: "/assets/Solution-ChallengesandResolutions-right-side-image.svg",
       },
     },
     Results: {
-      title: "Where <span>Strategy meets Tangible</span> <br /> Results",
+      title: "Innovation that Drives <span>Real <br /> Impact</span> ",
       description:
-        "From faster service cycles to smarter diagnostics — here’s how our solutions made measurable impact in the real world",
+        "From faster fault detection to better batteries—real results at fleet-wide scale",
       metrics: [
         {
-          value: "~50%",
-          description: "reduction in issue diagnosis time during servicing",
+          value: "~60%",
+          description: "reduction in manual inspection and root cause analysis effort",
         },
         {
-          value: "100%",
-          description: "of service visits now generate cloud-logged reports",
+          value: "~3x Faster",
+          description: "identification of battery faults using graph-based insights",
         },
         {
-          value: "Significant",
-          description: "drop in UPS downtime due to faster fault detection",
+          value: "<5 minutes",
+          description: "to validate range complaints using real-time & historical data",
         },
         {
-          value: "~40%",
+          value: "Thousands",
           description:
-            "increased technician efficiency through streamlined workflows",
+            "of vehicles connected & monitored with scalability",
         },
         {
-          value: "Multi-region",
+          value: "Higher",
           description:
-            "deployment with active usage by technicians across zones",
+            " product quality through actionable data",
+        },
+        {
+          value: ">50%",
+          description: "improvement in service response time",
+        },
+        {
+          value: "Centralized",
+          description:
+            "visibility across fleet operations enabled proactive maintenance",
         },
         {
           value: "Real-time",
-          description: "analytics enabling data-driven maintenance decisions",
-        },
-        {
-          value: "24/7",
-          description:
-            "system visibility enabled through real-time data logging",
-        },
-        {
-          value: "<5 mins",
-          description: "average time to generate & sync reports to the cloud",
+          description: "access to field performance data for faster decisions",
         },
       ],
     },
@@ -240,10 +246,7 @@
       },
       {
         type: "multiple",
-        images: [
-          "/assets/Artboard 5.jpg",
-          "/assets/work-gallery-image-6.png",
-        ],
+        images: ["/assets/Artboard 5.jpg", "/assets/work-gallery-image-6.png"],
       },
       {
         type: "single",

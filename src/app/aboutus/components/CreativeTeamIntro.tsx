@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
+import PlexusBackground from "./PlexusBackground";
 
 interface TeamData {
   id: number;
@@ -271,9 +272,26 @@ function CreativeTeamIntro() {
     setBannerImages(images);
   }, []);
 
+  useEffect(() => {
+    const clipBox = document.getElementById("clipBox");
+
+    if (clipBox) {
+      const bottomMask = document.createElement("div");
+      bottomMask.style.position = "absolute";
+      bottomMask.style.bottom = "-62px";
+      bottomMask.style.left = "0";
+      bottomMask.style.width = "120%";
+      bottomMask.style.height = "60px"; // how much to hide
+      bottomMask.style.background = "#000000"; // match bg
+      bottomMask.style.opacity = "0.3";
+
+      clipBox.appendChild(bottomMask);
+    }
+  }, []);
+
   return (
-    <div className="creative-team-intro-wrapper">
-      <div className="text-wraper-in-creative-team">
+    <div className="creative-team-intro-wrapper relative z-1 overflow-hidden">
+      <div className="text-wraper-in-creative-team relative z-1">
         <h3 className="creative-team-intro-title">
           Minds Built to <span>Create</span>
         </h3>
@@ -294,9 +312,9 @@ function CreativeTeamIntro() {
       </div>
 
       {/* Top banner images clickable */}
-      <div className="creative-team-image-wrapper">
+      <div className="creative-team-image-wrapper relative z-1">
         <motion.div
-          className="horizontal-scroller-container-testimonial-showcase cursor-grab overflow-hidden"
+          className="horizontal-scroller-container-testimonial-showcase cursor-grab overflow-hidden "
           whileTap={{ cursor: "grabbing" }}
           ref={containerRef}
         >
@@ -354,7 +372,7 @@ function CreativeTeamIntro() {
         >
           <DarkVeil  speed={0.8}/>
         </div> */}
-        <div className="overflow-hidden text-white max-w-[1279px] w-full mx-auto mb-[8.75rem] md:px-6 lg:px-0 creative-team-info-wrapper-and-holder relative">
+        <div className=" text-white max-w-[1279px] w-full mx-auto mb-[8.75rem] md:px-6 lg:px-0 creative-team-info-wrapper-and-holder relative">
           <div className="flex flex-col-reverse lg:flex-row gap-4 md:gap-6 lg:gap-[10%] items-start">
             {/* Left: Text Content */}
             <div className="lg:w-[40%] w-full space-y-6">
@@ -383,8 +401,8 @@ function CreativeTeamIntro() {
             {/* Background images (visible across breakpoints) */}
 
             {/* Right: Image Stack with 3-Layer PvP Animation */}
-            <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] flex items-cente1r justify-center ">
-              <img
+            <div className="relative lg:w-[55%] w-full h-[500px] lg:h-[550px] flex items-cente1r justify-center " id="clipBox">
+              {/* <img
                 src="/assets/Pink background blurred.png"
                 alt="background-image"
                 className="bg-image"
@@ -395,7 +413,8 @@ function CreativeTeamIntro() {
                 src="/assets/background in creative team info.png"
                 alt="background-image"
                 className="bg-image-foreground"
-              />
+              /> */}
+              <PlexusBackground />
 
               <AnimatePresence initial={false} mode="popLayout">
                 {teamDatas.map((member, idx) => {
@@ -467,6 +486,7 @@ function CreativeTeamIntro() {
                     <motion.div
                       key={member.id + "-" + member.images[0]}
                       className="absolute flex items-center justify-center"
+                      
                       animate={styles}
                       initial={initialvalue}
                       exit={exitValue}

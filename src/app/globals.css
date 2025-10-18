@@ -2126,8 +2126,7 @@ strong {
 }
 
 .about-us-hero-section-content-wrapper span {
-  background: linear-gradient(0deg, #772bf2, #772bf2),
-    linear-gradient(180deg, #ec4b7b 0%, rgba(206, 10, 255, 0) 100%);
+  background: linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%);
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
