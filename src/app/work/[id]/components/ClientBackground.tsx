@@ -46,7 +46,7 @@ function ClientBackground({ data }) {
           <>
             <div className="relative flex ">
               {/* First image aligned to the top */}
-              <div className="relative w-1/2 h-[400px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[8rem] flex items-start ">
+              <div className="relative w-1/2 h-[400px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[8rem] flex items-start  double-image-second-container-2">
                 <div className="relative w-full h-full">
                   <Image
                     src={data.leftImage}
@@ -58,7 +58,7 @@ function ClientBackground({ data }) {
               </div>
 
               {/* Second image aligned to the bottom */}
-              <div className="relative w-1/2 h-[400px] sm:-top-[8rem] md:top-0 md:bottom-0 lg:top-[4.8rem] flex items-end">
+              <div className="relative w-1/2 h-[400px] sm:-top-[8rem] md:top-0 md:bottom-0 lg:top-[4.8rem] flex items-end double-image-second-container">
                 <div className="relative w-full h-full">
                   <Image
                     src={data.leftImage2}

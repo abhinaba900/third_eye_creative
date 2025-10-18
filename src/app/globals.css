@@ -2352,7 +2352,19 @@ strong {
 }
 
 .creative-team-image.active-team-member-border {
-  border: 2px solid #9a6aff;
+  /* Set the border width, but make it transparent */
+  border: 2px solid transparent;
+
+  /* Set up layered backgrounds */
+  background-image: linear-gradient(#000000, #000000),
+    linear-gradient(0deg, #772bf2, #ec4b7b),
+    linear-gradient(180deg, #ce0aff 0%, rgba(206, 10, 255, 0) 100%);
+
+  background-origin: border-box;
+  background-clip: content-box, border-box, border-box;
+
+  /* Add this line */
+  border-radius: 50%;
 }
 
 .creative-team-image-wrapper {
@@ -2569,7 +2581,7 @@ strong {
   letter-spacing: -2%;
 }
 
-.services-overview-list img{
+.services-overview-list img {
   width: 40px;
   height: 40px;
 }
@@ -3712,9 +3724,8 @@ strong {
   vertical-align: middle;
 }
 
-
-.gallery-main-container-individual-page img{
-  border: 1px solid #3F3F3F;
+.gallery-main-container-individual-page img {
+  border: 1px solid #3f3f3f;
   border-radius: 24px;
 }
 /* media quarry */
@@ -4194,8 +4205,12 @@ strong {
     align-items: center;
     text-align: center;
     gap: 0;
-    padding: 5rem 1rem;
-    margin-top: 4rem;
+    padding: 0 1rem 5rem 1rem;
+    margin-top: 5rem;
+  }
+
+  .workflow-stage-card {
+    gap: 4rem;
   }
 
   .ScrollReveal_scroll-reveal-text__Td_gR {
@@ -4257,9 +4272,31 @@ strong {
     text-align: center;
   }
 
+  .double-image-second-container {
+    top: -20%;
+    margin-top: 0;
+    right: 0;
+    left: 0;
+    bottom: 20%;
+    align-items: start;
+    justify-content: center;
+    height: 300px;
+  }
+
+  .double-image-second-container-2 {
+    height: 230px;
+  }
+
   .creative-team-image-wrapper {
     padding: 1rem 1rem;
     margin-bottom: 4rem;
+  }
+
+  .option-4-card-image {
+    margin-left: 0;
+    width: 100%;
+    overflow: visible;
+    object-fit: contain;
   }
 
   .text-section-in-creative-team {
@@ -4559,7 +4596,7 @@ strong {
     margin-top: 5rem;
   }
   .services-overview-wrapper {
-    padding-bottom: 6rem;
+    padding-bottom: 5rem;
     padding-top: 5rem;
   }
 
@@ -4643,6 +4680,11 @@ strong {
   .absolute-container-testimonial-showcase
     .absolute-paragraph-testimonial-showcase {
     margin: 1rem auto 3rem auto !important;
+  }
+
+  .gradient-border {
+    max-height: 430px;
+    min-height: 430px;
   }
 }
 
