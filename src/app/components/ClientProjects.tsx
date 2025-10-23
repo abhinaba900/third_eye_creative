@@ -61,7 +61,6 @@ function ClientProjects() {
     }, 0); // Small timeout ensures state update renders the image first
   };
 
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -82,9 +81,7 @@ function ClientProjects() {
         Our <span>Work</span> in Action
       </h3>
       <p className="client-projects-description">
-        From bold brand identities to powerful digital solutions, our projects
-        reflect our passion for design, innovation, and measurable impact —
-        crafted to inspire and built to perform
+        Where creativity meets impact — designed to inspire, built to perform
       </p>
 
       {/* Project List */}

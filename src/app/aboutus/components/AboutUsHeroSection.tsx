@@ -25,8 +25,8 @@ function AboutUsHeroSection() {
           <div className="about-us-hero-section-content-wrapper-inner">
             <div className=" about-us-hero-section-content-wrapper">
               <h4>
-                Designing Bold Identities & Intelligent <span>Experiences</span>{" "}
-                for Brands Ready to Lead & Inspire
+                Designing Bold Identities & Smart <br /> <span>Experiences</span>{" "}
+                for Brands Ready to Lead
               </h4>
               <div className="about-us-hero-section-footer-wrapper">
                 <p>©2025</p>

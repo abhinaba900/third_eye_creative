@@ -11,10 +11,7 @@ function InsideCreativeMind() {
       <h3>
         Inside the <span>Creative</span> Mind
       </h3>
-      <p>
-        Step into the studio with our founders and creative leads as they unpack
-        the passion, philosophy, and chaos behind every idea we bring to life
-      </p>
+      <p>A glimpse into the passion and chaos that fuel our ideas</p>
 
       <div className="video-wrapper">
         <div className="responsive-player">

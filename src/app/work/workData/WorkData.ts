@@ -39,9 +39,9 @@
 
     ProblemStatement: {
       title:
-        "Unraveling the Chaos: <span>Real-Time</span> Battery <span>Diagnostics</span> at Scale",
+        "Battery insights, <span>Simplified</span>",
       description:
-        "Addressing EV Auto Range Complaints Through Streamlined Field Insights and Scalable Fleet-Wide Visibility",
+        "Real-time diagnostics to tackle EV range concerns, fleet-wide",
       contentSection: {
         icon: "/assets/ProblemStatement-contentSection-icon.png",
         title: "Redefining Battery Issue Resolution",
@@ -114,9 +114,9 @@
     },
     Solution: {
       layout: "1",
-      title: "Connected Intelligence for <br/> <span>Scalable</span> EV <span>Diagnostics</span> ",
+      title: "Smarter EV <span>Diagnostics</span>",
       description:
-        "Robust tools engineered to standardize, automate, and optimize UPS field operations at scale",
+        "Real-time data and cloud tools to manage thousands of vehicles effortlessly",
       offlineFunctionality: {
         title: "Secure Cloud Sync",
         description:
@@ -163,9 +163,9 @@
     },
 
     ChallengesandResolutions: {
-      title: "<span>Smart Fixes</span> for Scaled EV <br /> Challenges",
+      title: "<span>Precision</span> EV Solutions",
       description:
-        "Tailored solutions using adaptive tech—built to manage real-time data, ensure precision tracking, and deliver insights for every user",
+        "Adaptive tech that tracks, analyzes, and delivers insights in real time",
       challenges: {
         title: "What we were up against",
         points: [
@@ -186,9 +186,9 @@
       },
     },
     Results: {
-      title: "Innovation that Drives <span>Real <br /> Impact</span> ",
+      title: "<span>Innovation</span> in Action ",
       description:
-        "From faster fault detection to better batteries—real results at fleet-wide scale",
+        "Faster fault detection, stronger batteries, measurable fleet-wide impact",
       metrics: [
         {
           value: "~60%",
@@ -274,7 +274,7 @@
     herosection: {
       tags: ["Mobile App", "UI Design"],
       title:
-        "Xplorion AI – Crafting Seamless, AI-Powered Travel Itineraries with Smart Personalization",
+        "Xplorion AI – Crafting Seamless, AI-Powered Travel Itineraries",
       footerimage: "/assets/Xplorion AI-hero-footer-image.png",
     },
     ExecutiveSummary:
@@ -310,9 +310,9 @@
     },
 
     ProblemStatement: {
-      title: "<span>Fixing the</span> Travel Planning <span>Mess</span>",
+      title: "Travel <span>Simplified</span>",
       description:
-        "We replaced scattered tabs and generic plans with one smart solution, personalized, real-time itineraries made effortless",
+        "Personalized, real-time itineraries—everything in one smart place",
       contentSection: {
         icon: "/assets/ProblemStatement-contentSection-icon-2.png",
         title: "Reimagining Travel Planning",
@@ -350,7 +350,7 @@
     objectives: {
       title: "Behind the <span>Journey</span> ",
       description:
-        "Creating an AI-first travel experience that feels personal, seamless, and endlessly spontaneous",
+        "AI-powered travel that’s personal, seamless & full of surprises",
       realTimeDiagnostics: {
         icon: "/assets/objectives-realTimeDiagnostics-image-2.png",
         title: "Automate Itinerary Creation",
@@ -385,9 +385,9 @@
     },
     Solution: {
       layout: "2",
-      title: "<span>Personalized Journeys</span> <br/> Tailored by AI",
+      title: "<span>AI Powered</span> Travel",
       description:
-        "An intelligent solution that transforms preferences into real time, personalized itineraries—effortlessly",
+        "Turn your preferences into effortless, real-time itineraries",
       offlineFunctionality: {
         title: "AI-Based Interest Detection",
         description:
@@ -444,9 +444,9 @@
     },
 
     ChallengesandResolutions: {
-      title: "<span>Solving for</span> <br /> Smarter Journeys",
+      title: "<span>Smarter Travel</span> <br /> Simplified",
       description:
-        "We tackled real-world travel planning challenges with intelligent design, adaptive systems, and user-focused problem solving",
+        "Intelligent design and adaptive systems that make planning effortless",
       challenges: {
         title: "What we were up against",
         points: [
@@ -469,7 +469,7 @@
     Results: {
       title: "<span>Impact </span> that <br />  Travels Far",
       description:
-        "From planning time saved to global adoption—here’s how Xplorion is transforming travel, one smart itinerary at a time.",
+        "Smart itineraries, worldwide impact",
       metrics: [
         {
           value: "~90%",
@@ -552,7 +552,7 @@
     herosection: {
       tags: ["Mobile App", "UI Design"],
       title:
-        "STEP – Byte-Sized, Gamified NEET PG Prep Designed for India’s Next-Gen Doctors",
+        "STEP – Gamified NEET PG Prep for India’s Next-Gen Doctors",
       footerimage: "/assets/stepgha-hero-section-image.png",
     },
     ExecutiveSummary:
@@ -588,9 +588,9 @@
     },
 
     ProblemStatement: {
-      title: "<span>Cracking the</span> NEET PG Prep <span>Rut</span>",
+      title: "NEET PG <span>Made Engaging</span>",
       description:
-        "We replaced passive, overwhelming study methods with a bite-sized, gamified system that keeps medicos engaged, motivated, and exam-ready",
+        "Bite-sized, gamified learning that keeps medicos exam-ready",
       contentSection: {
         icon: "/assets/ProblemStatement-contentSection-icon-3.png",
         title: "Reimagining NEET PG Preparation",
@@ -627,9 +627,9 @@
     },
     objectives: {
       title:
-        "<span>Byte-Sized,</span> Competitive <br /> <span>Engaging</span> ",
+        "<span>Learning,</span> Gamified",
       description:
-        "We designed STEP to turn overwhelming study sessions into clear, gamified, and structured learning experiences that keep students focused and motivated",
+        "Clear, structured & engaging study sessions that keep students motivated",
       realTimeDiagnostics: {
         icon: "/assets/objectives-realTimeDiagnostics-image-3.png",
         title: "Break Down the Syllabus",
@@ -664,9 +664,9 @@
     },
     Solution: {
       layout: "2",
-      title: "<span>Smarter Prep,</span> <br/> Gamified",
+      title: "<span>Gamified</span> NEET PG",
       description:
-        "A focused, bite-sized learning system designed to turn complex NEET PG prep into clear, competitive, and engaging study sessions",
+        "Bite-sized, focused learning that makes concepts clear and engaging",
       offlineFunctionality: {
         title: "Byte-Sized Steps",
         description:
@@ -723,9 +723,9 @@
     },
 
     ChallengesandResolutions: {
-      title: "<span>Solving for </span><br /> Smarter Prep",
+      title: "<span>Prep,</span> Smarter ",
       description:
-        "We tackled key challenges in modern exam prep with real-time tech, engaging and micro-content, all built to keep students motivated and protected",
+        "Real-time tools and micro-content that keep students engaged & motivated",
       challenges: {
         title: "What we were up against",
         points: [
@@ -746,9 +746,9 @@
       },
     },
     Results: {
-      title: "Where <span>Learning</span> <br />  meets <span>Results</span>",
+      title: "<span>Learning</span> that Delivers",
       description:
-        "From higher engagement to viral features—see how STEP GHA is transforming exam prep for tomorrow’s doctors",
+        "Higher engagement & smarter prep for tomorrow’s doctors",
       metrics: [
         {
           value: "+50%",
@@ -865,9 +865,9 @@
     },
 
     ProblemStatement: {
-      title: "<span>Bridging</span> the Cash Flow <span>Gaps</span>",
+      title: "Cash Flow <span>Connected</span>",
       description:
-        "Unifying collections for real-time visibility and tighter control",
+        "Real-time visibility and streamlined collections",
       contentSection: {
         icon: "/assets/shellindia-contentSection-icon-3.png",
         title: "Fixing the Gaps in Cash Flow Oversight",
@@ -904,9 +904,9 @@
     },
     objectives: {
       type: "3",
-      title: "<span>Driving</span> Collection <span>Clarity</span>",
+      title: "<span>Clearer</span> Collections",
       description:
-        "Creating a secure, unified system to centralize, track, and reconcile cash flow in real time—nationwide",
+        "A centralized system to track and reconcile cash flow in real time",
       allSubDatas: [
         [
           {
@@ -998,9 +998,9 @@
     Solution: {
       layout: "3",
       title:
-        '<span>Connected</span> Collections Clear <span class="saparate-controall-section-updated">Control</span>',
+        'Collections <span class="saparate-controall-section-updated">Simplified</span>',
       description:
-        "A unified system for real-time cash tracking, seamless reconciliation, and clear oversight across all sites",
+        "Real-time tracking and seamless reconciliation across every site",
 
       allSubDatas: [
         {
@@ -1095,9 +1095,9 @@
 
     ChallengesandResolutions: {
       title:
-        "Solving for Scale, <br /> <span>Accuracy</span> & <span>Speed</span>",
+        "Scale. <span>Accuracy.</span> Speed",
       description:
-        "Smart fixes for big challenges, built to scale fast and run smoothd",
+        "Intelligent solutions that grow fast & perform",
       challenges: {
         title: "What we were up against",
         points: [
@@ -1120,7 +1120,7 @@
     Results: {
       title: "<span>Impact</span> at <span>Scale</span>",
       description:
-        "Real-time visibility, faster operations, and smarter oversight across India",
+        "Real-time insights, faster operations, nationwide oversight",
       metrics: [
         {
           value: "~100%",
@@ -1205,7 +1205,7 @@
     ProblemStatement: {
       title: "Solving <span>On-Site</span> Chaos",
       description:
-        "Streamlined diagnostics with one tool—faster data, fewer errors, and complete fleet visibility",
+        "Streamlined diagnostics in one tool",
       contentSection: {
         icon: "/assets/ProblemStatement-contentSection-mesha-electric-icon-3.png",
         title: "Transforming Field Diagnostics",
@@ -1238,7 +1238,7 @@
     objectives: {
       title: "Behind the <span>Build</span>",
       description:
-        "Building a unified diagnostic ecosystem for <br /> a smarter, faster UPS insights",
+        "A unified diagnostic system for a smarter, faster UPS insights",
       realTimeDiagnostics: {
         icon: "/assets/objectives-realTimeDiagnostics-mesha-electric-image-3.png",
         title: "Real-Time Diagnostics",
@@ -1273,9 +1273,9 @@
     },
     Solution: {
       layout: "1",
-      title: "<span>Scalable Diagnostics</span> <br/> Centralized Intelligence",
+      title: "<span>Smarter</span> UPS Operations",
       description:
-        "Robust tools engineered to standardize, automate, and optimize UPS field operations at scale",
+        "Centralized tools that standardize, automate and optimize",
       offlineFunctionality: {
         title: "Offline Functionality",
         description:
@@ -1323,9 +1323,9 @@
     },
 
     ChallengesandResolutions: {
-      title: "<span>Smart Solutions</span> <br /> for Complex Challenges",
+      title: "<span>Simplifying</span> UPS Diagnostics",
       description:
-        "Modular systems and adaptive technologies crafted to streamline UPS diagnostics and performance across all touchpoints",
+        "Modular systems to streamline performance across every touchpoint",
       challenges: {
         title: "What we were up against",
         points: [
@@ -1346,9 +1346,9 @@
       },
     },
     Results: {
-      title: "Where <span>Strategy meets Tangible</span> <br /> Results",
+      title: "<span>Strategy</span> in Action",
       description:
-        "From faster service cycles to smarter diagnostics — here’s how our solutions made measurable impact in the real world",
+        "Faster service, smarter diagnostics & measurable impact",
       metrics: [
         {
           value: "~50%",
@@ -1475,9 +1475,9 @@
 
     ProblemStatement: {
       title:
-        "<span>Closing</span> the <span>Gaps</span> in Digital <br /> Payments",
+        "Digital Payments, <span>Simplified</span>",
       description:
-        "Bringing real-time clarity and control to Shell’s retail transactions",
+        "Real-time clarity and control for every Shell transaction",
       contentSection: {
         icon: "/assets/shellindia-2-contentSection-icon-3.png",
         title: "Untangling the Digital Knot",
@@ -1515,9 +1515,9 @@
     objectives: {
       type: "3",
       title:
-        "<span>Streamlining</span> Digital Payments,<br /> <span>Nationwide</span>",
+        "Payments, <span>Unified</span>",
       description:
-        "A unified, secure system for effortless tracking and control",
+        "Secure, effortless tracking and control across the nation",
       allSubDatas: [
         [
           {
@@ -1609,9 +1609,9 @@
     Solution: {
       layout: "3",
       title:
-        "<span>Smarter</span> Way to Manage Digital <br /> <span>Payments</span>",
+        "Digital Payments, <span>Smarter</span>",
       description:
-        "Seamless tools for tracking, reconciling, and reporting digital sales",
+        "Seamless tools to track, reconcile and report sales",
 
       allSubDatas: [
         {
@@ -1705,8 +1705,8 @@
     },
 
     ChallengesandResolutions: {
-      title: "<span>Overcoming Hurdles</span>, Delivering <br /> Clarity",
-      description: "Making payments secure, simple, and seamless",
+      title: "<span>Payments,</span> made simple",
+      description: "Secure, seamless and effortless every time",
       challenges: {
         title: "What we were up against",
         points: [
@@ -1727,9 +1727,9 @@
       },
     },
     Results: {
-      title: "<span>Driving</span> Digital <span>Clarity</span>",
+      title: "<span>Clearer</span> Digital payments",
       description:
-        "Real-time tracking, nationwide rollout, and streamlined payments",
+        "Real-time tracking and seamless nationwide rollout",
       metrics: [
         {
           value: "~100%",
@@ -1779,7 +1779,7 @@
     herosection: {
       tags: ["Mobile App", "UI Design"],
       title:
-        "Naren Smart Connect Automating Farming with Offline-Ready SMS Control",
+        "Naren Smart Connect Farming, Automated",
       footerimage: "/assets/Naren-electric-hero-footer-image.png",
     },
     ExecutiveSummary:
@@ -1816,9 +1816,9 @@
 
     ProblemStatement: {
       title:
-        "When the Signal <span>Drops</span>, <br /> So Does <span>Control</span>",
+        "<span>Control,</span> That stays connected",
       description:
-        "Unreliable IoT, clunky SMS commands, and no easy way to manage or monitor, farmers deserved better",
+        "Reliable IoT and simple SMS tools farmers can count on",
       contentSection: {
         icon: "/assets/naren-electric-ProblemStatement-contentSection-icon-2.png",
         title: "Closing the Control Gap",
@@ -1850,9 +1850,9 @@
     },
     objectives: {
       title:
-        "Turning <span>Complexity</span> <br /> into <span>Control</span> ",
+        "<span>Complexity,</span> Simplified ",
       description:
-        "Clear goals to simplify GSM device management and make remote control effortless, no internet needed",
+        "GSM device management & remote control — no internet required",
       realTimeDiagnostics: {
         icon: "/assets/naren-electric-objectives-realTimeDiagnostics-image-2.png",
         title: "Intuitive SMS Control",
@@ -1888,9 +1888,9 @@
     Solution: {
       layout: "4",
       title:
-        "Reliable Control,<br /> <span>Zero</span> Connectivity <span>Worries</span>",
+        "Control, <span>Anywhere</span>",
       description:
-        "A smart offline-first system that mimics IoT ease while staying resilient through SMS automation",
+        "Offline-first SMS automation that works like smart IoT",
       offlineFunctionality: {
         title: "SMS Command UI",
         description:
@@ -1937,9 +1937,9 @@
     },
 
     ChallengesandResolutions: {
-      title: "Cracking the <span>Offline <br /> Control</span> Puzzle",
+      title: "<span>Offline Control,</span> Solved",
       description:
-        "Overcoming device, network, and OEM hurdles to deliver real-time, SMS-based IoT control—without compromise",
+        "Real-time SMS IoT management that ",
       challenges: {
         title: "What we were up against",
         points: [
@@ -1960,9 +1960,9 @@
       },
     },
     Results: {
-      title: "<span>Field-Proven</span> <br /> Performance",
+      title: "<span>Performance</span> you can trust ",
       description:
-        "Reliable control, seamless adoption, and real-world performance that delivers",
+        "Reliable control in real-world conditions",
       metrics: [
         {
           value: "~100%",

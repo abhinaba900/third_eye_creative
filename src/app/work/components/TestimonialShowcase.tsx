@@ -138,11 +138,10 @@ export default function TestimonialShowcase() {
 
       <div className="absolute-container-testimonial-showcase">
         <h3 className="absolute-title-testimonial-showcase">
-          Echoes from the <span>Bright Side</span>
+          Voices that <span>Matter</span>
         </h3>
         <p className="absolute-paragraph-testimonial-showcase max-w-[476px]">
-          Turns out, great work does get people talking, here’s what they’ve
-          been saying
+          When great work speaks, people listen
         </p>
 
         {/* horizontal sliders */}

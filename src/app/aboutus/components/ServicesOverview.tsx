@@ -54,11 +54,10 @@ function ServicesOverview() {
   return (
     <div className="services-overview-wrapper">
       <h3 className="services-overview-title">
-        We do <span>Four</span> things exactly
+        We do <span>Four</span> things
       </h3>
       <p className="services-overview-description">
-        Turning bold ideas into powerful brands, experiences, and digital magic
-        — one pixel, one strategy at a time
+        Turning ideas into brands, experiences, and digital magic
       </p>
 
       <div className="services-overview-content flex flex-col md:flex-row gap-10">

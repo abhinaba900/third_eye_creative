@@ -26,8 +26,7 @@ function LetWorkTogether() {
         Let’s Work <span>Together</span>
       </h3>
       <p className="text-center text-paragraph-our-expertise let-work-together-paragraph">
-        Tell us a bit about your vision — we’ll bring <br /> the strategy,
-        design, and code to life
+        We turn ideas into strategy, design, and code
       </p>
 
       {/* Form Container */}

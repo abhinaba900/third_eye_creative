@@ -46,16 +46,12 @@ const branddata = [
 function TrustedByBrands() {
   return (
     <div className="trusted-by-brands-wrapper">
-      <div className="heading-content-holders">
-        <h3>
+      <div className="heading-content-holders mx-auto w-full max-w-[1232px] " style={{margin:"auto",justifyContent:"center"}}>
+        <h3 className="text-center">
           Brands that <br />
           <span>Trust</span> Us
         </h3>
-        <p>
-          We&apos;re not just designing, we&apos;re crafting experiences that
-          amplify your brand to the next level. Let&apos;s make some magic
-          together!
-        </p>
+        
       </div>
 
       <div className="horizontal-scroller-container-testimonial-showcase relative">
