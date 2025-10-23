@@ -2417,6 +2417,8 @@ strong {
   -webkit-text-fill-color: transparent;
   background-clip: text; /* for Firefox */
   color: transparent;
+  position: relative;
+  z-index: 2;
 }
 
 .creative-team-tags {
