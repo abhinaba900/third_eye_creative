@@ -24,9 +24,8 @@ function CareersHerosection() {
           <div className="about-us-hero-section-content-wrapper-inner">
             <div className=" about-us-hero-section-content-wrapper">
               <h4>
-                <span className="span-diffrent-color">People</span> with
-                Purpose, <br /> <span>Passion</span> in Progress,{" "}
-                <span>Futures</span> that Inspire
+                <span>People</span> with Purpose,<br /><span>Passion</span> in
+                Progress
               </h4>
               <div className="about-us-hero-section-footer-wrapper">
                 <p>CREATE WITH PURPOSE</p>

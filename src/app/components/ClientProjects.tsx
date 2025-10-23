@@ -9,8 +9,8 @@ function ClientProjects() {
 
   const projects = [
     {
-      title: "Real estate website design for a Modern Living Brand",
-      client: "Urbando",
+      title: "IoT Data Platform for an Electric Mobility Leader",
+      client: "Mesha",
       year: "2025",
       image: "/assets/our work banner image.png",
     },
@@ -36,8 +36,8 @@ function ClientProjects() {
         "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&auto=format&fit=crop&q=80",
     },
     {
-      title: "Real Estate Website Design for Premium Property Solutions",
-      client: "Legacy Global Projects",
+      title: "IoT App Design for a Smart Power Solution",
+      client: "Mesha",
       year: "2025",
       image:
         "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&auto=format&fit=crop&q=80",

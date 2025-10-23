@@ -38,8 +38,7 @@
     },
 
     ProblemStatement: {
-      title:
-        "Battery insights, <span>Simplified</span>",
+      title: "Battery insights, <span>Simplified</span>",
       description:
         "Real-time diagnostics to tackle EV range concerns, fleet-wide",
       contentSection: {
@@ -78,8 +77,7 @@
     },
     objectives: {
       title: " Powering <span>Smarter Diagnostics</span> ",
-      description:
-        "Building real-time, scalable EV battery insights",
+      description: "Building real-time, scalable EV battery insights",
       realTimeDiagnostics: {
         icon: "/assets/div.YourPlayground_icon__ITdeD.png",
         title: "Comprehensive Data Capture",
@@ -192,25 +190,26 @@
       metrics: [
         {
           value: "~60%",
-          description: "reduction in manual inspection and root cause analysis effort",
+          description:
+            "reduction in manual inspection and root cause analysis effort",
         },
         {
           value: "~3x Faster",
-          description: "identification of battery faults using graph-based insights",
+          description:
+            "identification of battery faults using graph-based insights",
         },
         {
           value: "<5 minutes",
-          description: "to validate range complaints using real-time & historical data",
+          description:
+            "to validate range complaints using real-time & historical data",
         },
         {
           value: "Thousands",
-          description:
-            "of vehicles connected & monitored with scalability",
+          description: "of vehicles connected & monitored with scalability",
         },
         {
           value: "Higher",
-          description:
-            " product quality through actionable data",
+          description: " product quality through actionable data",
         },
         {
           value: ">50%",
@@ -273,9 +272,8 @@
     id: "2",
     herosection: {
       tags: ["Mobile App", "UI Design"],
-      title:
-        "Xplorion AI – Crafting Seamless, AI-Powered Travel Itineraries",
-      footerimage: "/assets/Xplorion AI-hero-footer-image.png",
+      title: "Xplorion AI – Crafting Seamless, AI-Powered Travel Itineraries",
+      footerimage: "/assets/xplorean-main.png",
     },
     ExecutiveSummary:
       "We partnered with Xplorion AI to design and develop a smart travel planning application that reimagines how itineraries are created. By leveraging real-time data from Google—reviews, photos, open hours, and directions—we built an intuitive system that delivers hyper-personalized, day-wise travel plans tailored to each user’s preferences. Our goal was to eliminate the complexity of trip planning and replace it with a seamless, AI-driven experience that feels effortless, insightful, and globally scalable.",
@@ -468,8 +466,7 @@
     },
     Results: {
       title: "<span>Impact </span> that <br />  Travels Far",
-      description:
-        "Smart itineraries, worldwide impact",
+      description: "Smart itineraries, worldwide impact",
       metrics: [
         {
           value: "~90%",
@@ -514,25 +511,15 @@
     gallery: [
       {
         type: "single",
-        image: "/assets/xplorean-galleryimage-1.png",
+        image: "/assets/xplorean-7.jpg",
       },
       {
         type: "multiple",
-        images: [
-          "/assets/xplorean-galleryimage-2.png",
-          "/assets/xplorean-galleryimage-3.png",
-        ],
+        images: ["/assets/xplorean-15.jpg", "/assets/xplorean-14.jpg"],
       },
       {
         type: "multiple",
-        images: [
-          "/assets/xplorean-galleryimage-4.png",
-          "/assets/xplorean-galleryimage-5.png",
-        ],
-      },
-      {
-        type: "single",
-        image: "/assets/xplorean-galleryimage-6.png",
+        images: ["/assets/xplorean-11.jpg", "/assets/xplorean-13.jpg"],
       },
     ],
     testimonials: [
@@ -551,9 +538,8 @@
     id: "3",
     herosection: {
       tags: ["Mobile App", "UI Design"],
-      title:
-        "STEP – Gamified NEET PG Prep for India’s Next-Gen Doctors",
-      footerimage: "/assets/stepgha-hero-section-image.png",
+      title: "STEP – Gamified NEET PG Prep for India’s Next-Gen Doctors",
+      footerimage: "/assets/step-gha-main.png",
     },
     ExecutiveSummary:
       "We built GHA Step, a Flutter-based mobile application designed to help medical students prepare for the NEET PG entrance exam through short, structured, and engaging learning experiences. The app features both free and paid video content, organized into byte-sized steps, with each step reinforced through pre-course and post-course MCQ tests. Additionally, it includes a unique real-time Player vs Player quiz mode, turning exam prep into a fun, competitive experience.",
@@ -626,8 +612,7 @@
       },
     },
     objectives: {
-      title:
-        "<span>Learning,</span> Gamified",
+      title: "<span>Learning,</span> Gamified",
       description:
         "Clear, structured & engaging study sessions that keep students motivated",
       realTimeDiagnostics: {
@@ -747,8 +732,7 @@
     },
     Results: {
       title: "<span>Learning</span> that Delivers",
-      description:
-        "Higher engagement & smarter prep for tomorrow’s doctors",
+      description: "Higher engagement & smarter prep for tomorrow’s doctors",
       metrics: [
         {
           value: "+50%",
@@ -791,25 +775,19 @@
     gallery: [
       {
         type: "single",
-        image: "/assets/stepgha-galleryimage-1.png",
+        image: "/assets/step-gha-2.jpg",
       },
       {
         type: "multiple",
-        images: [
-          "/assets/stepgha-galleryimage-2.png",
-          "/assets/stepgha-galleryimage-3.png",
-        ],
+        images: ["/assets/step-gha-8.png", "/assets/step-gha-9.png"],
       },
       {
         type: "multiple",
-        images: [
-          "/assets/stepgha-galleryimage-4.png",
-          "/assets/stepgha-galleryimage-5.png",
-        ],
+        images: ["/assets/step-gha-10.png", "/assets/step-gha-12.png"],
       },
       {
         type: "single",
-        image: "/assets/stepgha-galleryimage-6.png",
+        image: "/assets/step-gha-2.jpg",
       },
     ],
     testimonials: [
@@ -866,8 +844,7 @@
 
     ProblemStatement: {
       title: "Cash Flow <span>Connected</span>",
-      description:
-        "Real-time visibility and streamlined collections",
+      description: "Real-time visibility and streamlined collections",
       contentSection: {
         icon: "/assets/shellindia-contentSection-icon-3.png",
         title: "Fixing the Gaps in Cash Flow Oversight",
@@ -1094,10 +1071,8 @@
     },
 
     ChallengesandResolutions: {
-      title:
-        "Scale. <span>Accuracy.</span> Speed",
-      description:
-        "Intelligent solutions that grow fast & perform",
+      title: "Scale. <span>Accuracy.</span> Speed",
+      description: "Intelligent solutions that grow fast & perform",
       challenges: {
         title: "What we were up against",
         points: [
@@ -1168,7 +1143,7 @@
     herosection: {
       tags: ["Mobile App", "Desktop Dashboard", "UI Design"],
       title: "End-to-End Design for Mesha’s Data Management Solution",
-      footerimage: "/assets/mesha-electric-hero-section-image.png",
+      footerimage: "/assets/mesha-2-main.png",
     },
     ExecutiveSummary:
       "We developed a Flutter-based mobile application that connects via Bluetooth to UPS (Uninterruptible Power Supply) systems, fetching real-time parameters such as voltage, current, temperature, and battery health. This data is pushed to our cloud platform where it is analyzed and used to generate diagnostic reports. The system is used by service engineers and field technicians to instantly identify issues, leading to faster servicing and increased uptime for critical power systems.",
@@ -1204,8 +1179,7 @@
 
     ProblemStatement: {
       title: "Solving <span>On-Site</span> Chaos",
-      description:
-        "Streamlined diagnostics in one tool",
+      description: "Streamlined diagnostics in one tool",
       contentSection: {
         icon: "/assets/ProblemStatement-contentSection-mesha-electric-icon-3.png",
         title: "Transforming Field Diagnostics",
@@ -1274,8 +1248,7 @@
     Solution: {
       layout: "1",
       title: "<span>Smarter</span> UPS Operations",
-      description:
-        "Centralized tools that standardize, automate and optimize",
+      description: "Centralized tools that standardize, automate and optimize",
       offlineFunctionality: {
         title: "Offline Functionality",
         description:
@@ -1347,8 +1320,7 @@
     },
     Results: {
       title: "<span>Strategy</span> in Action",
-      description:
-        "Faster service, smarter diagnostics & measurable impact",
+      description: "Faster service, smarter diagnostics & measurable impact",
       metrics: [
         {
           value: "~50%",
@@ -1390,34 +1362,23 @@
     gallery: [
       {
         type: "single",
-        image: "/assets/mesha-electric-gallery-image-1.png",
+        image: "/assets/mesha-2-24.jpg",
       },
       {
         type: "single",
-        image: "/assets/mesha-electric-gallery-image-2.png",
+        image: "/assets/mesha-2-23.jpg",
       },
       {
         type: "single",
-        image: "/assets/mesha-electric-gallery-image-3.png",
+        image: "/assets/mesha-2-22.jpg",
       },
       {
         type: "single",
-        image: "/assets/mesha-electric-gallery-image-4.png",
+        image: "/assets/mesha-2-21.jpg",
       },
       {
         type: "multiple",
-        images: [
-          "/assets/mesha-electric-gallery-image-5.png",
-          "/assets/mesha-electric-gallery-image-6.png",
-        ],
-      },
-      {
-        type: "single",
-        image: "/assets/mesha-electric-gallery-image-7.png",
-      },
-      {
-        type: "single",
-        image: "/assets/mesha-electric-gallery-image-8.png",
+        images: ["/assets/mesha-2-20.jpg", "/assets/mesha-2-22.jpg"],
       },
     ],
     testimonials: [
@@ -1474,10 +1435,8 @@
     },
 
     ProblemStatement: {
-      title:
-        "Digital Payments, <span>Simplified</span>",
-      description:
-        "Real-time clarity and control for every Shell transaction",
+      title: "Digital Payments, <span>Simplified</span>",
+      description: "Real-time clarity and control for every Shell transaction",
       contentSection: {
         icon: "/assets/shellindia-2-contentSection-icon-3.png",
         title: "Untangling the Digital Knot",
@@ -1514,10 +1473,8 @@
     },
     objectives: {
       type: "3",
-      title:
-        "Payments, <span>Unified</span>",
-      description:
-        "Secure, effortless tracking and control across the nation",
+      title: "Payments, <span>Unified</span>",
+      description: "Secure, effortless tracking and control across the nation",
       allSubDatas: [
         [
           {
@@ -1608,10 +1565,8 @@
     },
     Solution: {
       layout: "3",
-      title:
-        "Digital Payments, <span>Smarter</span>",
-      description:
-        "Seamless tools to track, reconcile and report sales",
+      title: "Digital Payments, <span>Smarter</span>",
+      description: "Seamless tools to track, reconcile and report sales",
 
       allSubDatas: [
         {
@@ -1728,8 +1683,7 @@
     },
     Results: {
       title: "<span>Clearer</span> Digital payments",
-      description:
-        "Real-time tracking and seamless nationwide rollout",
+      description: "Real-time tracking and seamless nationwide rollout",
       metrics: [
         {
           value: "~100%",
@@ -1778,8 +1732,7 @@
     id: "7",
     herosection: {
       tags: ["Mobile App", "UI Design"],
-      title:
-        "Naren Smart Connect Farming, Automated",
+      title: "Naren Smart Connect Farming, Automated",
       footerimage: "/assets/Naren-electric-hero-footer-image.png",
     },
     ExecutiveSummary:
@@ -1815,10 +1768,8 @@
     },
 
     ProblemStatement: {
-      title:
-        "<span>Control,</span> That stays connected",
-      description:
-        "Reliable IoT and simple SMS tools farmers can count on",
+      title: "<span>Control,</span> That stays connected",
+      description: "Reliable IoT and simple SMS tools farmers can count on",
       contentSection: {
         icon: "/assets/naren-electric-ProblemStatement-contentSection-icon-2.png",
         title: "Closing the Control Gap",
@@ -1849,8 +1800,7 @@
       },
     },
     objectives: {
-      title:
-        "<span>Complexity,</span> Simplified ",
+      title: "<span>Complexity,</span> Simplified ",
       description:
         "GSM device management & remote control — no internet required",
       realTimeDiagnostics: {
@@ -1887,10 +1837,8 @@
     },
     Solution: {
       layout: "4",
-      title:
-        "Control, <span>Anywhere</span>",
-      description:
-        "Offline-first SMS automation that works like smart IoT",
+      title: "Control, <span>Anywhere</span>",
+      description: "Offline-first SMS automation that works like smart IoT",
       offlineFunctionality: {
         title: "SMS Command UI",
         description:
@@ -1938,8 +1886,7 @@
 
     ChallengesandResolutions: {
       title: "<span>Offline Control,</span> Solved",
-      description:
-        "Real-time SMS IoT management that ",
+      description: "Real-time SMS IoT management that ",
       challenges: {
         title: "What we were up against",
         points: [
@@ -1961,8 +1908,7 @@
     },
     Results: {
       title: "<span>Performance</span> you can trust ",
-      description:
-        "Reliable control in real-world conditions",
+      description: "Reliable control in real-world conditions",
       metrics: [
         {
           value: "~100%",
@@ -2002,25 +1948,19 @@
     gallery: [
       {
         type: "single",
-        image: "/assets/naren-electric-galleryimage-1.png",
+        image: "/assets/Naren-IOT-7.jpg",
       },
       {
         type: "multiple",
-        images: [
-          "/assets/naren-electric-galleryimage-2.png",
-          "/assets/naren-electric-galleryimage-3.png",
-        ],
-      },
-      {
-        type: "multiple",
-        images: [
-          "/assets/naren-electric-galleryimage-4.png",
-          "/assets/naren-electric-galleryimage-5.png",
-        ],
+        images: ["/assets/Naren-IOT-19.jpg", "/assets/Naren-IOT-16.jpg"],
       },
       {
         type: "single",
-        image: "/assets/naren-electric-galleryimage-6.png",
+        image: "/assets/Naren-IOT-17.jpg",
+      },
+      {
+        type: "single",
+        image: "/assets/Naren-IOT-18.jpg",
       },
     ],
     testimonials: [

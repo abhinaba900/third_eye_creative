@@ -23,7 +23,7 @@ function WorkHeroSection() {
           <div className="about-us-hero-section-content-wrapper-inner">
             <div className=" about-us-hero-section-content-wrapper">
               <h4>
-                Pixels with Purpose, Code with Character, Results that{" "}
+                Pixels with Purpose, Code with Character,<br /> Results that{" "}
                 <span>Resonate</span>
               </h4>
               <div className="about-us-hero-section-footer-wrapper">

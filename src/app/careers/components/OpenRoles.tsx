@@ -38,15 +38,14 @@ function OpenRoles() {
   return (
     <div className="open-roles-wrapper">
       <h3 className="open-roles-wrapper-title deskpot-text">
-        <span>Open Roles,</span> Open Minds
+        <span>Join</span> the team
       </h3>
       <h3 className="open-roles-wrapper-title mobile-text">
         <span>Open Roles</span>
         <br />Open Minds
       </h3>
       <p className="open-roles-wrapper-desc">
-        Explore opportunities to craft, code, and create alongside a team that
-        believes great ideas can come from anywhere
+        Create, code & innovate with a team that values ideas
       </p>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 px-4 sm:px-4 md:px-4 lg:px-0 md:grid-cols-2 lg:grid-cols-3 gap-6 overflow-visible open-roles-cards-wrapper">
