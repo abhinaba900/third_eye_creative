@@ -877,17 +877,17 @@ const MagicBento: React.FC<BentoProps> = ({
                       alt={cardDatas.realTimeDiagnostics.title}
                       width={800}
                       height={386}
-                      className="w-full h-full max-h-[400px] rounded-lg ml-auto object-contain mr-0"
+                      className="w-fit  h-full max-h-[400px] rounded-lg mx-auto object-contain -mb-9 "
                     />
                   </div>
                 )}
               </div>
             </div>
 
-            <div className="grid gap-[1rem] sm:grid-cols-1 lg:grid-cols-2 mb-[1rem]">
+            <div className="grid gap-[1rem] sm:grid-cols-1 lg:grid-cols-2 mb-[1rem] items-stretch justify-stretch">
               {/* Left Column */}
 
-              <div className="h-full">
+              <div className="flex flex-col justify-stretch">
                 {/* UPS Connectivity Card */}
                 <div
                   className={`${baseClassName}`}
@@ -1031,7 +1031,7 @@ const MagicBento: React.FC<BentoProps> = ({
 
                 {/* Bottom Two Small Cards */}
                 <div
-                  className={`grid gap-[1rem]  sm:grid-cols-2 lg:grid-cols-2 mt-[1rem]`}
+                  className={`grid gap-[1rem]  sm:grid-cols-2 lg:grid-cols-2 mt-[1rem] justify-stretch items-stretch  `}
                 >
                   {/* Cloud Sync Card */}
                   <div
@@ -1425,13 +1425,13 @@ const MagicBento: React.FC<BentoProps> = ({
                     </p>
                   </div>
                   {cardDatas.smartReports.image && (
-                    <div className="w-full h-full max-h-[435px] my-auto">
+                    <div className="relative w-full max-w-[526px] ml-auto my-auto h-auto aspect-[550/520]">
                       <Image
                         src={cardDatas.smartReports.image}
                         alt={cardDatas.smartReports.title}
-                        width={526}
-                        height={486}
-                        className="w-full h-full rounded-lg ml-auto object-cover object-top max-h-[435px]"
+                        fill
+                        className="rounded-lg "
+                        sizes="(max-width: 768px) 100vw, 526px"
                       />
                     </div>
                   )}

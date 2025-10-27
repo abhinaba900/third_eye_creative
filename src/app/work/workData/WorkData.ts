@@ -101,7 +101,7 @@
         title: "Real-Time Cloud Sync",
         icon: "/assets/div.YourPlayground_icon__ITdeD-real-time.png",
         description:
-          "Continuously push battery data to a centralized cloud platform for instant access and monitoring.",
+          "Continuously push battery data to a centralized cloud platform for instant access and monitoring.Gain real-time insights and make data-driven decisions with ease.",
       },
       unifiedProcess: {
         title: "Scalable System Design",
@@ -278,7 +278,7 @@
     ExecutiveSummary:
       "We partnered with Xplorion AI to design and develop a smart travel planning application that reimagines how itineraries are created. By leveraging real-time data from Google—reviews, photos, open hours, and directions—we built an intuitive system that delivers hyper-personalized, day-wise travel plans tailored to each user’s preferences. Our goal was to eliminate the complexity of trip planning and replace it with a seamless, AI-driven experience that feels effortless, insightful, and globally scalable.",
     ClientBackground: {
-      type: "2",
+      type: "4",
       leftImage: "/assets/Xplorion AI client-backgournd-let-image-1.png",
       leftImage2: "/assets/Xplorion AI client-backgournd-let-image-2.png",
       rightContent: {
@@ -372,7 +372,7 @@
         title: "Simplify Trip Planning",
         icon: "/assets/objectives-cloudSync-icon-2.png",
         description:
-          "Reduce planning complexity by offering an intuitive, all-in-one interface that replaces multiple browser tabs and note-taking.",
+          "Reduce planning complexity by offering an intuitive, all-in-one interface that replaces multiple browser tabs and note-taking.Keep your workflow organized and distraction-free from start to finish.",
       },
       unifiedProcess: {
         title: "Design Meets Function",
@@ -638,7 +638,7 @@
         title: "Cross-Platform Ready",
         icon: "/assets/objectives-cloudSync-icon-3.png",
         description:
-          "Deliver a seamless experience on Android and iOS with a single Flutter codebase.",
+          "Deliver a seamless experience on Android and iOS with a single Flutter codebase.Build faster, maintain easier, and launch high-performance apps with a native feel.",
       },
       unifiedProcess: {
         title: "Gamify Learning",
@@ -779,15 +779,15 @@
       },
       {
         type: "multiple",
-        images: ["/assets/step-gha-8.png", "/assets/step-gha-9.png"],
+        images: ["/assets/step-gha-8.png", "/assets/step-gha-10.png"],
       },
       {
         type: "multiple",
-        images: ["/assets/step-gha-10.png", "/assets/step-gha-12.png"],
+        images: ["/assets/step-gha-9.png", "/assets/step-gha-44.jpg"],
       },
       {
         type: "single",
-        image: "/assets/step-gha-2.jpg",
+        image: "/assets/step-gha-12.png",
       },
     ],
     testimonials: [
@@ -1366,19 +1366,27 @@
       },
       {
         type: "single",
-        image: "/assets/mesha-2-23.jpg",
+        image: "/assets/mesha-2-21.jpg",
+      },
+      {
+        type: "single",
+        image: "/assets/mesha-2-40.png",
+      },
+      {
+        type: "single",
+        image: "/assets/mesha-2-20.jpg",
+      },
+      {
+        type: "multiple",
+        images: ["/assets/mesha-2-23.jpg", "/assets/mesha-2-41.jpg"],
+      },
+      {
+        type: "single",
+        image: "/assets/mesha-2-43.png",
       },
       {
         type: "single",
         image: "/assets/mesha-2-22.jpg",
-      },
-      {
-        type: "single",
-        image: "/assets/mesha-2-21.jpg",
-      },
-      {
-        type: "multiple",
-        images: ["/assets/mesha-2-20.jpg", "/assets/mesha-2-22.jpg"],
       },
     ],
     testimonials: [
@@ -1738,7 +1746,7 @@
     ExecutiveSummary:
       "We developed Naren Smart Connect, a Flutter-based mobile application and admin panel for controlling and monitoring GSM-enabled motor controller devices via SMS. Unlike typical IoT systems that rely on internet connectivity, this solution ensures offline resilience by using SMS communication to operate devices such as pumps and controllers in remote or rural environments. The system also includes robust message parsing, device response handling, and real-time feedback, ensuring a seamless app-like experience for users, even when offline.",
     ClientBackground: {
-      type: "2",
+      type: "5",
       leftImage: "/assets/naren-electric-client-backgournd-let-image-1.png",
       leftImage2: "/assets/naren-electric-client-backgournd-let-image-2.png",
       rightContent: {
@@ -1820,7 +1828,7 @@
         title: "Real-Time Status Sync",
         description:
           "Parse incoming SMS replies to instantly update device status within the app.",
-        image: "/assets/naren-electric-objectives-realtime-content.png",
+        image: "/assets/naren-real-time-status-sync.png",
       },
       cloudSync: {
         title: "Cross-Device Compatibility",
@@ -1948,19 +1956,19 @@
     gallery: [
       {
         type: "single",
-        image: "/assets/Naren-IOT-7.jpg",
-      },
-      {
-        type: "multiple",
-        images: ["/assets/Naren-IOT-19.jpg", "/assets/Naren-IOT-16.jpg"],
-      },
-      {
-        type: "single",
         image: "/assets/Naren-IOT-17.jpg",
       },
       {
+        type: "multiple",
+        images: ["/assets/Naren-IOT-19.jpg", "/assets/Naren-IOT-18.jpg"],
+      },
+      {
+        type: "multiple",
+        images: ["/assets/Naren-IOT-16.jpg", "/assets/Naren-IOT-22.png"],
+      },
+      {
         type: "single",
-        image: "/assets/Naren-IOT-18.jpg",
+        image: "/assets/Naren-IOT-7.jpg",
       },
     ],
     testimonials: [

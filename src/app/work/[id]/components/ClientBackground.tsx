@@ -10,7 +10,6 @@ function ClientBackground({ data }) {
         paddingTop: data.type === "1" ? "" : "0",
         paddingBottom: data.type === "1" ? "" : "0",
         overflow: data.type === "1" ? "" : "hidden",
-        
       }}
     >
       {/* Left Section - App Screenshot */}
@@ -27,49 +26,99 @@ function ClientBackground({ data }) {
 
         {/* Screenshot Image with rounded corners and slight shadow */}
         {data.type === "1" && (
-          <>
-            <div
-              className="relative w-full h-100 max-h-[529px] z-1  left-[-50px] indevisual-page-client-background-image-container  shadow-xl"
-              style={{ boxShadow: "-50px 50px 150px 20px #000000CC" }}
-            >
-              <Image
-                src={data.leftImage}
-                alt="Dashboard"
-                fill
-                className="object-cointain rounded-[0.5rem] overflow-hidden"
-              />
-            </div>
-          </>
+          <div
+            className="relative w-full h-100 max-h-[529px] z-1  left-[-50px] indevisual-page-client-background-image-container  shadow-xl"
+            style={{ boxShadow: "-50px 50px 150px 20px #000000CC" }}
+          >
+            <Image
+              src={data.leftImage}
+              alt="Dashboard"
+              fill
+              className="object-cointain rounded-[0.5rem] overflow-hidden"
+            />
+          </div>
         )}
 
         {data.type === "2" && (
-          <>
-            <div className="relative flex ">
-              {/* First image aligned to the top */}
-              <div className="relative w-1/2 h-[400px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[8rem] flex items-start  double-image-second-container-2">
-                <div className="relative w-full h-full">
-                  <Image
-                    src={data.leftImage}
-                    alt="Dashboard 1"
-                    fill
-                    className="object-contain rounded-[0.5rem] overflow-hidden"
-                  />
-                </div>
-              </div>
-
-              {/* Second image aligned to the bottom */}
-              <div className="relative w-1/2 h-[400px] sm:-top-[8rem] md:top-0 md:bottom-0 lg:top-[4.8rem] flex items-end double-image-second-container">
-                <div className="relative w-full h-full">
-                  <Image
-                    src={data.leftImage2}
-                    alt="Dashboard 2"
-                    fill
-                    className="object-contain rounded-[0.5rem] overflow-hidden"
-                  />
-                </div>
+          <div className="relative flex justify-center gap-20 ">
+            {/* First image aligned to the top */}
+            <div className="relative w-[30%] h-[500px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[8rem] flex items-start  double-image-second-container-2">
+              <div className="relative w-full h-full">
+                <Image
+                  src={data.leftImage}
+                  alt="Dashboard 1"
+                  fill
+                  className="object-contain rounded-[0.5rem] overflow-hidden"
+                />
               </div>
             </div>
-          </>
+
+            {/* Second image aligned to the bottom */}
+            <div className="relative w-[30%] h-[500px] sm:-top-[8rem] md:top-0 md:bottom-0 lg:top-[4rem] flex items-end double-image-second-container">
+              <div className="relative w-full h-full">
+                <Image
+                  src={data.leftImage2}
+                  alt="Dashboard 2"
+                  fill
+                  className="object-contain rounded-[0.5rem] overflow-hidden"
+                />
+              </div>
+            </div>
+          </div>
+        )}
+        {data.type === "4" && (
+          <div className="relative flex justify-center gap-20 ">
+            {/* First image aligned to the top */}
+            <div className="relative w-[30%] h-[500px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[7rem] flex items-start  double-image-second-container-2">
+              <div className="relative w-full h-full">
+                <Image
+                  src={data.leftImage}
+                  alt="Dashboard 1"
+                  fill
+                  className="object-contain rounded-[0.5rem] overflow-hidden"
+                />
+              </div>
+            </div>
+
+            {/* Second image aligned to the bottom */}
+            <div className="relative w-[30%] h-[500px] sm:-top-[8rem] md:top-0 md:bottom-0 lg:top-[2rem] flex items-end double-image-second-container">
+              <div className="relative w-full h-full">
+                <Image
+                  src={data.leftImage2}
+                  alt="Dashboard 2"
+                  fill
+                  className="object-contain rounded-[0.5rem] overflow-hidden"
+                />
+              </div>
+            </div>
+          </div>
+        )}
+        {data.type === "5" && (
+          <div className="relative flex justify-center gap-20 ">
+            {/* First image aligned to the top */}
+            <div className="relative w-[30%] h-[400px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[10rem] flex items-start  double-image-second-container-2">
+              <div className="relative w-full h-full">
+                <Image
+                  src={data.leftImage}
+                  alt="Dashboard 1"
+                  fill
+                  className="object-contain rounded-[0.5rem] overflow-hidden h-[400px]"
+                />
+              </div>
+            </div>
+
+            {/* Second image aligned to the bottom */}
+            <div className="relative w-[30%] h-[500px] sm:-top-[8rem] md:top-0 md:bottom-0 lg:top-[4rem] flex items-end double-image-second-container">
+              <div className="relative w-full h-full">
+                <Image
+                  src={data.leftImage2}
+                  alt="Dashboard 2"
+                  fill
+                  className="object-contain rounded-[0.5rem] overflow-hidden"
+                />
+              </div>
+            </div>
+          </div>
         )}
       </div>
 
@@ -87,7 +136,6 @@ function ClientBackground({ data }) {
         className={`flex flex-col gap-6 w-full lg:w-[40%] ${
           data.type === "1" ? "p-5 lg:py-[5rem]" : "p-8 lg:py-16 "
         }  ${data.type === "3" ? "lg:w-[70%] mx-auto" : ""}`}
-        
       >
         <div>
           <Image

@@ -2551,7 +2551,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                             src={cardDatas.cloudPoweredAnalytics.image}
                             alt={cardDatas.cloudPoweredAnalytics.title}
                             height={280}
-                            className="w-full  h-[217px]   object-cover"
+                            className="w-full  h-[217px]   object-cover relative -bottom-3"
                           />
                         </div>
                       )}
@@ -2814,7 +2814,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     el.addEventListener("click", handleClick);
                   }}
                 >
-                  <div className=" h-fit bg-[rgba(255,255,255,0.1)]  shadow-xl flex flex-col items-end lg:pb-0">
+                  <div className=" h-full bg-[rgba(255,255,255,0.1)]  shadow-xl flex flex-col items-end lg:pb-0">
                     <div className="pt-6 pl-6 pr-6">
                       {/* Title and Description */}
                       <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
@@ -2832,7 +2832,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                             src={cardDatas.SaveandEditPlans.image}
                             alt={cardDatas.SaveandEditPlans.title}
                             height={280}
-                            className="w-full relative right-0 h-[217px] ml-auto block  object-cover"
+                            className="w-full relative right-0 h-[217px] ml-auto -bottom-3 block  object-cover"
                           />
                         </div>
                       )}
