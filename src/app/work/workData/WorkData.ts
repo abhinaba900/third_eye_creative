@@ -2,8 +2,8 @@
   {
     id: "1",
     herosection: {
-      tags: ["Mobile App", "Desktop Dashboard", "UI Design"],
-      title: "IoT Data Logger for EV Autos — Scalable Battery Insights",
+      tags: ["IOT", "Diagnostics", "Data Logging"],
+      title: "IoT Data Logger for EV Autos Scalable Battery Insights",
       footerimage: "/assets/Artboard 1.png",
     },
     ExecutiveSummary:
@@ -271,7 +271,7 @@
   {
     id: "2",
     herosection: {
-      tags: ["Mobile App", "UI Design"],
+      tags: ["AI", "Travel", "Assistant"],
       title: "Xplorion AI – Crafting Seamless, AI-Powered Travel Itineraries",
       footerimage: "/assets/xplorean-main.png",
     },
@@ -509,17 +509,22 @@
       ],
     },
     gallery: [
+    {
+        type: "single",
+        image: "/assets/xplorean-13.jpg",
+      },
+      {
+        type: "multiple",
+        images: ["/assets/xplorean-11.jpg" , "/assets/xplorean-14.jpg"],
+      },
+      {
+        type: "multiple",
+        images: ["/assets/xplorean-15.jpg", "/assets/xplorean-20.png"],
+      },
+
       {
         type: "single",
         image: "/assets/xplorean-7.jpg",
-      },
-      {
-        type: "multiple",
-        images: ["/assets/xplorean-15.jpg", "/assets/xplorean-14.jpg"],
-      },
-      {
-        type: "multiple",
-        images: ["/assets/xplorean-11.jpg", "/assets/xplorean-13.jpg"],
       },
     ],
     testimonials: [
@@ -537,7 +542,7 @@
   {
     id: "3",
     herosection: {
-      tags: ["Mobile App", "UI Design"],
+      tags: ["IOT", "Diagnostics", "Data Logging"],
       title: "STEP – Gamified NEET PG Prep for India’s Next-Gen Doctors",
       footerimage: "/assets/step-gha-main.png",
     },
@@ -805,7 +810,7 @@
   {
     id: "4",
     herosection: {
-      tags: ["Desktop Dashboard", "UI Design"],
+      tags: ["Finops", "Reporting", "Reconciliation"],
       title: "Streamlining Cash Flow Oversight for Shell India Markets",
       footerimage:
         "/assets/Streamlining Cash Flow Oversight for Shell India Markets.png",
@@ -1141,7 +1146,7 @@
   {
     id: "5",
     herosection: {
-      tags: ["Mobile App", "Desktop Dashboard", "UI Design"],
+      tags: ["IOT", "Diagnostics", "Data Logging"],
       title: "End-to-End Design for Mesha’s Data Management Solution",
       footerimage: "/assets/mesha-2-main.png",
     },
@@ -1405,7 +1410,7 @@
   {
     id: "6",
     herosection: {
-      tags: ["Desktop Dashboard", "UI Design"],
+      tags: ["Finops", "Reporting", "Reconciliation"],
       title: "Retail Cloud: Streamlining Digital Payments for Shell India",
       footerimage:
         "/assets/Streamlining Cash Flow Oversight for Shell India Markets.png",
@@ -1739,7 +1744,7 @@
   {
     id: "7",
     herosection: {
-      tags: ["Mobile App", "UI Design"],
+      tags: ["Agritech", "IoT", "Operation"],
       title: "Naren Smart Connect Farming, Automated",
       footerimage: "/assets/Naren-electric-hero-footer-image.png",
     },

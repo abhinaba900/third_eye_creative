@@ -18,7 +18,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    image: "/assets/project1.png",
+    image: "/assets/Artboard 3.jpg",
     categories: ["IOT", "Diagnostics", "Data Logging"],
     title: "Mesha IoT — Real-Time EV Battery Insights",
     flag: "project",

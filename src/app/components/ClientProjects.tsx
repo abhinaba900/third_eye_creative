@@ -12,35 +12,35 @@ function ClientProjects() {
       title: "IoT Data Platform for an Electric Mobility Leader",
       client: "Mesha",
       year: "2025",
-      image: "/assets/our work banner image.png",
+      image: "/assets/Artboard 3.jpg",
     },
     {
       title: "Smart Device Control App: UX/UI Design & Development",
       client: "Naren Electrix",
       year: "2025",
       image:
-        "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?w=800&auto=format&fit=crop&q=80",
+        "/assets/Naren-IOT-17.jpg",
     },
     {
       title: "AI-Powered Itinerary Generator: Mobile App Experience",
       client: "Xplorion AI",
       year: "2025",
       image:
-        "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&auto=format&fit=crop&q=80",
+        "/assets/xplorean-13.jpg",
     },
     {
       title: "NEET PG Prep App: EdTech Platform Design & Development",
       client: "STEP BY GHA",
       year: "2025",
       image:
-        "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&auto=format&fit=crop&q=80",
+        "/assets/step-gha-2.jpg",
     },
     {
       title: "IoT App Design for a Smart Power Solution",
       client: "Mesha",
       year: "2025",
       image:
-        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&auto=format&fit=crop&q=80",
+        "/assets/mesha-2-24.jpg",
     },
   ];
 
