@@ -10,7 +10,7 @@
       "We developed and deployed a scalable IoT Data Logging System for a leading battery manufacturer in the EV auto space. The system captures real-time, time-series data such as location, voltage, current, and temperature from thousands of EV autos across India. This data is pushed to our cloud platform, which generates actionable diagnostic reports to identify performance issues—especially in response to range complaints. The platform has become a critical diagnostic tool and is now deployed across thousands of vehicles.",
     ClientBackground: {
       type: "1",
-      leftImage: "/assets/ClientBackground-left-image.png",
+      leftImage: "/assets/ClientBackground-right-top-icon.webp",
       rightContent: {
         topIcon: "/assets/ClientBackground-right-top-icon.png",
         title: "Driving Battery Intelligence",
@@ -279,8 +279,8 @@
       "We partnered with Xplorion AI to design and develop a smart travel planning application that reimagines how itineraries are created. By leveraging real-time data from Google—reviews, photos, open hours, and directions—we built an intuitive system that delivers hyper-personalized, day-wise travel plans tailored to each user’s preferences. Our goal was to eliminate the complexity of trip planning and replace it with a seamless, AI-driven experience that feels effortless, insightful, and globally scalable.",
     ClientBackground: {
       type: "4",
-      leftImage: "/assets/Xplorion AI client-backgournd-let-image-1.png",
-      leftImage2: "/assets/Xplorion AI client-backgournd-let-image-2.png",
+      leftImage: "/assets/Xplorion AI client-backgournd-let-image-1.webp",
+      leftImage2: "/assets/Xplorion AI client-backgournd-let-image-2.webp",
       rightContent: {
         topIcon: "/assets/ClientBackground-right-top-icon.png",
         title: "Personalizing Exploration Through AI",
@@ -366,7 +366,7 @@
         title: "Integrate Real-Time Context ",
         description:
           "Fetch and display live data like open hours, reviews, photos, and directions using Google integrations to ensure relevance and accuracy.",
-        image: "/assets/xplorean-objectives-realtime-content.png",
+        image: "/assets/xplorean-objectives-realtime-content.webp",
       },
       cloudSync: {
         title: "Simplify Trip Planning",

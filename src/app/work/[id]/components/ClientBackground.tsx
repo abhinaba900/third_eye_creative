@@ -67,21 +67,22 @@ function ClientBackground({ data }) {
           </div>
         )}
         {data.type === "4" && (
-          <div className="relative flex justify-center gap-20 ">
+          <div className="relative flex justify-center gap-[2.5rem] ">
             {/* First image aligned to the top */}
-            <div className="relative w-[30%] h-[500px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[7rem] flex items-start  double-image-second-container-2">
+            <div className="relative w-[35%] h-[400px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[7rem] flex items-start double-image-second-container-2">
               <div className="relative w-full h-full">
                 <Image
                   src={data.leftImage}
                   alt="Dashboard 1"
-                  fill
-                  className="object-contain rounded-[0.5rem] overflow-hidden"
+                  width={318}
+                  height={400}
+                  className="object-contain rounded-[0.5rem] overflow-hidden shadow-[-50px_50px_100px_0px_#0000004D]"
                 />
               </div>
             </div>
 
             {/* Second image aligned to the bottom */}
-            <div className="relative w-[30%] h-[500px] sm:-top-[8rem] md:top-0 md:bottom-0 lg:top-[2rem] flex items-end double-image-second-container">
+            <div className="relative w-[40%] h-[500px] sm:-top-[8rem] md:top-0 md:bottom-0 lg:top-[2rem] flex items-end double-image-second-container">
               <div className="relative w-full h-full">
                 <Image
                   src={data.leftImage2}
