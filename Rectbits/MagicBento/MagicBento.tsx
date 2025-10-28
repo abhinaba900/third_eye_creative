@@ -1420,12 +1420,12 @@ const MagicBento: React.FC<BentoProps> = ({
                     <h3 className="text-lg font-semibold mb-2 single-work-page-objectives-real-time-diagnostics-title">
                       {cardDatas.smartReports.title}
                     </h3>
-                    <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">
+                    <p className="text-sm text-gray-400 mb-4 single-work-page-objectives-real-time-diagnostics-description">
                       {cardDatas.smartReports.description}
                     </p>
                   </div>
                   {cardDatas.smartReports.image && (
-                    <div className="relative w-full max-w-[526px] ml-auto my-auto h-auto aspect-[550/520]">
+                    <div className="relative w-full max-h-[480px] ml-[3rem] my-auto h-auto aspect-[550/520]">
                       <Image
                         src={cardDatas.smartReports.image}
                         alt={cardDatas.smartReports.title}

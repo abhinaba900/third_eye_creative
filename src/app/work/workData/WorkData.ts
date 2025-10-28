@@ -509,13 +509,13 @@
       ],
     },
     gallery: [
-    {
+      {
         type: "single",
         image: "/assets/xplorean-13.jpg",
       },
       {
         type: "multiple",
-        images: ["/assets/xplorean-11.jpg" , "/assets/xplorean-14.jpg"],
+        images: ["/assets/xplorean-11.jpg", "/assets/xplorean-14.jpg"],
       },
       {
         type: "multiple",
@@ -1139,7 +1139,16 @@
         },
       ],
     },
-    gallery: [],
+    gallery: [
+      {
+        type: "single",
+        image: "/assets/shellindia-gallery-image-1.png",
+      },
+      {
+        type: "single",
+        image: "/assets/shellindia-gallery-image-2.jpg",
+      },
+    ],
     testimonials: [],
   },
 

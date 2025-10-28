@@ -1696,7 +1696,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     el.addEventListener("click", handleClick);
                   }}
                 >
-                  <div className="h-fit pt-[2rem] px-[2rem] bg-[rgba(255,255,255,0.1)]  shadow-xl flex flex-col items-start lg:pb-0">
+                  <div className="h-full pt-[2rem] px-[2rem] bg-[rgba(255,255,255,0.1)]  shadow-xl flex flex-col justify-between items-start lg:pb-0">
                     {/* Title and Description */}
                     <h3 className="text-lg font-semibold mb-2 single-page-solution-cards-title">
                       {cardDatas.automatedReporting.title}
