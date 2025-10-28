@@ -5,25 +5,44 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/navigation";
 
+// const services = [
+//   {
+//     title: "Software that scales",
+//     image: "/assets/srvice overview image 1.webp",
+//   },
+//   {
+//     title: "Apps that click",
+//     image:
+//       "/assets/srvice overview image 2.webp",
+//   },
+//   {
+//     title: "Marketing that moves",
+//     image:
+//       "/assets/srvice overview image 3.webp",
+//   },
+//   {
+//     title: "Media that matters",
+//     image:
+//       "/assets/srvice overview image 4.webp",
+//   },
+// ];
+
 const services = [
   {
     title: "Software that scales",
-    image: "/assets/srvice overview image 1.webp",
+    image: "/assets/software.gif",
   },
   {
     title: "Apps that click",
-    image:
-      "/assets/srvice overview image 2.webp",
+    image: "/assets/apps.gif",
   },
   {
     title: "Marketing that moves",
-    image:
-      "/assets/srvice overview image 3.webp",
+    image: "/assets/marketing.gif",
   },
   {
     title: "Media that matters",
-    image:
-      "/assets/srvice overview image 4.webp",
+    image: "/assets/media.gif",
   },
 ];
 

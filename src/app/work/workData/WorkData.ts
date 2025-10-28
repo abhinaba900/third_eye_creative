@@ -120,7 +120,7 @@
         description:
           "Transmit data reliably and with low latency to a centralized cloud system using MQTT for smooth, scalable integration",
         image: "/assets/tsSolution-offlineFunctionality-image.png",
-        buttonImage: "/assets/tsSolution-offlineFunctionality-button.png",
+        buttonImage: "/assets/mesha-lot-button-image.png",
       },
       realTimeDiagnostics: {
         title: "Real-Time Data Capture",
