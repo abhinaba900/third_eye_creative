@@ -52,15 +52,15 @@ function GamingSection() {
       buttonText: "See the Vibes",
       slides: [
         {
-          src: "/assets/whatsup-slider-3rd-image.png",
+          src: "/assets/Cyber Security Podcast 2 Thumbnail.webp",
           alt: "People laughing while playing a card game",
         },
         {
-          src: "/assets/whatsup-slider-1st-image.jpg",
+          src: "/assets/TEC Cyber Security Podcast Thumbnail.webp",
           alt: "Friends playing a board game",
         },
         {
-          src: "/assets/whatsup-slider-2nd-image.png",
+          src: "/assets/TEC Dev Dispatch Podcast Thumbnail.webp",
           alt: "A complex board game setup",
         },
       ],
