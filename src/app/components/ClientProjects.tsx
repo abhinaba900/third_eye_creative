@@ -2,10 +2,12 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 function ClientProjects() {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const imageRef = useRef<HTMLDivElement>(null);
+  const router = useRouter();
 
   const projects = [
     {
@@ -18,29 +20,25 @@ function ClientProjects() {
       title: "Smart Device Control App: UX/UI Design & Development",
       client: "Naren Electrix",
       year: "2025",
-      image:
-        "/assets/Naren-IOT-17.jpg",
+      image: "/assets/Naren-IOT-17.jpg",
     },
     {
       title: "AI-Powered Itinerary Generator: Mobile App Experience",
       client: "Xplorion AI",
       year: "2025",
-      image:
-        "/assets/xplorean-13.jpg",
+      image: "/assets/xplorean-13.jpg",
     },
     {
       title: "NEET PG Prep App: EdTech Platform Design & Development",
       client: "STEP BY GHA",
       year: "2025",
-      image:
-        "/assets/step-gha-2.jpg",
+      image: "/assets/step-gha-2.jpg",
     },
     {
       title: "IoT App Design for a Smart Power Solution",
       client: "Mesha",
       year: "2025",
-      image:
-        "/assets/mesha-2-24.jpg",
+      image: "/assets/mesha-2-21.jpg",
     },
   ];
 
@@ -151,7 +149,10 @@ function ClientProjects() {
 
       {/* View More Button */}
       <div className="flex items-center justify-center view-more-button-in-client-projects mt-10">
-        <button className="view-more-button in-mobile-add-container-width">
+        <button
+          className="view-more-button in-mobile-add-container-width"
+          onClick={() => router.push("/work")}
+        >
           View More{" "}
           <Image
             src="/assets/project-data-button-arrow.png"

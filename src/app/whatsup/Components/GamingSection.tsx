@@ -5,64 +5,132 @@ import ActivitySlider from "./EventsSliders";
 function GamingSection() {
   const sliderData = [
     {
-      title: "BoomKarts, Go-Karting Championship 2025",
+      title: "BoomKarts 2025 — Go-Kart Championship",
       description:
-        "We swapped our desks for the racetrack and went full throttle. The Go-Karting Championship wasn’t just about who finished first—it was about pushing limits, cheering for each other, and feeling the rush of competition outside the studio.",
-      buttonText: "Watch Race Highlights",
+        " Where our competitive spirit hits the racetrack — full speed, full fun.",
+      buttonText: "Replay the Race",
+      url:"https://youtu.be/T7Bz9RWhN1c?si=fMWGJVUbpDEpmzth",
       slides: [
+       
         {
-          src: "/assets/TEC Dev Dispatch Podcast Thumbnail.webp",
-          alt: "A complex board game setup",
+          src: "/assets/whatsup-slider-1st-image.jpg",
+          alt: "Go-Kart on a race track",
         },
-        {
-          src: "/assets/Cyber Security Podcast 2 Thumbnail.webp",
-          alt: "People laughing while playing a card game",
-        },
-        {
-          src: "/assets/TEC Cyber Security Podcast Thumbnail.webp",
-          alt: "Friends playing a board game",
-        },
-      ],
-    },
-    {
-      title: "CS:GO Laser Tag",
-      description:
-        "Inspired by one of our favorite games, we brought the CS:GO experience into real life with a themed laser tag showdown. Teams geared up, strategies were made, and the studio spirit lit up the arena with laughter, adrenaline, and a dash of rivalry.",
-      buttonText: "Watch the Battle",
-      slides: [
-        {
-          src: "/assets/TEC Cyber Security Podcast Thumbnail.webp",
-          alt: "Friends playing a board game",
-        },
-        {
-          src: "/assets/Cyber Security Podcast 2 Thumbnail.webp",
-          alt: "People laughing while playing a card game",
-        },
+        // {
+        //   src: "/assets/whatsup-slider-2nd-image.png",
+        //   alt: "Racers at the starting line",
+        // },
+        // {
+        //   src: "/assets/whatsup-slider-3rd-image.png",
+        //   alt: "A go-kart drifting around a corner",
+        // },
+        // {
+        //   src: "/assets/Cyber Security Podcast 2 Thumbnail.webp",
+        //   alt: "People laughing while playing a card game",
+        // },
 
-        {
-          src: "/assets/TEC Dev Dispatch Podcast Thumbnail.webp",
-          alt: "A complex board game setup",
-        },
+        // {
+        //   src: "/assets/TEC Dev Dispatch Podcast Thumbnail.webp",
+        //   alt: "A complex board game setup",
+        // },
       ],
     },
     {
-      title: "Creative Studio Nights",
+      title: "Web Apps Under Attack",
       description:
-        "Some of our best ideas come after hours. From impromptu jam sessions to brainstorming marathons, our Creative Studio Nights blend work, play, and passion. It’s where art, music, and imagination meet—fueling the culture that makes us who we are.",
-      buttonText: "See the Vibes",
+        "A quick dive into real threats—and how hackers exploit the web.",
+      buttonText: "Watch the Breach",
+      url:"https://youtu.be/tra9bnmpPXs?si=_jfvLJj9U-yD_M9t",
       slides: [
         {
           src: "/assets/Cyber Security Podcast 2 Thumbnail.webp",
           alt: "People laughing while playing a card game",
         },
+        // {
+        //   src: "/assets/whatsup-slider-2nd-image.png",
+        //   alt: "Close-up of a laser tag gun",
+        // },
+        // {
+        //   src: "/assets/whatsup-slider-1st-image.jpg",
+        //   alt: "Players in a laser tag arena",
+        // },
+
+        // {
+        //   src: "/assets/whatsup-slider-3rd-image.png",
+        //   alt: "A team planning their strategy",
+        // },
+
+        // {
+        //   src: "/assets/TEC Cyber Security Podcast Thumbnail.webp",
+        //   alt: "Friends playing a board game",
+        // },
+        // {
+        //   src: "/assets/TEC Dev Dispatch Podcast Thumbnail.webp",
+        //   alt: "A complex board game setup",
+        // },
+      ],
+    },
+    {
+      title: "Cybersecurity Made Simple",
+      description:
+        "Understand the threats. Strengthen your defense. In just minutes.",
+      buttonText: "Learn the Hacks",
+      url:"https://youtu.be/AYiWdIBxidI?si=ssRrqYghVei3cxNF",
+      slides: [
         {
           src: "/assets/TEC Cyber Security Podcast Thumbnail.webp",
           alt: "Friends playing a board game",
         },
+        // {
+        //   src: "/assets/whatsup-slider-3rd-image.png",
+        //   alt: "People laughing while playing a card game",
+        // },
+        // {
+        //   src: "/assets/whatsup-slider-1st-image.jpg",
+        //   alt: "Friends playing a board game",
+        // },
+        // {
+        //   src: "/assets/whatsup-slider-2nd-image.png",
+        //   alt: "A complex board game setup",
+        // },
+        // {
+        //   src: "/assets/Cyber Security Podcast 2 Thumbnail.webp",
+        //   alt: "People laughing while playing a card game",
+        // },
+        
+      ],
+    },
+    {
+      title: "AI x Coding: The New Era",
+      description:
+        "Speed up. Collaborate smarter. Code with AI — not against it.",
+      buttonText: "See the Shift",
+      url:"https://youtu.be/L2DWwwmyi6k?si=GmZvxaR_2jJmLUPq",
+      slides: [
         {
           src: "/assets/TEC Dev Dispatch Podcast Thumbnail.webp",
           alt: "A complex board game setup",
         },
+        // {
+        //   src: "/assets/whatsup-slider-3rd-image.png",
+        //   alt: "People laughing while playing a card game",
+        // },
+        // {
+        //   src: "/assets/whatsup-slider-1st-image.jpg",
+        //   alt: "Friends playing a board game",
+        // },
+        // {
+        //   src: "/assets/whatsup-slider-2nd-image.png",
+        //   alt: "A complex board game setup",
+        // },
+        // {
+        //   src: "/assets/Cyber Security Podcast 2 Thumbnail.webp",
+        //   alt: "People laughing while playing a card game",
+        // },
+        // {
+        //   src: "/assets/TEC Cyber Security Podcast Thumbnail.webp",
+        //   alt: "Friends playing a board game",
+        // },
       ],
     },
   ];
@@ -83,6 +151,7 @@ function GamingSection() {
             description={data.description}
             buttonText={data.buttonText}
             slides={data.slides}
+            url={data.url}
           />
         ))}
       </div>

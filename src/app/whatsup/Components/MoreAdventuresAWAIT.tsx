@@ -1,4 +1,5 @@
-﻿import Image from "next/image";
+﻿"use client";
+import Image from "next/image";
 import React from "react";
 
 function MoreAdventuresAWAIT() {
@@ -18,7 +19,7 @@ function MoreAdventuresAWAIT() {
           Stay tuned for what’s next in our creative journey!
         </p>
 
-        <button className="view-more-button mt-4 flex items-center gap-2">
+        <button className="view-more-button mt-4 flex items-center gap-2" onClick={()=> window.open("https://www.youtube.com/@3rdeyecreative", "_blank")}>
           Follow Our Journey{" "}
           <Image
             src="/assets/project-data-button-arrow.png"

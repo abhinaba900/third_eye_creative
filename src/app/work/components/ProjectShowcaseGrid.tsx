@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import React, {  useState } from "react";
+import React, { useState } from "react";
 // import CategoryFilterBar from "./CategoryFilterBar";
 import Image from "next/image";
 import Link from "next/link";
@@ -42,7 +42,7 @@ const projects: Project[] = [
 
     categories: ["IOT", "Diagnostics", "Data Logging"],
     title: "STEP — The Smarter Way to Prep",
-    flag: "website",
+    flag: "project",
 
     description:
       "A NEET PG prep app designed for serious med aspirants on the go. We built a structured, distraction-free interface for focus and performance.",
@@ -53,7 +53,7 @@ const projects: Project[] = [
 
     categories: ["Real Estate Website", "UI/UX Design", "Web Development"],
     title: "Urbando — Artfully Engineered Living",
-    flag: "website",
+    flag: "project",
     description:
       " A sleek, responsive website designed to showcase Urbando’s premium homes with elegance and ease. We blended visual minimalism with high-conversion layouts for a refined user experience.",
   },
@@ -79,10 +79,10 @@ const projects: Project[] = [
   },
   {
     id: 7,
-    image: "/assets/Naren-IOT-7.jpg",
+    image: "/assets/Naren-IOT-17.jpg",
     categories: ["Agritech", "IoT", "Operation"],
     title: "Naren IoT — Connected Control, Anytime Anywhere",
-    flag: "website",
+    flag: "project",
 
     description:
       "A unified IoT dashboard built to monitor, manage, and automate industrial devices in real-time. Designed for reliability, remote accessibility, and data-backed decision-making.",
@@ -92,7 +92,7 @@ const projects: Project[] = [
     image: "/assets/mesha-2-21.jpg",
     categories: ["IOT", "Diagnostics", "Data Logging"],
     title: "Mesha Data Manager — Real-Time UPS Insights",
-    flag: "website",
+    flag: "project",
     description:
       "The Mesha app turns UPS servicing into a connected workflow — Bluetooth data collection on-site, cloud analytics off-site. Engineers now diagnose issues in seconds instead of hours.",
   },
@@ -102,8 +102,6 @@ function ProjectShowcaseGrid() {
   const [active] = useState("");
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [hoveredId, setHoveredId] = useState<number | null>(null);
-
- 
 
   return (
     <div>
@@ -158,11 +156,13 @@ function ProjectShowcaseGrid() {
                             strokeWidth="2"
                             viewBox="0 0 24 24"
                           >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            />
+                            <g transform="rotate(-30 6 6)">
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"
+                              />
+                            </g>
                           </svg>
                         </div>
                       </div>

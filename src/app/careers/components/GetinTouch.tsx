@@ -2,8 +2,10 @@
 
 import React from "react";
 import GlassSurface from "../../../../Rectbits/GlassSurface/GlassSurface";
+import { useRouter } from "next/navigation";
 
 function GetinTouch() {
+  const router = useRouter();
   return (
     <div className="relative w-full px-4 py-20 sm:py-20 md:py-90 2xl:py-130 bg-black text-white overflow-visible overflow-x-hidden get-in-touch-wrapper-careers-page">
       {/* SVG Background */}
@@ -133,7 +135,7 @@ function GetinTouch() {
           className="mx-auto p-0 md:p-4 cursor-pointer group transition-transform duration-400 ease-in-out hover:scale-105 "
           style={{}}
         >
-          <button className="flex items-center cursor-pointer lets-connect-button-in-careers-page px-8 py-4 md:px-[50px] md:py-[32px] mx-auto  rounded-[114.71px] bg-gradient-to-br from-[#fff6ed]/80 to-[#ffdab9]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.6)] border border-orange-300 relative text-orange-600 font-semibold text-lg md:text-2xl ">
+          <button onClick={() => router.push("/contactus")} className="flex items-center cursor-pointer lets-connect-button-in-careers-page px-8 py-4 md:px-[50px] md:py-[32px] mx-auto  rounded-[114.71px] bg-gradient-to-br from-[#fff6ed]/80 to-[#ffdab9]/80 shadow-[inset_0_0_10px_rgba(255,255,255,0.6)] border border-orange-300 relative text-orange-600 font-semibold text-lg md:text-2xl ">
             <span
               className="bg-gradient-to-r from-[#FF891D] to-[#EC4B7B] bg-clip-text text-transparent work-getintouch-button"
               style={{

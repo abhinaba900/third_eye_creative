@@ -1,10 +1,13 @@
-﻿import Image from "next/image";
+﻿"use client";
+import Image from "next/image";
 import React from "react";
 import Silk from "../../../Reactbits/Silk/Silk";
 // import TextPressure from "../../../Reactbits/TextPressure/TextPressure";
 // import VanishEffect from "./PrinceText";
+import { useRouter } from "next/navigation";
 
 function BuildWithUsBanner() {
+  const router = useRouter();
   return (
     <div className="build-with-us-banner">
       <div className="silk-background">
@@ -26,7 +29,7 @@ function BuildWithUsBanner() {
         /> */}
       </h3>
 
-      <button className="view-more-button">
+      <button className="view-more-button" onClick={()=> router.push("/contactus")}>
         Lets Build Something{" "}
         <Image
           src="/assets/project-data-button-arrow.png"

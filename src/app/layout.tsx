@@ -6,8 +6,9 @@ import GradualBlurMemo from "@/components/GradualBlur";
 // import Bottomblur from "./components/Bottomblur";
 
 export const metadata: Metadata = {
-  title: 'Third Eye Creative | Software, Branding & Media Agency in Bangalore',
-  description: 'We craft digital experiences that blend tech, design & storytelling. Your creative partner for apps, branding, and media in Bangalore.',
+  title: "Third Eye Creative | Software, Branding & Media Agency in Bangalore",
+  description:
+    "We craft digital experiences that blend tech, design & storytelling. Your creative partner for apps, branding, and media in Bangalore.",
 };
 
 export default function RootLayout({
@@ -15,6 +16,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
       <body cz-shortcut-listen="true">

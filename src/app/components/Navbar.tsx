@@ -66,6 +66,40 @@ function Navbar() {
     };
   }, []);
 
+  useEffect(() => {
+    // Check if the script is already on the page to avoid duplicates
+    if (document.getElementById("chatbot")) {
+      return;
+    }
+
+    // 1. Create a new script element
+    const script = document.createElement("script");
+
+    // 2. Set all the necessary attributes from your original request
+    script.src =
+      "https://res.public.onecdn.static.microsoft/customerconnect/v1/7dttl/init.js";
+    script.id = "chatbot";
+    script.type = "text/javascript";
+    script.crossOrigin = "anonymous";
+    // Set custom attributes like 'environmentId' using setAttribute
+    script.setAttribute(
+      "environmentId",
+      "decc167c-794f-e408-8a21-d632539b63d9"
+    );
+
+    // 3. Append the script to the document body, which will load and run it
+    document.body.appendChild(script);
+
+    // 4. (Optional but good practice)
+    // Return a cleanup function to remove the script if the component unmounts
+    return () => {
+      const existingScript = document.getElementById("chatbot");
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, []);
+
   const toggleMenu = () => {
     setMenuOpen((prev) => !prev);
   };

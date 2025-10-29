@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import React, { useState } from "react";
+import React from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 // import required modules
 import { Navigation, Pagination } from "swiper/modules";
 import Image from "next/image";
+import Link from "next/link";
 
 // --- Define the props for our component ---
 interface Slide {
@@ -22,6 +23,7 @@ interface ActivitySliderProps {
   title: string;
   description: string;
   buttonText: string;
+  url: string;
 }
 
 // --- The Slider Component ---
@@ -30,35 +32,36 @@ const ActivitySlider: React.FC<ActivitySliderProps> = ({
   title,
   description,
   buttonText,
+  url
 }) => {
-  const [showLeft, setShowLeft] = useState(false);
-  const [showRight, setShowRight] = useState(false);
+  // const [showLeft, setShowLeft] = useState(false);
+  // const [showRight, setShowRight] = useState(false);
 
   // Track mouse position to toggle navigation visibility
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const sliderWidth = e.currentTarget.clientWidth;
-    const mouseX = e.clientX - e.currentTarget.getBoundingClientRect().left;
+  // const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+  //   const sliderWidth = e.currentTarget.clientWidth;
+  //   const mouseX = e.clientX - e.currentTarget.getBoundingClientRect().left;
 
-    if (mouseX < sliderWidth / 2) {
-      setShowLeft(true);
-      setShowRight(false);
-    } else {
-      setShowRight(true);
-      setShowLeft(false);
-    }
-  };
+  //   if (mouseX < sliderWidth / 2) {
+  //     setShowLeft(true);
+  //     setShowRight(false);
+  //   } else {
+  //     setShowRight(true);
+  //     setShowLeft(false);
+  //   }
+  // };
 
-  const handleMouseLeave = () => {
-    setShowLeft(false);
-    setShowRight(false);
-  };
+  // const handleMouseLeave = () => {
+  //   setShowLeft(false);
+  //   setShowRight(false);
+  // };
   return (
     <div className="w-full max-w-[1232px] mx-auto ">
       {/* Main container with group class for hover effects */}
       <div
         className="relative group"
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
+        // onMouseMove={handleMouseMove}
+        // onMouseLeave={handleMouseLeave}
       >
         <Swiper
           // Swiper options
@@ -90,7 +93,7 @@ const ActivitySlider: React.FC<ActivitySliderProps> = ({
         </Swiper>
 
         {/* Custom Left Arrow */}
-        <div
+        {/* <div
           className={`swiper-button-prev-custom absolute top-1/2 left-4 transform -translate-y-1/2 z-1
                          bg-opacity-40 text-white rounded-full w-[70px] h-[70px] flex items-center justify-center
                         cursor-pointer opacity-0 ${
@@ -105,10 +108,10 @@ const ActivitySlider: React.FC<ActivitySliderProps> = ({
             height={100}
             className="view-more-button-arrow"
           />
-        </div>
+        </div> */}
 
         {/* Custom Right Arrow */}
-        <div
+        {/* <div
           className={`swiper-button-next-custom absolute top-1/2 right-4 transform -translate-y-1/2 z-1
                          bg-opacity-40 text-white rounded-full w-[70px] h-[70px] flex items-center justify-center
                         cursor-pointer opacity-0 ${
@@ -123,7 +126,7 @@ const ActivitySlider: React.FC<ActivitySliderProps> = ({
             height={100}
             className="view-more-button-arrow"
           />
-        </div>
+        </div> */}
       </div>
 
       {/* Text Content Below Slider */}
@@ -134,7 +137,9 @@ const ActivitySlider: React.FC<ActivitySliderProps> = ({
         <p className="mt-2 text-gray-300 inside-the-slider-description">
           {description}
         </p>
-        <button
+        <Link
+          href={url}
+          target="_blank"
           className=" px-8 py-3 bg-transparent border border-gray-500 rounded-full
                          flex items-center justify-center mx-auto gap-2
                          hover:bg-white hover:text-black transition-colors duration-300 w-full view-more-button events-slider-button"
@@ -147,7 +152,7 @@ const ActivitySlider: React.FC<ActivitySliderProps> = ({
             height={24}
             className="view-more-button-arrow"
           />
-        </button>
+        </Link>
       </div>
     </div>
   );
