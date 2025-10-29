@@ -42,7 +42,7 @@ function ClientBackground({ data }) {
         {data.type === "2" && (
           <div className="relative flex justify-center gap-[2.5rem] ">
             {/* First image aligned to the top */}
-            <div className="relative w-[35%] h-[500px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[8rem] flex items-start  double-image-second-container-2">
+            <div className="relative w-[30%] lg:w-[35%] h-[500px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[8rem] flex items-start  double-image-second-container-2">
               <div className="relative w-full h-full">
                 <Image
                   src={data.leftImage}
@@ -70,7 +70,7 @@ function ClientBackground({ data }) {
         {data.type === "4" && (
           <div className="relative flex justify-center gap-[2.5rem] ">
             {/* First image aligned to the top */}
-            <div className="relative w-[35%] h-[400px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[7rem] flex items-start double-image-second-container-2">
+            <div className="relative w-[30%] lg:w-[35%] h-[400px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[7rem] flex items-start double-image-second-container-2">
               <div className="relative w-full h-full">
                 <Image
                   src={data.leftImage}
@@ -98,7 +98,7 @@ function ClientBackground({ data }) {
         {data.type === "5" && (
           <div className="relative flex justify-center gap-[2.5rem] ">
             {/* First image aligned to the top */}
-            <div className="relative w-[35%] h-[400px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[10rem] flex items-start  double-image-second-container-2">
+            <div className="relative w-[30%] lg:w-[35%] h-[400px] sm:h-auto md:top-0 md:bottom-0 lg:-top-[10rem] flex items-start  double-image-second-container-2">
               <div className="relative w-full h-full">
                 <Image
                   src={data.leftImage}

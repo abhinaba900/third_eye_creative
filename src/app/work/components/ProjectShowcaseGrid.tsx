@@ -28,7 +28,7 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    image: "/assets/project2.png",
+    image: "/assets/xplorean-13.jpg",
     categories: ["AI", "Travel", "Assistant"],
     title: "Xplorion AI — Travel, Reimagined",
     flag: "project",
@@ -38,7 +38,7 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    image: "/assets/project4.png",
+    image: "/assets/step-gha-2.jpg",
 
     categories: ["IOT", "Diagnostics", "Data Logging"],
     title: "STEP — The Smarter Way to Prep",
@@ -59,7 +59,7 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    image: "/assets/project5.png",
+    image: "/assets/shellindia-gallery-image-2.jpg",
     categories: ["Finops", "Reporting", "Reconciliation"],
     title: "Shell India – Digital Payment Command Center",
     flag: "project",
@@ -79,7 +79,7 @@ const projects: Project[] = [
   },
   {
     id: 7,
-    image: "/assets/project7.png",
+    image: "/assets/Naren-IOT-7.jpg",
     categories: ["Agritech", "IoT", "Operation"],
     title: "Naren IoT — Connected Control, Anytime Anywhere",
     flag: "website",
@@ -89,7 +89,7 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    image: "/assets/project8.png",
+    image: "/assets/mesha-2-21.jpg",
     categories: ["IOT", "Diagnostics", "Data Logging"],
     title: "Mesha Data Manager — Real-Time UPS Insights",
     flag: "website",
