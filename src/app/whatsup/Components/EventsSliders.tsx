@@ -75,13 +75,13 @@ const ActivitySlider: React.FC<ActivitySliderProps> = ({
           className="rounded-2xl overflow-hidden"
         >
           {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <div className="relative w-full h-[559px] ">
+            <SwiperSlide key={index + 1}>
+              <div className="relative w-full h-[250px] lg:h-[559px] ">
                 <Image
                   src={slide.src}
                   alt={slide.alt}
                   fill
-                  style={{ objectFit: "cover" }}
+                  className="object-contain lg:object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>

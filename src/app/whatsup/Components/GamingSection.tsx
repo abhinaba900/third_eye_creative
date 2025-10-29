@@ -11,16 +11,16 @@ function GamingSection() {
       buttonText: "Watch Race Highlights",
       slides: [
         {
-          src: "/assets/whatsup-slider-1st-image.jpg",
-          alt: "Go-Kart on a race track",
+          src: "/assets/TEC Dev Dispatch Podcast Thumbnail.webp",
+          alt: "A complex board game setup",
         },
         {
-          src: "/assets/whatsup-slider-2nd-image.png",
-          alt: "Racers at the starting line",
+          src: "/assets/Cyber Security Podcast 2 Thumbnail.webp",
+          alt: "People laughing while playing a card game",
         },
         {
-          src: "/assets/whatsup-slider-3rd-image.png",
-          alt: "A go-kart drifting around a corner",
+          src: "/assets/TEC Cyber Security Podcast Thumbnail.webp",
+          alt: "Friends playing a board game",
         },
       ],
     },
@@ -31,17 +31,17 @@ function GamingSection() {
       buttonText: "Watch the Battle",
       slides: [
         {
-          src: "/assets/whatsup-slider-2nd-image.png",
-          alt: "Close-up of a laser tag gun",
+          src: "/assets/TEC Cyber Security Podcast Thumbnail.webp",
+          alt: "Friends playing a board game",
         },
         {
-          src: "/assets/whatsup-slider-1st-image.jpg",
-          alt: "Players in a laser tag arena",
+          src: "/assets/Cyber Security Podcast 2 Thumbnail.webp",
+          alt: "People laughing while playing a card game",
         },
 
         {
-          src: "/assets/whatsup-slider-3rd-image.png",
-          alt: "A team planning their strategy",
+          src: "/assets/TEC Dev Dispatch Podcast Thumbnail.webp",
+          alt: "A complex board game setup",
         },
       ],
     },
