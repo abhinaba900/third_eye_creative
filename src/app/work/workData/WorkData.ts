@@ -1232,7 +1232,7 @@
         title: "Real-Time Diagnostics",
         description:
           "Access live data including voltage, current, temperature, and more. Get instant insights into the system’s performance right from the field.",
-        rightsideimage: "/assets/stepgha-objectives.png",
+        rightsideimage: "/assets/Mesha-Data-management.png",
       },
       upsConnectivity: {
         title: "UPS Connectivity",
@@ -1274,7 +1274,7 @@
         title: "Real-Time Diagnostics",
         description:
           "Instantly captures and displays critical data like voltage, current, temperature, and battery cycles.",
-        image: "/assets/Solution-realTimeDiagnostics-mesha-electric-image.png",
+        image: "/assets/Solution-realTimeDiagnostics-mesha-electric-image.webp",
       },
       seamlessBluetoothIntegration: {
         title: "Seamless Bluetooth Integration",
@@ -1305,7 +1305,7 @@
         title: "Automated Reporting",
         description:
           "Generates immediate, detailed reports highlighting faults, anomalies, and performance trends.",
-        image: "/assets/Solution-automatedReporting-image.png",
+        image: "/assets/mesha data management 2.png",
       },
     },
 
@@ -1830,7 +1830,7 @@
         title: "Intuitive SMS Control",
         description:
           "Design a user-friendly mobile app to operate GSM-enabled devices entirely through SMS commands.",
-        rightsideimage: "/assets/Xplorion App ss  objectives.png",
+        rightsideimage: "/assets/Naren-app-objectives.png",
       },
       upsConnectivity: {
         title: "Offline-First Reliability",

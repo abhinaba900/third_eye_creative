@@ -1027,9 +1027,9 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                         <img
                           src={cardDatas.realTimeDiagnostics.image}
                           alt={cardDatas.realTimeDiagnostics.title}
-                          width={240}
+                          width={230}
                           height={280}
-                          className="w-100 h-[217px] max-w-[230px] object-contain block mx-auto"
+                          className="w-100  h-[217px]  max-w-[230px] object-contain block mx-auto"
                         />
                       </div>
                     )}
@@ -3418,7 +3418,7 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     <p className="text-sm text-gray-400 mb-4 single-work-page-objectives-real-time-diagnostics-description">
                       {cardDatas.seamlessBluetoothIntegration.description}
                     </p>
-                    <div className="relative w-full h-48 rounded-lg overflow-hidden -mb-5">
+                    <div className="relative w-full h-55 rounded-lg overflow-hidden -mb-8">
                       <Image
                         src={cardDatas.seamlessBluetoothIntegration.image}
                         alt="Bluetooth Integration"
@@ -3545,18 +3545,18 @@ const MagicBentoCopy: React.FC<BentoProps> = ({
                     el.addEventListener("click", handleClick);
                   }}
                 >
-                  <div className="bg-[rgba(255,255,255,0.1)] h-full rounded-2xl p-6 shadow-lg overflow-hidden ">
+                  <div className="bg-[rgba(255,255,255,0.1)] h-full rounded-2xl p-6 shadow-lg overflow-hidden pb-0">
                     <h3 className="text-xl font-semibold mb-3 single-page-solution-cards-title">
                       {cardDatas.technologyBackbone.title}
                     </h3>
                     <p className="text-sm text-gray-400 single-work-page-objectives-real-time-diagnostics-description">
                       {cardDatas.technologyBackbone.description}
                     </p>
-                    <div className="relative w-full h-[252px] -ml-6 rounded-lg overflow-hidden option-4-card-image">
+                    <div className="relative w-full h-[252px] -ml-6 rounded-lg overflow-hidden option-4-card-image  -bottom-5">
                       <img
                         src={cardDatas.technologyBackbone.image}
                         alt={cardDatas.technologyBackbone.title}
-                        className=" object-cover w-100  h-full max-w-[500px]  max-h-[252px] "
+                        className=" object-contain w-full  h-full max-w-[500px]  max-h-[252px]  "
                       />
                     </div>
                   </div>
