@@ -1,4 +1,4 @@
-﻿import ScrollReveal from "../../../Reactbits/ScrollReveal/ScrollReveal";
+﻿// import ScrollReveal from "../../../Reactbits/ScrollReveal/ScrollReveal";
 
 function TextToRevealSection() {
   const text =
