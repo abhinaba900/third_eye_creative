@@ -46,7 +46,7 @@ const teamDatas: TeamData[] = [
     ],
     description:
       "Siddarth is the brain behind all the tech innovations at Third Eye Creative. A genius in system architecture and AI, he leads the development of our most ambitious projects with precision and vision. When he’s not building scalable systems or experimenting with emerging technologies, you’ll find him trading the markets or sharing his knowledge as a passionate teacher.",
-    images: ["/assets/Sid 3.webp"],
+    images: ["/assets/Sid 3.png"],
     name: "SIDDHARTH SHANKAR",
     role: "CTO & Technical Head",
     bannerimage: "/assets/Siddharth-small.png",
@@ -502,7 +502,7 @@ function CreativeTeamIntro() {
                         height={550}
                         className={`rounded-xl transition-all duration-700 ${
                           positionIndex === 0 ? "scale-100" : "scale-90"
-                        }`}
+                        } `}
                       />
                     </motion.div>
                   );
