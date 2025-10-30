@@ -6,7 +6,7 @@ function ExecutiveSummary({ data }) {
   return (
     <div className="executive-summary-container">
       <div className="desktop-text">
-        <ScrollReveal
+        {/* <ScrollReveal
           baseOpacity={0}
           enableBlur={true}
           baseRotation={5}
@@ -14,8 +14,11 @@ function ExecutiveSummary({ data }) {
           textClassName="scroll-reveal-text-wrapper-in-executive-summary"
         >
           {data}
-        </ScrollReveal>
+        </ScrollReveal> */}
+
+        <p className="scroll-reveal-text-wrapper-in-executive-summary">{data}</p>
       </div>
+
       <p className="mobile-text">{data}</p>
     </div>
   );

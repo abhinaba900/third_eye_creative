@@ -114,7 +114,7 @@
       layout: "1",
       title: "Smarter EV <span>Diagnostics</span>",
       description:
-        "Real-time data and cloud tools to manage thousands of vehicles effortlessly",
+        "Real-time data and cloud tools to manage vehicles",
       offlineFunctionality: {
         title: "Secure Cloud Sync",
         description:
@@ -163,7 +163,7 @@
     ChallengesandResolutions: {
       title: "<span>Precision</span> EV Solutions",
       description:
-        "Adaptive tech that tracks, analyzes, and delivers insights in real time",
+        "Adaptive tech that tracks and analyzes insights",
       challenges: {
         title: "What we were up against",
         points: [
@@ -186,7 +186,7 @@
     Results: {
       title: "<span>Innovation</span> in Action ",
       description:
-        "Faster fault detection, stronger batteries, measurable fleet-wide impact",
+        "Faster fault detection, measurable fleet-wide impact",
       metrics: [
         {
           value: "~60%",
@@ -310,7 +310,7 @@
     ProblemStatement: {
       title: "Travel <span>Simplified</span>",
       description:
-        "Personalized, real-time itineraries—everything in one smart place",
+        "All your plans, personalized and updated in real time.",
       contentSection: {
         icon: "/assets/ProblemStatement-contentSection-icon-2.png",
         title: "Reimagining Travel Planning",
@@ -348,7 +348,7 @@
     objectives: {
       title: "Behind the <span>Journey</span> ",
       description:
-        "AI-powered travel that’s personal, seamless & full of surprises",
+        "AI-powered travel—personal, seamless,full of surprises.",
       realTimeDiagnostics: {
         icon: "/assets/objectives-realTimeDiagnostics-image-2.png",
         title: "Automate Itinerary Creation",
@@ -385,7 +385,7 @@
       layout: "2",
       title: "<span>AI Powered</span> Travel",
       description:
-        "Turn your preferences into effortless, real-time itineraries",
+        "Effortless, real-time itineraries shaped",
       offlineFunctionality: {
         title: "AI-Based Interest Detection",
         description:
@@ -444,7 +444,7 @@
     ChallengesandResolutions: {
       title: "<span>Smarter Travel</span> <br /> Simplified",
       description:
-        "Intelligent design and adaptive systems that make planning effortless",
+        "Smart, adaptive design that makes planning effortless.",
       challenges: {
         title: "What we were up against",
         points: [
@@ -619,7 +619,7 @@
     objectives: {
       title: "<span>Learning,</span> Gamified",
       description:
-        "Clear, structured & engaging study sessions that keep students motivated",
+        "Focused, engaging, motivating study sessions.",
       realTimeDiagnostics: {
         icon: "/assets/objectives-realTimeDiagnostics-image-3.png",
         title: "Break Down the Syllabus",
@@ -656,7 +656,7 @@
       layout: "2",
       title: "<span>Gamified</span> NEET PG",
       description:
-        "Bite-sized, focused learning that makes concepts clear and engaging",
+        "Focused, bite-sized learning made clear and engaging.",
       offlineFunctionality: {
         title: "Byte-Sized Steps",
         description:
@@ -715,7 +715,7 @@
     ChallengesandResolutions: {
       title: "<span>Prep,</span> Smarter ",
       description:
-        "Real-time tools and micro-content that keep students engaged & motivated",
+        "Engaging, real-time learning tools.",
       challenges: {
         title: "What we were up against",
         points: [
@@ -737,7 +737,7 @@
     },
     Results: {
       title: "<span>Learning</span> that Delivers",
-      description: "Higher engagement & smarter prep for tomorrow’s doctors",
+      description: "Smarter prep, higher engagement.",
       metrics: [
         {
           value: "+50%",
@@ -888,7 +888,7 @@
       type: "3",
       title: "<span>Clearer</span> Collections",
       description:
-        "A centralized system to track and reconcile cash flow in real time",
+        "Centralized, real-time cash flow tracking.",
       allSubDatas: [
         [
           {
@@ -982,7 +982,7 @@
       title:
         'Collections <span class="saparate-controall-section-updated">Simplified</span>',
       description:
-        "Real-time tracking and seamless reconciliation across every site",
+        "Seamless, real-time tracking across sites.",
 
       allSubDatas: [
         {
@@ -1100,7 +1100,7 @@
     Results: {
       title: "<span>Impact</span> at <span>Scale</span>",
       description:
-        "Real-time insights, faster operations, nationwide oversight",
+        "Real-time insights. Faster operations. Total oversight.",
       metrics: [
         {
           value: "~100%",
@@ -1226,7 +1226,7 @@
     objectives: {
       title: "Behind the <span>Build</span>",
       description:
-        "A unified diagnostic system for a smarter, faster UPS insights",
+        "Unified diagnostics for smarter, faster UPS insights.",
       realTimeDiagnostics: {
         icon: "/assets/objectives-realTimeDiagnostics-mesha-electric-image-3.png",
         title: "Real-Time Diagnostics",
@@ -1262,7 +1262,7 @@
     Solution: {
       layout: "1",
       title: "<span>Smarter</span> UPS Operations",
-      description: "Centralized tools that standardize, automate and optimize",
+      description: "Centralized tools to standardize and optimize.",
       offlineFunctionality: {
         title: "Offline Functionality",
         description:
@@ -1312,7 +1312,7 @@
     ChallengesandResolutions: {
       title: "<span>Simplifying</span> UPS Diagnostics",
       description:
-        "Modular systems to streamline performance across every touchpoint",
+        "Modular systems streamlining performance",
       challenges: {
         title: "What we were up against",
         points: [
@@ -1334,7 +1334,7 @@
     },
     Results: {
       title: "<span>Strategy</span> in Action",
-      description: "Faster service, smarter diagnostics & measurable impact",
+      description: "Smarter diagnostics. Faster service. Real impact.",
       metrics: [
         {
           value: "~50%",
@@ -1496,7 +1496,7 @@
     objectives: {
       type: "3",
       title: "Payments, <span>Unified</span>",
-      description: "Secure, effortless tracking and control across the nation",
+      description: "Secure, effortless nationwide control.",
       allSubDatas: [
         [
           {
@@ -1824,7 +1824,7 @@
     objectives: {
       title: "<span>Complexity,</span> Simplified ",
       description:
-        "GSM device management & remote control — no internet required",
+        "Offline GSM management and remote control.",
       realTimeDiagnostics: {
         icon: "/assets/naren-electric-objectives-realTimeDiagnostics-image-2.png",
         title: "Intuitive SMS Control",
