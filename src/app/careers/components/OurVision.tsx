@@ -1,5 +1,5 @@
 ﻿import React from "react";
-import ScrollReveal from "../../../../Reactbits/ScrollReveal/ScrollReveal";
+// import ScrollReveal from "../../../../Reactbits/ScrollReveal/ScrollReveal";
 
 function OurVision() {
   return (
@@ -8,7 +8,7 @@ function OurVision() {
         Our <span>Vision</span>
       </h3>
       <div className="our-approach-content-wrapper">
-        <ScrollReveal
+        {/* <ScrollReveal
           baseOpacity={0}
           enableBlur={true}
           baseRotation={5}
@@ -17,7 +17,12 @@ function OurVision() {
           To shape a world where bold ideas, thoughtful design, and smart
           technology come together, inspiring brands, empowering people, and
           redefining what creative collaboration can achieve.
-        </ScrollReveal>
+        </ScrollReveal> */}
+        <p>
+          To shape a world where bold ideas, thoughtful design, and smart
+          technology come together, inspiring brands, empowering people, and
+          redefining what creative collaboration can achieve.
+        </p>
       </div>
     </div>
   );

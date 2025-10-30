@@ -770,7 +770,10 @@ html {
 .scroll-reveal-text-wrapper {
   font-family: var(--font-family-sequel-sans-light-display);
   font-weight: 400;
-  font-size: 48px;
+  font-size: 47px;
+  line-height: 56px;
+  letter-spacing: 0%;
+  text-align: justify;
 }
 
 .hero-title-1,
