@@ -46,7 +46,7 @@ const teamDatas: TeamData[] = [
     ],
     description:
       "Siddarth is the brain behind all the tech innovations at Third Eye Creative. A genius in system architecture and AI, he leads the development of our most ambitious projects with precision and vision. When he’s not building scalable systems or experimenting with emerging technologies, you’ll find him trading the markets or sharing his knowledge as a passionate teacher.",
-    images: ["/assets/Siddharth.webp"],
+    images: ["/assets/Sid 3.webp"],
     name: "SIDDHARTH SHANKAR",
     role: "CTO & Technical Head",
     bannerimage: "/assets/Siddharth-small.png",
@@ -152,10 +152,10 @@ const teamDatas: TeamData[] = [
     ],
     description:
       "Adheem is a calm, offence-focused cybersecurity analyst with ~4 years of hands-on experience in ethical hacking and Penetration testing. Working from a Kali VM toolkit (Nmap, Metasploit, Wireshark, OpenVAS, Aircrack-ng, and more), he specializes in recon, vulnerability assessments, and exploit testing to harden web apps and client systems. Driven by the belief that “nothing is uncrackable,” he hunts for discrepancies and hidden openings—helps teams close them—while keeping one eye on emerging tech and the other on a green-on-black terminal.",
-    images: ["/assets/Adheem.webp"],
+    images: ["/assets/Adheem 2.webp"],
     name: "Adheem Rahman",
     role: "Cybersecurity Engineer",
-    bannerimage: "/assets/Adheem-small.png",
+    bannerimage: "/assets/Adheem 2.png",
   },
   {
     id: 10,

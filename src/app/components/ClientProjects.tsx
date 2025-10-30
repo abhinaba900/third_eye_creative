@@ -15,30 +15,35 @@ function ClientProjects() {
       client: "Mesha",
       year: "2025",
       image: "/assets/Artboard 3.jpg",
+      page: 5,
     },
     {
       title: "Smart Device Control App: UX/UI Design & Development",
       client: "Naren Electrix",
       year: "2025",
       image: "/assets/Naren-IOT-17.jpg",
+      page: 7,
     },
     {
       title: "AI-Powered Itinerary Generator: Mobile App Experience",
       client: "Xplorion AI",
       year: "2025",
       image: "/assets/xplorean-13.jpg",
+      page: 2,
     },
     {
       title: "NEET PG Prep App: EdTech Platform Design & Development",
       client: "STEP BY GHA",
       year: "2025",
       image: "/assets/step-gha-2.jpg",
+      page: 3,
     },
     {
       title: "IoT App Design for a Smart Power Solution",
       client: "Mesha",
       year: "2025",
-      image: "/assets/mesha-2-21.jpg",
+      image: "/assets/mesha-2-22.jpg",
+      page: 1,
     },
   ];
 
@@ -113,7 +118,10 @@ function ClientProjects() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.6, ease: "easeInOut" }}
-                      className="absolute inset-0 w-full h-full object-cover rounded-[40px] pt-5"
+                      className="absolute inset-0 w-full h-full object-cover rounded-[40px] pt-5 cursor-pointer"
+                      onClick={() =>
+                        router.push(`/work/${projects[activeIndex].page}`)
+                      }
                     />
                   </AnimatePresence>
                 </div>

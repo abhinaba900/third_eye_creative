@@ -13,7 +13,14 @@ function AboutUsHeroSection() {
         className="mx-auto my-4 background-image-hero-section-about-us"
       /> */}
       <div className="about-us-hero-section-wrapper h-full overflow-hidden relative z-1">
-        <h1 className="about-us-hero-section-title">THIRD EYE</h1>
+        <h1
+          className="about-us-hero-section-title"
+          style={{
+            fontSize: "16vw",
+          }}
+        >
+          WHO WE ARE
+        </h1>
         <div className="relative w-full ">
           <Aurora
             colorStops={["#C883FF", "#772BF2", "#CE0AFF00"]}
@@ -25,8 +32,8 @@ function AboutUsHeroSection() {
           <div className="about-us-hero-section-content-wrapper-inner">
             <div className=" about-us-hero-section-content-wrapper">
               <h4>
-                Designing Bold Identities & Smart <br /> <span>Experiences</span>{" "}
-                for Brands Ready to Lead
+                Designing Bold Identities & Smart <br />{" "}
+                <span>Experiences</span> for Brands Ready to Lead
               </h4>
               <div className="about-us-hero-section-footer-wrapper">
                 <p>©2025</p>

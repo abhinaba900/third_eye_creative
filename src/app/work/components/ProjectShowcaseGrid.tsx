@@ -89,7 +89,7 @@ const projects: Project[] = [
   },
   {
     id: 5,
-    image: "/assets/mesha-2-21.jpg",
+    image: "/assets/mesha-2-22.jpg",
     categories: ["IOT", "Diagnostics", "Data Logging"],
     title: "Mesha Data Manager — Real-Time UPS Insights",
     flag: "project",
