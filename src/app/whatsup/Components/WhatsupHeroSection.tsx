@@ -29,7 +29,7 @@ function WhatsupHeroSection() {
                 <span className="span-diffrent-color-2"> Experiences</span>
               </h4>
               <div className="about-us-hero-section-footer-wrapper">
-                <p>TEAM SPIRITz</p>
+                {/* <p>TEAM SPIRITz</p> */}
                 <p>CREATIVE ENERGY</p>
                 <p>UNPLUGGED MOMENTS</p>
               </div>

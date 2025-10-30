@@ -37,7 +37,7 @@ function LifeatThirdEye() {
         <span>Life at</span> Third Eye
       </h3>
       <p className="lifeat-third-eye-desc">
-        A culture of curiosity, collaboration and work that makes a difference
+        A culture of curiosity, collaboration & work 
       </p>
 
       <div className="bg-black text-white py-0 pt-[5rem] px-4 md:px-10 max-w-[1262px] mx-auto mb-[3.75rem] lifeatthird-eye-values-wrapper md:mb-[4.75rem] lg:mb-[8.75rem]">

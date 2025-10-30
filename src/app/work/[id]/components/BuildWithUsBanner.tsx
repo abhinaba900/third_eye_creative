@@ -14,10 +14,10 @@ function BuildWithUsBanner() {
           Ideas don’t build themselves<span>, <br /> We do</span>
         </h3>
 
-        <p className="build-with-us-banner-description">
+        {/* <p className="build-with-us-banner-description">
           Share your vision , we’ll bring the strategy, design, and <br /> tech to make
           it real
-        </p>
+        </p> */}
 
         <button className="view-more-button mt-4 flex items-center gap-2">
           Let&apos;s Build Something{" "}

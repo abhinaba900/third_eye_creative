@@ -3646,8 +3646,8 @@ strong {
 /* whatsup section  */
 
 .span-diffrent-color-2 {
-  background: linear-gradient(0deg, #772bf2, #ec4b7b),
-    linear-gradient(180deg, #ce0aff 0%, rgba(206, 10, 255, 0) 100%) !important;
+
+  background: linear-gradient(180deg, #ff891d 0%, #ec4b7b 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important; /* for Firefox */

@@ -140,7 +140,7 @@ function GamingSection() {
         Work Hard, <span>Play Harder</span>
       </h3>
       <p>
-        Because deadlines aren’t the only thing <br /> we race against
+        Because deadlines aren’t the only thing  we race against
       </p>
 
       <div className="w-full">

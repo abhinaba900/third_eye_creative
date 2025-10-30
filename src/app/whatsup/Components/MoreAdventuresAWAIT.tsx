@@ -15,9 +15,9 @@ function MoreAdventuresAWAIT() {
           More Adventures <br /> <span>AWAIT</span>
         </h3>
 
-        <p className="build-with-us-banner-description">
+        {/* <p className="build-with-us-banner-description">
           Stay tuned for what’s next in our creative journey!
-        </p>
+        </p> */}
 
         <button className="view-more-button mt-4 flex items-center gap-2" onClick={()=> window.open("https://www.youtube.com/@3rdeyecreative", "_blank")}>
           Follow Our Journey{" "}
