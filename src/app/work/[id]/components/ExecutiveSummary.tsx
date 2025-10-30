@@ -1,6 +1,6 @@
 ﻿"use client";
 import React from "react";
-import ScrollReveal from "../../../../../Reactbits/ScrollReveal/ScrollReveal";
+// import ScrollReveal from "../../../../../Reactbits/ScrollReveal/ScrollReveal";
 
 function ExecutiveSummary({ data }) {
   return (
